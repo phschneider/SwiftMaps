@@ -33,6 +33,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         
+        self.title = node._id
     }
     
     override func viewWillAppear(animated: Bool) {

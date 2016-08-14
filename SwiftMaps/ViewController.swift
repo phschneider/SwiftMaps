@@ -140,9 +140,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         //        [[[6.8997573853,49.2041400138],[6.8997573853,49.2993821679],[7.0501327515,49.2993821679],[7.0501327515,49.2041400138],[6.8997573853,49.2041400138]]]
         
        
-        let boundingBoxes: [String] = [austria] // lichtenstein] // , saarland, pfalz, bw]
+        let boundingBoxes: [String] = [saarland, pfalz, bw, austria, lichtenstein]
 //        var searchStrings: [String] = ["highway=speed_camera", "highway=rest_area", "highway=services", "amenity=toilets"]
-        let searchStrings: [String] = ["highway=speed_camera", "highway=rest_area", "highway=services", "amenity=toilets"]
+        let searchStrings: [String] = ["highway=speed_camera", "highway=rest_area", "highway=services"] //, "amenity=toilets"]
         
         for boundingBox in boundingBoxes {
             print(boundingBox)
@@ -290,6 +290,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.stopUpdatingLocation()
     }
     
+    
+    // MARK: MapView
     func mapView(mapView: MKMapView,didSelectAnnotationView view: MKAnnotationView)
     {
         if ((view.annotation?.isKindOfClass(NodeAnnotationView)) != nil)
@@ -381,7 +383,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return circleRenderer
     }
        
-        
+    
+    // MARK: LocationManager
     // 1. user enter region
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         showAlert("enter \(region.identifier)")
@@ -404,6 +407,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
 
     
+    // MARK: Helper
     func showAlert(message: NSString)
     {
         let alert = UIAlertController(title: "Alert",
