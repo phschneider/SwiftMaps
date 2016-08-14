@@ -1,0 +1,6 @@
+framework module AlamofireNetworkActivityIndicator {
+  umbrella header "Pods-AlamofireNetworkActivityIndicator-umbrella.h"
+
+  export *
+  module * { export * }
+}
