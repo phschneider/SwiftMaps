@@ -18,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mapViewController: UIViewController?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        #if (arch(i386) || arch(x86_64)) && os(iOS)
+            NSLog("Documents Directory %@", NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0])
+//            NSArray* cachePathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+//            NSString* cachePath = [cachePathArray lastObject];
+//            NSLog(@"Cache Directory: %@", cachePath);
+        #endif
+        
         // Override point for customization after application launch.
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
 
