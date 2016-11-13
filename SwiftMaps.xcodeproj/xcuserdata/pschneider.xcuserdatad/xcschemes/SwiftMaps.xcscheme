@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "227C05D11D3180110033E6BD"
-               BuildableName = "SwiftMaps.app"
-               BlueprintName = "SwiftMaps"
+               BuildableName = "TrafficMaps.app"
+               BlueprintName = "TrafficMaps"
                ReferencedContainer = "container:SwiftMaps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "227C05D11D3180110033E6BD"
-            BuildableName = "SwiftMaps.app"
-            BlueprintName = "SwiftMaps"
+            BuildableName = "TrafficMaps.app"
+            BlueprintName = "TrafficMaps"
             ReferencedContainer = "container:SwiftMaps.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "227C05D11D3180110033E6BD"
-            BuildableName = "SwiftMaps.app"
-            BlueprintName = "SwiftMaps"
+            BuildableName = "TrafficMaps.app"
+            BlueprintName = "TrafficMaps"
             ReferencedContainer = "container:SwiftMaps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "227C05D11D3180110033E6BD"
-            BuildableName = "SwiftMaps.app"
-            BlueprintName = "SwiftMaps"
+            BuildableName = "TrafficMaps.app"
+            BlueprintName = "TrafficMaps"
             ReferencedContainer = "container:SwiftMaps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -14,11 +14,43 @@ import AlamofireNetworkActivityIndicator
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var navigationController: UINavigationController?
+    var mapViewController: UIViewController?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
+
+        navigationController = UINavigationController()
+        #if IS_TRAFFIC_MAPS
+            mapViewController = TrafficMapViewController()
+        #else
+            #if IS_TOILETT_MAPS
+                mapViewController = ToilettMapViewController()
+            #else
+                mapViewController = MountainMapViewController()
+            #endif
+        #endif
+        
+        self.navigationController!.pushViewController(mapViewController!, animated: false)
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.rootViewController = navigationController
+        self.window!.backgroundColor = UIColor.whiteColor()
+        self.window!.makeKeyAndVisible()
+
+        #if (arch(i386) || arch(x86_64)) && os(iOS)
+            let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+            let url = NSURL(fileURLWithPath: path)
+            let filePath = url.URLByAppendingPathComponent("sample.xml").path!
+            let fileManager = NSFileManager.defaultManager()
+            if fileManager.fileExistsAtPath(filePath) {
+                print("FILE AVAILABLE %@",filePath)
+            } else {
+                print("FILE NOT AVAILABLE")
+            }
+        #endif
+        
         return true
     }
 

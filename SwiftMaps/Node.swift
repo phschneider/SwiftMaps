@@ -10,9 +10,6 @@ import Foundation
 import EVReflection
 
 class Node: EVObject {
-//    let title: String
-//    let price: Double
-//    let id: Int
     var _version: String?
     var _uid: String?
     
@@ -25,18 +22,53 @@ class Node: EVObject {
     var _lon: NSNumber?
     var tag: [Tag] = [Tag]()
 
-
+    var type: String?
     
-//    static func deserialize(node: XMLIndexer) throws -> Node {
-//        return try Node(
-//            lat: (node.element?.attributes["lat"])!
-////            id: attributes["id"],
-////            lat: node?attributes["lat"],
-////            lon: node?attributes["lon"]
-////            
-////            price: node["lon"].value(),
-////            year: node["year"].value(),
-////            amount: node["amount"].value()
-//        )
-//    }
+    func isPeak() -> Bool
+    {
+        return (self.type?.lowercaseString.rangeOfString("peak") != nil)
+    }
+    
+    func isToilet() -> Bool
+    {
+        return (self.type?.lowercaseString.rangeOfString("toilets") != nil)
+    }
+    
+    func isSpeedCam() -> Bool
+    {
+        return (self.type?.lowercaseString.rangeOfString("speed_camera") != nil)
+    }
+    
+    func title() -> String
+    {
+        var title:String = ""
+        let name:Tag? = (self.tagForKey("name"))
+        let ele:Tag? = (self.tagForKey("ele"))
+        
+        if (name != nil)
+        {
+            title = title + (name?._v)!
+        }
+        if (ele != nil)
+        {
+            title = title + " (" + (ele?._v)! + ")"
+        }
+        
+        if (title.characters.count == 0)
+        {
+            title = self._id!
+        }
+        
+        return title
+    }
+    
+    func tagForKey(key:String) -> Tag? {
+        for object in tag {
+            if (object._k == key)
+            {
+                return object
+            }
+        }
+        return nil
+    }
 }
