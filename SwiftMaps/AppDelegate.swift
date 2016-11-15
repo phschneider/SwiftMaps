@@ -30,14 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
 
         navigationController = UINavigationController()
+
         #if IS_TRAFFIC_MAPS
             mapViewController = TrafficMapViewController()
+        #elseif IS_TOILETT_MAPS
+            mapViewController = ToilettMapViewController()
+        #elseif IS_ATM_MAPS
+            mapViewController = ATMMapViewController()
         #else
-            #if IS_TOILETT_MAPS
-                mapViewController = ToilettMapViewController()
-            #else
-                mapViewController = MountainMapViewController()
-            #endif
+            mapViewController = MountainMapViewController()
         #endif
         
         self.navigationController!.pushViewController(mapViewController!, animated: false)

@@ -520,7 +520,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
-                    anView!.image = UIImage(named: "mountain-512")
+//                    anView!.image = UIImage(named: "mountain-512")
+                    anView!.image = UIImage(named: "RESTROOM_SIGN-512")
+                    
                     
 //                    let label:UILabel = UILabel.init(frame: CGRectMake(0, 0, 20, 20))
 //                    label.text = "🔼"
