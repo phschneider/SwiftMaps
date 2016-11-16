@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             mapViewController = ToilettMapViewController()
         #elseif IS_ATM_MAPS
             mapViewController = ATMMapViewController()
+        #elseif IS_PICNIC_MAPS
+            mapViewController = PicnicMapsViewController()
         #else
             mapViewController = MountainMapViewController()
         #endif

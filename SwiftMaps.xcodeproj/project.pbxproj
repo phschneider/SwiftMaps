@@ -20,9 +20,22 @@
 		224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		224F2A761DDBB67900B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		224F2A771DDBB67900B22D2B /* RESTROOM_SIGN-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EDD1DD899EA001F8DA0 /* RESTROOM_SIGN-512@3x.png */; };
-		224F2A801DDBB75800B22D2B /* ATMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */; };
 		224F2A811DDBB76B00B22D2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
 		224F2A821DDBB76C00B22D2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
+		224F2AA81DDBBB7600B22D2B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
+		224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
+		224F2AAA1DDBBB7600B22D2B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
+		224F2AAB1DDBBB7600B22D2B /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
+		224F2AAC1DDBBB7600B22D2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
+		224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
+		224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
+		224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
+		224F2AB21DDBBB7600B22D2B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		224F2AB41DDBBB7600B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
+		224F2AB51DDBBB7600B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
+		224F2AB61DDBBB7600B22D2B /* RESTROOM_SIGN-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EDD1DD899EA001F8DA0 /* RESTROOM_SIGN-512@3x.png */; };
+		224F2ABF1DDBBBC200B22D2B /* PicnicMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */; };
+		224F2AC01DDBBC0A00B22D2B /* ATMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */; };
 		227653F81D318E3700BA689B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
 		227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		227C05D81D3180120033E6BD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
@@ -103,6 +116,24 @@
 		224F2A921DDBB95900B22D2B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		224F2A931DDBB95900B22D2B /* ATMMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATMMap-Logo.png"; sourceTree = "<group>"; };
 		224F2A941DDBB95900B22D2B /* ATMMaps-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ATMMaps-Info.plist"; sourceTree = "<group>"; };
+		224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicnicMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicnicMapsViewController.swift; sourceTree = "<group>"; };
+		224F2AC31DDBBC3800B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		224F2AC41DDBBC3800B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		224F2AC51DDBBC3800B22D2B /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		224F2AC61DDBBC3800B22D2B /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		224F2AC71DDBBC3800B22D2B /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		224F2AC81DDBBC3800B22D2B /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		224F2AC91DDBBC3800B22D2B /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		224F2ACA1DDBBC3800B22D2B /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		224F2ACB1DDBBC3800B22D2B /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		224F2ACC1DDBBC3800B22D2B /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		224F2ACD1DDBBC3800B22D2B /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		224F2ACE1DDBBC3800B22D2B /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		224F2ACF1DDBBC3800B22D2B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		224F2AD01DDBBC3800B22D2B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		224F2AD11DDBBC3800B22D2B /* TrafficMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrafficMap-Logo.png"; sourceTree = "<group>"; };
+		224F2AD21DDBBC3800B22D2B /* PicnicMaps-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PicnicMaps-Info.plist"; sourceTree = "<group>"; };
 		227653EF1D31848E00BA689B /* SwiftMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftMaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		227653F71D318E3700BA689B /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		227C05D21D3180110033E6BD /* TrafficMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +216,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		224F2AB11DDBBB7600B22D2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224F2AB21DDBBB7600B22D2B /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		227C05CF1D3180110033E6BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +296,37 @@
 			path = AppIcons;
 			sourceTree = "<group>";
 		};
+		224F2AC11DDBBC3800B22D2B /* PicnicMaps */ = {
+			isa = PBXGroup;
+			children = (
+				224F2AC21DDBBC3800B22D2B /* AppIcons */,
+				224F2AD21DDBBC3800B22D2B /* PicnicMaps-Info.plist */,
+			);
+			path = PicnicMaps;
+			sourceTree = "<group>";
+		};
+		224F2AC21DDBBC3800B22D2B /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				224F2AC31DDBBC3800B22D2B /* Icon-120.png */,
+				224F2AC41DDBBC3800B22D2B /* Icon-40.png */,
+				224F2AC51DDBBC3800B22D2B /* Icon-40@2x.png */,
+				224F2AC61DDBBC3800B22D2B /* Icon-40@3x.png */,
+				224F2AC71DDBBC3800B22D2B /* Icon-60@2x.png */,
+				224F2AC81DDBBC3800B22D2B /* Icon-60@3x.png */,
+				224F2AC91DDBBC3800B22D2B /* Icon-76.png */,
+				224F2ACA1DDBBC3800B22D2B /* Icon-76@2x.png */,
+				224F2ACB1DDBBC3800B22D2B /* Icon-83.5@2x.png */,
+				224F2ACC1DDBBC3800B22D2B /* Icon-Small.png */,
+				224F2ACD1DDBBC3800B22D2B /* Icon-Small@2x.png */,
+				224F2ACE1DDBBC3800B22D2B /* Icon-Small@3x.png */,
+				224F2ACF1DDBBC3800B22D2B /* iTunesArtwork.png */,
+				224F2AD01DDBBC3800B22D2B /* iTunesArtwork@2x.png */,
+				224F2AD11DDBBC3800B22D2B /* TrafficMap-Logo.png */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
 		227653F61D31849800BA689B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +359,7 @@
 				4A24F8E51D95D95B0011485B /* MountainMaps.app */,
 				4AF49F861D985D60001A8034 /* ToilettMaps.app */,
 				224F2A7D1DDBB67900B22D2B /* ATMMaps.app */,
+				224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,6 +400,7 @@
 		22FF9E891DD885CB001F8DA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				224F2AC11DDBBC3800B22D2B /* PicnicMaps */,
 				224F2A831DDBB95900B22D2B /* ATMMaps */,
 				22FF9ED21DD88A8F001F8DA0 /* Images */,
 				22FF9E9B1DD885CB001F8DA0 /* MountainMaps */,
@@ -439,6 +511,7 @@
 				4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */,
 				4AF49FAA1D985EDD001A8034 /* ToilettMapViewController.swift */,
 				224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */,
+				224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */,
 			);
 			name = MapViewController;
 			sourceTree = "<group>";
@@ -490,6 +563,26 @@
 			name = ATMMaps;
 			productName = SwiftMaps;
 			productReference = 224F2A7D1DDBB67900B22D2B /* ATMMaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		224F2AA51DDBBB7600B22D2B /* PicnicMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224F2AB91DDBBB7600B22D2B /* Build configuration list for PBXNativeTarget "PicnicMaps" */;
+			buildPhases = (
+				224F2AA61DDBBB7600B22D2B /* Check Pods Manifest.lock */,
+				224F2AA71DDBBB7600B22D2B /* Sources */,
+				224F2AB11DDBBB7600B22D2B /* Frameworks */,
+				224F2AB31DDBBB7600B22D2B /* Resources */,
+				224F2AB71DDBBB7600B22D2B /* Copy Pods Resources */,
+				224F2AB81DDBBB7600B22D2B /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicnicMaps;
+			productName = SwiftMaps;
+			productReference = 224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */;
 			productType = "com.apple.product-type.application";
 		};
 		227C05D11D3180110033E6BD /* TrafficMaps */ = {
@@ -630,6 +723,7 @@
 				4A24F8B81D95D95B0011485B /* MountainMaps */,
 				4AF49F611D985D60001A8034 /* ToilettMaps */,
 				224F2A661DDBB67900B22D2B /* ATMMaps */,
+				224F2AA51DDBBB7600B22D2B /* PicnicMaps */,
 			);
 		};
 /* End PBXProject section */
@@ -642,6 +736,16 @@
 				224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */,
 				224F2A761DDBB67900B22D2B /* LaunchScreen.storyboard in Resources */,
 				224F2A771DDBB67900B22D2B /* RESTROOM_SIGN-512@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224F2AB31DDBBB7600B22D2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224F2AB41DDBBB7600B22D2B /* mountain-512@3x.png in Resources */,
+				224F2AB51DDBBB7600B22D2B /* LaunchScreen.storyboard in Resources */,
+				224F2AB61DDBBB7600B22D2B /* RESTROOM_SIGN-512@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +842,51 @@
 			showEnvVarsInLog = 0;
 		};
 		224F2A791DDBB67900B22D2B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		224F2AA61DDBBB7600B22D2B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		224F2AB71DDBBB7600B22D2B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		224F2AB81DDBBB7600B22D2B /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -881,13 +1030,29 @@
 			files = (
 				224F2A691DDBB67900B22D2B /* Tag.swift in Sources */,
 				224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
+				224F2AC01DDBBC0A00B22D2B /* ATMMapViewController.swift in Sources */,
 				224F2A6C1DDBB67900B22D2B /* Node.swift in Sources */,
 				224F2A6D1DDBB67900B22D2B /* Nodes.swift in Sources */,
 				224F2A821DDBB76C00B22D2B /* MapViewController.swift in Sources */,
 				224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */,
-				224F2A801DDBB75800B22D2B /* ATMMapViewController.swift in Sources */,
 				224F2A6F1DDBB67900B22D2B /* DetailViewController.swift in Sources */,
 				224F2A711DDBB67900B22D2B /* NodeAnnotationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224F2AA71DDBBB7600B22D2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224F2AA81DDBBB7600B22D2B /* Tag.swift in Sources */,
+				224F2ABF1DDBBBC200B22D2B /* PicnicMapsViewController.swift in Sources */,
+				224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
+				224F2AAA1DDBBB7600B22D2B /* Node.swift in Sources */,
+				224F2AAB1DDBBB7600B22D2B /* Nodes.swift in Sources */,
+				224F2AAC1DDBBB7600B22D2B /* MapViewController.swift in Sources */,
+				224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */,
+				224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */,
+				224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,6 +1171,35 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_ATM_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.atm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		224F2ABA1DDBBB7600B22D2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Resources/PicnicMaps/PicnicMaps-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_PICNIC_MAPS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.picnic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		224F2ABB1DDBBB7600B22D2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Resources/PicnicMaps/PicnicMaps-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_PICNIC_MAPS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.picnic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
@@ -1241,6 +1435,15 @@
 			buildConfigurations = (
 				224F2A7B1DDBB67900B22D2B /* Debug */,
 				224F2A7C1DDBB67900B22D2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224F2AB91DDBBB7600B22D2B /* Build configuration list for PBXNativeTarget "PicnicMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224F2ABA1DDBBB7600B22D2B /* Debug */,
+				224F2ABB1DDBBB7600B22D2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
