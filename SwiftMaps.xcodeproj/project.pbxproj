@@ -56,6 +56,35 @@
 		225A61621DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		225A61631DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		225A61641DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
+		226E3E151DE257340021C283 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */; };
+		226E3E161DE257340021C283 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */; };
+		226E3E171DE257340021C283 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */; };
+		226E3E181DE257340021C283 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA01DD885CB001F8DA0 /* Icon-40@3x.png */; };
+		226E3E191DE257340021C283 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA11DD885CB001F8DA0 /* Icon-60@2x.png */; };
+		226E3E1A1DE257340021C283 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA21DD885CB001F8DA0 /* Icon-60@3x.png */; };
+		226E3E1B1DE257340021C283 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA31DD885CB001F8DA0 /* Icon-76.png */; };
+		226E3E1C1DE257340021C283 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA41DD885CB001F8DA0 /* Icon-76@2x.png */; };
+		226E3E1D1DE257340021C283 /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA51DD885CB001F8DA0 /* Icon-83.5@2x.png */; };
+		226E3E1E1DE257340021C283 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA61DD885CB001F8DA0 /* Icon-Small.png */; };
+		226E3E1F1DE257340021C283 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA71DD885CB001F8DA0 /* Icon-Small@2x.png */; };
+		226E3E201DE257340021C283 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA81DD885CB001F8DA0 /* Icon-Small@3x.png */; };
+		226E3E211DE257340021C283 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA91DD885CB001F8DA0 /* iTunesArtwork.png */; };
+		226E3E221DE257340021C283 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EAA1DD885CB001F8DA0 /* iTunesArtwork@2x.png */; };
+		226E3E231DE257340021C283 /* MountainMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EAB1DD885CB001F8DA0 /* MountainMap-Logo.png */; };
+		226E3E441DE260570021C283 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E341DE2604E0021C283 /* Icon-120.png */; };
+		226E3E451DE260570021C283 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E351DE2604E0021C283 /* Icon-40.png */; };
+		226E3E461DE260570021C283 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E361DE2604E0021C283 /* Icon-40@2x.png */; };
+		226E3E471DE260570021C283 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E371DE2604E0021C283 /* Icon-40@3x.png */; };
+		226E3E481DE260570021C283 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E381DE2604E0021C283 /* Icon-60@2x.png */; };
+		226E3E491DE260570021C283 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E391DE2604E0021C283 /* Icon-60@3x.png */; };
+		226E3E4A1DE260570021C283 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E3A1DE2604E0021C283 /* Icon-76.png */; };
+		226E3E4B1DE260570021C283 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E3B1DE2604E0021C283 /* Icon-76@2x.png */; };
+		226E3E4C1DE260570021C283 /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E3C1DE2604E0021C283 /* Icon-83.5@2x.png */; };
+		226E3E4D1DE260570021C283 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E3D1DE2604E0021C283 /* Icon-Small.png */; };
+		226E3E4E1DE260570021C283 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E3E1DE2604E0021C283 /* Icon-Small@2x.png */; };
+		226E3E4F1DE260570021C283 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E3F1DE2604E0021C283 /* Icon-Small@3x.png */; };
+		226E3E501DE260570021C283 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E401DE2604E0021C283 /* iTunesArtwork.png */; };
+		226E3E511DE260570021C283 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E411DE2604E0021C283 /* iTunesArtwork@2x.png */; };
 		227653F81D318E3700BA689B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
 		227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		227C05D81D3180120033E6BD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
@@ -121,7 +150,7 @@
 		4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		4AF49F6E1D985D60001A8034 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4AF49F761D985D60001A8034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
-		4AF49FAB1D985EDD001A8034 /* ToilettMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF49FAA1D985EDD001A8034 /* ToilettMapViewController.swift */; };
+		4AF49FAB1D985EDD001A8034 /* ToiletMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */; };
 		7421218801F653DEB16DF5FF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -187,6 +216,21 @@
 		225A61531DE1ECCA004CDA62 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		225A61591DE1EE7E004CDA62 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewBoundingBoxExtension.swift; sourceTree = "<group>"; };
+		226E3E341DE2604E0021C283 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		226E3E351DE2604E0021C283 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		226E3E361DE2604E0021C283 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		226E3E371DE2604E0021C283 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		226E3E381DE2604E0021C283 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		226E3E391DE2604E0021C283 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		226E3E3A1DE2604E0021C283 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		226E3E3B1DE2604E0021C283 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		226E3E3C1DE2604E0021C283 /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		226E3E3D1DE2604E0021C283 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		226E3E3E1DE2604E0021C283 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		226E3E3F1DE2604E0021C283 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		226E3E401DE2604E0021C283 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		226E3E411DE2604E0021C283 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		226E3E421DE2604E0021C283 /* ToiletMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToiletMaps-Info.plist"; sourceTree = "<group>"; };
 		227653EF1D31848E00BA689B /* SwiftMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftMaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		227653F71D318E3700BA689B /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		227C05D21D3180110033E6BD /* TrafficMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,22 +262,6 @@
 		22FF9EAA1DD885CB001F8DA0 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		22FF9EAB1DD885CB001F8DA0 /* MountainMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MountainMap-Logo.png"; sourceTree = "<group>"; };
 		22FF9EAC1DD885CB001F8DA0 /* MountainMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MountainMaps-Info.plist"; sourceTree = "<group>"; };
-		22FF9EAF1DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
-		22FF9EB01DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
-		22FF9EB11DD885CB001F8DA0 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
-		22FF9EB21DD885CB001F8DA0 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
-		22FF9EB31DD885CB001F8DA0 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
-		22FF9EB41DD885CB001F8DA0 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
-		22FF9EB51DD885CB001F8DA0 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
-		22FF9EB61DD885CB001F8DA0 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
-		22FF9EB71DD885CB001F8DA0 /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
-		22FF9EB81DD885CB001F8DA0 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		22FF9EB91DD885CB001F8DA0 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		22FF9EBA1DD885CB001F8DA0 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
-		22FF9EBB1DD885CB001F8DA0 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		22FF9EBC1DD885CB001F8DA0 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		22FF9EBD1DD885CB001F8DA0 /* MountainMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MountainMap-Logo.png"; sourceTree = "<group>"; };
-		22FF9EBE1DD885CB001F8DA0 /* ToilettMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToilettMaps-Info.plist"; sourceTree = "<group>"; };
 		22FF9EC11DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9EC21DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		22FF9EC31DD885CB001F8DA0 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -255,8 +283,8 @@
 		4A24F8E51D95D95B0011485B /* MountainMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountainMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A24F8E71D95D9DC0011485B /* MountainMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainMapViewController.swift; sourceTree = "<group>"; };
 		4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficMapViewController.swift; sourceTree = "<group>"; };
-		4AF49F861D985D60001A8034 /* ToilettMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToilettMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AF49FAA1D985EDD001A8034 /* ToilettMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToilettMapViewController.swift; sourceTree = "<group>"; };
+		4AF49F861D985D60001A8034 /* ToiletMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToiletMapViewController.swift; sourceTree = "<group>"; };
 		EC00347F4665D339BA6A6034 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -380,6 +408,36 @@
 			path = AppIcons;
 			sourceTree = "<group>";
 		};
+		226E3E321DE2604E0021C283 /* ToiletMaps */ = {
+			isa = PBXGroup;
+			children = (
+				226E3E331DE2604E0021C283 /* AppIcons */,
+				226E3E421DE2604E0021C283 /* ToiletMaps-Info.plist */,
+			);
+			path = ToiletMaps;
+			sourceTree = "<group>";
+		};
+		226E3E331DE2604E0021C283 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				226E3E341DE2604E0021C283 /* Icon-120.png */,
+				226E3E351DE2604E0021C283 /* Icon-40.png */,
+				226E3E361DE2604E0021C283 /* Icon-40@2x.png */,
+				226E3E371DE2604E0021C283 /* Icon-40@3x.png */,
+				226E3E381DE2604E0021C283 /* Icon-60@2x.png */,
+				226E3E391DE2604E0021C283 /* Icon-60@3x.png */,
+				226E3E3A1DE2604E0021C283 /* Icon-76.png */,
+				226E3E3B1DE2604E0021C283 /* Icon-76@2x.png */,
+				226E3E3C1DE2604E0021C283 /* Icon-83.5@2x.png */,
+				226E3E3D1DE2604E0021C283 /* Icon-Small.png */,
+				226E3E3E1DE2604E0021C283 /* Icon-Small@2x.png */,
+				226E3E3F1DE2604E0021C283 /* Icon-Small@3x.png */,
+				226E3E401DE2604E0021C283 /* iTunesArtwork.png */,
+				226E3E411DE2604E0021C283 /* iTunesArtwork@2x.png */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
 		227653F61D31849800BA689B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,7 +468,7 @@
 				227C05E91D3180120033E6BD /* SwiftMapsTests.xctest */,
 				227C05F41D3180120033E6BD /* SwiftMapsUITests.xctest */,
 				4A24F8E51D95D95B0011485B /* MountainMaps.app */,
-				4AF49F861D985D60001A8034 /* ToilettMaps.app */,
+				4AF49F861D985D60001A8034 /* ToiletMaps.app */,
 				224F2A7D1DDBB67900B22D2B /* ATMmaps.app */,
 				224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */,
 			);
@@ -457,11 +515,11 @@
 		22FF9E891DD885CB001F8DA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				226E3E321DE2604E0021C283 /* ToiletMaps */,
 				224F2AC11DDBBC3800B22D2B /* PicnicMaps */,
 				224F2A831DDBB95900B22D2B /* ATMMaps */,
 				22FF9ED21DD88A8F001F8DA0 /* Images */,
 				22FF9E9B1DD885CB001F8DA0 /* MountainMaps */,
-				22FF9EAD1DD885CB001F8DA0 /* ToilettMaps */,
 				22FF9EBF1DD885CB001F8DA0 /* TrafficMaps */,
 			);
 			path = Resources;
@@ -494,37 +552,6 @@
 				22FF9EA91DD885CB001F8DA0 /* iTunesArtwork.png */,
 				22FF9EAA1DD885CB001F8DA0 /* iTunesArtwork@2x.png */,
 				22FF9EAB1DD885CB001F8DA0 /* MountainMap-Logo.png */,
-			);
-			path = AppIcons;
-			sourceTree = "<group>";
-		};
-		22FF9EAD1DD885CB001F8DA0 /* ToilettMaps */ = {
-			isa = PBXGroup;
-			children = (
-				22FF9EAE1DD885CB001F8DA0 /* AppIcons */,
-				22FF9EBE1DD885CB001F8DA0 /* ToilettMaps-Info.plist */,
-			);
-			path = ToilettMaps;
-			sourceTree = "<group>";
-		};
-		22FF9EAE1DD885CB001F8DA0 /* AppIcons */ = {
-			isa = PBXGroup;
-			children = (
-				22FF9EAF1DD885CB001F8DA0 /* Icon-120.png */,
-				22FF9EB01DD885CB001F8DA0 /* Icon-40.png */,
-				22FF9EB11DD885CB001F8DA0 /* Icon-40@2x.png */,
-				22FF9EB21DD885CB001F8DA0 /* Icon-40@3x.png */,
-				22FF9EB31DD885CB001F8DA0 /* Icon-60@2x.png */,
-				22FF9EB41DD885CB001F8DA0 /* Icon-60@3x.png */,
-				22FF9EB51DD885CB001F8DA0 /* Icon-76.png */,
-				22FF9EB61DD885CB001F8DA0 /* Icon-76@2x.png */,
-				22FF9EB71DD885CB001F8DA0 /* Icon-83.5@2x.png */,
-				22FF9EB81DD885CB001F8DA0 /* Icon-Small.png */,
-				22FF9EB91DD885CB001F8DA0 /* Icon-Small@2x.png */,
-				22FF9EBA1DD885CB001F8DA0 /* Icon-Small@3x.png */,
-				22FF9EBB1DD885CB001F8DA0 /* iTunesArtwork.png */,
-				22FF9EBC1DD885CB001F8DA0 /* iTunesArtwork@2x.png */,
-				22FF9EBD1DD885CB001F8DA0 /* MountainMap-Logo.png */,
 			);
 			path = AppIcons;
 			sourceTree = "<group>";
@@ -566,7 +593,7 @@
 				227C05D71D3180120033E6BD /* MapViewController.swift */,
 				4A24F8E71D95D9DC0011485B /* MountainMapViewController.swift */,
 				4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */,
-				4AF49FAA1D985EDD001A8034 /* ToilettMapViewController.swift */,
+				4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */,
 				224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */,
 				224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */,
 			);
@@ -718,9 +745,9 @@
 			productReference = 4A24F8E51D95D95B0011485B /* MountainMaps.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4AF49F611D985D60001A8034 /* ToilettMaps */ = {
+		4AF49F611D985D60001A8034 /* ToiletMaps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4AF49F831D985D60001A8034 /* Build configuration list for PBXNativeTarget "ToilettMaps" */;
+			buildConfigurationList = 4AF49F831D985D60001A8034 /* Build configuration list for PBXNativeTarget "ToiletMaps" */;
 			buildPhases = (
 				4AF49F621D985D60001A8034 /* Check Pods Manifest.lock */,
 				4AF49F631D985D60001A8034 /* Sources */,
@@ -733,9 +760,9 @@
 			);
 			dependencies = (
 			);
-			name = ToilettMaps;
+			name = ToiletMaps;
 			productName = SwiftMaps;
-			productReference = 4AF49F861D985D60001A8034 /* ToilettMaps.app */;
+			productReference = 4AF49F861D985D60001A8034 /* ToiletMaps.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -778,7 +805,7 @@
 				227C05F31D3180120033E6BD /* SwiftMapsUITests */,
 				227C05D11D3180110033E6BD /* TrafficMaps */,
 				4A24F8B81D95D95B0011485B /* MountainMaps */,
-				4AF49F611D985D60001A8034 /* ToilettMaps */,
+				4AF49F611D985D60001A8034 /* ToiletMaps */,
 				224F2A661DDBB67900B22D2B /* ATMMaps */,
 				224F2AA51DDBBB7600B22D2B /* PicnicMaps */,
 			);
@@ -863,9 +890,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226E3E151DE257340021C283 /* Icon-120.png in Resources */,
 				22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */,
 				4A24F8CF1D95D95B0011485B /* LaunchScreen.storyboard in Resources */,
+				226E3E201DE257340021C283 /* Icon-Small@3x.png in Resources */,
+				226E3E221DE257340021C283 /* iTunesArtwork@2x.png in Resources */,
+				226E3E1E1DE257340021C283 /* Icon-Small.png in Resources */,
+				226E3E171DE257340021C283 /* Icon-40@2x.png in Resources */,
+				226E3E211DE257340021C283 /* iTunesArtwork.png in Resources */,
+				226E3E231DE257340021C283 /* MountainMap-Logo.png in Resources */,
 				22FF9EE11DD8E7E4001F8DA0 /* RESTROOM_SIGN-512@3x.png in Resources */,
+				226E3E1D1DE257340021C283 /* Icon-83.5@2x.png in Resources */,
+				226E3E1C1DE257340021C283 /* Icon-76@2x.png in Resources */,
+				226E3E181DE257340021C283 /* Icon-40@3x.png in Resources */,
+				226E3E1A1DE257340021C283 /* Icon-60@3x.png in Resources */,
+				226E3E1B1DE257340021C283 /* Icon-76.png in Resources */,
+				226E3E161DE257340021C283 /* Icon-40.png in Resources */,
+				226E3E191DE257340021C283 /* Icon-60@2x.png in Resources */,
+				226E3E1F1DE257340021C283 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,9 +915,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226E3E441DE260570021C283 /* Icon-120.png in Resources */,
 				22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */,
 				4AF49F761D985D60001A8034 /* LaunchScreen.storyboard in Resources */,
+				226E3E4F1DE260570021C283 /* Icon-Small@3x.png in Resources */,
+				226E3E511DE260570021C283 /* iTunesArtwork@2x.png in Resources */,
+				226E3E4D1DE260570021C283 /* Icon-Small.png in Resources */,
+				226E3E461DE260570021C283 /* Icon-40@2x.png in Resources */,
+				226E3E501DE260570021C283 /* iTunesArtwork.png in Resources */,
 				22FF9EE01DD899EA001F8DA0 /* RESTROOM_SIGN-512@3x.png in Resources */,
+				226E3E4C1DE260570021C283 /* Icon-83.5@2x.png in Resources */,
+				226E3E4B1DE260570021C283 /* Icon-76@2x.png in Resources */,
+				226E3E471DE260570021C283 /* Icon-40@3x.png in Resources */,
+				226E3E491DE260570021C283 /* Icon-60@3x.png in Resources */,
+				226E3E4A1DE260570021C283 /* Icon-76.png in Resources */,
+				226E3E451DE260570021C283 /* Icon-40.png in Resources */,
+				226E3E481DE260570021C283 /* Icon-60@2x.png in Resources */,
+				226E3E4E1DE260570021C283 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1222,7 +1278,7 @@
 				4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */,
 				225A61561DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */,
-				4AF49FAB1D985EDD001A8034 /* ToilettMapViewController.swift in Sources */,
+				4AF49FAB1D985EDD001A8034 /* ToiletMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1489,9 +1545,9 @@
 				INFOPLIST_FILE = "Resources/MountainMaps/MountainMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_MOUNTAIN_MAPS";
-				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.traffic;
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.mountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e090489-9bfb-418b-a47e-222cb88b5fca";
+				PROVISIONING_PROFILE = "4d182af2-b242-414c-b2c7-b73bde878b30";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1505,9 +1561,9 @@
 				INFOPLIST_FILE = "Resources/MountainMaps/MountainMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_MOUNTAIN_MAPS";
-				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.traffic;
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.mountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e090489-9bfb-418b-a47e-222cb88b5fca";
+				PROVISIONING_PROFILE = "4d182af2-b242-414c-b2c7-b73bde878b30";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
@@ -1517,12 +1573,12 @@
 			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "Resources/ToilettMaps/ToilettMaps-Info.plist";
+				INFOPLIST_FILE = "Resources/ToiletMaps/ToiletMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TOILETT_MAPS";
-				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.toilett;
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.toilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e090489-9bfb-418b-a47e-222cb88b5fca";
+				PROVISIONING_PROFILE = "8b3b80fc-f9f2-4bb4-a281-bad86fa49812";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1533,12 +1589,12 @@
 			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "Resources/ToilettMaps/ToilettMaps-Info.plist";
+				INFOPLIST_FILE = "Resources/ToiletMaps/ToiletMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TOILETT_MAPS";
-				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.toilett;
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.toilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e090489-9bfb-418b-a47e-222cb88b5fca";
+				PROVISIONING_PROFILE = "8b3b80fc-f9f2-4bb4-a281-bad86fa49812";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
@@ -1609,7 +1665,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4AF49F831D985D60001A8034 /* Build configuration list for PBXNativeTarget "ToilettMaps" */ = {
+		4AF49F831D985D60001A8034 /* Build configuration list for PBXNativeTarget "ToiletMaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4AF49F841D985D60001A8034 /* Debug */,

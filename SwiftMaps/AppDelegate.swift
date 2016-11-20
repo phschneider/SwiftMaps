@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if IS_TRAFFIC_MAPS
             mapViewController = TrafficMapViewController()
         #elseif IS_TOILETT_MAPS
-            mapViewController = ToilettMapViewController()
+            mapViewController = ToiletMapViewController()
         #elseif IS_ATM_MAPS
             mapViewController = ATMMapViewController()
         #elseif IS_PICNIC_MAPS
