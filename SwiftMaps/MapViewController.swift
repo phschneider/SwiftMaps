@@ -9,11 +9,8 @@
 import UIKit
 import CoreLocation
 import MapKit
-import Alamofire
-//import SWXMLHash
-import AlamofireXmlToObjects
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate {
     var mapView: MKMapView!
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation!
@@ -27,23 +24,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if (CLLocationManager.locationServicesEnabled())
         {
             self.locationManager = CLLocationManager()
-            self.locationManager.delegate = self
+            // TODO - Delegate
+//            self.locationManager.delegate = LocationManagerDelegate()
             locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
             self.locationManager.activityType = CLActivityType.AutomotiveNavigation
             self.locationManager.requestWhenInUseAuthorization()
             self.locationManager.startUpdatingLocation()
             self.locationManager.startUpdatingHeading()
-        }
-        
-//        // To complete the authorization process for enabling location services, add the following lines of code
-        let status = CLLocationManager.authorizationStatus()
-        if status == .NotDetermined || status == .Denied || status == .AuthorizedWhenInUse {
-            // present an alert indicating location authorization required
-            // and offer to take the user to Settings for the app via
-            // UIApplication -openUrl: and UIApplicationOpenSettingsURLString
-//            self.locationManager.requestAlwaysAuthorization()
-            self.locationManager.requestWhenInUseAuthorization()
+
+            // To complete the authorization process for enabling location services, add the following lines of code
+            let status = CLLocationManager.authorizationStatus()
+            if status == .NotDetermined || status == .Denied || status == .AuthorizedWhenInUse
+            {
+                // present an alert indicating location authorization required
+                // and offer to take the user to Settings for the app via
+                // UIApplication -openUrl: and UIApplicationOpenSettingsURLString
+                //            self.locationManager.requestAlwaysAuthorization()
+                self.locationManager.requestWhenInUseAuthorization()
+            }
         }
         
         self.mapView = MKMapView(frame: self.view.frame)
@@ -63,12 +62,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.view.addSubview(self.mapView)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: #selector(addTapped))
-
-//        var frame: CGRect!
-        setupData()
     }
     
     override func viewWillAppear(animated: Bool) {
+        //      TODO
         //        locationManager.startUpdatingHeading()
         //        locationManager.startUpdatingLocation()
     }
@@ -78,23 +75,32 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         self.addLocationButton()
         
-        // 1. status is not determined
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        }
-            // 2. authorization were denied
-        else if CLLocationManager.authorizationStatus() == .Denied {
-            showAlert("Location services were previously denied. Please enable location services for this app in Settings.")
-        }
-            // 3. we do have authorization
-        else if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
-            locationManager.startUpdatingLocation()
+        if (self.locationManager != nil && CLLocationManager.locationServicesEnabled())
+        {
+            // 1. status is not determined
+            if CLLocationManager.authorizationStatus() == .NotDetermined
+            {
+                locationManager.requestWhenInUseAuthorization()
+            }
+                // 2. authorization were denied
+            else if CLLocationManager.authorizationStatus() == .Denied
+            {
+                AlertController().showAlert("Location services were previously denied. Please enable location services for this app in Settings.")
+            }
+                // 3. we do have authorization
+            else if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse
+            {
+                locationManager.startUpdatingLocation()
+            }
         }
     }
     
     override func viewWillDisappear(animated: Bool) {
-        locationManager.stopUpdatingHeading()
-        locationManager.stopUpdatingLocation()
+        if (self.locationManager != nil && CLLocationManager.locationServicesEnabled())
+        {
+            locationManager.stopUpdatingHeading()
+            locationManager.stopUpdatingLocation()
+        }
     }
 
     
@@ -236,177 +242,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             print(boundingBox)
             for searchString in searchStrings {
                 print(searchString)
-                self.requestForBoundingBox(searchString, boundingBox: boundingBox)
+                Api().requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: self.mapView)
             }
         }
-        
-        //        self.requestForBoundingBox(searchString, boundingBox: pfalz)
-        //        self.requestForBoundingBox(searchString, boundingBox: bw)
-        
-        
-//        self.requestForBoundingBox(searchString, boundingBox: saarland)
-        //        self.requestForBoundingBox(searchString, boundingBox: pfalz)
-        //        self.requestForBoundingBox(searchString, boundingBox: bw)
-    
     }
     
-    // MARK: Bounding Box
-    // http://www.softwarepassion.com/how-to-get-geographic-coordinates-of-the-visible-mkmapview-area-in-ios/
-    func getCoordinateFromMapRectanglePoint(x:Double, y:Double) -> CLLocationCoordinate2D
-    {
-        return MKCoordinateForMapPoint(MKMapPointMake(x, y))
-    }
     
-    func getNECoordinate(mapRect: MKMapRect) -> CLLocationCoordinate2D
+    // MARK: Helper
+    func selectAllVisibleAnnotation()
     {
-        return self.getCoordinateFromMapRectanglePoint(MKMapRectGetMaxX(mapRect),y:mapRect.origin.y);
-    }
-    
-    func getNWCoordinate(mapRect: MKMapRect) -> CLLocationCoordinate2D
-    {
-        return self.getCoordinateFromMapRectanglePoint(MKMapRectGetMinX(mapRect),y:mapRect.origin.y);
-    }
-    
-    func getSECoordinate(mapRect: MKMapRect) -> CLLocationCoordinate2D
-    {
-        return self.getCoordinateFromMapRectanglePoint(MKMapRectGetMaxX(mapRect),y:MKMapRectGetMaxY(mapRect));
-    }
-    
-    func getSWCoordinate(mapRect: MKMapRect) -> CLLocationCoordinate2D
-    {
-        return self.getCoordinateFromMapRectanglePoint(mapRect.origin.x,y:MKMapRectGetMaxY(mapRect));
-    }
-    
-    func getBoundingBox(mapRect: MKMapRect) -> [Double]
-    {
-        let bottomLeft:CLLocationCoordinate2D = self.getSWCoordinate(mapRect)
-        let topRight:CLLocationCoordinate2D = self.getNECoordinate(mapRect)
-        
-        return [bottomLeft.latitude, bottomLeft.longitude, topRight.latitude, topRight.longitude]
-    }
-    
-    func requestForBoundingBox(searchString: String, boundingBox: NSString)
-    {
-        
-        var urlString : String
-        #if (arch(i386) || arch(x86_64)) && os(iOS)
-            let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-            let url = NSURL(fileURLWithPath: path)
-            let filePath = url.URLByAppendingPathComponent("sample.xml").path!
-            let fileManager = NSFileManager.defaultManager()
-            if fileManager.fileExistsAtPath(filePath) {
-                print("FILE AVAILABLE %@",filePath)
-                urlString = String(format:"file://%@",filePath)
-            } else {
-                print("FILE NOT AVAILABLE")
-                urlString = String(format:"http://overpass.osm.rambler.ru/cgi/xapi_meta?node[%@][bbox=%@]", searchString,boundingBox)
+        for object in self.mapView.annotationsInMapRect(self.mapView.visibleMapRect)
+        {
+            if (object .conformsToProtocol(MKAnnotation))
+            {
+                self.mapView.selectAnnotation(object as! MKAnnotation, animated: false)
             }
-            #else
-                urlString = String(format:"http://overpass.osm.rambler.ru/cgi/xapi_meta?node[%@][bbox=%@]", searchString,boundingBox)
-        #endif
-        
-        Alamofire.request(
-            .GET,
-            //            "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[highway=rest_area][bbox=6.3584695643,49.1130992988,7.4034901078,49.6393467247]",
-            //                "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[highway=emergency_access_point][bbox=6.8997573853,49.2041400138,7.0501327515,49.2993821679]",
-            //            "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[highway=speed_camera][bbox=6.8997573853,49.2041400138,7.0501327515,49.2993821679]",
-            
-            
-            //        > Saarland:
-            //        > 49.6393467247 6.3584695643 49.1130992988 7.4034901078
-            // Achtung: Werte vertauscht!!
-            urlString,
-            //            "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[tourism=viewpoint][bbox=6.3584695643,49.1130992988,7.4034901078,49.6393467247]",
-            encoding: .URL)
-            .validate()
-            .responseString { response in
-                print("Success: \(response.result.isSuccess)")
-                print("Response String: \(response.result.value)")
-                let message : String
-                var isRealRequest :Bool
-                    isRealRequest = response.response?.allHeaderFields != nil
-                
-                if (isRealRequest)
-                    {
-                    if let httpError = response.result.error
-                    {
-                        let statusCode = httpError.code
-                    }
-                    else
-                    { //no errors
-                        let statusCode = (response.response?.statusCode)!
-                    }
-                    
-                    if let httpStatusCode = response.response?.statusCode
-                    {
-                        switch(httpStatusCode)
-                        {
-                        case 504:
-                            message = "Gateway Time-out"
-                        case 200:
-                            message = ""
-                        default:
-                            message = "Ok"
-                        }
-                    }
-                    else
-                    {
-                        message = "default"
-                    }
-                    if (message.characters.count > 0)
-                    {
-                        self.showAlert(message)
-                    }
-                }
-            }
-            .responseObject { (response: Result< Osm, NSError>) in
-                print("Response Object: ")
-                
-                
-                if (response.isFailure)
-                {
-                    print ("Response: \(response.error)")
-                }
-                else
-                {
-                    if let result = response.value
-                    {
-                        var zoomRect :MKMapRect = MKMapRectNull
-                        
-                        for node in result.node
-                        {
-                            print(node._lat)
-                            let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
-                            
-                            node.type = searchString
-                            
-                            let anotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
-                            
-                            self.mapView .addAnnotation(anotation)
-                            
-                            let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
-                            let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
-                            if (MKMapRectIsNull(zoomRect))
-                            {
-                                zoomRect = pointRect;
-                            }
-                            else
-                            {
-                                zoomRect = MKMapRectUnion(zoomRect, pointRect);
-                            }
-                        }
-                        self.mapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsetsMake(10,10,10,10), animated: true)
-                        self.title = String(format:"%d", self.mapView.annotations.count)
-                        
-                        for object in self.mapView.annotationsInMapRect(self.mapView.visibleMapRect)
-                        {
-                            if (object .conformsToProtocol(MKAnnotation))
-                            {
-                                self.mapView.selectAnnotation(object as! MKAnnotation, animated: false)
-                            }
-                        }
-                    }
-                }
         }
     }
     
@@ -464,37 +314,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    
-//    You should be careful with number of simultaneously tracking regions. The system limited regions count to 20 for one app. If you want to work with larger regions count you can track only this regions, which are close to user’s location right now. When the user’s location changes, you can remove regions that are now farther way and add regions coming up on the user’s path. If reach regions limit, location manager will fire monitoringDidFailForRegion method. You can handle it for better app’s UX.
-    func setupData() {
-        // 1. check if system can monitor regions
-        if CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion.self) {
-            
-            // 2. region data
-            let title = "Apple "
-            let coordinate = CLLocationCoordinate2DMake(37.331002, -122.029663)
-            let regionRadius = 300.0
-            
-            // 3. setup region
-            let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,
-                longitude: coordinate.longitude), radius: regionRadius, identifier: title)
-            locationManager.startMonitoringForRegion(region)
-            
-            // 4. setup annotation
-            let restaurantAnnotation = MKPointAnnotation()
-            restaurantAnnotation.coordinate = coordinate;
-            restaurantAnnotation.title = "\(title)";
-            mapView.addAnnotation(restaurantAnnotation)
-            
-            // 5. setup circle
-            let circle = MKCircle(centerCoordinate: coordinate, radius: regionRadius)
-            mapView.addOverlay(circle)
-        }
-        else {
-            print("System can't track regions")
-        }
-    }
-    
     // 6. draw circle
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         let circleRenderer = MKCircleRenderer(overlay: overlay)
@@ -502,159 +321,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         circleRenderer.lineWidth = 1.0
         return circleRenderer
     }
-    
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-        if (annotation is MKUserLocation) {
-            //if annotation is not an MKPointAnnotation (eg. MKUserLocation),
-            //return nil so map draws default view for it (eg. blue dot)...
-            return nil
-        }
-        
-        else if (annotation is NodeAnnotationView)
-        {
-            if ( (annotation as! NodeAnnotationView).node.isPeak())
-            {
-                let reuseId = "peak"
-                var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-//                    anView!.image = UIImage(named: "mountain-512")
-                    anView!.image = UIImage(named: "RESTROOM_SIGN-512")
-                    
-                    
-//                    let label:UILabel = UILabel.init(frame: CGRectMake(0, 0, 20, 20))
-//                    label.text = "🔼"
-//                    anView?.addSubview(label)
-                }
-                return anView
-            }
-        }
-        
-        return nil
-        
-////            anView!.image = UIImage(named:"Icon-76")
-
-    }
-       
-    
-    // MARK: LocationManager
-    // 1. user enter region
-    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        showAlert("enter \(region.identifier)")
-    }
-
-    // 2. user exit region
-    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
-        showAlert("exit \(region.identifier)")
-    }
-
-    
-//    // CLLocationManagerDelegate
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        let location = locations.last
-////        let haccuracy = location?.horizontalAccuracy
-////        let vaccuracy = location?.verticalAccuracy
-////        
-////        print(haccuracy)
-////        print(vaccuracy)
-//        
-//        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-//        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-//        
-//        self.mapView.setRegion(region, animated: true)
-//        
-//        manager.stopUpdatingLocation()
-//    }
-
-    
-    // MARK: Helper
-    func showAlert(message: NSString)
-    {
-        // WARNING: Mögliche doppelte alerts
-            let alert = UIAlertController(title: "Alert",
-                                      message: message as String,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            
-        }
-        alert.addAction(OKAction)
-        
-        presentViewController(alert, animated: true, completion:nil)
-    }
-    
-//    func fetchAllRooms(completion: ([Node]?) -> Void) {
-//    func fetchAllRooms(completionHandler: (NSDictionary?,NSError?)) -> () {
-//        Alamofire.request(
-//            .GET,
-//            "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[highway=rest_area][bbox=6.3584695643,49.1130992988,7.4034901078,49.6393467247]",
-//            encoding: .URL)
-//            .validate()
-//            .responseString { response in
-//                print("Response String: \(response.result.value)")
-//            }
-//            .responseJSON { response in
-//                print(response.request)  // original URL request
-//                print(response.response) // URL response
-//                print(response.data)     // server data
-//                print(response.result)   // result of response serialization
-//                
-//                if let JSON = response.result.value {
-//                    print("JSON: \(JSON)")
-//                }
-//            }
-//            .response { (request, response, data, error) in
-//                print(request)
-//                print(response)
-//                print(error)
-//                
-//                var xml = SWXMLHash.parse(data!)
-////                var nodes: [Node] = try xml["osm"]["node"].value()
-//                
-//                print(xml["osm"].element?.text)
-//                print(xml["osm"]["node"][1].element?.attributes["id"])
-//                
-////                func enumerate(indexer: XMLIndexer) {
-////                    for child in indexer.children {
-////                        NSLog(child.element!.name)
-////                        enumerate(child)
-////                    }
-////                }
-//                
-//             
-////                var rooms = [RemoteRoom]()
-//                //                for roomDict in rows {
-//                //                    rooms.append(RemoteRoom(jsonData: roomDict))
-//                //                }
-//                //
-//                
-//                
-////                enumerate(xml)
-//                completionHandler(xml,nil)
-//            }
-    
-//            .responseJSON { (response) -> Void in
-//                guard response.result.isSuccess else {
-//                    print("Error while fetching remote rooms: \(response.result.error)")
-//                    completion(nil)
-//                    return
-//                }
-//                
-//                guard let value = response.result.value as? [String: AnyObject],
-//                    rows = value["rows"] as? [[String: AnyObject]] else {
-//                        print("Malformed data received from fetchAllRooms service")
-//                        completion(nil)
-//                        return
-//                }
-//                
-//                var rooms = [RemoteRoom]()
-//                for roomDict in rows {
-//                    rooms.append(RemoteRoom(jsonData: roomDict))
-//                }
-//                
-//                completion(rooms)
-//        }
-//    }
 }
 

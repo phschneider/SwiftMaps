@@ -26,14 +26,14 @@ class TrafficMapViewController: MapViewController {
     override func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
         
-        let bounding:[Double] = self.getBoundingBox(self.mapView.visibleMapRect)
+        let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
         
-        let searchStrings: [String] = ["highway=speed_camera", "highway=rest_area", "highway=services", "amenity=toilets"]
+        let searchStrings: [String] = ["node[highway=speed_camera]", "node[highway=rest_area]", "node[highway=services]", "node[amenity=toilets]"]
         
         for searchString in searchStrings {
             print(searchString)
-            self.requestForBoundingBox(searchString, boundingBox: boundingBoxString)
+            Api().requestForBoundingBox(searchString, boundingBox: boundingBoxString, mapView: self.mapView)
         }
     }
 }

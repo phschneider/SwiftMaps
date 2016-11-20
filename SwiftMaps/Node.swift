@@ -39,6 +39,18 @@ class Node: EVObject {
         return (self.type?.lowercaseString.rangeOfString("speed_camera") != nil)
     }
     
+    func isAtm() -> Bool
+    {
+        print(type)
+        return (self.type?.lowercaseString.rangeOfString("amenity=atm") != nil)
+    }
+    
+    func isBank() -> Bool
+    {
+        print(type)
+        return (self.type?.lowercaseString.rangeOfString("amenity=bank") != nil)
+    }
+    
     func title() -> String
     {
         var title:String = ""

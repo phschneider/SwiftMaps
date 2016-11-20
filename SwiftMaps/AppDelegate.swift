@@ -55,7 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let url = NSURL(fileURLWithPath: path)
             let filePath = url.URLByAppendingPathComponent("sample.xml").path!
             let fileManager = NSFileManager.defaultManager()
-            if fileManager.fileExistsAtPath(filePath) {
+            if fileManager.fileExistsAtPath(filePath)
+            {
                 print("FILE AVAILABLE %@",filePath)
             } else {
                 print("FILE NOT AVAILABLE")

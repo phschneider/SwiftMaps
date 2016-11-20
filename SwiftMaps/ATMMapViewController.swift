@@ -20,11 +20,19 @@ class ATMMapViewController: MapViewController {
     override func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
         
-        let bounding:[Double] = self.getBoundingBox(self.mapView.visibleMapRect)
+        let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
         
-        self.requestForBoundingBox("amenity=atm", boundingBox: boundingBoxString)
+        //amenity=atm or (amenity=bank and atm=yes)
+
+        let searchStrings: [String] = ["node[amenity=bank][atm=yes]", "node[amenity=atm]"]
+        
+        for searchString in searchStrings {
+            print(searchString)
+            Api().requestForBoundingBox(searchString, boundingBox: boundingBoxString, mapView: self.mapView)
+        }
     }
+    
     
     override func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if (annotation is MKUserLocation) {
@@ -34,9 +42,10 @@ class ATMMapViewController: MapViewController {
         }
         else if (annotation is NodeAnnotationView)
         {
-            if ( (annotation as! NodeAnnotationView).node.isPeak())
+            let node:Node = (annotation as! NodeAnnotationView).node;
+            if (node.isAtm())
             {
-                let reuseId = "peak"
+                let reuseId = "atm"
                 var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
                 if (anView == nil)
                 {
@@ -45,11 +54,10 @@ class ATMMapViewController: MapViewController {
         //                    let label:UILabel = UILabel.init(frame: CGRectMake(0, 0, 20, 20))
         //                    label.text = "🔼"
         //                    anView?.addSubview(label)
+                }
+                return anView
+            }
         }
-        return anView
-        }
-        }
-        
         return nil
     }
 

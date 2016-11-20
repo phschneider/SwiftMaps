@@ -20,10 +20,10 @@ class PicnicMapsViewController: MapViewController {
     override func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
         
-        let bounding:[Double] = self.getBoundingBox(self.mapView.visibleMapRect)
+        let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
         
-        self.requestForBoundingBox("tourism=picnic_site", boundingBox: boundingBoxString)
+        Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString, mapView: self.mapView)
     }
     
     override func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
