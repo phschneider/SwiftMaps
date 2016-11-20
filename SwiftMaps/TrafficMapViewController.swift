@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import MapKit
 
 class TrafficMapViewController: MapViewController {
     
     // MARK: View ...
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Traffice"
+        self.title = "Traffic"
         self.mapView.mapType = MKMapType.Standard
     }
     

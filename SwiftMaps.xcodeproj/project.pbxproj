@@ -79,6 +79,21 @@
 		22B7579B1DE2340600EFEB96 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2A901DDBB95900B22D2B /* Icon-Small@3x.png */; };
 		22B7579C1DE2340600EFEB96 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2A911DDBB95900B22D2B /* iTunesArtwork.png */; };
 		22B7579D1DE2340600EFEB96 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2A921DDBB95900B22D2B /* iTunesArtwork@2x.png */; };
+		22B7579E1DE24EA400EFEB96 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC11DD885CB001F8DA0 /* Icon-120.png */; };
+		22B7579F1DE24EA400EFEB96 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC21DD885CB001F8DA0 /* Icon-40.png */; };
+		22B757A01DE24EA400EFEB96 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC31DD885CB001F8DA0 /* Icon-40@2x.png */; };
+		22B757A11DE24EA400EFEB96 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC41DD885CB001F8DA0 /* Icon-40@3x.png */; };
+		22B757A21DE24EA400EFEB96 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC51DD885CB001F8DA0 /* Icon-60@2x.png */; };
+		22B757A31DE24EA400EFEB96 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC61DD885CB001F8DA0 /* Icon-60@3x.png */; };
+		22B757A41DE24EA400EFEB96 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC71DD885CB001F8DA0 /* Icon-76.png */; };
+		22B757A51DE24EA400EFEB96 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC81DD885CB001F8DA0 /* Icon-76@2x.png */; };
+		22B757A61DE24EA400EFEB96 /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EC91DD885CB001F8DA0 /* Icon-83.5@2x.png */; };
+		22B757A71DE24EA400EFEB96 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECA1DD885CB001F8DA0 /* Icon-Small.png */; };
+		22B757A81DE24EA400EFEB96 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECB1DD885CB001F8DA0 /* Icon-Small@2x.png */; };
+		22B757A91DE24EA400EFEB96 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECC1DD885CB001F8DA0 /* Icon-Small@3x.png */; };
+		22B757AA1DE24EA400EFEB96 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECD1DD885CB001F8DA0 /* iTunesArtwork.png */; };
+		22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECE1DD885CB001F8DA0 /* iTunesArtwork@2x.png */; };
+		22B757AC1DE24EA400EFEB96 /* TrafficMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECF1DD885CB001F8DA0 /* TrafficMap-Logo.png */; };
 		22FF9ED81DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
@@ -132,7 +147,7 @@
 		0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		223501861D60C6D10043D3E0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		223501881D60C8050043D3E0 /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
-		224F2A7D1DDBB67900B22D2B /* ATMMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATMMapViewController.swift; sourceTree = "<group>"; };
 		224F2A851DDBB95900B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		224F2A861DDBB95900B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -396,7 +411,7 @@
 				227C05F41D3180120033E6BD /* SwiftMapsUITests.xctest */,
 				4A24F8E51D95D95B0011485B /* MountainMaps.app */,
 				4AF49F861D985D60001A8034 /* ToilettMaps.app */,
-				224F2A7D1DDBB67900B22D2B /* ATMMaps.app */,
+				224F2A7D1DDBB67900B22D2B /* ATMmaps.app */,
 				224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */,
 			);
 			name = Products;
@@ -604,7 +619,7 @@
 			);
 			name = ATMMaps;
 			productName = SwiftMaps;
-			productReference = 224F2A7D1DDBB67900B22D2B /* ATMMaps.app */;
+			productReference = 224F2A7D1DDBB67900B22D2B /* ATMmaps.app */;
 			productType = "com.apple.product-type.application";
 		};
 		224F2AA51DDBBB7600B22D2B /* PicnicMaps */ = {
@@ -759,9 +774,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				227C05D11D3180110033E6BD /* TrafficMaps */,
 				227C05E81D3180120033E6BD /* SwiftMapsTests */,
 				227C05F31D3180120033E6BD /* SwiftMapsUITests */,
+				227C05D11D3180110033E6BD /* TrafficMaps */,
 				4A24F8B81D95D95B0011485B /* MountainMaps */,
 				4AF49F611D985D60001A8034 /* ToilettMaps */,
 				224F2A661DDBB67900B22D2B /* ATMMaps */,
@@ -809,9 +824,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B7579E1DE24EA400EFEB96 /* Icon-120.png in Resources */,
 				22FF9ED81DD88B14001F8DA0 /* mountain-512@3x.png in Resources */,
 				227C05E31D3180120033E6BD /* LaunchScreen.storyboard in Resources */,
+				22B757A91DE24EA400EFEB96 /* Icon-Small@3x.png in Resources */,
+				22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */,
+				22B757A71DE24EA400EFEB96 /* Icon-Small.png in Resources */,
+				22B757A01DE24EA400EFEB96 /* Icon-40@2x.png in Resources */,
+				22B757AC1DE24EA400EFEB96 /* TrafficMap-Logo.png in Resources */,
+				22B757AA1DE24EA400EFEB96 /* iTunesArtwork.png in Resources */,
 				22FF9EDE1DD899EA001F8DA0 /* RESTROOM_SIGN-512@3x.png in Resources */,
+				22B757A61DE24EA400EFEB96 /* Icon-83.5@2x.png in Resources */,
+				22B757A51DE24EA400EFEB96 /* Icon-76@2x.png in Resources */,
+				22B757A11DE24EA400EFEB96 /* Icon-40@3x.png in Resources */,
+				22B757A31DE24EA400EFEB96 /* Icon-60@3x.png in Resources */,
+				22B757A41DE24EA400EFEB96 /* Icon-76.png in Resources */,
+				22B7579F1DE24EA400EFEB96 /* Icon-40.png in Resources */,
+				22B757A21DE24EA400EFEB96 /* Icon-60@2x.png in Resources */,
+				22B757A81DE24EA400EFEB96 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1232,7 +1262,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_ATM_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.atm;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ATMmaps;
 				PROVISIONING_PROFILE = "fff83fc5-8a2c-42f9-bbb2-2822d8d5076d";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1248,7 +1278,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_ATM_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.atm;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ATMmaps;
 				PROVISIONING_PROFILE = "fff83fc5-8a2c-42f9-bbb2-2822d8d5076d";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
@@ -1384,7 +1414,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TRAFFIC_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.traffic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e090489-9bfb-418b-a47e-222cb88b5fca";
+				PROVISIONING_PROFILE = "d26fa1b3-72e8-4520-bf4f-a28702d04de4";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1400,7 +1430,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TRAFFIC_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.traffic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e090489-9bfb-418b-a47e-222cb88b5fca";
+				PROVISIONING_PROFILE = "d26fa1b3-72e8-4520-bf4f-a28702d04de4";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
