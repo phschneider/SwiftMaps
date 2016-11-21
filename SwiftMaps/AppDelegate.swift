@@ -39,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             mapViewController = ATMMapViewController()
         #elseif IS_PICNIC_MAPS
             mapViewController = PicnicMapsViewController()
+        #elseif IS_SINGLETRAIL_MAPS
+            mapViewController = SingleTrailMapViewController()
         #else
             mapViewController = MountainMapViewController()
         #endif
