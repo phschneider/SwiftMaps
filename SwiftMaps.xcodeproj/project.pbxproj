@@ -70,7 +70,6 @@
 		226E3E201DE257340021C283 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA81DD885CB001F8DA0 /* Icon-Small@3x.png */; };
 		226E3E211DE257340021C283 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EA91DD885CB001F8DA0 /* iTunesArtwork.png */; };
 		226E3E221DE257340021C283 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EAA1DD885CB001F8DA0 /* iTunesArtwork@2x.png */; };
-		226E3E231DE257340021C283 /* MountainMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9EAB1DD885CB001F8DA0 /* MountainMap-Logo.png */; };
 		226E3E441DE260570021C283 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E341DE2604E0021C283 /* Icon-120.png */; };
 		226E3E451DE260570021C283 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E351DE2604E0021C283 /* Icon-40.png */; };
 		226E3E461DE260570021C283 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E361DE2604E0021C283 /* Icon-40@2x.png */; };
@@ -126,7 +125,6 @@
 		22A42BE91DE39C1B00F81767 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BD91DE39C1500F81767 /* Icon-Small@3x.png */; };
 		22A42BEA1DE39C1B00F81767 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BDA1DE39C1500F81767 /* iTunesArtwork.png */; };
 		22A42BEB1DE39C1B00F81767 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BDB1DE39C1500F81767 /* iTunesArtwork@2x.png */; };
-		22A42BEC1DE39C1B00F81767 /* TrafficMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BDC1DE39C1500F81767 /* TrafficMap-Logo.png */; };
 		22A42BEE1DE39C4800F81767 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2AC31DDBBC3800B22D2B /* Icon-120.png */; };
 		22A42BEF1DE39C4800F81767 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2AC41DDBBC3800B22D2B /* Icon-40.png */; };
 		22A42BF01DE39C4800F81767 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2AC51DDBBC3800B22D2B /* Icon-40@2x.png */; };
@@ -309,7 +307,6 @@
 		22A42BD91DE39C1500F81767 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 		22A42BDA1DE39C1500F81767 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		22A42BDB1DE39C1500F81767 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		22A42BDC1DE39C1500F81767 /* TrafficMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrafficMap-Logo.png"; sourceTree = "<group>"; };
 		22A42BDD1DE39C1500F81767 /* SingleTrailMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SingleTrailMaps-Info.plist"; sourceTree = "<group>"; };
 		22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -325,7 +322,6 @@
 		22FF9EA81DD885CB001F8DA0 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 		22FF9EA91DD885CB001F8DA0 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		22FF9EAA1DD885CB001F8DA0 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		22FF9EAB1DD885CB001F8DA0 /* MountainMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MountainMap-Logo.png"; sourceTree = "<group>"; };
 		22FF9EAC1DD885CB001F8DA0 /* MountainMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MountainMaps-Info.plist"; sourceTree = "<group>"; };
 		22FF9EC11DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9EC21DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -612,7 +608,6 @@
 				22A42BD91DE39C1500F81767 /* Icon-Small@3x.png */,
 				22A42BDA1DE39C1500F81767 /* iTunesArtwork.png */,
 				22A42BDB1DE39C1500F81767 /* iTunesArtwork@2x.png */,
-				22A42BDC1DE39C1500F81767 /* TrafficMap-Logo.png */,
 			);
 			path = AppIcons;
 			sourceTree = "<group>";
@@ -657,7 +652,6 @@
 				22FF9EA81DD885CB001F8DA0 /* Icon-Small@3x.png */,
 				22FF9EA91DD885CB001F8DA0 /* iTunesArtwork.png */,
 				22FF9EAA1DD885CB001F8DA0 /* iTunesArtwork@2x.png */,
-				22FF9EAB1DD885CB001F8DA0 /* MountainMap-Logo.png */,
 			);
 			path = AppIcons;
 			sourceTree = "<group>";
@@ -1032,7 +1026,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A42BEC1DE39C1B00F81767 /* TrafficMap-Logo.png in Resources */,
 				22A42B921DE39AAE00F81767 /* mountain-512@3x.png in Resources */,
 				22A42B931DE39AAE00F81767 /* LaunchScreen.storyboard in Resources */,
 				22A42BE31DE39C1B00F81767 /* Icon-60@3x.png in Resources */,
@@ -1065,7 +1058,6 @@
 				226E3E1E1DE257340021C283 /* Icon-Small.png in Resources */,
 				226E3E171DE257340021C283 /* Icon-40@2x.png in Resources */,
 				226E3E211DE257340021C283 /* iTunesArtwork.png in Resources */,
-				226E3E231DE257340021C283 /* MountainMap-Logo.png in Resources */,
 				22FF9EE11DD8E7E4001F8DA0 /* RESTROOM_SIGN-512@3x.png in Resources */,
 				226E3E1D1DE257340021C283 /* Icon-83.5@2x.png in Resources */,
 				226E3E1C1DE257340021C283 /* Icon-76@2x.png in Resources */,
@@ -1780,7 +1772,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SINGLETRAIL_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.singletrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e7c8485-5961-418d-9822-1265c17cca98";
+				PROVISIONING_PROFILE = "5f4af942-91f8-412f-ae8a-770e819a0eb5";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1796,7 +1788,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SINGLETRAIL_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.singletrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e7c8485-5961-418d-9822-1265c17cca98";
+				PROVISIONING_PROFILE = "5f4af942-91f8-412f-ae8a-770e819a0eb5";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
