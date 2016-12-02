@@ -314,12 +314,24 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
     }
     
-    // 6. draw circle
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-        let circleRenderer = MKCircleRenderer(overlay: overlay)
-        circleRenderer.strokeColor = UIColor.redColor()
-        circleRenderer.lineWidth = 1.0
-        return circleRenderer
+        if (overlay is MKCircle)
+        {
+            let circleRenderer = MKCircleRenderer(overlay: overlay)
+            circleRenderer.strokeColor = UIColor.redColor()
+            circleRenderer.lineWidth = 1.0
+            return circleRenderer
+        }
+            
+        else if (overlay is MKTileOverlay)
+        {
+            return MKTileOverlayRenderer.init(tileOverlay: (overlay as! MKTileOverlay))
+        }
+            
+        else
+        {
+            return MKOverlayRenderer.init(overlay: overlay)
+        }
     }
 }
 
