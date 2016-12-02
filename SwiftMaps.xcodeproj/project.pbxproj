@@ -291,7 +291,6 @@
 		229A74CD1D35918C002241F5 /* Nodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
 		229A74CF1D359232002241F5 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleTrailMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		22A42BA81DE39AAF00F81767 /* PicnicMaps copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PicnicMaps copy-Info.plist"; path = "/Users/pschneider/Dropbox/Dev/SwiftMaps/SwiftMaps/PicnicMaps copy-Info.plist"; sourceTree = "<absolute>"; };
 		22A42BCA1DE39B3B00F81767 /* SingleTrailMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTrailMapViewController.swift; sourceTree = "<group>"; };
 		22A42BCE1DE39C1500F81767 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22A42BCF1DE39C1500F81767 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -526,7 +525,6 @@
 				227C05D31D3180110033E6BD /* Products */,
 				359EC2D35BC547549F36DE00 /* Frameworks */,
 				FDD811799552711BAFA25D4E /* Pods */,
-				22A42BA81DE39AAF00F81767 /* PicnicMaps copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

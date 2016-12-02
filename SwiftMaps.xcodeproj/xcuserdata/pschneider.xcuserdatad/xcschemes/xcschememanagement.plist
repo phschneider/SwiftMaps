@@ -4,17 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MountainMaps.xcscheme</key>
+		<key>ATMMaps.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>3</integer>
 		</dict>
-		<key>ToilettMaps.xcscheme</key>
+		<key>MountainMaps.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>1</integer>
 		</dict>
-		<key>TrafficMaps.xcscheme</key>
+		<key>PicnicMaps.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>SingleTrailMaps.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>ToiletMaps.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TrafficMaps.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -43,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>227C05F31D3180120033E6BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22A42B7E1DE39AAE00F81767</key>
 		<dict>
 			<key>primary</key>
 			<true/>
