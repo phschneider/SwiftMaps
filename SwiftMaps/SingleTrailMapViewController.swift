@@ -15,6 +15,17 @@ class SingleTrailMapViewController: MapViewController {
         super.viewDidLoad()
         self.title = "Trails"
         self.mapView.mapType = MKMapType.Standard
+        
+        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
+        osmOverlay.canReplaceMapContent = true;
+        
+        let stravaOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
+        stravaOverlay.canReplaceMapContent = false;
+        self.mapView.addOverlays([osmOverlay,stravaOverlay],level: .AboveLabels)
+        
+//        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
+//        overlay.canReplaceMapContent = false;
+//        self.mapView.addOverlay(overlay, level: .AboveRoads)
     }
     
     override func addTapped(){
