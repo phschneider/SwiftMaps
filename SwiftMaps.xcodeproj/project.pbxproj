@@ -165,6 +165,12 @@
 		22B757AA1DE24EA400EFEB96 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECD1DD885CB001F8DA0 /* iTunesArtwork.png */; };
 		22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECE1DD885CB001F8DA0 /* iTunesArtwork@2x.png */; };
 		22B757AC1DE24EA400EFEB96 /* TrafficMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECF1DD885CB001F8DA0 /* TrafficMap-Logo.png */; };
+		22D5A02F1DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		22D5A0301DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		22D5A0311DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22FF9ED81DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
@@ -301,6 +307,7 @@
 		22A42BDA1DE39C1500F81767 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		22A42BDB1DE39C1500F81767 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		22A42BDD1DE39C1500F81767 /* SingleTrailMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SingleTrailMaps-Info.plist"; sourceTree = "<group>"; };
+		22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileOverlay.swift; sourceTree = "<group>"; };
 		22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -544,6 +551,7 @@
 				225A61591DE1EE7E004CDA62 /* Api.swift */,
 				225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */,
 				225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */,
+				22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */,
 				22FF9ED11DD887BF001F8DA0 /* MapViewController */,
 				223501861D60C6D10043D3E0 /* DetailViewController.swift */,
 				227C05E11D3180120033E6BD /* LaunchScreen.storyboard */,
@@ -1370,6 +1378,7 @@
 				224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */,
 				225A61571DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				224F2A6F1DDBB67900B22D2B /* DetailViewController.swift in Sources */,
+				22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				224F2A711DDBB67900B22D2B /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1390,6 +1399,7 @@
 				224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */,
 				225A61581DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */,
+				22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1410,6 +1420,7 @@
 				223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */,
 				225A61541DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				4A24F92C1D96A5C60011485B /* TrafficMapViewController.swift in Sources */,
+				22D5A02F1DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1441,6 +1452,7 @@
 				22A42BCB1DE39B3B00F81767 /* SingleTrailMapViewController.swift in Sources */,
 				22A42B851DE39AAE00F81767 /* Node.swift in Sources */,
 				22A42B861DE39AAE00F81767 /* Nodes.swift in Sources */,
+				22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				22A42B871DE39AAE00F81767 /* MapViewBoundingBoxExtension.swift in Sources */,
 				22A42B881DE39AAE00F81767 /* Api.swift in Sources */,
 				22A42B891DE39AAE00F81767 /* MapViewController.swift in Sources */,
@@ -1467,6 +1479,7 @@
 				4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */,
 				225A61551DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				4A24F8C11D95D95B0011485B /* DetailViewController.swift in Sources */,
+				22D5A0301DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				4A24F8C21D95D95B0011485B /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1487,6 +1500,7 @@
 				4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */,
 				225A61561DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */,
+				22D5A0311DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				4AF49FAB1D985EDD001A8034 /* ToiletMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
