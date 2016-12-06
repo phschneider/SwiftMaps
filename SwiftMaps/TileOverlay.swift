@@ -81,8 +81,9 @@ class TileOverlay: MKTileOverlay {
             else
             {
                 print("loading " + String(path) + " from directory")
+                Networking.sharedInstance.incrementCount()
                 NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                    
+                    Networking.sharedInstance.decrementCount()
                     if error != nil
                     {
                         print(error)

@@ -165,6 +165,12 @@
 		22B757AA1DE24EA400EFEB96 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECD1DD885CB001F8DA0 /* iTunesArtwork.png */; };
 		22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECE1DD885CB001F8DA0 /* iTunesArtwork@2x.png */; };
 		22B757AC1DE24EA400EFEB96 /* TrafficMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECF1DD885CB001F8DA0 /* TrafficMap-Logo.png */; };
+		22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
+		22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
+		22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
+		22D0E1B51DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
+		22D0E1B61DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
+		22D0E1B71DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		22D5A02F1DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22D5A0301DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22D5A0311DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
@@ -307,6 +313,7 @@
 		22A42BDA1DE39C1500F81767 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		22A42BDB1DE39C1500F81767 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		22A42BDD1DE39C1500F81767 /* SingleTrailMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SingleTrailMaps-Info.plist"; sourceTree = "<group>"; };
+		22D0E1B11DF7585D0052E17B /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileOverlay.swift; sourceTree = "<group>"; };
 		22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -552,6 +559,7 @@
 				225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */,
 				225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */,
 				22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */,
+				22D0E1B11DF7585D0052E17B /* Networking.swift */,
 				22FF9ED11DD887BF001F8DA0 /* MapViewController */,
 				223501861D60C6D10043D3E0 /* DetailViewController.swift */,
 				227C05E11D3180120033E6BD /* LaunchScreen.storyboard */,
@@ -1372,6 +1380,7 @@
 				224F2AC01DDBBC0A00B22D2B /* ATMMapViewController.swift in Sources */,
 				224F2A6C1DDBB67900B22D2B /* Node.swift in Sources */,
 				224F2A6D1DDBB67900B22D2B /* Nodes.swift in Sources */,
+				22D0E1B51DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61631DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615D1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				224F2A821DDBB76C00B22D2B /* MapViewController.swift in Sources */,
@@ -1393,6 +1402,7 @@
 				224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
 				224F2AAA1DDBBB7600B22D2B /* Node.swift in Sources */,
 				224F2AAB1DDBBB7600B22D2B /* Nodes.swift in Sources */,
+				22D0E1B61DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61641DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				224F2AAC1DDBBB7600B22D2B /* MapViewController.swift in Sources */,
@@ -1414,6 +1424,7 @@
 				227C05D81D3180120033E6BD /* MapViewController.swift in Sources */,
 				227653F81D318E3700BA689B /* Node.swift in Sources */,
 				229A74CE1D35918C002241F5 /* Nodes.swift in Sources */,
+				22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61601DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615A1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */,
@@ -1448,6 +1459,7 @@
 				22A42B811DE39AAE00F81767 /* Tag.swift in Sources */,
 				22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */,
 				22A42B831DE39AAE00F81767 /* PicnicMapsViewController.swift in Sources */,
+				22D0E1B71DF7585D0052E17B /* Networking.swift in Sources */,
 				22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */,
 				22A42BCB1DE39B3B00F81767 /* SingleTrailMapViewController.swift in Sources */,
 				22A42B851DE39AAE00F81767 /* Node.swift in Sources */,
@@ -1473,6 +1485,7 @@
 				4A24F8BD1D95D95B0011485B /* MapViewController.swift in Sources */,
 				4A24F8E81D95D9DC0011485B /* MountainMapViewController.swift in Sources */,
 				4A24F8BE1D95D95B0011485B /* Node.swift in Sources */,
+				22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61611DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615B1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				4A24F8BF1D95D95B0011485B /* Nodes.swift in Sources */,
@@ -1494,6 +1507,7 @@
 				4AF49F681D985D60001A8034 /* Node.swift in Sources */,
 				4AF49F691D985D60001A8034 /* Nodes.swift in Sources */,
 				224F2A811DDBB76B00B22D2B /* MapViewController.swift in Sources */,
+				22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61621DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615C1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */,
