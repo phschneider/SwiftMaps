@@ -15,6 +15,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation!
     var locationButton: UIButton!
+    var alphaSlider: UISlider!
+    var alphaValue : CGFloat = 1.0
     
     // MARK: View ...
     override func viewDidLoad() {
@@ -74,6 +76,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidAppear(animated)
         
         self.addLocationButton()
+        self.addAlphaSlider()
         
         if (self.locationManager != nil && CLLocationManager.locationServicesEnabled())
         {
@@ -158,6 +161,37 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         {
             self.locationButton.setTitle("None", forState: UIControlState.Normal)
         }
+    }
+    
+    func addAlphaSlider()
+    {
+        var frame = self.view.bounds;
+        var originX = 15.0;
+        var height = 48.0;
+        
+        frame.origin.y = ceil(frame.size.height / 2) // - (44 + 20);
+        frame.size.height -= frame.origin.y;
+        //        frame.size.width = self.mapView.frame.size.width - ((5*originX) + (4*height) + (2*originX));
+        frame.origin.x = ceil(frame.size.width / 2) * (-1) + 40;
+        frame.size.height = CGFloat(height);
+        
+        self.alphaSlider = UISlider()
+        self.alphaSlider.backgroundColor = UIColor.whiteColor()
+        self.alphaSlider.value = Float(alphaValue)
+        self.alphaSlider.frame = frame;
+        self.alphaSlider.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
+        self.alphaSlider.addTarget(self, action: Selector("sliderValueChanged"), forControlEvents:.ValueChanged)
+        self.alphaSlider.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
+        self.view .addSubview(self.alphaSlider)
+    }
+    
+    func sliderValueChanged()
+    {
+        alphaValue = CGFloat(self.alphaSlider.value)
+        //        self.alphaSlider.value
+        let overlays = mapView.overlays
+        mapView.removeOverlays(overlays)
+        mapView.addOverlays(overlays)
     }
     
     func addTapped(){
@@ -325,7 +359,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             
         else if (overlay is MKTileOverlay)
         {
-            return MKTileOverlayRenderer.init(tileOverlay: (overlay as! MKTileOverlay))
+            let renderer = MKTileOverlayRenderer.init(tileOverlay: (overlay as! MKTileOverlay))
+            if (overlay is TileOverlay)
+            {
+                renderer.alpha = alphaValue
+            }
+            return renderer
         }
             
         else
