@@ -17,6 +17,11 @@ class MountainMapViewController: MapViewController {
         self.mapView.mapType = MKMapType.HybridFlyover
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.alphaSlider.hidden = true
+    }
+    
     override func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
 
