@@ -1,0 +1,6 @@
+framework module Pods_ATMMaps {
+  umbrella header "Pods-ATMMaps-umbrella.h"
+
+  export *
+  module * { export * }
+}

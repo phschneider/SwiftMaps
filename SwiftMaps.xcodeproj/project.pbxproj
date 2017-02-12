@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073F5CCB10AEDEFDAED95B11 /* Pods_ATMMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00F348B1F80E470409846EB /* Pods_ATMMaps.framework */; };
 		223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		224F2A691DDBB67900B22D2B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
@@ -16,7 +17,6 @@
 		224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		224F2A6F1DDBB67900B22D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		224F2A711DDBB67900B22D2B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
-		224F2A731DDBB67900B22D2B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		224F2A761DDBB67900B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		224F2A811DDBB76B00B22D2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
@@ -29,7 +29,6 @@
 		224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
-		224F2AB21DDBBB7600B22D2B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		224F2AB41DDBBB7600B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		224F2AB51DDBBB7600B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		224F2ABF1DDBBBC200B22D2B /* PicnicMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */; };
@@ -104,7 +103,6 @@
 		22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
 		22A42B8C1DE39AAE00F81767 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		22A42B8D1DE39AAE00F81767 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
-		22A42B8F1DE39AAE00F81767 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		22A42B921DE39AAE00F81767 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22A42B931DE39AAE00F81767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		22A42BCB1DE39B3B00F81767 /* SingleTrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A42BCA1DE39B3B00F81767 /* SingleTrailMapViewController.swift */; };
@@ -188,10 +186,10 @@
 		4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		4A24F8C11D95D95B0011485B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		4A24F8C21D95D95B0011485B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
-		4A24F8C41D95D95B0011485B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A24F8CF1D95D95B0011485B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		4A24F8E81D95D9DC0011485B /* MountainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24F8E71D95D9DC0011485B /* MountainMapViewController.swift */; };
 		4A24F92C1D96A5C60011485B /* TrafficMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */; };
+		4A98C8852F6553D6C866A08B /* Pods_MountainMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A3144314A96E3D036D4F96 /* Pods_MountainMaps.framework */; };
 		4AF49F641D985D60001A8034 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
 		4AF49F651D985D60001A8034 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		4AF49F681D985D60001A8034 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
@@ -199,10 +197,12 @@
 		4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
-		4AF49F6E1D985D60001A8034 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4AF49F761D985D60001A8034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		4AF49FAB1D985EDD001A8034 /* ToiletMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */; };
-		7421218801F653DEB16DF5FF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC00347F4665D339BA6A6034 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6D4789E88952616D69734C21 /* Pods_SingleTrailMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */; };
+		70BE93DF131682DB6DBB12A9 /* Pods_PicnicMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD027E4AE053E0A4285D1233 /* Pods_PicnicMaps.framework */; };
+		90699F09260964318778CAC1 /* Pods_TrafficMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */; };
+		BD072785494A3759A7D6C88E /* Pods_ToiletMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F136E1B762A3DEE3F22C4545 /* Pods_ToiletMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,8 +223,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		053EEA67321D9175542854A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleTrailMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		223501861D60C6D10043D3E0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		223501881D60C8050043D3E0 /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
 		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,12 +346,29 @@
 		22FF9ECF1DD885CB001F8DA0 /* TrafficMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrafficMap-Logo.png"; sourceTree = "<group>"; };
 		22FF9ED01DD885CB001F8DA0 /* TrafficMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrafficMaps-Info.plist"; sourceTree = "<group>"; };
 		22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mountain-512@3x.png"; sourceTree = "<group>"; };
+		24460EC3EF3F0A44194405AC /* Pods-ToiletMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToiletMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToiletMaps/Pods-ToiletMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		2BD123240E9EB4EF17CD2499 /* Pods-ATMMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		33B249D4328B8B5D682217BC /* Pods-ATMMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps.release.xcconfig"; sourceTree = "<group>"; };
 		4A24F8E51D95D95B0011485B /* MountainMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountainMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A24F8E71D95D9DC0011485B /* MountainMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainMapViewController.swift; sourceTree = "<group>"; };
 		4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficMapViewController.swift; sourceTree = "<group>"; };
 		4AF49F861D985D60001A8034 /* ToiletMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToiletMapViewController.swift; sourceTree = "<group>"; };
+		59930192B7A810B08D69CB6D /* Pods-PicnicMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrafficMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87135555C56C886A834A21CE /* Pods-SingleTrailMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleTrailMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps.release.xcconfig"; sourceTree = "<group>"; };
+		A00F348B1F80E470409846EB /* Pods_ATMMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3FE8323EE52E8444781C886 /* Pods-MountainMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MountainMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-MountainMaps/Pods-MountainMaps.release.xcconfig"; sourceTree = "<group>"; };
+		BEB1C6A969F30E9010D3C01E /* Pods-SingleTrailMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleTrailMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		CD027E4AE053E0A4285D1233 /* Pods_PicnicMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicnicMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA2CD0C077351D18597C2C74 /* Pods-ToiletMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToiletMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToiletMaps/Pods-ToiletMaps.release.xcconfig"; sourceTree = "<group>"; };
+		DCEF70EA94FD854D63AA3D24 /* Pods-MountainMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MountainMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MountainMaps/Pods-MountainMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		E4A137F672A2C3B1610A0CDD /* Pods-TrafficMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrafficMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		EC00347F4665D339BA6A6034 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F136E1B762A3DEE3F22C4545 /* Pods_ToiletMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToiletMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E2ECA3930CE6CC7CCA3C07 /* Pods-PicnicMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps.release.xcconfig"; sourceTree = "<group>"; };
+		F8A3144314A96E3D036D4F96 /* Pods_MountainMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MountainMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA614E8B8D0568482B1AECA6 /* Pods-TrafficMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrafficMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,7 +376,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224F2A731DDBB67900B22D2B /* Pods.framework in Frameworks */,
+				073F5CCB10AEDEFDAED95B11 /* Pods_ATMMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +384,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224F2AB21DDBBB7600B22D2B /* Pods.framework in Frameworks */,
+				70BE93DF131682DB6DBB12A9 /* Pods_PicnicMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +392,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7421218801F653DEB16DF5FF /* Pods.framework in Frameworks */,
+				90699F09260964318778CAC1 /* Pods_TrafficMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +414,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A42B8F1DE39AAE00F81767 /* Pods.framework in Frameworks */,
+				6D4789E88952616D69734C21 /* Pods_SingleTrailMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +422,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A24F8C41D95D95B0011485B /* Pods.framework in Frameworks */,
+				4A98C8852F6553D6C866A08B /* Pods_MountainMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,13 +430,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF49F6E1D985D60001A8034 /* Pods.framework in Frameworks */,
+				BD072785494A3759A7D6C88E /* Pods_ToiletMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D89F119DB46DE1C64AD3A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BD123240E9EB4EF17CD2499 /* Pods-ATMMaps.debug.xcconfig */,
+				33B249D4328B8B5D682217BC /* Pods-ATMMaps.release.xcconfig */,
+				DCEF70EA94FD854D63AA3D24 /* Pods-MountainMaps.debug.xcconfig */,
+				A3FE8323EE52E8444781C886 /* Pods-MountainMaps.release.xcconfig */,
+				59930192B7A810B08D69CB6D /* Pods-PicnicMaps.debug.xcconfig */,
+				F1E2ECA3930CE6CC7CCA3C07 /* Pods-PicnicMaps.release.xcconfig */,
+				BEB1C6A969F30E9010D3C01E /* Pods-SingleTrailMaps.debug.xcconfig */,
+				87135555C56C886A834A21CE /* Pods-SingleTrailMaps.release.xcconfig */,
+				24460EC3EF3F0A44194405AC /* Pods-ToiletMaps.debug.xcconfig */,
+				DA2CD0C077351D18597C2C74 /* Pods-ToiletMaps.release.xcconfig */,
+				E4A137F672A2C3B1610A0CDD /* Pods-TrafficMaps.debug.xcconfig */,
+				FA614E8B8D0568482B1AECA6 /* Pods-TrafficMaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		224F2A831DDBB95900B22D2B /* ATMMaps */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,7 +566,7 @@
 				22FF9E891DD885CB001F8DA0 /* Resources */,
 				227C05D31D3180110033E6BD /* Products */,
 				359EC2D35BC547549F36DE00 /* Frameworks */,
-				FDD811799552711BAFA25D4E /* Pods */,
+				14D89F119DB46DE1C64AD3A5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -720,17 +755,14 @@
 			isa = PBXGroup;
 			children = (
 				EC00347F4665D339BA6A6034 /* Pods.framework */,
+				A00F348B1F80E470409846EB /* Pods_ATMMaps.framework */,
+				F8A3144314A96E3D036D4F96 /* Pods_MountainMaps.framework */,
+				CD027E4AE053E0A4285D1233 /* Pods_PicnicMaps.framework */,
+				0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */,
+				F136E1B762A3DEE3F22C4545 /* Pods_ToiletMaps.framework */,
+				7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FDD811799552711BAFA25D4E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				053EEA67321D9175542854A9 /* Pods.debug.xcconfig */,
-				0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -740,12 +772,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 224F2A7A1DDBB67900B22D2B /* Build configuration list for PBXNativeTarget "ATMMaps" */;
 			buildPhases = (
-				224F2A671DDBB67900B22D2B /* Check Pods Manifest.lock */,
+				E986D30EF3726801A3D83172 /* [CP] Check Pods Manifest.lock */,
 				224F2A681DDBB67900B22D2B /* Sources */,
 				224F2A721DDBB67900B22D2B /* Frameworks */,
 				224F2A741DDBB67900B22D2B /* Resources */,
-				224F2A781DDBB67900B22D2B /* Copy Pods Resources */,
-				224F2A791DDBB67900B22D2B /* Embed Pods Frameworks */,
+				77E2269585E5717BF8B3E403 /* [CP] Embed Pods Frameworks */,
+				C5AB0C7C4EB5AADE1B722DFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -760,12 +792,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 224F2AB91DDBBB7600B22D2B /* Build configuration list for PBXNativeTarget "PicnicMaps" */;
 			buildPhases = (
-				224F2AA61DDBBB7600B22D2B /* Check Pods Manifest.lock */,
+				BA38C175FDDEFD184902BDA1 /* [CP] Check Pods Manifest.lock */,
 				224F2AA71DDBBB7600B22D2B /* Sources */,
 				224F2AB11DDBBB7600B22D2B /* Frameworks */,
 				224F2AB31DDBBB7600B22D2B /* Resources */,
-				224F2AB71DDBBB7600B22D2B /* Copy Pods Resources */,
-				224F2AB81DDBBB7600B22D2B /* Embed Pods Frameworks */,
+				8FA05BFEE156B59529C659E2 /* [CP] Embed Pods Frameworks */,
+				CD6C06CCB7A74FD5D6327423 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -780,12 +812,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 227C05FD1D3180120033E6BD /* Build configuration list for PBXNativeTarget "TrafficMaps" */;
 			buildPhases = (
-				096BB48ADC374312869390CA /* Check Pods Manifest.lock */,
+				B897EBBA3DA64B49A60AB690 /* [CP] Check Pods Manifest.lock */,
 				227C05CE1D3180110033E6BD /* Sources */,
 				227C05CF1D3180110033E6BD /* Frameworks */,
 				227C05D01D3180110033E6BD /* Resources */,
-				FD734F31E3EF47529F1E97AD /* Copy Pods Resources */,
-				531C494ADF334E4584D88AD2 /* Embed Pods Frameworks */,
+				6615E892B6698BB99F155B98 /* [CP] Embed Pods Frameworks */,
+				0FE704B3AF18343C99705D35 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -836,12 +868,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A42BA41DE39AAE00F81767 /* Build configuration list for PBXNativeTarget "SingleTrailMaps" */;
 			buildPhases = (
-				22A42B7F1DE39AAE00F81767 /* Check Pods Manifest.lock */,
+				1355555D510D2758D3812FC5 /* [CP] Check Pods Manifest.lock */,
 				22A42B801DE39AAE00F81767 /* Sources */,
 				22A42B8E1DE39AAE00F81767 /* Frameworks */,
 				22A42B901DE39AAE00F81767 /* Resources */,
-				22A42BA21DE39AAE00F81767 /* Copy Pods Resources */,
-				22A42BA31DE39AAE00F81767 /* Embed Pods Frameworks */,
+				6D68C5D4732C0CDA3B364233 /* [CP] Embed Pods Frameworks */,
+				A26940AED7784ECFBCE18047 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -856,12 +888,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A24F8E21D95D95B0011485B /* Build configuration list for PBXNativeTarget "MountainMaps" */;
 			buildPhases = (
-				4A24F8B91D95D95B0011485B /* Check Pods Manifest.lock */,
+				3B747334D204A5B9E8A09DCC /* [CP] Check Pods Manifest.lock */,
 				4A24F8BA1D95D95B0011485B /* Sources */,
 				4A24F8C31D95D95B0011485B /* Frameworks */,
 				4A24F8C51D95D95B0011485B /* Resources */,
-				4A24F8E01D95D95B0011485B /* Copy Pods Resources */,
-				4A24F8E11D95D95B0011485B /* Embed Pods Frameworks */,
+				677D792EA1E74535BD25F85A /* [CP] Embed Pods Frameworks */,
+				73AC6B2939119B361FBD0D3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -876,12 +908,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AF49F831D985D60001A8034 /* Build configuration list for PBXNativeTarget "ToiletMaps" */;
 			buildPhases = (
-				4AF49F621D985D60001A8034 /* Check Pods Manifest.lock */,
+				E495B31E1BD8B7DCFECDAE1A /* [CP] Check Pods Manifest.lock */,
 				4AF49F631D985D60001A8034 /* Sources */,
 				4AF49F6D1D985D60001A8034 /* Frameworks */,
 				4AF49F6F1D985D60001A8034 /* Resources */,
-				4AF49F811D985D60001A8034 /* Copy Pods Resources */,
-				4AF49F821D985D60001A8034 /* Embed Pods Frameworks */,
+				77487F59AC104AE45BB1F5E2 /* [CP] Embed Pods Frameworks */,
+				FD606258983A4B7E44543E90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1097,274 +1129,274 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		096BB48ADC374312869390CA /* Check Pods Manifest.lock */ = {
+		0FE704B3AF18343C99705D35 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		224F2A671DDBB67900B22D2B /* Check Pods Manifest.lock */ = {
+		1355555D510D2758D3812FC5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		224F2A781DDBB67900B22D2B /* Copy Pods Resources */ = {
+		3B747334D204A5B9E8A09DCC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		224F2A791DDBB67900B22D2B /* Embed Pods Frameworks */ = {
+		6615E892B6698BB99F155B98 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		224F2AA61DDBBB7600B22D2B /* Check Pods Manifest.lock */ = {
+		677D792EA1E74535BD25F85A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MountainMaps/Pods-MountainMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		224F2AB71DDBBB7600B22D2B /* Copy Pods Resources */ = {
+		6D68C5D4732C0CDA3B364233 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		224F2AB81DDBBB7600B22D2B /* Embed Pods Frameworks */ = {
+		73AC6B2939119B361FBD0D3C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MountainMaps/Pods-MountainMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		22A42B7F1DE39AAE00F81767 /* Check Pods Manifest.lock */ = {
+		77487F59AC104AE45BB1F5E2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToiletMaps/Pods-ToiletMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		22A42BA21DE39AAE00F81767 /* Copy Pods Resources */ = {
+		77E2269585E5717BF8B3E403 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		22A42BA31DE39AAE00F81767 /* Embed Pods Frameworks */ = {
+		8FA05BFEE156B59529C659E2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4A24F8B91D95D95B0011485B /* Check Pods Manifest.lock */ = {
+		A26940AED7784ECFBCE18047 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4A24F8E01D95D95B0011485B /* Copy Pods Resources */ = {
+		B897EBBA3DA64B49A60AB690 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4A24F8E11D95D95B0011485B /* Embed Pods Frameworks */ = {
+		BA38C175FDDEFD184902BDA1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4AF49F621D985D60001A8034 /* Check Pods Manifest.lock */ = {
+		C5AB0C7C4EB5AADE1B722DFD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4AF49F811D985D60001A8034 /* Copy Pods Resources */ = {
+		CD6C06CCB7A74FD5D6327423 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4AF49F821D985D60001A8034 /* Embed Pods Frameworks */ = {
+		E495B31E1BD8B7DCFECDAE1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		531C494ADF334E4584D88AD2 /* Embed Pods Frameworks */ = {
+		E986D30EF3726801A3D83172 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FD734F31E3EF47529F1E97AD /* Copy Pods Resources */ = {
+		FD606258983A4B7E44543E90 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToiletMaps/Pods-ToiletMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1548,7 +1580,7 @@
 /* Begin XCBuildConfiguration section */
 		224F2A7B1DDBB67900B22D2B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 2BD123240E9EB4EF17CD2499 /* Pods-ATMMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/ATMMaps/ATMMaps-Info.plist";
@@ -1564,7 +1596,7 @@
 		};
 		224F2A7C1DDBB67900B22D2B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 33B249D4328B8B5D682217BC /* Pods-ATMMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/ATMMaps/ATMMaps-Info.plist";
@@ -1579,7 +1611,7 @@
 		};
 		224F2ABA1DDBBB7600B22D2B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 59930192B7A810B08D69CB6D /* Pods-PicnicMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/PicnicMaps/PicnicMaps-Info.plist";
@@ -1595,7 +1627,7 @@
 		};
 		224F2ABB1DDBBB7600B22D2B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = F1E2ECA3930CE6CC7CCA3C07 /* Pods-PicnicMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/PicnicMaps/PicnicMaps-Info.plist";
@@ -1699,7 +1731,7 @@
 		};
 		227C05FE1D3180120033E6BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = E4A137F672A2C3B1610A0CDD /* Pods-TrafficMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/TrafficMaps/TrafficMaps-Info.plist";
@@ -1707,7 +1739,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TRAFFIC_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.traffic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d26fa1b3-72e8-4520-bf4f-a28702d04de4";
+				PROVISIONING_PROFILE = "4195e76f-9a7b-4fa4-aff4-c2be37f19018";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1715,7 +1747,7 @@
 		};
 		227C05FF1D3180120033E6BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = FA614E8B8D0568482B1AECA6 /* Pods-TrafficMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/TrafficMaps/TrafficMaps-Info.plist";
@@ -1723,7 +1755,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TRAFFIC_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.traffic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d26fa1b3-72e8-4520-bf4f-a28702d04de4";
+				PROVISIONING_PROFILE = "4195e76f-9a7b-4fa4-aff4-c2be37f19018";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
@@ -1776,7 +1808,7 @@
 		};
 		22A42BA51DE39AAE00F81767 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BEB1C6A969F30E9010D3C01E /* Pods-SingleTrailMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
@@ -1792,7 +1824,7 @@
 		};
 		22A42BA61DE39AAE00F81767 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 87135555C56C886A834A21CE /* Pods-SingleTrailMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
@@ -1807,7 +1839,7 @@
 		};
 		4A24F8E31D95D95B0011485B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = DCEF70EA94FD854D63AA3D24 /* Pods-MountainMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/MountainMaps/MountainMaps-Info.plist";
@@ -1823,7 +1855,7 @@
 		};
 		4A24F8E41D95D95B0011485B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = A3FE8323EE52E8444781C886 /* Pods-MountainMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/MountainMaps/MountainMaps-Info.plist";
@@ -1838,7 +1870,7 @@
 		};
 		4AF49F841D985D60001A8034 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053EEA67321D9175542854A9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 24460EC3EF3F0A44194405AC /* Pods-ToiletMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/ToiletMaps/ToiletMaps-Info.plist";
@@ -1854,7 +1886,7 @@
 		};
 		4AF49F851D985D60001A8034 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0879082E60C351BD4366D7F1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = DA2CD0C077351D18597C2C74 /* Pods-ToiletMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Resources/ToiletMaps/ToiletMaps-Info.plist";
