@@ -1878,7 +1878,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TOILETT_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.toilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8b3b80fc-f9f2-4bb4-a281-bad86fa49812";
+				PROVISIONING_PROFILE = "08447eb8-0220-473f-935f-1cec5d90c92a";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1894,7 +1894,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_TOILETT_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.toilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8b3b80fc-f9f2-4bb4-a281-bad86fa49812";
+				PROVISIONING_PROFILE = "08447eb8-0220-473f-935f-1cec5d90c92a";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
