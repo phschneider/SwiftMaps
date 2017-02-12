@@ -165,21 +165,39 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func addAlphaSlider()
     {
+        // Achtung, der Slider wird um 90° gedreht daher ist höhe = breite
         var frame = self.view.bounds;
-        var originX = 15.0;
         var height = 48.0;
         
-        frame.origin.y = ceil(frame.size.height / 2) // - (44 + 20);
-        frame.size.height -= frame.origin.y;
-        //        frame.size.width = self.mapView.frame.size.width - ((5*originX) + (4*height) + (2*originX));
-        frame.origin.x = ceil(frame.size.width / 2) * (-1) + 40;
-        frame.size.height = CGFloat(height);
+        if (self.view.bounds.size.width > self.view.bounds.size.height)
+        {
+            // Landscape = 0,0, 736, 414
+            frame.origin.y = ceil(frame.size.height / 2) // - (44 + 20);
+            frame.size.width = min(self.view.bounds.size.width,self.view.bounds.size.height) - frame.origin.y
+            frame.size.height -= frame.origin.y;
+            frame.origin.x = ceil(frame.size.width / 2) * (-1) + 40;
+            frame.size.height = CGFloat(height);
+        }
+        else
+        {
+            // Landscape = 0,0, 736, 414
+            frame.origin.y = ceil(frame.size.height / 2) // - (44 + 20);
+            frame.size.height -= frame.origin.y;
+            frame.origin.x = ceil(frame.size.width / 2) * (-1) + 40;
+            frame.size.height = CGFloat(height);
+        }
         
+        // Landscape = -328, 207, 736,48
+        // Mit min ) -167, 207, 414, 48
         self.alphaSlider = UISlider()
         self.alphaSlider.backgroundColor = UIColor.whiteColor()
         self.alphaSlider.value = Float(alphaValue)
         self.alphaSlider.frame = frame;
-        self.alphaSlider.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
+        
+        self.alphaSlider.autoresizingMask = [.FlexibleHeight, .FlexibleBottomMargin, .FlexibleTopMargin]
+        
+        self.alphaSlider.removeConstraints(self.alphaSlider.constraints)
+        self.alphaSlider.translatesAutoresizingMaskIntoConstraints = true
         self.alphaSlider.addTarget(self, action: Selector("sliderValueChanged"), forControlEvents:.ValueChanged)
         self.alphaSlider.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
         self.view .addSubview(self.alphaSlider)
