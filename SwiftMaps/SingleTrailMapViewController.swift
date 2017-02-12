@@ -18,6 +18,16 @@ class SingleTrailMapViewController: MapViewController {
         
         let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
         osmOverlay.canReplaceMapContent = true;
+//        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
+//        osmOverlay.canReplaceMapContent = true;
+        
+        
+//        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://a.tile.opentopomap.org/{z}/{x}/{y}.png")
+//        osmOverlay.canReplaceMapContent = true;
+
+//        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://c.tile.hosted.thunderforest.com/komoot-2/{z}/{x}/{y}.png")
+//        osmOverlay.canReplaceMapContent = true;
+
         
         let stravaOverlay:TileOverlay = TileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
         stravaOverlay.canReplaceMapContent = false;
