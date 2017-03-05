@@ -2703,7 +2703,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SEGMENT_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.segment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
+				PROVISIONING_PROFILE = "f92290c3-8e78-4adc-8d8c-c5b1cfe10cd0";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2720,7 +2720,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SEGMENT_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.segment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
+				PROVISIONING_PROFILE = "f92290c3-8e78-4adc-8d8c-c5b1cfe10cd0";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
