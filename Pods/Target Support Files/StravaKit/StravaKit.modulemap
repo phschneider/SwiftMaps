@@ -1,0 +1,6 @@
+framework module StravaKit {
+  umbrella header "StravaKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

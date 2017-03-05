@@ -14,9 +14,9 @@ class SingleTrailMapViewController: MapViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Trails"
-        self.mapView.mapType = MKMapType.Standard
+        self.mapView.mapType = MKMapType.standard
         
-        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
+        let osmOverlay:MKTileOverlay = MKTileOverlay.init(urlTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
         osmOverlay.canReplaceMapContent = true;
 //        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
 //        osmOverlay.canReplaceMapContent = true;
@@ -29,9 +29,9 @@ class SingleTrailMapViewController: MapViewController {
 //        osmOverlay.canReplaceMapContent = true;
 
         
-        let stravaOverlay:TileOverlay = TileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
+        let stravaOverlay:TileOverlay = TileOverlay.init(urlTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
         stravaOverlay.canReplaceMapContent = false;
-        self.mapView.addOverlays([osmOverlay,stravaOverlay],level: .AboveLabels)
+        self.mapView.addOverlays([osmOverlay,stravaOverlay],level: .aboveLabels)
         
 //        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
 //        overlay.canReplaceMapContent = false;
@@ -47,7 +47,7 @@ class SingleTrailMapViewController: MapViewController {
 //        Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString, mapView: self.mapView)
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(_ mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if (annotation is MKUserLocation) {
             //if annotation is not an MKPointAnnotation (eg. MKUserLocation),
             //return nil so map draws default view for it (eg. blue dot)...
@@ -58,7 +58,7 @@ class SingleTrailMapViewController: MapViewController {
             if ( (annotation as! NodeAnnotationView).node.isPeak())
             {
                 let reuseId = "picnic"
-                var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
                 if (anView == nil)
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)

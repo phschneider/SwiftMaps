@@ -26,8 +26,8 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     {
         self.node = node
         
-        self.tableView = UITableView.init(frame: CGRectZero, style: UITableViewStyle.Plain)
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
+        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
         
         super.init(nibName: nil, bundle: nil)
         self.view.addSubview(self.tableView)
@@ -50,12 +50,12 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.tableView.frame = self.view.frame
     }
     
     // MARK: HeaderView
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if (section == 0)
         {
             let mapView = MKMapView()
@@ -80,7 +80,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if (section == 0)
         {
             return 250.0
@@ -89,11 +89,11 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     // MARK: TableView
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0)
         {
             return self.node.tag.count
@@ -102,14 +102,14 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         return 1
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         userLocation = locations[0] 
-        self.tableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Automatic)
+        self.tableView.reloadSections(IndexSet(integer: 1), with: UITableViewRowAnimation.automatic)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "LabelCell"
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: reuseIdentifier)
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
         
         switch indexPath.section {
         case 0:
@@ -124,7 +124,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
             if ((self.userLocation) != nil)
             {
                 let nodeLocation:CLLocation = CLLocation.init(latitude: Double(node._lat!), longitude: Double(node._lon!))
-                let myLocation:CLLocationDistance = (self.userLocation!.distanceFromLocation(nodeLocation))
+                let myLocation:CLLocationDistance = (self.userLocation!.distance(from: nodeLocation))
                 cell.detailTextLabel?.text = String(Double(round(100*myLocation)/100))
             }
             break

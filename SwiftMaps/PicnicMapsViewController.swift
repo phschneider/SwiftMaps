@@ -14,12 +14,12 @@ class PicnicMapsViewController: MapViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Picnic"
-        self.mapView.mapType = MKMapType.HybridFlyover
+        self.mapView.mapType = MKMapType.hybridFlyover
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.alphaSlider.hidden = true
+        self.alphaSlider.isHidden = true
     }
     
     override func addTapped(){
@@ -28,10 +28,10 @@ class PicnicMapsViewController: MapViewController {
         let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
         
-        Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString, mapView: self.mapView)
+        Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView)
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(_ mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if (annotation is MKUserLocation) {
             //if annotation is not an MKPointAnnotation (eg. MKUserLocation),
             //return nil so map draws default view for it (eg. blue dot)...
@@ -42,7 +42,7 @@ class PicnicMapsViewController: MapViewController {
             if ( (annotation as! NodeAnnotationView).node.isPeak())
             {
                 let reuseId = "picnic"
-                var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
                 if (anView == nil)
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)

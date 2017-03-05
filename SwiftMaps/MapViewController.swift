@@ -30,14 +30,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //            self.locationManager.delegate = LocationManagerDelegate()
             locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.activityType = CLActivityType.AutomotiveNavigation
+            self.locationManager.activityType = CLActivityType.automotiveNavigation
             self.locationManager.requestWhenInUseAuthorization()
             self.locationManager.startUpdatingLocation()
             self.locationManager.startUpdatingHeading()
 
             // To complete the authorization process for enabling location services, add the following lines of code
             let status = CLLocationManager.authorizationStatus()
-            if status == .NotDetermined || status == .Denied || status == .AuthorizedWhenInUse
+            if status == .notDetermined || status == .denied || status == .authorizedWhenInUse
             {
                 // present an alert indicating location authorization required
                 // and offer to take the user to Settings for the app via
@@ -57,22 +57,22 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.mapView.showsBuildings = true;
         self.mapView.showsPointsOfInterest = true;
         
-        self.mapView.mapType = MKMapType.Standard
+        self.mapView.mapType = MKMapType.standard
         self.mapView.showsUserLocation = true;
-        self.mapView.userTrackingMode = MKUserTrackingMode.None
+        self.mapView.userTrackingMode = MKUserTrackingMode.none
         
         self.view.addSubview(self.mapView)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: #selector(addTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(addTapped))
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //      TODO
         //        locationManager.startUpdatingHeading()
         //        locationManager.startUpdatingLocation()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.addLocationButton()
@@ -81,24 +81,24 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         if (self.locationManager != nil && CLLocationManager.locationServicesEnabled())
         {
             // 1. status is not determined
-            if CLLocationManager.authorizationStatus() == .NotDetermined
+            if CLLocationManager.authorizationStatus() == .notDetermined
             {
                 locationManager.requestWhenInUseAuthorization()
             }
                 // 2. authorization were denied
-            else if CLLocationManager.authorizationStatus() == .Denied
+            else if CLLocationManager.authorizationStatus() == .denied
             {
                 AlertController().showAlert("Location services were previously denied. Please enable location services for this app in Settings.")
             }
                 // 3. we do have authorization
-            else if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse
+            else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
             {
                 locationManager.startUpdatingLocation()
             }
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         if (self.locationManager != nil && CLLocationManager.locationServicesEnabled())
         {
             locationManager.stopUpdatingHeading()
@@ -113,7 +113,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         var frame = self.view.bounds;
         var originX = 15.0;
         var originY = self.mapView.frame.size.height - 50.0 - 15.0;
-        var height = 48.0;
+        let height = 48.0;
         
         frame.origin.y = frame.size.height - (44 + 20);
         frame.size.height -= frame.origin.y;
@@ -121,45 +121,45 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         frame.origin.x = ceil((self.mapView.frame.size.width - frame.size.width)/2);
         frame.size.height = CGFloat(height);
         
-        self.locationButton = UIButton(type: UIButtonType.RoundedRect)
-        self.locationButton.backgroundColor = UIColor.whiteColor()
+        self.locationButton = UIButton(type: UIButtonType.roundedRect)
+        self.locationButton.backgroundColor = UIColor.white
         self.locationButton.frame = frame;
-        self.locationButton.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
-        self.locationButton.addTarget(self, action: Selector("locationButtonTapped"), forControlEvents:.TouchUpInside)
+        self.locationButton.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        self.locationButton.addTarget(self, action: #selector(MapViewController.locationButtonTapped), for:.touchUpInside)
         
         self.view .addSubview(self.locationButton)
         self.updateLocationButtonTitle()
     }
     
     func locationButtonTapped(){
-        if (self.mapView.userTrackingMode == MKUserTrackingMode.None)
+        if (self.mapView.userTrackingMode == MKUserTrackingMode.none)
         {
-            self.mapView.userTrackingMode = MKUserTrackingMode.Follow
+            self.mapView.userTrackingMode = MKUserTrackingMode.follow
         }
-        else if (self.mapView.userTrackingMode == MKUserTrackingMode.Follow)
+        else if (self.mapView.userTrackingMode == MKUserTrackingMode.follow)
         {
-            self.mapView.userTrackingMode = MKUserTrackingMode.FollowWithHeading
+            self.mapView.userTrackingMode = MKUserTrackingMode.followWithHeading
         }
         else //if (self.mapView.userTrackingMode == MKUserTrackingMode.FollowWithHeading)
         {
-            self.mapView.userTrackingMode = MKUserTrackingMode.None;
+            self.mapView.userTrackingMode = MKUserTrackingMode.none;
         }
         self .updateLocationButtonTitle()
     }
     
     func updateLocationButtonTitle()
     {
-        if (self.mapView.userTrackingMode == MKUserTrackingMode.None)
+        if (self.mapView.userTrackingMode == MKUserTrackingMode.none)
         {
-            self.locationButton.setTitle("Follow", forState: UIControlState.Normal)
+            self.locationButton.setTitle("Follow", for: UIControlState())
         }
-        else if (self.mapView.userTrackingMode == MKUserTrackingMode.Follow)
+        else if (self.mapView.userTrackingMode == MKUserTrackingMode.follow)
         {
-            self.locationButton.setTitle("Heading", forState: UIControlState.Normal)
+            self.locationButton.setTitle("Heading", for: UIControlState())
         }
         else //if (self.mapView.userTrackingMode == MKUserTrackingMode.FollowWithHeading)
         {
-            self.locationButton.setTitle("None", forState: UIControlState.Normal)
+            self.locationButton.setTitle("None", for: UIControlState())
         }
     }
     
@@ -167,7 +167,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     {
         // Achtung, der Slider wird um 90° gedreht daher ist höhe = breite
         var frame = self.view.bounds;
-        var height = 48.0;
+        let height = 48.0;
         
         if (self.view.bounds.size.width > self.view.bounds.size.height)
         {
@@ -190,16 +190,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Landscape = -328, 207, 736,48
         // Mit min ) -167, 207, 414, 48
         self.alphaSlider = UISlider()
-        self.alphaSlider.backgroundColor = UIColor.whiteColor()
+        self.alphaSlider.backgroundColor = UIColor.white
         self.alphaSlider.value = Float(alphaValue)
         self.alphaSlider.frame = frame;
         
-        self.alphaSlider.autoresizingMask = [.FlexibleHeight, .FlexibleBottomMargin, .FlexibleTopMargin]
+        self.alphaSlider.autoresizingMask = [.flexibleHeight, .flexibleBottomMargin, .flexibleTopMargin]
         
         self.alphaSlider.removeConstraints(self.alphaSlider.constraints)
         self.alphaSlider.translatesAutoresizingMaskIntoConstraints = true
-        self.alphaSlider.addTarget(self, action: Selector("sliderValueChanged"), forControlEvents:.ValueChanged)
-        self.alphaSlider.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
+        self.alphaSlider.addTarget(self, action: #selector(MapViewController.sliderValueChanged), for:.valueChanged)
+        self.alphaSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
         self.view .addSubview(self.alphaSlider)
     }
     
@@ -294,23 +294,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             print(boundingBox)
             for searchString in searchStrings {
                 print(searchString)
-                Api().requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: self.mapView)
+                Api().requestForBoundingBox(searchString, boundingBox: boundingBox as NSString, mapView: self.mapView)
             }
         }
     }
     
     
     // MARK: Helper
-    func selectAllVisibleAnnotation()
-    {
-        for object in self.mapView.annotationsInMapRect(self.mapView.visibleMapRect)
-        {
-            if (object .conformsToProtocol(MKAnnotation))
-            {
-                self.mapView.selectAnnotation(object as! MKAnnotation, animated: false)
-            }
-        }
-    }
+//    func selectAllVisibleAnnotation()
+//    {
+//        for object in self.mapView.annotations(in: self.mapView.visibleMapRect)
+//        {
+//            if (object .conforms(to: MKAnnotation))
+//            {
+//                self.mapView.selectAnnotation(object as! MKAnnotation, animated: false)
+//            }
+//        }
+//    }
     
     
     // MARK: MapView
@@ -358,19 +358,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //        return anView
 //    }
     
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
-        if control == view.rightCalloutAccessoryView {
-            print("Disclosure Pressed! \( view.annotation!.subtitle)")
-        }
-        
-    }
+//    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//        
+//        if control == view.rightCalloutAccessoryView {
+//            print("Disclosure Pressed! \( view.annotation!.subtitle)")
+//        }
+//        
+//    }
+//   
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if (overlay is MKCircle)
         {
             let circleRenderer = MKCircleRenderer(overlay: overlay)
-            circleRenderer.strokeColor = UIColor.redColor()
+            circleRenderer.strokeColor = UIColor.red
             circleRenderer.lineWidth = 1.0
             return circleRenderer
         }
@@ -383,6 +384,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 renderer.alpha = alphaValue
             }
             return renderer
+        }
+            
+        else if (overlay is MKPolyline)
+        {
+            // draw the track
+            let polyLine = overlay
+            let polyLineRenderer = MKPolylineRenderer(overlay: polyLine)
+            polyLineRenderer.strokeColor = UIColor(red: CGFloat(arc4random()) / CGFloat(UInt32.max),green: CGFloat(arc4random()) / CGFloat(UInt32.max), blue:  CGFloat(arc4random()) / CGFloat(UInt32.max), alpha: 1.0)
+            polyLineRenderer.lineWidth = 2.0
+            
+            return polyLineRenderer
         }
             
         else

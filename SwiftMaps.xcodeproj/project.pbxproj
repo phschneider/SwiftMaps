@@ -175,6 +175,40 @@
 		22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		22EAB6681E6B701900FC3EC1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
+		22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
+		22EAB66A1E6B701900FC3EC1 /* PicnicMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */; };
+		22EAB66B1E6B701900FC3EC1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
+		22EAB66C1E6B701900FC3EC1 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
+		22EAB66D1E6B701900FC3EC1 /* SingleTrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A42BCA1DE39B3B00F81767 /* SingleTrailMapViewController.swift */; };
+		22EAB66E1E6B701900FC3EC1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
+		22EAB66F1E6B701900FC3EC1 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
+		22EAB6701E6B701900FC3EC1 /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		22EAB6711E6B701900FC3EC1 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
+		22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
+		22EAB6731E6B701900FC3EC1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
+		22EAB6741E6B701900FC3EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
+		22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
+		22EAB6761E6B701900FC3EC1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
+		22EAB6771E6B701900FC3EC1 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
+		22EAB6791E6B701900FC3EC1 /* Pods_SingleTrailMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */; };
+		22EAB67B1E6B701900FC3EC1 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
+		22EAB67C1E6B701900FC3EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
+		22EAB6A41E6B708300FC3EC1 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6941E6B707A00FC3EC1 /* Icon-120.png */; };
+		22EAB6A51E6B708300FC3EC1 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6951E6B707A00FC3EC1 /* Icon-40.png */; };
+		22EAB6A61E6B708300FC3EC1 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6961E6B707A00FC3EC1 /* Icon-40@2x.png */; };
+		22EAB6A71E6B708300FC3EC1 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6971E6B707A00FC3EC1 /* Icon-40@3x.png */; };
+		22EAB6A81E6B708300FC3EC1 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6981E6B707A00FC3EC1 /* Icon-60@2x.png */; };
+		22EAB6A91E6B708300FC3EC1 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6991E6B707A00FC3EC1 /* Icon-60@3x.png */; };
+		22EAB6AA1E6B708300FC3EC1 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69A1E6B707A00FC3EC1 /* Icon-76.png */; };
+		22EAB6AB1E6B708300FC3EC1 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69B1E6B707A00FC3EC1 /* Icon-76@2x.png */; };
+		22EAB6AC1E6B708300FC3EC1 /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69C1E6B707A00FC3EC1 /* Icon-83.5@2x.png */; };
+		22EAB6AD1E6B708300FC3EC1 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69D1E6B707A00FC3EC1 /* Icon-Small.png */; };
+		22EAB6AE1E6B708300FC3EC1 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69E1E6B707A00FC3EC1 /* Icon-Small@2x.png */; };
+		22EAB6AF1E6B708300FC3EC1 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69F1E6B707A00FC3EC1 /* Icon-Small@3x.png */; };
+		22EAB6B01E6B708300FC3EC1 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6A01E6B707A00FC3EC1 /* iTunesArtwork.png */; };
+		22EAB6B11E6B708300FC3EC1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6A11E6B707A00FC3EC1 /* iTunesArtwork@2x.png */; };
+		22EAB6B31E6B729700FC3EC1 /* SegmentMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EAB6B21E6B729700FC3EC1 /* SegmentMapsViewController.swift */; };
 		22FF9ED81DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
@@ -202,6 +236,7 @@
 		6D4789E88952616D69734C21 /* Pods_SingleTrailMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */; };
 		70BE93DF131682DB6DBB12A9 /* Pods_PicnicMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD027E4AE053E0A4285D1233 /* Pods_PicnicMaps.framework */; };
 		90699F09260964318778CAC1 /* Pods_TrafficMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */; };
+		AFEDD5B451C71E66A6CF69D3 /* Pods_SegmentMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84902EEC82D37A76DFA28FA /* Pods_SegmentMaps.framework */; };
 		BD072785494A3759A7D6C88E /* Pods_ToiletMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F136E1B762A3DEE3F22C4545 /* Pods_ToiletMaps.framework */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +258,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		065B78DD4D055984CADDF946 /* Pods-SegmentMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleTrailMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		223501861D60C6D10043D3E0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		223501881D60C8050043D3E0 /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
@@ -314,6 +350,24 @@
 		22A42BDD1DE39C1500F81767 /* SingleTrailMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SingleTrailMaps-Info.plist"; sourceTree = "<group>"; };
 		22D0E1B11DF7585D0052E17B /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileOverlay.swift; sourceTree = "<group>"; };
+		22EAB6901E6B701900FC3EC1 /* SegmentMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegmentMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22EAB6941E6B707A00FC3EC1 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		22EAB6951E6B707A00FC3EC1 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		22EAB6961E6B707A00FC3EC1 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		22EAB6971E6B707A00FC3EC1 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		22EAB6981E6B707A00FC3EC1 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		22EAB6991E6B707A00FC3EC1 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		22EAB69A1E6B707A00FC3EC1 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		22EAB69B1E6B707A00FC3EC1 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		22EAB69C1E6B707A00FC3EC1 /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		22EAB69D1E6B707A00FC3EC1 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		22EAB69E1E6B707A00FC3EC1 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		22EAB69F1E6B707A00FC3EC1 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		22EAB6A01E6B707A00FC3EC1 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		22EAB6A11E6B707A00FC3EC1 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		22EAB6A21E6B707A00FC3EC1 /* SegmentMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegmentMaps-Info.plist"; sourceTree = "<group>"; };
+		22EAB6A31E6B707A00FC3EC1 /* TrailMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrailMap-Logo.png"; sourceTree = "<group>"; };
+		22EAB6B21E6B729700FC3EC1 /* SegmentMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentMapsViewController.swift; sourceTree = "<group>"; };
 		22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -355,6 +409,7 @@
 		4AF49F861D985D60001A8034 /* ToiletMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToiletMapViewController.swift; sourceTree = "<group>"; };
 		59930192B7A810B08D69CB6D /* Pods-PicnicMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		74C16CAD546C6DD479BF5ACD /* Pods-SegmentMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps.release.xcconfig"; sourceTree = "<group>"; };
 		7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrafficMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87135555C56C886A834A21CE /* Pods-SingleTrailMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleTrailMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps.release.xcconfig"; sourceTree = "<group>"; };
 		A00F348B1F80E470409846EB /* Pods_ATMMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,6 +422,7 @@
 		EC00347F4665D339BA6A6034 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F136E1B762A3DEE3F22C4545 /* Pods_ToiletMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToiletMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E2ECA3930CE6CC7CCA3C07 /* Pods-PicnicMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps.release.xcconfig"; sourceTree = "<group>"; };
+		F84902EEC82D37A76DFA28FA /* Pods_SegmentMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegmentMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A3144314A96E3D036D4F96 /* Pods_MountainMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MountainMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA614E8B8D0568482B1AECA6 /* Pods-TrafficMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrafficMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +474,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22EAB6781E6B701900FC3EC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EAB6791E6B701900FC3EC1 /* Pods_SingleTrailMaps.framework in Frameworks */,
+				AFEDD5B451C71E66A6CF69D3 /* Pods_SegmentMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A24F8C31D95D95B0011485B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,6 +517,8 @@
 				DA2CD0C077351D18597C2C74 /* Pods-ToiletMaps.release.xcconfig */,
 				E4A137F672A2C3B1610A0CDD /* Pods-TrafficMaps.debug.xcconfig */,
 				FA614E8B8D0568482B1AECA6 /* Pods-TrafficMaps.release.xcconfig */,
+				065B78DD4D055984CADDF946 /* Pods-SegmentMaps.debug.xcconfig */,
+				74C16CAD546C6DD479BF5ACD /* Pods-SegmentMaps.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -581,6 +648,7 @@
 				224F2A7D1DDBB67900B22D2B /* ATMmaps.app */,
 				224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */,
 				22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */,
+				22EAB6901E6B701900FC3EC1 /* SegmentMaps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -654,9 +722,41 @@
 			path = AppIcons;
 			sourceTree = "<group>";
 		};
+		22EAB6921E6B707A00FC3EC1 /* SegmentMaps */ = {
+			isa = PBXGroup;
+			children = (
+				22EAB6931E6B707A00FC3EC1 /* AppIcons */,
+				22EAB6A21E6B707A00FC3EC1 /* SegmentMaps-Info.plist */,
+				22EAB6A31E6B707A00FC3EC1 /* TrailMap-Logo.png */,
+			);
+			path = SegmentMaps;
+			sourceTree = "<group>";
+		};
+		22EAB6931E6B707A00FC3EC1 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				22EAB6941E6B707A00FC3EC1 /* Icon-120.png */,
+				22EAB6951E6B707A00FC3EC1 /* Icon-40.png */,
+				22EAB6961E6B707A00FC3EC1 /* Icon-40@2x.png */,
+				22EAB6971E6B707A00FC3EC1 /* Icon-40@3x.png */,
+				22EAB6981E6B707A00FC3EC1 /* Icon-60@2x.png */,
+				22EAB6991E6B707A00FC3EC1 /* Icon-60@3x.png */,
+				22EAB69A1E6B707A00FC3EC1 /* Icon-76.png */,
+				22EAB69B1E6B707A00FC3EC1 /* Icon-76@2x.png */,
+				22EAB69C1E6B707A00FC3EC1 /* Icon-83.5@2x.png */,
+				22EAB69D1E6B707A00FC3EC1 /* Icon-Small.png */,
+				22EAB69E1E6B707A00FC3EC1 /* Icon-Small@2x.png */,
+				22EAB69F1E6B707A00FC3EC1 /* Icon-Small@3x.png */,
+				22EAB6A01E6B707A00FC3EC1 /* iTunesArtwork.png */,
+				22EAB6A11E6B707A00FC3EC1 /* iTunesArtwork@2x.png */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
 		22FF9E891DD885CB001F8DA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22EAB6921E6B707A00FC3EC1 /* SegmentMaps */,
 				22A42BCC1DE39C1500F81767 /* SingleTrailMaps */,
 				226E3E321DE2604E0021C283 /* ToiletMaps */,
 				224F2AC11DDBBC3800B22D2B /* PicnicMaps */,
@@ -739,6 +839,7 @@
 				4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */,
 				224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */,
 				224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */,
+				22EAB6B21E6B729700FC3EC1 /* SegmentMapsViewController.swift */,
 			);
 			name = MapViewController;
 			sourceTree = "<group>";
@@ -761,6 +862,7 @@
 				0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */,
 				F136E1B762A3DEE3F22C4545 /* Pods_ToiletMaps.framework */,
 				7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */,
+				F84902EEC82D37A76DFA28FA /* Pods_SegmentMaps.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -772,12 +874,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 224F2A7A1DDBB67900B22D2B /* Build configuration list for PBXNativeTarget "ATMMaps" */;
 			buildPhases = (
+				74EE055FF821FF0C2A6F9077 /* 📦 Check Pods Manifest.lock */,
 				E986D30EF3726801A3D83172 /* [CP] Check Pods Manifest.lock */,
 				224F2A681DDBB67900B22D2B /* Sources */,
 				224F2A721DDBB67900B22D2B /* Frameworks */,
 				224F2A741DDBB67900B22D2B /* Resources */,
 				77E2269585E5717BF8B3E403 /* [CP] Embed Pods Frameworks */,
 				C5AB0C7C4EB5AADE1B722DFD /* [CP] Copy Pods Resources */,
+				E6313394D0C7F025FBA05A28 /* 📦 Embed Pods Frameworks */,
+				D7A2734765F67AE99DAF4003 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -792,12 +897,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 224F2AB91DDBBB7600B22D2B /* Build configuration list for PBXNativeTarget "PicnicMaps" */;
 			buildPhases = (
+				BCD751213FD910D96DAB36BD /* 📦 Check Pods Manifest.lock */,
 				BA38C175FDDEFD184902BDA1 /* [CP] Check Pods Manifest.lock */,
 				224F2AA71DDBBB7600B22D2B /* Sources */,
 				224F2AB11DDBBB7600B22D2B /* Frameworks */,
 				224F2AB31DDBBB7600B22D2B /* Resources */,
 				8FA05BFEE156B59529C659E2 /* [CP] Embed Pods Frameworks */,
 				CD6C06CCB7A74FD5D6327423 /* [CP] Copy Pods Resources */,
+				A48F1141BCC87ADA153C979D /* 📦 Embed Pods Frameworks */,
+				8DAE46C7FC2D774434D6CD53 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -812,12 +920,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 227C05FD1D3180120033E6BD /* Build configuration list for PBXNativeTarget "TrafficMaps" */;
 			buildPhases = (
+				F834CD551242F4BE564EC47C /* 📦 Check Pods Manifest.lock */,
 				B897EBBA3DA64B49A60AB690 /* [CP] Check Pods Manifest.lock */,
 				227C05CE1D3180110033E6BD /* Sources */,
 				227C05CF1D3180110033E6BD /* Frameworks */,
 				227C05D01D3180110033E6BD /* Resources */,
 				6615E892B6698BB99F155B98 /* [CP] Embed Pods Frameworks */,
 				0FE704B3AF18343C99705D35 /* [CP] Copy Pods Resources */,
+				E8E48AAFD972DEB4AAA4C78B /* 📦 Embed Pods Frameworks */,
+				21EDC4618E296C5999FC34CD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -868,12 +979,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A42BA41DE39AAE00F81767 /* Build configuration list for PBXNativeTarget "SingleTrailMaps" */;
 			buildPhases = (
+				55A28C885115A9E3FF4D5C33 /* 📦 Check Pods Manifest.lock */,
 				1355555D510D2758D3812FC5 /* [CP] Check Pods Manifest.lock */,
 				22A42B801DE39AAE00F81767 /* Sources */,
 				22A42B8E1DE39AAE00F81767 /* Frameworks */,
 				22A42B901DE39AAE00F81767 /* Resources */,
 				6D68C5D4732C0CDA3B364233 /* [CP] Embed Pods Frameworks */,
 				A26940AED7784ECFBCE18047 /* [CP] Copy Pods Resources */,
+				BC9EEED027A32B4BBF4C3DF6 /* 📦 Embed Pods Frameworks */,
+				8C9FDFA5A3B9DA8FB0ECE450 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -884,16 +998,42 @@
 			productReference = 22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */;
 			productType = "com.apple.product-type.application";
 		};
+		22EAB6651E6B701900FC3EC1 /* SegmentMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22EAB68D1E6B701900FC3EC1 /* Build configuration list for PBXNativeTarget "SegmentMaps" */;
+			buildPhases = (
+				3EFCBC225ACB4AB18DA27569 /* 📦 Check Pods Manifest.lock */,
+				22EAB6661E6B701900FC3EC1 /* [CP] Check Pods Manifest.lock */,
+				22EAB6671E6B701900FC3EC1 /* Sources */,
+				22EAB6781E6B701900FC3EC1 /* Frameworks */,
+				22EAB67A1E6B701900FC3EC1 /* Resources */,
+				22EAB68B1E6B701900FC3EC1 /* [CP] Embed Pods Frameworks */,
+				22EAB68C1E6B701900FC3EC1 /* [CP] Copy Pods Resources */,
+				7E41395AF2C0704BA9B800BB /* 📦 Embed Pods Frameworks */,
+				84115092E35F81BBC2FB1314 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SegmentMaps;
+			productName = SwiftMaps;
+			productReference = 22EAB6901E6B701900FC3EC1 /* SegmentMaps.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4A24F8B81D95D95B0011485B /* MountainMaps */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A24F8E21D95D95B0011485B /* Build configuration list for PBXNativeTarget "MountainMaps" */;
 			buildPhases = (
+				F8B305886247786CB13EB98C /* 📦 Check Pods Manifest.lock */,
 				3B747334D204A5B9E8A09DCC /* [CP] Check Pods Manifest.lock */,
 				4A24F8BA1D95D95B0011485B /* Sources */,
 				4A24F8C31D95D95B0011485B /* Frameworks */,
 				4A24F8C51D95D95B0011485B /* Resources */,
 				677D792EA1E74535BD25F85A /* [CP] Embed Pods Frameworks */,
 				73AC6B2939119B361FBD0D3C /* [CP] Copy Pods Resources */,
+				64541E79FACFD63FBA50BFF8 /* 📦 Embed Pods Frameworks */,
+				EF5833F6F1C4FF177C5E0FE7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -908,12 +1048,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AF49F831D985D60001A8034 /* Build configuration list for PBXNativeTarget "ToiletMaps" */;
 			buildPhases = (
+				08AF32091E85218BC07B96DF /* 📦 Check Pods Manifest.lock */,
 				E495B31E1BD8B7DCFECDAE1A /* [CP] Check Pods Manifest.lock */,
 				4AF49F631D985D60001A8034 /* Sources */,
 				4AF49F6D1D985D60001A8034 /* Frameworks */,
 				4AF49F6F1D985D60001A8034 /* Resources */,
 				77487F59AC104AE45BB1F5E2 /* [CP] Embed Pods Frameworks */,
 				FD606258983A4B7E44543E90 /* [CP] Copy Pods Resources */,
+				F3F9275BB97081F518F482A4 /* 📦 Embed Pods Frameworks */,
+				E9B551D28581DF8519A7B611 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -945,6 +1088,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 227C05D11D3180110033E6BD;
 					};
+					22EAB6651E6B701900FC3EC1 = {
+						LastSwiftMigration = 0820;
+					};
 				};
 			};
 			buildConfigurationList = 227C05CD1D3180110033E6BD /* Build configuration list for PBXProject "SwiftMaps" */;
@@ -968,6 +1114,7 @@
 				224F2A661DDBB67900B22D2B /* ATMMaps */,
 				224F2AA51DDBBB7600B22D2B /* PicnicMaps */,
 				22A42B7E1DE39AAE00F81767 /* SingleTrailMaps */,
+				22EAB6651E6B701900FC3EC1 /* SegmentMaps */,
 			);
 		};
 /* End PBXProject section */
@@ -1080,6 +1227,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22EAB67A1E6B701900FC3EC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EAB6AC1E6B708300FC3EC1 /* Icon-83.5@2x.png in Resources */,
+				22EAB6A91E6B708300FC3EC1 /* Icon-60@3x.png in Resources */,
+				22EAB6A51E6B708300FC3EC1 /* Icon-40.png in Resources */,
+				22EAB6B11E6B708300FC3EC1 /* iTunesArtwork@2x.png in Resources */,
+				22EAB6B01E6B708300FC3EC1 /* iTunesArtwork.png in Resources */,
+				22EAB67B1E6B701900FC3EC1 /* mountain-512@3x.png in Resources */,
+				22EAB6A41E6B708300FC3EC1 /* Icon-120.png in Resources */,
+				22EAB6AE1E6B708300FC3EC1 /* Icon-Small@2x.png in Resources */,
+				22EAB6A81E6B708300FC3EC1 /* Icon-60@2x.png in Resources */,
+				22EAB67C1E6B701900FC3EC1 /* LaunchScreen.storyboard in Resources */,
+				22EAB6A71E6B708300FC3EC1 /* Icon-40@3x.png in Resources */,
+				22EAB6AD1E6B708300FC3EC1 /* Icon-Small.png in Resources */,
+				22EAB6A61E6B708300FC3EC1 /* Icon-40@2x.png in Resources */,
+				22EAB6AB1E6B708300FC3EC1 /* Icon-76@2x.png in Resources */,
+				22EAB6AF1E6B708300FC3EC1 /* Icon-Small@3x.png in Resources */,
+				22EAB6AA1E6B708300FC3EC1 /* Icon-76.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A24F8C51D95D95B0011485B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1129,6 +1299,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08AF32091E85218BC07B96DF /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		0FE704B3AF18343C99705D35 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1159,6 +1344,66 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		21EDC4618E296C5999FC34CD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22EAB6661E6B701900FC3EC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22EAB68B1E6B701900FC3EC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22EAB68C1E6B701900FC3EC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3B747334D204A5B9E8A09DCC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1172,6 +1417,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3EFCBC225ACB4AB18DA27569 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55A28C885115A9E3FF4D5C33 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64541E79FACFD63FBA50BFF8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MountainMaps/Pods-MountainMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6615E892B6698BB99F155B98 /* [CP] Embed Pods Frameworks */ = {
@@ -1234,6 +1524,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MountainMaps/Pods-MountainMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		74EE055FF821FF0C2A6F9077 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		77487F59AC104AE45BB1F5E2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1262,6 +1567,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E41395AF2C0704BA9B800BB /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84115092E35F81BBC2FB1314 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C9FDFA5A3B9DA8FB0ECE450 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DAE46C7FC2D774434D6CD53 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8FA05BFEE156B59529C659E2 /* [CP] Embed Pods Frameworks */ = {
@@ -1294,6 +1659,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A48F1141BCC87ADA153C979D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B897EBBA3DA64B49A60AB690 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1322,6 +1702,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC9EEED027A32B4BBF4C3DF6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCD751213FD910D96DAB36BD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C5AB0C7C4EB5AADE1B722DFD /* [CP] Copy Pods Resources */ = {
@@ -1354,6 +1764,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D7A2734765F67AE99DAF4003 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E495B31E1BD8B7DCFECDAE1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1369,6 +1794,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E6313394D0C7F025FBA05A28 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8E48AAFD972DEB4AAA4C78B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E986D30EF3726801A3D83172 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1382,6 +1837,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9B551D28581DF8519A7B611 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToiletMaps/Pods-ToiletMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF5833F6F1C4FF177C5E0FE7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MountainMaps/Pods-MountainMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F9275BB97081F518F482A4 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToiletMaps/Pods-ToiletMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F834CD551242F4BE564EC47C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B305886247786CB13EB98C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FD606258983A4B7E44543E90 /* [CP] Copy Pods Resources */ = {
@@ -1507,6 +2037,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22EAB6671E6B701900FC3EC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EAB6681E6B701900FC3EC1 /* Tag.swift in Sources */,
+				22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */,
+				22EAB66A1E6B701900FC3EC1 /* PicnicMapsViewController.swift in Sources */,
+				22EAB66B1E6B701900FC3EC1 /* Networking.swift in Sources */,
+				22EAB66C1E6B701900FC3EC1 /* SwiftMaps.xcdatamodeld in Sources */,
+				22EAB66D1E6B701900FC3EC1 /* SingleTrailMapViewController.swift in Sources */,
+				22EAB66E1E6B701900FC3EC1 /* Node.swift in Sources */,
+				22EAB66F1E6B701900FC3EC1 /* Nodes.swift in Sources */,
+				22EAB6B31E6B729700FC3EC1 /* SegmentMapsViewController.swift in Sources */,
+				22EAB6701E6B701900FC3EC1 /* TileOverlay.swift in Sources */,
+				22EAB6711E6B701900FC3EC1 /* MapViewBoundingBoxExtension.swift in Sources */,
+				22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */,
+				22EAB6731E6B701900FC3EC1 /* MapViewController.swift in Sources */,
+				22EAB6741E6B701900FC3EC1 /* AppDelegate.swift in Sources */,
+				22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */,
+				22EAB6761E6B701900FC3EC1 /* DetailViewController.swift in Sources */,
+				22EAB6771E6B701900FC3EC1 /* NodeAnnotationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A24F8BA1D95D95B0011485B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1591,6 +2145,7 @@
 				PROVISIONING_PROFILE = "d8291e27-214d-48ef-bf35-5fc269347d3c";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1606,6 +2161,7 @@
 				PRODUCT_NAME = ATMmaps;
 				PROVISIONING_PROFILE = "d8291e27-214d-48ef-bf35-5fc269347d3c";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1622,6 +2178,7 @@
 				PROVISIONING_PROFILE = "3e0b76ba-ef71-4340-914d-b745142db9a7";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1637,6 +2194,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3e0b76ba-ef71-4340-914d-b745142db9a7";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1684,6 +2242,7 @@
 				PROVISIONING_PROFILE = "076d4204-bf62-4138-8c14-784019329c11";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1724,6 +2283,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "076d4204-bf62-4138-8c14-784019329c11";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1742,6 +2302,7 @@
 				PROVISIONING_PROFILE = "4195e76f-9a7b-4fa4-aff4-c2be37f19018";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1757,6 +2318,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4195e76f-9a7b-4fa4-aff4-c2be37f19018";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1819,6 +2381,7 @@
 				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1834,6 +2397,40 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		22EAB68E1E6B701900FC3EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 065B78DD4D055984CADDF946 /* Pods-SegmentMaps.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Resources/SegmentMaps/SegmentMaps-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SEGMENT_MAPS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.segment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		22EAB68F1E6B701900FC3EC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74C16CAD546C6DD479BF5ACD /* Pods-SegmentMaps.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Resources/SegmentMaps/SegmentMaps-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SEGMENT_MAPS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.segment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1850,6 +2447,7 @@
 				PROVISIONING_PROFILE = "d0ecd20e-fa1d-412a-aade-c1e6d808a13c";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1865,6 +2463,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d0ecd20e-fa1d-412a-aade-c1e6d808a13c";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1881,6 +2480,7 @@
 				PROVISIONING_PROFILE = "08447eb8-0220-473f-935f-1cec5d90c92a";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1896,6 +2496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "08447eb8-0220-473f-935f-1cec5d90c92a";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1961,6 +2562,15 @@
 			buildConfigurations = (
 				22A42BA51DE39AAE00F81767 /* Debug */,
 				22A42BA61DE39AAE00F81767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22EAB68D1E6B701900FC3EC1 /* Build configuration list for PBXNativeTarget "SegmentMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EAB68E1E6B701900FC3EC1 /* Debug */,
+				22EAB68F1E6B701900FC3EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

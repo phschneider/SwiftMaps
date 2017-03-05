@@ -14,12 +14,12 @@ class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     
     // MARK: LocationManager
     // 1. user enter region
-    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         AlertController().showAlert("enter \(region.identifier)")
     }
     
     // 2. user exit region
-    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         AlertController().showAlert("exit \(region.identifier)")
     }
     

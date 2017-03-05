@@ -12,7 +12,7 @@ import UIKit
 class Networking {
     static let sharedInstance = Networking()
     
-    private var _count : Int = 0             // _countx -> backing count
+    fileprivate var _count : Int = 0             // _countx -> backing count
     var count : Int {
         set { _count = 2 * newValue
             if (count == 0)
@@ -34,14 +34,14 @@ class Networking {
         count -= 1
     }
     
-    private func showTraffic()
+    fileprivate func showTraffic()
     {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
-    private func hideTraffic()
+    fileprivate func hideTraffic()
     {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
 }

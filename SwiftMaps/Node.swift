@@ -26,29 +26,29 @@ class Node: EVObject {
     
     func isPeak() -> Bool
     {
-        return (self.type?.lowercaseString.rangeOfString("peak") != nil)
+        return (self.type?.lowercased().range(of: "peak") != nil)
     }
     
     func isToilet() -> Bool
     {
-        return (self.type?.lowercaseString.rangeOfString("toilets") != nil)
+        return (self.type?.lowercased().range(of: "toilets") != nil)
     }
     
     func isSpeedCam() -> Bool
     {
-        return (self.type?.lowercaseString.rangeOfString("speed_camera") != nil)
+        return (self.type?.lowercased().range(of: "speed_camera") != nil)
     }
     
     func isAtm() -> Bool
     {
         print(type)
-        return (self.type?.lowercaseString.rangeOfString("amenity=atm") != nil)
+        return (self.type?.lowercased().range(of: "amenity=atm") != nil)
     }
     
     func isBank() -> Bool
     {
         print(type)
-        return (self.type?.lowercaseString.rangeOfString("amenity=bank") != nil)
+        return (self.type?.lowercased().range(of: "amenity=bank") != nil)
     }
     
     func title() -> String
@@ -74,7 +74,7 @@ class Node: EVObject {
         return title
     }
     
-    func tagForKey(key:String) -> Tag? {
+    func tagForKey(_ key:String) -> Tag? {
         for object in tag {
             if (object._k == key)
             {

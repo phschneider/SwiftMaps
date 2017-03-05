@@ -12,28 +12,28 @@ import UIKit
 class AlertController {
     
     // MARK: Helper
-    func showAlert(message: NSString)
+    func showAlert(_ message: String)
     {
         // WARNING: Mögliche doppelte alerts
         let alert = UIAlertController(title: "Alert",
                                       message: message as String,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
             
         }
         alert.addAction(OKAction)
   
         //
-        let window:UIWindow = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        let window:UIWindow = UIWindow.init(frame: UIScreen.main.bounds)
         let viewController:UIViewController = UIViewController();
         viewController.view.frame = window.frame;
         
-        window.backgroundColor = UIColor.whiteColor();
+        window.backgroundColor = UIColor.white;
         window.windowLevel = UIWindowLevelAlert;
         
         window.rootViewController=viewController;
         window.makeKeyAndVisible();
     
-        viewController.presentViewController(alert, animated: true, completion:nil)
+        viewController.present(alert, animated: true, completion:nil)
     }
 }

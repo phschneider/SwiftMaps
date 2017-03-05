@@ -11,10 +11,10 @@ import MapKit
 
 class TileOverlay: MKTileOverlay {
 
-    let cache: NSCache = NSCache()
+//    let cache: NSCache = NSCache<URL, Data:AnyObject >()
     
-    override init(URLTemplate: String?) {
-        super.init(URLTemplate: URLTemplate)
+    override init(urlTemplate URLTemplate: String?) {
+        super.init(urlTemplate: URLTemplate)
     }
     
     func name () -> String
@@ -26,17 +26,17 @@ class TileOverlay: MKTileOverlay {
     {
 //        let docsDir:String = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0].absoluteString
 //        let databasePath = docsDir.stringByAppendingFormat("tiles/%@", self.name())
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let databasePath =  dirPaths[0].stringByAppendingFormat("/tiles/%@", self.name())
-        return databasePath;
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let databasePath =  dirPaths[0].appendingFormat("/tiles/%@", self.name())
+        return databasePath as NSString;
     }
     
-    func storageForPath(path: MKTileOverlayPath) -> String
+    func storageForPath(_ path: MKTileOverlayPath) -> String
     {
         return self.storageForComponents(path.z, x: path.x, y: path.y)
     }
     
-    func storageForComponents(z: Int, x: Int, y:Int) -> String
+    func storageForComponents(_ z: Int, x: Int, y:Int) -> String
     {
 //        let directory = String.init(format: "%ld/%ld/%ld.png",z,x,y)
 //        return mainFolder().stringByAppendingPathComponent(directory)
@@ -44,45 +44,45 @@ class TileOverlay: MKTileOverlay {
 //        return mainFolder().stringByAppendingPathComponent(directory)
     }
     
-    func directoryForPath(path: MKTileOverlayPath) -> String
+    func directoryForPath(_ path: MKTileOverlayPath) -> String
     {
         return self.directoryForComponents(path.z, x: path.x, y: path.y)
     }
     
-    func directoryForComponents(z: Int, x: Int, y:Int) -> String
+    func directoryForComponents(_ z: Int, x: Int, y:Int) -> String
     {
         return String.init(format: "%ld/%ld",z,x)
 //        return mainFolder().stringByAppendingPathComponent(directory)
     }
     
     
-    override func loadTileAtPath(path: MKTileOverlayPath, result: (NSData?, NSError?) -> Void) {
-        let url = URLForTilePath(path)
+    override func loadTile(at path: MKTileOverlayPath, result: @escaping (Data?, Error?) -> Void) {
+        let url = self.url(forTilePath: path)
         
 
-        if let cachedData = cache.objectForKey(url) as? NSData
-        {
-            print("using cache for " + String(path))
-            result(cachedData, nil)
-            return
-        }
-        else
-        {
+//        if let cachedData = cache.object(forKey: url) as? Data
+//        {
+//            print("using cache for " + String(describing: path))
+//            result(cachedData, nil)
+//            return
+//        }
+//        else
+//        {
             NSLog("storagePath %@", self.storageForPath(path))
-            let storagePath = self.mainFolder().stringByAppendingPathComponent(self.storageForPath(path))
-            let  storageData: NSData? = NSData(contentsOfFile: storagePath)
+            let storagePath = self.mainFolder().appendingPathComponent(self.storageForPath(path))
+            let  storageData: Data? = try? Data(contentsOf: URL(fileURLWithPath: storagePath))
             
             if (storageData != nil)
             {
-                print("using storage for " + String(path))
+                print("using storage for " + String(describing: path))
                 result(storageData, nil)
                 return
             }
             else
             {
-                print("loading " + String(path) + " from directory")
+                print("loading " + String(describing: path) + " from directory")
                 Networking.sharedInstance.incrementCount()
-                NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
                     Networking.sharedInstance.decrementCount()
                     if error != nil
                     {
@@ -92,14 +92,14 @@ class TileOverlay: MKTileOverlay {
                     else
                     {
                         //let data: NSData =  NSData(contentsOfURL:url)!
-                        self.cache.setObject(data!, forKey: url)
+//                        self.cache.setObject(data!, forKey: url)
                         
                         do {
     //                        let folderPath = self.directoryForPath(path)
     //                        let folderPath = self.mainFolder().stringByAppendingPathComponent("/tiles/default/")
-                            let folderPath = self.mainFolder().stringByAppendingPathComponent(self.directoryForPath(path))
-                            try NSFileManager.defaultManager().createDirectoryAtPath(folderPath, withIntermediateDirectories: true, attributes: nil)
-                            try data!.writeToFile(storagePath, options: .AtomicWrite)
+                            let folderPath = self.mainFolder().appendingPathComponent(self.directoryForPath(path))
+                            try FileManager.default.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
+                            try data!.write(to: URL(fileURLWithPath: storagePath), options: .atomicWrite)
                         }
                         catch {
                             print (error)
@@ -111,7 +111,7 @@ class TileOverlay: MKTileOverlay {
                 }).resume()
                 return
             }
-        }
+//        }
     }
     
 }

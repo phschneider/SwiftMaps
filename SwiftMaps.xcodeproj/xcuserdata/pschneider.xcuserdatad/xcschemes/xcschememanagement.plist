@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>SegmentMaps.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>SingleTrailMaps.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -63,6 +68,11 @@
 			<true/>
 		</dict>
 		<key>22A42B7E1DE39AAE00F81767</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22EAB6651E6B701900FC3EC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

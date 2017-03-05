@@ -36,3 +36,10 @@ target "SingleTrailMaps" do
 	pod 'AlamofireNetworkActivityIndicator'
 	pod 'AlamofireXmlToObjects'
 end
+
+target "SegmentMaps" do
+	pod 'StravaKit', '~> 0.9'
+	pod 'Alamofire', '~> 4.0'
+	pod 'AlamofireNetworkActivityIndicator'
+	pod 'AlamofireXmlToObjects'
+end

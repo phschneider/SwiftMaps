@@ -17,7 +17,7 @@ import AlamofireXmlToObjects
 
 class Api {
  
-    func requestForBoundingBox(searchString: String, boundingBox: NSString ,mapView: MKMapView)
+    func requestForBoundingBox(_ searchString: String, boundingBox: NSString ,mapView: MKMapView)
     {
         
         var urlString : String = ""
@@ -25,11 +25,11 @@ class Api {
         //http://overpass-api.de/api/
         
         #if (arch(i386) || arch(x86_64)) && os(iOS)
-            let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-            let url = NSURL(fileURLWithPath: path)
-            let filePath = url.URLByAppendingPathComponent("sample.xml").path!
-            let fileManager = NSFileManager.defaultManager()
-            if fileManager.fileExistsAtPath(filePath) {
+            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+            let url = URL(fileURLWithPath: path)
+            let filePath = url.appendingPathComponent("sample.xml").path
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: filePath) {
                 print("FILE AVAILABLE %@",filePath)
                 urlString = String(format:"file://%@",filePath)
             } else {
@@ -45,7 +45,6 @@ class Api {
         print("Url String: \(urlString)")
         
         Alamofire.request(
-            .GET,
             //            "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[highway=rest_area][bbox=6.3584695643,49.1130992988,7.4034901078,49.6393467247]",
             //                "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[highway=emergency_access_point][bbox=6.8997573853,49.2041400138,7.0501327515,49.2993821679]",
             //            "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[highway=speed_camera][bbox=6.8997573853,49.2041400138,7.0501327515,49.2993821679]",
@@ -54,9 +53,9 @@ class Api {
             //        > Saarland:
             //        > 49.6393467247 6.3584695643 49.1130992988 7.4034901078
             // Achtung: Werte vertauscht!!
-            urlString,
+            urlString
             //            "http://overpass.osm.rambler.ru/cgi/xapi_meta?node[tourism=viewpoint][bbox=6.3584695643,49.1130992988,7.4034901078,49.6393467247]",
-            encoding: .URL)
+            )
             .validate()
             .responseString { response in
                 print("Success: \(response.result.isSuccess)")
@@ -69,7 +68,7 @@ class Api {
                 {
                     if let httpError = response.result.error
                     {
-                        let statusCode = httpError.code
+                        let statusCode = httpError._code
                     }
                     else
                     { //no errors
@@ -98,11 +97,11 @@ class Api {
                     }
                 }
             }
-            .responseObject { (response: Result< Osm, NSError>) in
+            .responseObject { (response: DataResponse<Osm>) in
                 print("Response Object: ")
                 
                 
-                if (response.isFailure)
+                if (response.result.isFailure)
                 {
                     print ("Response: \(response.error)")
                 }
