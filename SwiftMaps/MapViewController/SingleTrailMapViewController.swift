@@ -11,6 +11,12 @@ import MapKit
 
 class SingleTrailMapViewController: MapViewController {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.addAlphaSlider()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Trails"

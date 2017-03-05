@@ -76,7 +76,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidAppear(animated)
         
         self.addLocationButton()
-        self.addAlphaSlider()
         
         if (self.locationManager != nil && CLLocationManager.locationServicesEnabled())
         {
