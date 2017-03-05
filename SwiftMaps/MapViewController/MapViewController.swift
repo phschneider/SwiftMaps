@@ -378,8 +378,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         if (overlay is MKPolygon)
         {
             let renderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
-            renderer.fillColor = UIColor.orange.withAlphaComponent(0.5)
-            renderer.strokeColor = UIColor.orange
+            renderer.fillColor = UIColor.orange.withAlphaComponent(0.25)
+            renderer.strokeColor = UIColor.orange.withAlphaComponent(0.5)
             renderer.lineWidth = 2
             return renderer
         }
