@@ -10,29 +10,18 @@
 		073F5CCB10AEDEFDAED95B11 /* Pods_ATMMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00F348B1F80E470409846EB /* Pods_ATMMaps.framework */; };
 		223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
-		224F2A691DDBB67900B22D2B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
 		224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		224F2A6C1DDBB67900B22D2B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
-		224F2A6D1DDBB67900B22D2B /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
 		224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		224F2A6F1DDBB67900B22D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		224F2A711DDBB67900B22D2B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		224F2A761DDBB67900B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
-		224F2A811DDBB76B00B22D2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
-		224F2A821DDBB76C00B22D2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
-		224F2AA81DDBBB7600B22D2B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
 		224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		224F2AAA1DDBBB7600B22D2B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
-		224F2AAB1DDBBB7600B22D2B /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
-		224F2AAC1DDBBB7600B22D2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
 		224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		224F2AB41DDBBB7600B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		224F2AB51DDBBB7600B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
-		224F2ABF1DDBBBC200B22D2B /* PicnicMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */; };
-		224F2AC01DDBBC0A00B22D2B /* ATMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */; };
 		225A61481DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		225A61491DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		225A614A1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
@@ -81,31 +70,96 @@
 		226E3E4F1DE260570021C283 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E3F1DE2604E0021C283 /* Icon-Small@3x.png */; };
 		226E3E501DE260570021C283 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E401DE2604E0021C283 /* iTunesArtwork.png */; };
 		226E3E511DE260570021C283 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 226E3E411DE2604E0021C283 /* iTunesArtwork@2x.png */; };
-		227653F81D318E3700BA689B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
 		227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
-		227C05D81D3180120033E6BD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
 		227C05DE1D3180120033E6BD /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		227C05E31D3180120033E6BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		227C05EE1D3180120033E6BD /* SwiftMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05ED1D3180120033E6BD /* SwiftMapsTests.swift */; };
 		227C05F91D3180120033E6BD /* SwiftMapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05F81D3180120033E6BD /* SwiftMapsUITests.swift */; };
-		229A74CE1D35918C002241F5 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
-		229A74D01D359232002241F5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
-		22A42B811DE39AAE00F81767 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
+		229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
+		229563B31E6C1BB30045E3BE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
+		229563B41E6C1BB30045E3BE /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
+		229563B81E6C1BB30045E3BE /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
+		229563B91E6C1BB30045E3BE /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
+		229563BA1E6C1BB30045E3BE /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
+		229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
+		229563BD1E6C1BB30045E3BE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
+		229563BE1E6C1BB30045E3BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
+		229563BF1E6C1BB30045E3BE /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
+		229563C11E6C1BB30045E3BE /* Pods_SingleTrailMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */; };
+		229563C31E6C1BB30045E3BE /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
+		229563C41E6C1BB30045E3BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
+		229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DE1E6C1D7E0045E3BE /* ATMMapViewController.swift */; };
+		229563E81E6C1D860045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563E91E6C1D870045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563EA1E6C1D870045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563EB1E6C1D880045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563EC1E6C1D880045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563ED1E6C1D890045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563EE1E6C1D890045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563EF1E6C1D8A0045E3BE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DF1E6C1D7E0045E3BE /* MapViewController.swift */; };
+		229563F01E6C1D8D0045E3BE /* MountainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563E01E6C1D7E0045E3BE /* MountainMapViewController.swift */; };
+		229563F11E6C1D8F0045E3BE /* NatureMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563E11E6C1D7E0045E3BE /* NatureMapViewController.swift */; };
+		229563F21E6C1D920045E3BE /* PicnicMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563E21E6C1D7E0045E3BE /* PicnicMapsViewController.swift */; };
+		229563F31E6C1D940045E3BE /* SegmentMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563E31E6C1D7E0045E3BE /* SegmentMapsViewController.swift */; };
+		229563F41E6C1D980045E3BE /* SingleTrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563E41E6C1D7E0045E3BE /* SingleTrailMapViewController.swift */; };
+		229563F51E6C1D9B0045E3BE /* ToiletMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563E51E6C1D7E0045E3BE /* ToiletMapViewController.swift */; };
+		229563F61E6C1D9E0045E3BE /* TrafficMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563E61E6C1D7E0045E3BE /* TrafficMapViewController.swift */; };
+		229563FA1E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229563FB1E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229563FC1E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229563FD1E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229563FE1E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229563FF1E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229564001E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229564011E6C1DC70045E3BE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F71E6C1DC70045E3BE /* Node.swift */; };
+		229564021E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		229564031E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		229564041E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		229564051E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		229564061E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		229564071E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		229564081E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		229564091E6C1DC70045E3BE /* Osm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F81E6C1DC70045E3BE /* Osm.swift */; };
+		2295640A1E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		2295640B1E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		2295640C1E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		2295640D1E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		2295640E1E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		2295640F1E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		229564101E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		229564111E6C1DC70045E3BE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563F91E6C1DC70045E3BE /* Tag.swift */; };
+		229564241E6C1E200045E3BE /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564141E6C1E160045E3BE /* Icon-120.png */; };
+		229564251E6C1E200045E3BE /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564151E6C1E160045E3BE /* Icon-40.png */; };
+		229564261E6C1E200045E3BE /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564161E6C1E160045E3BE /* Icon-40@2x.png */; };
+		229564271E6C1E200045E3BE /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564171E6C1E160045E3BE /* Icon-40@3x.png */; };
+		229564281E6C1E200045E3BE /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564181E6C1E160045E3BE /* Icon-60@2x.png */; };
+		229564291E6C1E200045E3BE /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564191E6C1E160045E3BE /* Icon-60@3x.png */; };
+		2295642A1E6C1E200045E3BE /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 2295641A1E6C1E160045E3BE /* Icon-76.png */; };
+		2295642B1E6C1E200045E3BE /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2295641B1E6C1E160045E3BE /* Icon-76@2x.png */; };
+		2295642C1E6C1E200045E3BE /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2295641C1E6C1E160045E3BE /* Icon-83.5@2x.png */; };
+		2295642D1E6C1E200045E3BE /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2295641D1E6C1E160045E3BE /* Icon-Small.png */; };
+		2295642E1E6C1E200045E3BE /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2295641E1E6C1E160045E3BE /* Icon-Small@2x.png */; };
+		2295642F1E6C1E200045E3BE /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2295641F1E6C1E160045E3BE /* Icon-Small@3x.png */; };
+		229564301E6C1E200045E3BE /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564201E6C1E160045E3BE /* iTunesArtwork.png */; };
+		229564311E6C1E200045E3BE /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 229564211E6C1E160045E3BE /* iTunesArtwork@2x.png */; };
+		229564341E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		229564351E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		229564361E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		229564371E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		229564381E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		229564391E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		2295643A1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		2295643B1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
-		22A42B831DE39AAE00F81767 /* PicnicMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */; };
 		22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		22A42B851DE39AAE00F81767 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
-		22A42B861DE39AAE00F81767 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
 		22A42B871DE39AAE00F81767 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		22A42B881DE39AAE00F81767 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
-		22A42B891DE39AAE00F81767 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
 		22A42B8A1DE39AAE00F81767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
 		22A42B8C1DE39AAE00F81767 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		22A42B8D1DE39AAE00F81767 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		22A42B921DE39AAE00F81767 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22A42B931DE39AAE00F81767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
-		22A42BCB1DE39B3B00F81767 /* SingleTrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A42BCA1DE39B3B00F81767 /* SingleTrailMapViewController.swift */; };
 		22A42BDE1DE39C1B00F81767 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BCE1DE39C1500F81767 /* Icon-120.png */; };
 		22A42BDF1DE39C1B00F81767 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BCF1DE39C1500F81767 /* Icon-40.png */; };
 		22A42BE01DE39C1B00F81767 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BD01DE39C1500F81767 /* Icon-40@2x.png */; };
@@ -175,18 +229,12 @@
 		22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		22EAB6681E6B701900FC3EC1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
 		22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
-		22EAB66A1E6B701900FC3EC1 /* PicnicMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */; };
 		22EAB66B1E6B701900FC3EC1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		22EAB66C1E6B701900FC3EC1 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		22EAB66D1E6B701900FC3EC1 /* SingleTrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A42BCA1DE39B3B00F81767 /* SingleTrailMapViewController.swift */; };
-		22EAB66E1E6B701900FC3EC1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
-		22EAB66F1E6B701900FC3EC1 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
 		22EAB6701E6B701900FC3EC1 /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22EAB6711E6B701900FC3EC1 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
-		22EAB6731E6B701900FC3EC1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
 		22EAB6741E6B701900FC3EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
 		22EAB6761E6B701900FC3EC1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
@@ -208,31 +256,20 @@
 		22EAB6AF1E6B708300FC3EC1 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69F1E6B707A00FC3EC1 /* Icon-Small@3x.png */; };
 		22EAB6B01E6B708300FC3EC1 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6A01E6B707A00FC3EC1 /* iTunesArtwork.png */; };
 		22EAB6B11E6B708300FC3EC1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6A11E6B707A00FC3EC1 /* iTunesArtwork@2x.png */; };
-		22EAB6B31E6B729700FC3EC1 /* SegmentMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EAB6B21E6B729700FC3EC1 /* SegmentMapsViewController.swift */; };
 		22FF9ED81DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
-		4A24F8BB1D95D95B0011485B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
 		4A24F8BC1D95D95B0011485B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		4A24F8BD1D95D95B0011485B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D71D3180120033E6BD /* MapViewController.swift */; };
-		4A24F8BE1D95D95B0011485B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
-		4A24F8BF1D95D95B0011485B /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
 		4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		4A24F8C11D95D95B0011485B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		4A24F8C21D95D95B0011485B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		4A24F8CF1D95D95B0011485B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
-		4A24F8E81D95D9DC0011485B /* MountainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24F8E71D95D9DC0011485B /* MountainMapViewController.swift */; };
-		4A24F92C1D96A5C60011485B /* TrafficMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */; };
 		4A98C8852F6553D6C866A08B /* Pods_MountainMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A3144314A96E3D036D4F96 /* Pods_MountainMaps.framework */; };
-		4AF49F641D985D60001A8034 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CF1D359232002241F5 /* Tag.swift */; };
 		4AF49F651D985D60001A8034 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		4AF49F681D985D60001A8034 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227653F71D318E3700BA689B /* Node.swift */; };
-		4AF49F691D985D60001A8034 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A74CD1D35918C002241F5 /* Nodes.swift */; };
 		4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		4AF49F761D985D60001A8034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
-		4AF49FAB1D985EDD001A8034 /* ToiletMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */; };
 		6D4789E88952616D69734C21 /* Pods_SingleTrailMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */; };
 		70BE93DF131682DB6DBB12A9 /* Pods_PicnicMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD027E4AE053E0A4285D1233 /* Pods_PicnicMaps.framework */; };
 		90699F09260964318778CAC1 /* Pods_TrafficMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */; };
@@ -263,7 +300,6 @@
 		223501861D60C6D10043D3E0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		223501881D60C8050043D3E0 /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
 		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATMMapViewController.swift; sourceTree = "<group>"; };
 		224F2A851DDBB95900B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		224F2A861DDBB95900B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		224F2A871DDBB95900B22D2B /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -281,7 +317,6 @@
 		224F2A931DDBB95900B22D2B /* ATMMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATMMap-Logo.png"; sourceTree = "<group>"; };
 		224F2A941DDBB95900B22D2B /* ATMMaps-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ATMMaps-Info.plist"; sourceTree = "<group>"; };
 		224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicnicMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicnicMapsViewController.swift; sourceTree = "<group>"; };
 		224F2AC31DDBBC3800B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		224F2AC41DDBBC3800B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		224F2AC51DDBBC3800B22D2B /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -317,10 +352,8 @@
 		226E3E411DE2604E0021C283 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		226E3E421DE2604E0021C283 /* ToiletMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToiletMaps-Info.plist"; sourceTree = "<group>"; };
 		227653EF1D31848E00BA689B /* SwiftMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftMaps-Bridging-Header.h"; sourceTree = "<group>"; };
-		227653F71D318E3700BA689B /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		227C05D21D3180110033E6BD /* TrafficMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C05D51D3180120033E6BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		227C05D71D3180120033E6BD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		227C05DD1D3180120033E6BD /* SwiftMaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftMaps.xcdatamodel; sourceTree = "<group>"; };
 		227C05E21D3180120033E6BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		227C05E91D3180120033E6BD /* SwiftMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,10 +362,36 @@
 		227C05F41D3180120033E6BD /* SwiftMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C05F81D3180120033E6BD /* SwiftMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapsUITests.swift; sourceTree = "<group>"; };
 		227C05FA1D3180120033E6BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		229A74CD1D35918C002241F5 /* Nodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
-		229A74CF1D359232002241F5 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		229563DA1E6C1BB30045E3BE /* NatureMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		229563DE1E6C1D7E0045E3BE /* ATMMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ATMMapViewController.swift; path = MapViewController/ATMMapViewController.swift; sourceTree = "<group>"; };
+		229563DF1E6C1D7E0045E3BE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MapViewController/MapViewController.swift; sourceTree = "<group>"; };
+		229563E01E6C1D7E0045E3BE /* MountainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MountainMapViewController.swift; path = MapViewController/MountainMapViewController.swift; sourceTree = "<group>"; };
+		229563E11E6C1D7E0045E3BE /* NatureMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NatureMapViewController.swift; path = MapViewController/NatureMapViewController.swift; sourceTree = "<group>"; };
+		229563E21E6C1D7E0045E3BE /* PicnicMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PicnicMapsViewController.swift; path = MapViewController/PicnicMapsViewController.swift; sourceTree = "<group>"; };
+		229563E31E6C1D7E0045E3BE /* SegmentMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SegmentMapsViewController.swift; path = MapViewController/SegmentMapsViewController.swift; sourceTree = "<group>"; };
+		229563E41E6C1D7E0045E3BE /* SingleTrailMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleTrailMapViewController.swift; path = MapViewController/SingleTrailMapViewController.swift; sourceTree = "<group>"; };
+		229563E51E6C1D7E0045E3BE /* ToiletMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToiletMapViewController.swift; path = MapViewController/ToiletMapViewController.swift; sourceTree = "<group>"; };
+		229563E61E6C1D7E0045E3BE /* TrafficMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrafficMapViewController.swift; path = MapViewController/TrafficMapViewController.swift; sourceTree = "<group>"; };
+		229563F71E6C1DC70045E3BE /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Models/Node.swift; sourceTree = "<group>"; };
+		229563F81E6C1DC70045E3BE /* Osm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Osm.swift; path = Models/Osm.swift; sourceTree = "<group>"; };
+		229563F91E6C1DC70045E3BE /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Models/Tag.swift; sourceTree = "<group>"; };
+		229564141E6C1E160045E3BE /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		229564151E6C1E160045E3BE /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		229564161E6C1E160045E3BE /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		229564171E6C1E160045E3BE /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		229564181E6C1E160045E3BE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		229564191E6C1E160045E3BE /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		2295641A1E6C1E160045E3BE /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		2295641B1E6C1E160045E3BE /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		2295641C1E6C1E160045E3BE /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		2295641D1E6C1E160045E3BE /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		2295641E1E6C1E160045E3BE /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		2295641F1E6C1E160045E3BE /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		229564201E6C1E160045E3BE /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		229564211E6C1E160045E3BE /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		229564221E6C1E160045E3BE /* NatureMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NatureMaps-Info.plist"; sourceTree = "<group>"; };
+		229564331E6C21820045E3BE /* Way.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Way.swift; path = Models/Way.swift; sourceTree = "<group>"; };
 		22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleTrailMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		22A42BCA1DE39B3B00F81767 /* SingleTrailMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTrailMapViewController.swift; sourceTree = "<group>"; };
 		22A42BCE1DE39C1500F81767 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22A42BCF1DE39C1500F81767 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		22A42BD01DE39C1500F81767 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -366,8 +425,6 @@
 		22EAB6A01E6B707A00FC3EC1 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		22EAB6A11E6B707A00FC3EC1 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		22EAB6A21E6B707A00FC3EC1 /* SegmentMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegmentMaps-Info.plist"; sourceTree = "<group>"; };
-		22EAB6A31E6B707A00FC3EC1 /* TrailMap-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrailMap-Logo.png"; sourceTree = "<group>"; };
-		22EAB6B21E6B729700FC3EC1 /* SegmentMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentMapsViewController.swift; sourceTree = "<group>"; };
 		22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -404,10 +461,7 @@
 		2BD123240E9EB4EF17CD2499 /* Pods-ATMMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		33B249D4328B8B5D682217BC /* Pods-ATMMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps.release.xcconfig"; sourceTree = "<group>"; };
 		4A24F8E51D95D95B0011485B /* MountainMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountainMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A24F8E71D95D9DC0011485B /* MountainMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainMapViewController.swift; sourceTree = "<group>"; };
-		4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficMapViewController.swift; sourceTree = "<group>"; };
 		4AF49F861D985D60001A8034 /* ToiletMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToiletMapViewController.swift; sourceTree = "<group>"; };
 		59930192B7A810B08D69CB6D /* Pods-PicnicMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicnicMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicnicMaps/Pods-PicnicMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		74C16CAD546C6DD479BF5ACD /* Pods-SegmentMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps.release.xcconfig"; sourceTree = "<group>"; };
 		7D6872312BA6338D8A2D46C7 /* Pods_TrafficMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrafficMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -463,6 +517,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229563C01E6C1BB30045E3BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229563C11E6C1BB30045E3BE /* Pods_SingleTrailMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,9 +679,10 @@
 		227653F61D31849800BA689B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				227653F71D318E3700BA689B /* Node.swift */,
-				229A74CD1D35918C002241F5 /* Nodes.swift */,
-				229A74CF1D359232002241F5 /* Tag.swift */,
+				229563F71E6C1DC70045E3BE /* Node.swift */,
+				229564331E6C21820045E3BE /* Way.swift */,
+				229563F81E6C1DC70045E3BE /* Osm.swift */,
+				229563F91E6C1DC70045E3BE /* Tag.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -649,6 +712,7 @@
 				224F2ABC1DDBBB7600B22D2B /* PicnicMaps.app */,
 				22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */,
 				22EAB6901E6B701900FC3EC1 /* SegmentMaps.app */,
+				229563DA1E6C1BB30045E3BE /* NatureMaps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -692,6 +756,36 @@
 			path = SwiftMapsUITests;
 			sourceTree = "<group>";
 		};
+		229564121E6C1E160045E3BE /* NatureMaps */ = {
+			isa = PBXGroup;
+			children = (
+				229564131E6C1E160045E3BE /* AppIcons */,
+				229564221E6C1E160045E3BE /* NatureMaps-Info.plist */,
+			);
+			path = NatureMaps;
+			sourceTree = "<group>";
+		};
+		229564131E6C1E160045E3BE /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				229564141E6C1E160045E3BE /* Icon-120.png */,
+				229564151E6C1E160045E3BE /* Icon-40.png */,
+				229564161E6C1E160045E3BE /* Icon-40@2x.png */,
+				229564171E6C1E160045E3BE /* Icon-40@3x.png */,
+				229564181E6C1E160045E3BE /* Icon-60@2x.png */,
+				229564191E6C1E160045E3BE /* Icon-60@3x.png */,
+				2295641A1E6C1E160045E3BE /* Icon-76.png */,
+				2295641B1E6C1E160045E3BE /* Icon-76@2x.png */,
+				2295641C1E6C1E160045E3BE /* Icon-83.5@2x.png */,
+				2295641D1E6C1E160045E3BE /* Icon-Small.png */,
+				2295641E1E6C1E160045E3BE /* Icon-Small@2x.png */,
+				2295641F1E6C1E160045E3BE /* Icon-Small@3x.png */,
+				229564201E6C1E160045E3BE /* iTunesArtwork.png */,
+				229564211E6C1E160045E3BE /* iTunesArtwork@2x.png */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
 		22A42BCC1DE39C1500F81767 /* SingleTrailMaps */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,7 +821,6 @@
 			children = (
 				22EAB6931E6B707A00FC3EC1 /* AppIcons */,
 				22EAB6A21E6B707A00FC3EC1 /* SegmentMaps-Info.plist */,
-				22EAB6A31E6B707A00FC3EC1 /* TrailMap-Logo.png */,
 			);
 			path = SegmentMaps;
 			sourceTree = "<group>";
@@ -756,6 +849,7 @@
 		22FF9E891DD885CB001F8DA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				229564121E6C1E160045E3BE /* NatureMaps */,
 				22EAB6921E6B707A00FC3EC1 /* SegmentMaps */,
 				22A42BCC1DE39C1500F81767 /* SingleTrailMaps */,
 				226E3E321DE2604E0021C283 /* ToiletMaps */,
@@ -832,14 +926,15 @@
 		22FF9ED11DD887BF001F8DA0 /* MapViewController */ = {
 			isa = PBXGroup;
 			children = (
-				227C05D71D3180120033E6BD /* MapViewController.swift */,
-				22A42BCA1DE39B3B00F81767 /* SingleTrailMapViewController.swift */,
-				4A24F8E71D95D9DC0011485B /* MountainMapViewController.swift */,
-				4A24F92B1D96A5C60011485B /* TrafficMapViewController.swift */,
-				4AF49FAA1D985EDD001A8034 /* ToiletMapViewController.swift */,
-				224F2A7F1DDBB75800B22D2B /* ATMMapViewController.swift */,
-				224F2ABE1DDBBBC200B22D2B /* PicnicMapsViewController.swift */,
-				22EAB6B21E6B729700FC3EC1 /* SegmentMapsViewController.swift */,
+				229563DE1E6C1D7E0045E3BE /* ATMMapViewController.swift */,
+				229563DF1E6C1D7E0045E3BE /* MapViewController.swift */,
+				229563E01E6C1D7E0045E3BE /* MountainMapViewController.swift */,
+				229563E11E6C1D7E0045E3BE /* NatureMapViewController.swift */,
+				229563E21E6C1D7E0045E3BE /* PicnicMapsViewController.swift */,
+				229563E31E6C1D7E0045E3BE /* SegmentMapsViewController.swift */,
+				229563E41E6C1D7E0045E3BE /* SingleTrailMapViewController.swift */,
+				229563E51E6C1D7E0045E3BE /* ToiletMapViewController.swift */,
+				229563E61E6C1D7E0045E3BE /* TrafficMapViewController.swift */,
 			);
 			name = MapViewController;
 			sourceTree = "<group>";
@@ -974,6 +1069,29 @@
 			productName = SwiftMapsUITests;
 			productReference = 227C05F41D3180120033E6BD /* SwiftMapsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		229563AC1E6C1BB30045E3BE /* NatureMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 229563D71E6C1BB30045E3BE /* Build configuration list for PBXNativeTarget "NatureMaps" */;
+			buildPhases = (
+				229563AD1E6C1BB30045E3BE /* 📦 Check Pods Manifest.lock */,
+				229563AE1E6C1BB30045E3BE /* [CP] Check Pods Manifest.lock */,
+				229563AF1E6C1BB30045E3BE /* Sources */,
+				229563C01E6C1BB30045E3BE /* Frameworks */,
+				229563C21E6C1BB30045E3BE /* Resources */,
+				229563D31E6C1BB30045E3BE /* [CP] Embed Pods Frameworks */,
+				229563D41E6C1BB30045E3BE /* [CP] Copy Pods Resources */,
+				229563D51E6C1BB30045E3BE /* 📦 Embed Pods Frameworks */,
+				229563D61E6C1BB30045E3BE /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NatureMaps;
+			productName = SwiftMaps;
+			productReference = 229563DA1E6C1BB30045E3BE /* NatureMaps.app */;
+			productType = "com.apple.product-type.application";
 		};
 		22A42B7E1DE39AAE00F81767 /* SingleTrailMaps */ = {
 			isa = PBXNativeTarget;
@@ -1115,6 +1233,7 @@
 				224F2AA51DDBBB7600B22D2B /* PicnicMaps */,
 				22A42B7E1DE39AAE00F81767 /* SingleTrailMaps */,
 				22EAB6651E6B701900FC3EC1 /* SegmentMaps */,
+				229563AC1E6C1BB30045E3BE /* NatureMaps */,
 			);
 		};
 /* End PBXProject section */
@@ -1201,6 +1320,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229563C21E6C1BB30045E3BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229563C31E6C1BB30045E3BE /* mountain-512@3x.png in Resources */,
+				229564311E6C1E200045E3BE /* iTunesArtwork@2x.png in Resources */,
+				2295642C1E6C1E200045E3BE /* Icon-83.5@2x.png in Resources */,
+				229563C41E6C1BB30045E3BE /* LaunchScreen.storyboard in Resources */,
+				229564241E6C1E200045E3BE /* Icon-120.png in Resources */,
+				2295642A1E6C1E200045E3BE /* Icon-76.png in Resources */,
+				229564301E6C1E200045E3BE /* iTunesArtwork.png in Resources */,
+				229564251E6C1E200045E3BE /* Icon-40.png in Resources */,
+				2295642E1E6C1E200045E3BE /* Icon-Small@2x.png in Resources */,
+				229564291E6C1E200045E3BE /* Icon-60@3x.png in Resources */,
+				2295642D1E6C1E200045E3BE /* Icon-Small.png in Resources */,
+				229564271E6C1E200045E3BE /* Icon-40@3x.png in Resources */,
+				229564281E6C1E200045E3BE /* Icon-60@2x.png in Resources */,
+				229564261E6C1E200045E3BE /* Icon-40@2x.png in Resources */,
+				2295642B1E6C1E200045E3BE /* Icon-76@2x.png in Resources */,
+				2295642F1E6C1E200045E3BE /* Icon-Small@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1357,6 +1499,96 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrafficMaps/Pods-TrafficMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		229563AD1E6C1BB30045E3BE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		229563AE1E6C1BB30045E3BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		229563D31E6C1BB30045E3BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		229563D41E6C1BB30045E3BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		229563D51E6C1BB30045E3BE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		229563D61E6C1BB30045E3BE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleTrailMaps/Pods-SingleTrailMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		22EAB6661E6B701900FC3EC1 /* [CP] Check Pods Manifest.lock */ = {
@@ -1936,20 +2168,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224F2A691DDBB67900B22D2B /* Tag.swift in Sources */,
 				225A614B1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
-				224F2AC01DDBBC0A00B22D2B /* ATMMapViewController.swift in Sources */,
-				224F2A6C1DDBB67900B22D2B /* Node.swift in Sources */,
-				224F2A6D1DDBB67900B22D2B /* Nodes.swift in Sources */,
 				22D0E1B51DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61631DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615D1DE1EE7E004CDA62 /* Api.swift in Sources */,
-				224F2A821DDBB76C00B22D2B /* MapViewController.swift in Sources */,
+				229564371E6C21820045E3BE /* Way.swift in Sources */,
+				229563FD1E6C1DC70045E3BE /* Node.swift in Sources */,
+				229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */,
 				224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */,
 				225A61571DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				224F2A6F1DDBB67900B22D2B /* DetailViewController.swift in Sources */,
 				22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				229564051E6C1DC70045E3BE /* Osm.swift in Sources */,
+				2295640D1E6C1DC70045E3BE /* Tag.swift in Sources */,
+				229563EB1E6C1D880045E3BE /* MapViewController.swift in Sources */,
 				224F2A711DDBB67900B22D2B /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1958,21 +2191,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224F2AA81DDBBB7600B22D2B /* Tag.swift in Sources */,
+				229563F21E6C1D920045E3BE /* PicnicMapsViewController.swift in Sources */,
 				225A614C1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
-				224F2ABF1DDBBBC200B22D2B /* PicnicMapsViewController.swift in Sources */,
 				224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
-				224F2AAA1DDBBB7600B22D2B /* Node.swift in Sources */,
-				224F2AAB1DDBBB7600B22D2B /* Nodes.swift in Sources */,
 				22D0E1B61DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61641DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
+				229564381E6C21820045E3BE /* Way.swift in Sources */,
+				229563FE1E6C1DC70045E3BE /* Node.swift in Sources */,
 				225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */,
-				224F2AAC1DDBBB7600B22D2B /* MapViewController.swift in Sources */,
 				224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */,
 				225A61581DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */,
 				22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				229564061E6C1DC70045E3BE /* Osm.swift in Sources */,
+				2295640E1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */,
+				229563EC1E6C1D880045E3BE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1980,21 +2214,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229A74D01D359232002241F5 /* Tag.swift in Sources */,
 				225A61481DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				227C05DE1D3180120033E6BD /* SwiftMaps.xcdatamodeld in Sources */,
-				227C05D81D3180120033E6BD /* MapViewController.swift in Sources */,
-				227653F81D318E3700BA689B /* Node.swift in Sources */,
-				229A74CE1D35918C002241F5 /* Nodes.swift in Sources */,
 				22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61601DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615A1DE1EE7E004CDA62 /* Api.swift in Sources */,
+				229564341E6C21820045E3BE /* Way.swift in Sources */,
+				229563FA1E6C1DC70045E3BE /* Node.swift in Sources */,
 				227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */,
 				223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */,
+				229563F61E6C1D9E0045E3BE /* TrafficMapViewController.swift in Sources */,
 				225A61541DE1ECCA004CDA62 /* AlertController.swift in Sources */,
-				4A24F92C1D96A5C60011485B /* TrafficMapViewController.swift in Sources */,
 				22D5A02F1DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				229564021E6C1DC70045E3BE /* Osm.swift in Sources */,
+				2295640A1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */,
+				229563E81E6C1D860045E3BE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2014,26 +2249,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		229563AF1E6C1BB30045E3BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */,
+				229563B31E6C1BB30045E3BE /* Networking.swift in Sources */,
+				229563B41E6C1BB30045E3BE /* SwiftMaps.xcdatamodeld in Sources */,
+				229563B81E6C1BB30045E3BE /* TileOverlay.swift in Sources */,
+				229563B91E6C1BB30045E3BE /* MapViewBoundingBoxExtension.swift in Sources */,
+				2295643B1E6C21820045E3BE /* Way.swift in Sources */,
+				229564011E6C1DC70045E3BE /* Node.swift in Sources */,
+				229563BA1E6C1BB30045E3BE /* Api.swift in Sources */,
+				229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */,
+				229563BD1E6C1BB30045E3BE /* AlertController.swift in Sources */,
+				229563F11E6C1D8F0045E3BE /* NatureMapViewController.swift in Sources */,
+				229563BE1E6C1BB30045E3BE /* DetailViewController.swift in Sources */,
+				229564091E6C1DC70045E3BE /* Osm.swift in Sources */,
+				229564111E6C1DC70045E3BE /* Tag.swift in Sources */,
+				229563BF1E6C1BB30045E3BE /* NodeAnnotationView.swift in Sources */,
+				229563EF1E6C1D8A0045E3BE /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22A42B801DE39AAE00F81767 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A42B811DE39AAE00F81767 /* Tag.swift in Sources */,
 				22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */,
-				22A42B831DE39AAE00F81767 /* PicnicMapsViewController.swift in Sources */,
 				22D0E1B71DF7585D0052E17B /* Networking.swift in Sources */,
 				22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */,
-				22A42BCB1DE39B3B00F81767 /* SingleTrailMapViewController.swift in Sources */,
-				22A42B851DE39AAE00F81767 /* Node.swift in Sources */,
-				22A42B861DE39AAE00F81767 /* Nodes.swift in Sources */,
 				22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				22A42B871DE39AAE00F81767 /* MapViewBoundingBoxExtension.swift in Sources */,
+				229564391E6C21820045E3BE /* Way.swift in Sources */,
+				229563FF1E6C1DC70045E3BE /* Node.swift in Sources */,
+				229563F41E6C1D980045E3BE /* SingleTrailMapViewController.swift in Sources */,
 				22A42B881DE39AAE00F81767 /* Api.swift in Sources */,
-				22A42B891DE39AAE00F81767 /* MapViewController.swift in Sources */,
 				22A42B8A1DE39AAE00F81767 /* AppDelegate.swift in Sources */,
 				22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */,
 				22A42B8C1DE39AAE00F81767 /* DetailViewController.swift in Sources */,
+				229564071E6C1DC70045E3BE /* Osm.swift in Sources */,
+				2295640F1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A42B8D1DE39AAE00F81767 /* NodeAnnotationView.swift in Sources */,
+				229563ED1E6C1D890045E3BE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2041,23 +2299,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22EAB6681E6B701900FC3EC1 /* Tag.swift in Sources */,
 				22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */,
-				22EAB66A1E6B701900FC3EC1 /* PicnicMapsViewController.swift in Sources */,
 				22EAB66B1E6B701900FC3EC1 /* Networking.swift in Sources */,
 				22EAB66C1E6B701900FC3EC1 /* SwiftMaps.xcdatamodeld in Sources */,
-				22EAB66D1E6B701900FC3EC1 /* SingleTrailMapViewController.swift in Sources */,
-				22EAB66E1E6B701900FC3EC1 /* Node.swift in Sources */,
-				22EAB66F1E6B701900FC3EC1 /* Nodes.swift in Sources */,
-				22EAB6B31E6B729700FC3EC1 /* SegmentMapsViewController.swift in Sources */,
+				229563F31E6C1D940045E3BE /* SegmentMapsViewController.swift in Sources */,
 				22EAB6701E6B701900FC3EC1 /* TileOverlay.swift in Sources */,
+				2295643A1E6C21820045E3BE /* Way.swift in Sources */,
+				229564001E6C1DC70045E3BE /* Node.swift in Sources */,
 				22EAB6711E6B701900FC3EC1 /* MapViewBoundingBoxExtension.swift in Sources */,
 				22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */,
-				22EAB6731E6B701900FC3EC1 /* MapViewController.swift in Sources */,
 				22EAB6741E6B701900FC3EC1 /* AppDelegate.swift in Sources */,
 				22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */,
 				22EAB6761E6B701900FC3EC1 /* DetailViewController.swift in Sources */,
+				229564081E6C1DC70045E3BE /* Osm.swift in Sources */,
+				229564101E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22EAB6771E6B701900FC3EC1 /* NodeAnnotationView.swift in Sources */,
+				229563EE1E6C1D890045E3BE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2065,21 +2322,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A24F8BB1D95D95B0011485B /* Tag.swift in Sources */,
 				225A61491DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				4A24F8BC1D95D95B0011485B /* SwiftMaps.xcdatamodeld in Sources */,
-				4A24F8BD1D95D95B0011485B /* MapViewController.swift in Sources */,
-				4A24F8E81D95D9DC0011485B /* MountainMapViewController.swift in Sources */,
-				4A24F8BE1D95D95B0011485B /* Node.swift in Sources */,
+				229563F01E6C1D8D0045E3BE /* MountainMapViewController.swift in Sources */,
 				22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61611DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
+				229564351E6C21820045E3BE /* Way.swift in Sources */,
+				229563FB1E6C1DC70045E3BE /* Node.swift in Sources */,
 				225A615B1DE1EE7E004CDA62 /* Api.swift in Sources */,
-				4A24F8BF1D95D95B0011485B /* Nodes.swift in Sources */,
 				4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */,
 				225A61551DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				4A24F8C11D95D95B0011485B /* DetailViewController.swift in Sources */,
 				22D5A0301DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				229564031E6C1DC70045E3BE /* Osm.swift in Sources */,
+				2295640B1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				4A24F8C21D95D95B0011485B /* NodeAnnotationView.swift in Sources */,
+				229563E91E6C1D870045E3BE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2087,21 +2345,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF49F641D985D60001A8034 /* Tag.swift in Sources */,
 				225A614A1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				4AF49F651D985D60001A8034 /* SwiftMaps.xcdatamodeld in Sources */,
-				4AF49F681D985D60001A8034 /* Node.swift in Sources */,
-				4AF49F691D985D60001A8034 /* Nodes.swift in Sources */,
-				224F2A811DDBB76B00B22D2B /* MapViewController.swift in Sources */,
 				22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61621DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615C1DE1EE7E004CDA62 /* Api.swift in Sources */,
+				229564361E6C21820045E3BE /* Way.swift in Sources */,
+				229563FC1E6C1DC70045E3BE /* Node.swift in Sources */,
 				4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */,
 				4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */,
 				225A61561DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */,
 				22D5A0311DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
-				4AF49FAB1D985EDD001A8034 /* ToiletMapViewController.swift in Sources */,
+				229564041E6C1DC70045E3BE /* Osm.swift in Sources */,
+				2295640C1E6C1DC70045E3BE /* Tag.swift in Sources */,
+				229563EA1E6C1D870045E3BE /* MapViewController.swift in Sources */,
+				229563F51E6C1D9B0045E3BE /* ToiletMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2368,6 +2627,39 @@
 			};
 			name = Release;
 		};
+		229563D81E6C1BB30045E3BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEB1C6A969F30E9010D3C01E /* Pods-SingleTrailMaps.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Resources/NatureMaps/NatureMaps-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_NATURE_MAPS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.nature;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "903c670d-5c90-4589-b57e-ec275dabd6f4";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		229563D91E6C1BB30045E3BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87135555C56C886A834A21CE /* Pods-SingleTrailMaps.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Resources/NatureMaps/NatureMaps-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_NATURE_MAPS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.nature;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "903c670d-5c90-4589-b57e-ec275dabd6f4";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		22A42BA51DE39AAE00F81767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEB1C6A969F30E9010D3C01E /* Pods-SingleTrailMaps.debug.xcconfig */;
@@ -2553,6 +2845,15 @@
 			buildConfigurations = (
 				227C06041D3180120033E6BD /* Debug */,
 				227C06051D3180120033E6BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		229563D71E6C1BB30045E3BE /* Build configuration list for PBXNativeTarget "NatureMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				229563D81E6C1BB30045E3BE /* Debug */,
+				229563D91E6C1BB30045E3BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -12,6 +12,8 @@ import EVReflection
 class Osm: EVObject {
     var node: [Node] = [Node]()
     
+    var way: [Way] = [Way]()
+    
     var __name: String?
     
     var _version: String?

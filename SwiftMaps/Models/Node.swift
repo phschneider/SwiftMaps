@@ -22,6 +22,8 @@ class Node: EVObject {
     var _lon: NSNumber?
     var tag: [Tag] = [Tag]()
 
+    var _ref: String?
+    
     var type: String?
     
     func isPeak() -> Bool

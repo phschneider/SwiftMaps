@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             mapViewController = SingleTrailMapViewController()
         #elseif IS_SEGMENT_MAPS
             mapViewController = SegmentMapsViewController()
+        #elseif IS_NATURE_MAPS
+            mapViewController = NatureMapViewController()
         #else
             mapViewController = MountainMapViewController()
         #endif

@@ -112,29 +112,46 @@ class Api {
                         var zoomRect :MKMapRect = MKMapRectNull
                         var annotations: [MKAnnotation] = []
 
-                        
-                        for node in result.node
+                        if (result.way.count == 0)
                         {
-                            print(node._lat)
-                            let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
-                            
-                            node.type = searchString
-                            
-                            let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
-                            
-                            annotations.append(annotation)
-                            
-                            let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
-                            let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
-                            if (MKMapRectIsNull(zoomRect))
+                            for node in result.node
                             {
-                                zoomRect = pointRect;
-                            }
-                            else
-                            {
-                                zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                                print(node._lat)
+                                let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
+                                
+                                node.type = searchString
+                                
+                                let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
+                                
+                                annotations.append(annotation)
+                                
+                                let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
+                                let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+                                if (MKMapRectIsNull(zoomRect))
+                                {
+                                    zoomRect = pointRect;
+                                }
+                                else
+                                {
+                                    zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                                }
                             }
                         }
+                        
+                        for way in result.way
+                        {
+                            var coordinates:[CLLocationCoordinate2D] = []
+                            for nd in way.nd
+                            {
+                                var wayNode:Node = result.node.first(where: { $0._id! == nd._ref! })!
+                                print(wayNode)
+                                coordinates.append(CLLocationCoordinate2D(latitude: Double(wayNode._lat!), longitude: Double(wayNode._lon!)))
+                            }
+                            
+                            let polygon = MKPolygon(coordinates: &coordinates, count: coordinates.count)
+                            mapView.add(polygon)
+                        }
+                        
                         
                         if (annotations.count > 0)
                         {
