@@ -22,8 +22,7 @@ class SingleTrailMapViewController: MapViewController {
         self.title = "Trails"
         self.mapView.mapType = MKMapType.standard
         
-        let osmOverlay:MKTileOverlay = MKTileOverlay.init(urlTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
-        osmOverlay.canReplaceMapContent = true;
+        let osmOverlay:MapBoxRunBikeHikeTileOverlay = MapBoxRunBikeHikeTileOverlay.init()
 //        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
 //        osmOverlay.canReplaceMapContent = true;
         
@@ -35,8 +34,7 @@ class SingleTrailMapViewController: MapViewController {
 //        osmOverlay.canReplaceMapContent = true;
 
         
-        let stravaOverlay:TileOverlay = TileOverlay.init(urlTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
-        stravaOverlay.canReplaceMapContent = false;
+        let stravaOverlay:StravaTileOverlay = StravaTileOverlay.init()        
         self.mapView.addOverlays([osmOverlay,stravaOverlay],level: .aboveLabels)
         
 //        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
