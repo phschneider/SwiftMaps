@@ -11,6 +11,8 @@ import MapKit
 
 class SingleTrailMapViewController: MapViewController {
     
+    var gpx:Gpx?
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -47,7 +49,7 @@ class SingleTrailMapViewController: MapViewController {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 print(contents)
-                let gpx = Gpx(xmlString: contents)
+                self.gpx = Gpx(xmlString: contents)
                 print(gpx?.trk)
                 let line: MKPolyline = (gpx?.route())!
 //                if (line)
@@ -55,6 +57,15 @@ class SingleTrailMapViewController: MapViewController {
                 self.mapView.addOverlays([line], level:MKOverlayLevel.aboveLabels)
                 var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
                 self.mapView.addAnnotations(annotations)
+                
+                for overlay in self.mapView.overlays
+                {
+                    if (overlay is MKPolyline)
+                    {
+                        let offset:CGFloat = 75
+                        self.mapView.setVisibleMapRect(overlay.boundingMapRect, edgePadding: UIEdgeInsets(top: offset, left: offset, bottom: offset, right: offset), animated: true)
+                    }
+                }
 //                }
             } catch {
                 // contents could not be loaded
@@ -73,8 +84,22 @@ class SingleTrailMapViewController: MapViewController {
         
         let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
+        Api().requestForBoundingBox("node[natural=peak]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[tourism=viewpoint]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+
+        Api().requestForBoundingBox("node[amenity=shelter]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[amenity=fast_food]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[amenity=restaurant]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[amenity=cafe]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[amenity=fuel]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
         
-//        Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString, mapView: self.mapView)
+        Api().requestForBoundingBox("node[shop=bakery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        Api().requestForBoundingBox("node[shop=supermarket]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        
+        var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
+        self.mapView.addAnnotations(annotations)
     }
     
     func mapView(_ mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
@@ -93,12 +118,186 @@ class SingleTrailMapViewController: MapViewController {
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
-                    //                    let label:UILabel = UILabel.init(frame: CGRectMake(0, 0, 20, 20))
-                    //                    label.text = "🔼"
-                    //                    anView?.addSubview(label)
+                    anView?.image = UIImage(named:"peak")
+                }
+                else
+                {
+                    anView?.annotation = annotation
                 }
                 return anView
             }
+            else if ( (annotation as! NodeAnnotationView).node.isPicnic())
+            {
+                let reuseId = "picnic"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"picnic")
+                   
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isBench())
+            {
+                let reuseId = "bench"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"bench")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isCafe())
+            {
+                let reuseId = "cafe"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"cafe")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isFuel())
+            {
+                let reuseId = "fuel"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"fuel")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isBakery())
+            {
+                let reuseId = "bakery"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"bakery")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isFastFood())
+            {
+                let reuseId = "fastfood"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"fastfood")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isRestaurant())
+            {
+                let reuseId = "restaurant"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"restaurant")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isSupermarket())
+            {
+                let reuseId = "supermarket"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"supermarket")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isShelter())
+            {
+                let reuseId = "shelter"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"shelter")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isViewpoint())
+            {
+                let reuseId = "viewpoint"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"viewpoint")
+                    
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+
+
         }
         else if (annotation is DistanceAnnotation)
         {

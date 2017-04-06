@@ -16,8 +16,12 @@ import AlamofireXmlToObjects
 
 
 class Api {
- 
     func requestForBoundingBox(_ searchString: String, boundingBox: NSString ,mapView: MKMapView)
+    {
+        self .requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: mapView, gpx: nil)
+    }
+    
+    func requestForBoundingBox(_ searchString: String, boundingBox: NSString ,mapView: MKMapView, gpx:Gpx?)
     {
         
         var urlString : String = ""
@@ -116,24 +120,29 @@ class Api {
                         {
                             for node in result.node
                             {
-                                print(node._lat)
+//                                print(node._lat)
                                 let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
+                                let loc = CLLocation.init(latitude: node._lat as! CLLocationDegrees, longitude: node._lon as! CLLocationDegrees)
                                 
-                                node.type = searchString
-                                
-                                let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
-                                
-                                annotations.append(annotation)
-                                
-                                let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
-                                let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
-                                if (MKMapRectIsNull(zoomRect))
+                                // Distance Filter
+                                if (gpx != nil && (gpx?.smallesDistance(current: loc).isLess(than: 1000.0))!)
                                 {
-                                    zoomRect = pointRect;
-                                }
-                                else
-                                {
-                                    zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                                    node.type = searchString
+                                    
+                                    let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
+                                    
+                                    annotations.append(annotation)
+                                    
+                                    let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
+                                    let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+                                    if (MKMapRectIsNull(zoomRect))
+                                    {
+                                        zoomRect = pointRect;
+                                    }
+                                    else
+                                    {
+                                        zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                                    }
                                 }
                             }
                         }

@@ -43,21 +43,67 @@ class Node: EVObject {
     
     func isAtm() -> Bool
     {
-        print(type)
         return (self.type?.lowercased().range(of: "amenity=atm") != nil)
     }
     
     func isBank() -> Bool
     {
-        print(type)
         return (self.type?.lowercased().range(of: "amenity=bank") != nil)
     }
     
+    func isBench() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=bench") != nil)
+    }
+    
+    func isFuel() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=fuel") != nil)
+    }
+    
+    func isCafe() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=cafe") != nil)
+    }
+    
+    func isShelter() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=shelter") != nil)
+    }
+    
+    func isBakery() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "shop=bakery") != nil)
+    }
+    
+    
     func isPicnic() -> Bool
     {
-        print(type)
         return (self.type?.lowercased().range(of: "tourism=picnic_site") != nil)
     }
+    
+    func isViewpoint() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "tourism=viewpoint") != nil)
+    }
+    
+    
+    
+    func isFastFood() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=fast_food") != nil)
+    }
+    
+    func isRestaurant() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=restaurant") != nil)
+    }
+    
+    func isSupermarket() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "shop=supermarket") != nil)
+    }
+    
     
     func title() -> String
     {

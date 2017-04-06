@@ -33,4 +33,9 @@ class Gpx: EVObject {
         var points:[DistanceAnnotation] = (trk?.distanceAnnotations)!
         return points
     }
+    
+    func smallesDistance(current: CLLocation) -> CLLocationDistance
+    {
+        return (trk?.smallestDistanceTo(current: current))!
+    }
 }

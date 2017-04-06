@@ -68,19 +68,19 @@ class TileOverlay: MKTileOverlay {
 //        }
 //        else
 //        {
-            NSLog("storagePath %@", self.storageForPath(path))
+//            NSLog("storagePath %@", self.storageForPath(path))
             let storagePath = self.mainFolder().appendingPathComponent(self.storageForPath(path))
             let  storageData: Data? = try? Data(contentsOf: URL(fileURLWithPath: storagePath))
             
             if (storageData != nil)
             {
-                print("using storage for " + String(describing: path))
+//                print("using storage for " + String(describing: path))
                 result(storageData, nil)
                 return
             }
             else
             {
-                print("loading " + String(describing: path) + " from directory")
+//                print("loading " + String(describing: path) + " from directory")
                 Networking.sharedInstance.incrementCount()
                 URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
                     Networking.sharedInstance.decrementCount()

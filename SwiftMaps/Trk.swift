@@ -27,6 +27,19 @@ class Trk: EVObject {
         return points
     }
     
+    public var locations: [CLLocation]? {
+        var points = [CLLocation]()
+        
+        for segment in trkseg
+        {
+            for point in segment.trkpt
+            {
+                points.append(CLLocation.init(latitude: point._lat as! CLLocationDegrees, longitude: point._lon as! CLLocationDegrees));
+            }
+        }
+        return points
+    }
+    
     public var distanceAnnotations: [DistanceAnnotation]? {
         var points = [DistanceAnnotation]()
         var alreadyAddedDistances = [String]()
@@ -56,5 +69,20 @@ class Trk: EVObject {
             }
         }
         return points
+    }
+    
+    func smallestDistanceTo(current: CLLocation) -> CLLocationDistance
+    {
+        var closestLocation: CLLocation?
+        var smallestDistance: CLLocationDistance?
+        for location in locations! {
+            let distance = current.distance(from: location)
+            if smallestDistance == nil || distance < smallestDistance!
+            {
+                closestLocation = location
+                smallestDistance = distance
+            }
+        }
+        return smallestDistance!
     }
 }
