@@ -40,6 +40,30 @@ class SingleTrailMapViewController: MapViewController {
 //        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
 //        overlay.canReplaceMapContent = false;
 //        self.mapView.addOverlay(overlay, level: .AboveRoads)
+        
+        
+        // TEST GPX / EVREFLECT
+        if let filepath = Bundle.main.path(forResource: "AraSaarland200KmBrevet2017", ofType: "gpx") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                print(contents)
+                let gpx = Gpx(xmlString: contents)
+                print(gpx?.trk)
+                let line: MKPolyline = (gpx?.route())!
+//                if (line)
+//                {
+                self.mapView.addOverlays([line], level:MKOverlayLevel.aboveLabels)
+//                }
+            } catch {
+                // contents could not be loaded
+            }
+        } else {
+            // example.txt not found!
+        }
+
+        
+//        MKPolyline *route = [track route];
+//        [self.mapView addOverlay:route];
     }
     
     override func addTapped(){

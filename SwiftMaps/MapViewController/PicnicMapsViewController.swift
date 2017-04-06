@@ -19,7 +19,6 @@ class PicnicMapsViewController: MapViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.alphaSlider.isHidden = true
     }
     
     override func addTapped(){
@@ -39,7 +38,7 @@ class PicnicMapsViewController: MapViewController {
         }
         else if (annotation is NodeAnnotationView)
         {
-            if ( (annotation as! NodeAnnotationView).node.isPeak())
+            if ( (annotation as! NodeAnnotationView).node.isPicnic())
             {
                 let reuseId = "picnic"
                 var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
@@ -47,9 +46,18 @@ class PicnicMapsViewController: MapViewController {
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"picnic")
                     //                    let label:UILabel = UILabel.init(frame: CGRectMake(0, 0, 20, 20))
                     //                    label.text = "🔼"
                     //                    anView?.addSubview(label)
+                }
+
+                //                    let label:UILabel = UILabel.init(frame: CGRectMake(0, 0, 20, 20))
+                //                    label.text = "🔼"
+                //                    anView?.addSubview(label)
+                else {
+                    //we are re-using a view, update its annotation reference...
+                    anView?.annotation = annotation
                 }
                 return anView
             }

@@ -53,6 +53,12 @@ class Node: EVObject {
         return (self.type?.lowercased().range(of: "amenity=bank") != nil)
     }
     
+    func isPicnic() -> Bool
+    {
+        print(type)
+        return (self.type?.lowercased().range(of: "tourism=picnic_site") != nil)
+    }
+    
     func title() -> String
     {
         var title:String = ""

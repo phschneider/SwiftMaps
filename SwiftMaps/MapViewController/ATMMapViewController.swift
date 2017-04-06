@@ -56,15 +56,18 @@ class ATMMapViewController: MapViewController {
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
+                    anView.image = UIImage(named:"cafe")
         //                    let label:UILabel = UILabel.init(frame: CGRectMake(0, 0, 20, 20))
         //                    label.text = "🔼"
         //                    anView?.addSubview(label)
+                }
+                else {
+                    //we are re-using a view, update its annotation reference...
+                    anView.annotation = annotation
                 }
                 return anView
             }
         }
         return nil
     }
-
 }
-
