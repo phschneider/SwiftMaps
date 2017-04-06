@@ -27,4 +27,10 @@ class Gpx: EVObject {
         var polyline = MKPolyline(coordinates: points!, count: (points?.count)!)
         return polyline
     }
+    
+    func distanceAnnotations() -> [DistanceAnnotation]
+    {
+        var points:[DistanceAnnotation] = (trk?.distanceAnnotations)!
+        return points
+    }
 }

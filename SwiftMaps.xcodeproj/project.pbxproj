@@ -182,6 +182,14 @@
 		22A120121E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
 		22A120131E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
 		22A120141E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
+		22A120161E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
+		22A120171E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
+		22A120181E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
+		22A120191E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
+		22A1201A1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
+		22A1201B1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
+		22A1201C1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
+		22A1201D1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
 		22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		22A42B871DE39AAE00F81767 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
@@ -446,6 +454,7 @@
 		22A11FF81E967B3C000EB30F /* Trkseg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkseg.swift; sourceTree = "<group>"; };
 		22A120031E967BB6000EB30F /* Trkpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkpt.swift; sourceTree = "<group>"; };
 		22A1200C1E967E19000EB30F /* Wpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wpt.swift; sourceTree = "<group>"; };
+		22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceAnnotation.swift; sourceTree = "<group>"; };
 		22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleTrailMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A42BCE1DE39C1500F81767 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22A42BCF1DE39C1500F81767 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -777,6 +786,7 @@
 			isa = PBXGroup;
 			children = (
 				227C05D51D3180120033E6BD /* AppDelegate.swift */,
+				22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */,
 				225A61531DE1ECCA004CDA62 /* AlertController.swift */,
 				225A61591DE1EE7E004CDA62 /* Api.swift */,
 				225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */,
@@ -2227,6 +2237,7 @@
 				22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				229564051E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22A11FFC1E967B3C000EB30F /* Trkseg.swift in Sources */,
+				22A120191E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				2295640D1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A11FF31E967AEE000EB30F /* Trk.swift in Sources */,
 				229563EB1E6C1D880045E3BE /* MapViewController.swift in Sources */,
@@ -2255,6 +2266,7 @@
 				22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				229564061E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22A11FFD1E967B3C000EB30F /* Trkseg.swift in Sources */,
+				22A1201A1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				2295640E1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A11FF41E967AEE000EB30F /* Trk.swift in Sources */,
 				224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */,
@@ -2283,6 +2295,7 @@
 				22D5A02F1DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				229564021E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22A11FF91E967B3C000EB30F /* Trkseg.swift in Sources */,
+				22A120161E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				2295640A1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A11FF01E967AEE000EB30F /* Trk.swift in Sources */,
 				223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */,
@@ -2327,6 +2340,7 @@
 				229563BE1E6C1BB30045E3BE /* DetailViewController.swift in Sources */,
 				229564091E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22A120001E967B3C000EB30F /* Trkseg.swift in Sources */,
+				22A1201D1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				229564111E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A11FF71E967AEE000EB30F /* Trk.swift in Sources */,
 				229563BF1E6C1BB30045E3BE /* NodeAnnotationView.swift in Sources */,
@@ -2347,6 +2361,7 @@
 				22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				22A42B871DE39AAE00F81767 /* MapViewBoundingBoxExtension.swift in Sources */,
 				229564391E6C21820045E3BE /* Way.swift in Sources */,
+				22A1201B1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				229563FF1E6C1DC70045E3BE /* Node.swift in Sources */,
 				229563F41E6C1D980045E3BE /* SingleTrailMapViewController.swift in Sources */,
 				22BD0B851E96456800752922 /* Gpx.swift in Sources */,
@@ -2385,6 +2400,7 @@
 				22EAB6761E6B701900FC3EC1 /* DetailViewController.swift in Sources */,
 				229564081E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22A11FFF1E967B3C000EB30F /* Trkseg.swift in Sources */,
+				22A1201C1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				229564101E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A11FF61E967AEE000EB30F /* Trk.swift in Sources */,
 				22EAB6771E6B701900FC3EC1 /* NodeAnnotationView.swift in Sources */,
@@ -2413,6 +2429,7 @@
 				22D5A0301DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				229564031E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22A11FFA1E967B3C000EB30F /* Trkseg.swift in Sources */,
+				22A120171E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				2295640B1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A11FF11E967AEE000EB30F /* Trk.swift in Sources */,
 				4A24F8C21D95D95B0011485B /* NodeAnnotationView.swift in Sources */,
@@ -2441,6 +2458,7 @@
 				22D5A0311DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
 				229564041E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22A11FFB1E967B3C000EB30F /* Trkseg.swift in Sources */,
+				22A120181E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
 				2295640C1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				22A11FF21E967AEE000EB30F /* Trk.swift in Sources */,
 				229563EA1E6C1D870045E3BE /* MapViewController.swift in Sources */,

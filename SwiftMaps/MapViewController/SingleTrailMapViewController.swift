@@ -53,6 +53,8 @@ class SingleTrailMapViewController: MapViewController {
 //                if (line)
 //                {
                 self.mapView.addOverlays([line], level:MKOverlayLevel.aboveLabels)
+                var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
+                self.mapView.addAnnotations(annotations)
 //                }
             } catch {
                 // contents could not be loaded
@@ -98,7 +100,32 @@ class SingleTrailMapViewController: MapViewController {
                 return anView
             }
         }
-        
+        else if (annotation is DistanceAnnotation)
+        {
+            var annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "Distance")
+            annotationView.canShowCallout = false;
+            
+            let size:Int = 15
+            var frame:CGRect = CGRect.zero
+            frame.size = CGSize.init(width: size, height: size)
+            
+            var label:UILabel = UILabel.init(frame: annotationView.frame)
+            label.frame = frame
+            label.textAlignment = NSTextAlignment.center
+            label.text = annotation.title!
+            label.backgroundColor = UIColor.yellow
+            label.adjustsFontSizeToFitWidth = true
+            label.font = UIFont.systemFont(ofSize: 10)
+            label.clipsToBounds = true
+            label.textColor = UIColor.black
+            label.layer.borderColor = UIColor.black.cgColor
+            label.layer.cornerRadius = frame.size.width/2
+            label.layer.borderWidth = 1.0
+            label.center = annotationView.center
+            annotationView .addSubview(label)
+            return annotationView
+        }
+
         return nil
     }
     

@@ -26,4 +26,35 @@ class Trk: EVObject {
         }
         return points
     }
+    
+    public var distanceAnnotations: [DistanceAnnotation]? {
+        var points = [DistanceAnnotation]()
+        var alreadyAddedDistances = [String]()
+        for segment in trkseg
+        {
+            var location:CLLocation! = nil
+            var tmplocation:CLLocation
+            var distance:Double = 0.0
+            for point in segment.trkpt
+            {
+                tmplocation = CLLocation.init(latitude: point._lat as! CLLocationDegrees, longitude: point._lon as! CLLocationDegrees)
+                if (location != nil)
+                {
+                    distance = distance + location.distance(from: tmplocation)
+                }
+                var roundedDistance:Int = Int(distance.divided(by: 5000.0))
+                if ((roundedDistance%1)==0)
+                {
+                    let distanceKey = String.init(format: "%d", roundedDistance*5 as! CVarArg)
+                    if (!alreadyAddedDistances.contains(distanceKey))
+                    {
+                        points.append(DistanceAnnotation.init(coordinate: tmplocation.coordinate, title: distanceKey))
+                        alreadyAddedDistances.append(distanceKey)
+                    }
+                }
+                location = tmplocation
+            }
+        }
+        return points
+    }
 }
