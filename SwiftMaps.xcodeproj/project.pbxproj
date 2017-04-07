@@ -1405,6 +1405,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 227C05D11D3180110033E6BD;
 					};
+					22A42B7E1DE39AAE00F81767 = {
+						DevelopmentTeam = 723AP2V5VG;
+					};
 					22EAB6651E6B701900FC3EC1 = {
 						LastSwiftMigration = 0820;
 					};
@@ -2963,12 +2966,14 @@
 			baseConfigurationReference = 9ED00DA497F7032DAD44EA88 /* Pods-SingleTrailMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 723AP2V5VG;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SINGLETRAIL_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.singletrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
+				PROVISIONING_PROFILE_SPECIFIER = "net.phschneider.maps.singletrail AppStore";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2980,12 +2985,14 @@
 			baseConfigurationReference = A13FA36DA72B3212838F0C7A /* Pods-SingleTrailMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 723AP2V5VG;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SINGLETRAIL_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.singletrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8ab20927-3e29-4bb6-9e37-36353c48dbc8";
+				PROVISIONING_PROFILE_SPECIFIER = "net.phschneider.maps.singletrail AppStore";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
