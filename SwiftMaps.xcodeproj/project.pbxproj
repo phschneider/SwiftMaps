@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		073F5CCB10AEDEFDAED95B11 /* Pods_ATMMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00F348B1F80E470409846EB /* Pods_ATMMaps.framework */; };
+		2214BBDD1E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBDE1E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBDF1E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBE01E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBE11E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBE21E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBE31E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBE41E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
+		2214BBE61E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
+		2214BBE71E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
+		2214BBE81E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
+		2214BBE91E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
+		2214BBEA1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
+		2214BBEB1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
+		2214BBEC1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
+		2214BBED1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
 		223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
 		223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
@@ -76,6 +92,14 @@
 		227C05E31D3180120033E6BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		227C05EE1D3180120033E6BD /* SwiftMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05ED1D3180120033E6BD /* SwiftMapsTests.swift */; };
 		227C05F91D3180120033E6BD /* SwiftMapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05F81D3180120033E6BD /* SwiftMapsUITests.swift */; };
+		228625261E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		228625271E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		228625281E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		228625291E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		2286252A1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		2286252B1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		2286252C1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		2286252D1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
 		229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		229563B31E6C1BB30045E3BE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		229563B41E6C1BB30045E3BE /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
@@ -443,6 +467,8 @@
 /* Begin PBXFileReference section */
 		065B78DD4D055984CADDF946 /* Pods-SegmentMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleTrailMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency_access_point.png; sourceTree = "<group>"; };
+		2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WayPointAnnotation.swift; sourceTree = "<group>"; };
 		223501861D60C6D10043D3E0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		223501881D60C8050043D3E0 /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
 		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -509,6 +535,7 @@
 		227C05F41D3180120033E6BD /* SwiftMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C05F81D3180120033E6BD /* SwiftMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapsUITests.swift; sourceTree = "<group>"; };
 		227C05FA1D3180120033E6BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228625251E97D883003F7AF2 /* icecream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icecream.png; sourceTree = "<group>"; };
 		229563DA1E6C1BB30045E3BE /* NatureMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229563DE1E6C1D7E0045E3BE /* ATMMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ATMMapViewController.swift; path = MapViewController/ATMMapViewController.swift; sourceTree = "<group>"; };
 		229563DF1E6C1D7E0045E3BE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MapViewController/MapViewController.swift; sourceTree = "<group>"; };
@@ -902,6 +929,7 @@
 				227653F61D31849800BA689B /* Models */,
 				227653EF1D31848E00BA689B /* SwiftMaps-Bridging-Header.h */,
 				223501881D60C8050043D3E0 /* NodeAnnotationView.swift */,
+				2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */,
 			);
 			path = SwiftMaps;
 			sourceTree = "<group>";
@@ -1133,6 +1161,8 @@
 		22FF9ED21DD88A8F001F8DA0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */,
+				228625251E97D883003F7AF2 /* icecream.png */,
 				22A5E74A1E96F17C0020BAFF /* restaurant.png */,
 				22A5E7411E96F11F0020BAFF /* cafe.png */,
 				22A5E72F1E96EE860020BAFF /* bakery.png */,
@@ -1446,6 +1476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5E7331E96EE860020BAFF /* bakery.png in Resources */,
+				228625291E97D883003F7AF2 /* icecream.png in Resources */,
 				22B757901DE2340600EFEB96 /* Icon-120.png in Resources */,
 				22A5E7061E96E5D30020BAFF /* picnic.png in Resources */,
 				22A5E7691E96F3F00020BAFF /* viewpoint.png in Resources */,
@@ -1472,6 +1503,7 @@
 				22B757961DE2340600EFEB96 /* Icon-76.png in Resources */,
 				22B757911DE2340600EFEB96 /* Icon-40.png in Resources */,
 				22B757941DE2340600EFEB96 /* Icon-60@2x.png in Resources */,
+				2214BBE01E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				22B7579A1DE2340600EFEB96 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1481,6 +1513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5E7341E96EE860020BAFF /* bakery.png in Resources */,
+				2286252A1E97D883003F7AF2 /* icecream.png in Resources */,
 				22A42BEE1DE39C4800F81767 /* Icon-120.png in Resources */,
 				22A5E7071E96E5D30020BAFF /* picnic.png in Resources */,
 				22A5E76A1E96F3F00020BAFF /* viewpoint.png in Resources */,
@@ -1507,6 +1540,7 @@
 				22A42BF41DE39C4800F81767 /* Icon-76.png in Resources */,
 				22A42BEF1DE39C4800F81767 /* Icon-40.png in Resources */,
 				22A42BF21DE39C4800F81767 /* Icon-60@2x.png in Resources */,
+				2214BBE11E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				22A42BF81DE39C4800F81767 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1520,6 +1554,7 @@
 				22A5E7301E96EE860020BAFF /* bakery.png in Resources */,
 				22A5E7391E96F05C0020BAFF /* fastfood.png in Resources */,
 				227C05E31D3180120033E6BD /* LaunchScreen.storyboard in Resources */,
+				228625261E97D883003F7AF2 /* icecream.png in Resources */,
 				22B757A91DE24EA400EFEB96 /* Icon-Small@3x.png in Resources */,
 				22A5E7541E96F2920020BAFF /* supermarket.png in Resources */,
 				22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */,
@@ -1532,6 +1567,7 @@
 				22B757A51DE24EA400EFEB96 /* Icon-76@2x.png in Resources */,
 				22B757A11DE24EA400EFEB96 /* Icon-40@3x.png in Resources */,
 				22B757A31DE24EA400EFEB96 /* Icon-60@3x.png in Resources */,
+				2214BBDD1E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				22B757A41DE24EA400EFEB96 /* Icon-76.png in Resources */,
 				22B7579F1DE24EA400EFEB96 /* Icon-40.png in Resources */,
 				22A5E74B1E96F17C0020BAFF /* restaurant.png in Resources */,
@@ -1566,6 +1602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5E7371E96EE860020BAFF /* bakery.png in Resources */,
+				2286252D1E97D883003F7AF2 /* icecream.png in Resources */,
 				229563C31E6C1BB30045E3BE /* mountain-512@3x.png in Resources */,
 				22A5E70A1E96E5D30020BAFF /* picnic.png in Resources */,
 				22A5E76D1E96F3F00020BAFF /* viewpoint.png in Resources */,
@@ -1592,6 +1629,7 @@
 				229564281E6C1E200045E3BE /* Icon-60@2x.png in Resources */,
 				229564261E6C1E200045E3BE /* Icon-40@2x.png in Resources */,
 				2295642B1E6C1E200045E3BE /* Icon-76@2x.png in Resources */,
+				2214BBE41E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				2295642F1E6C1E200045E3BE /* Icon-Small@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1601,6 +1639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5E7351E96EE860020BAFF /* bakery.png in Resources */,
+				2286252B1E97D883003F7AF2 /* icecream.png in Resources */,
 				22A42B921DE39AAE00F81767 /* mountain-512@3x.png in Resources */,
 				22A5E7081E96E5D30020BAFF /* picnic.png in Resources */,
 				22A5E76B1E96F3F00020BAFF /* viewpoint.png in Resources */,
@@ -1627,6 +1666,7 @@
 				22A42BE51DE39C1B00F81767 /* Icon-76@2x.png in Resources */,
 				22A42BDE1DE39C1B00F81767 /* Icon-120.png in Resources */,
 				22A42BE11DE39C1B00F81767 /* Icon-40@3x.png in Resources */,
+				2214BBE21E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				22A42BDF1DE39C1B00F81767 /* Icon-40.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1636,6 +1676,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5E7361E96EE860020BAFF /* bakery.png in Resources */,
+				2286252C1E97D883003F7AF2 /* icecream.png in Resources */,
 				22EAB6AC1E6B708300FC3EC1 /* Icon-83.5@2x.png in Resources */,
 				22A5E7091E96E5D30020BAFF /* picnic.png in Resources */,
 				22A5E76C1E96F3F00020BAFF /* viewpoint.png in Resources */,
@@ -1662,6 +1703,7 @@
 				22EAB6A61E6B708300FC3EC1 /* Icon-40@2x.png in Resources */,
 				22EAB6AB1E6B708300FC3EC1 /* Icon-76@2x.png in Resources */,
 				22EAB6AF1E6B708300FC3EC1 /* Icon-Small@3x.png in Resources */,
+				2214BBE31E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				22EAB6AA1E6B708300FC3EC1 /* Icon-76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1671,6 +1713,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5E7311E96EE860020BAFF /* bakery.png in Resources */,
+				228625271E97D883003F7AF2 /* icecream.png in Resources */,
 				226E3E151DE257340021C283 /* Icon-120.png in Resources */,
 				22A5E7041E96E5D30020BAFF /* picnic.png in Resources */,
 				22A5E7671E96F3F00020BAFF /* viewpoint.png in Resources */,
@@ -1697,6 +1740,7 @@
 				226E3E1B1DE257340021C283 /* Icon-76.png in Resources */,
 				226E3E161DE257340021C283 /* Icon-40.png in Resources */,
 				226E3E191DE257340021C283 /* Icon-60@2x.png in Resources */,
+				2214BBDE1E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				226E3E1F1DE257340021C283 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1706,6 +1750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5E7321E96EE860020BAFF /* bakery.png in Resources */,
+				228625281E97D883003F7AF2 /* icecream.png in Resources */,
 				226E3E441DE260570021C283 /* Icon-120.png in Resources */,
 				22A5E7051E96E5D30020BAFF /* picnic.png in Resources */,
 				22A5E7681E96F3F00020BAFF /* viewpoint.png in Resources */,
@@ -1732,6 +1777,7 @@
 				226E3E4A1DE260570021C283 /* Icon-76.png in Resources */,
 				226E3E451DE260570021C283 /* Icon-40.png in Resources */,
 				226E3E481DE260570021C283 /* Icon-60@2x.png in Resources */,
+				2214BBDF1E97DC58005C8CC7 /* emergency_access_point.png in Resources */,
 				226E3E4E1DE260570021C283 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2429,6 +2475,7 @@
 				22A120101E967E19000EB30F /* Wpt.swift in Sources */,
 				22BD0B831E96456800752922 /* Gpx.swift in Sources */,
 				229564371E6C21820045E3BE /* Way.swift in Sources */,
+				2214BBE91E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229563FD1E6C1DC70045E3BE /* Node.swift in Sources */,
 				229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */,
 				224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */,
@@ -2458,6 +2505,7 @@
 				22A120111E967E19000EB30F /* Wpt.swift in Sources */,
 				22BD0B841E96456800752922 /* Gpx.swift in Sources */,
 				229564381E6C21820045E3BE /* Way.swift in Sources */,
+				2214BBEA1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229563FE1E6C1DC70045E3BE /* Node.swift in Sources */,
 				225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */,
@@ -2487,6 +2535,7 @@
 				22A1200D1E967E19000EB30F /* Wpt.swift in Sources */,
 				22BD0B801E96456800752922 /* Gpx.swift in Sources */,
 				229564341E6C21820045E3BE /* Way.swift in Sources */,
+				2214BBE61E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229563FA1E6C1DC70045E3BE /* Node.swift in Sources */,
 				227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */,
 				223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */,
@@ -2532,6 +2581,7 @@
 				22A120141E967E19000EB30F /* Wpt.swift in Sources */,
 				22BD0B871E96456800752922 /* Gpx.swift in Sources */,
 				2295643B1E6C21820045E3BE /* Way.swift in Sources */,
+				2214BBED1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229564011E6C1DC70045E3BE /* Node.swift in Sources */,
 				229563BA1E6C1BB30045E3BE /* Api.swift in Sources */,
 				229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */,
@@ -2571,6 +2621,7 @@
 				22A42B8A1DE39AAE00F81767 /* AppDelegate.swift in Sources */,
 				22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */,
 				22A42B8C1DE39AAE00F81767 /* DetailViewController.swift in Sources */,
+				2214BBEB1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229564071E6C1DC70045E3BE /* Osm.swift in Sources */,
 				2295640F1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				2253E4DF1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
@@ -2592,6 +2643,7 @@
 				22A120131E967E19000EB30F /* Wpt.swift in Sources */,
 				22BD0B861E96456800752922 /* Gpx.swift in Sources */,
 				2295643A1E6C21820045E3BE /* Way.swift in Sources */,
+				2214BBEC1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229564001E6C1DC70045E3BE /* Node.swift in Sources */,
 				22EAB6711E6B701900FC3EC1 /* MapViewBoundingBoxExtension.swift in Sources */,
 				22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */,
@@ -2621,6 +2673,7 @@
 				22A1200E1E967E19000EB30F /* Wpt.swift in Sources */,
 				22BD0B811E96456800752922 /* Gpx.swift in Sources */,
 				229564351E6C21820045E3BE /* Way.swift in Sources */,
+				2214BBE71E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229563FB1E6C1DC70045E3BE /* Node.swift in Sources */,
 				225A615B1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */,
@@ -2650,6 +2703,7 @@
 				22A1200F1E967E19000EB30F /* Wpt.swift in Sources */,
 				22BD0B821E96456800752922 /* Gpx.swift in Sources */,
 				229564361E6C21820045E3BE /* Way.swift in Sources */,
+				2214BBE81E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229563FC1E6C1DC70045E3BE /* Node.swift in Sources */,
 				4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */,
 				4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */,

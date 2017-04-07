@@ -58,6 +58,9 @@ class SingleTrailMapViewController: MapViewController {
                 var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
                 self.mapView.addAnnotations(annotations)
                 
+                annotations = (gpx?.wayPointAnnotations())!
+                self.mapView.addAnnotations(annotations)
+                
                 for overlay in self.mapView.overlays
                 {
                     if (overlay is MKPolyline)
@@ -84,23 +87,68 @@ class SingleTrailMapViewController: MapViewController {
         
         let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
-        Api().requestForBoundingBox("node[natural=peak]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[tourism=viewpoint]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-
-        Api().requestForBoundingBox("node[amenity=shelter]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[amenity=fast_food]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[amenity=restaurant]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[amenity=cafe]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[amenity=fuel]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
         
-        Api().requestForBoundingBox("node[shop=bakery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
-        Api().requestForBoundingBox("node[shop=supermarket]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:gpx)
+        let dispatchTime = 2.0
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+            Api().requestForBoundingBox("node[natural=peak]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+            
+                DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                    Api().requestForBoundingBox("node[tourism=viewpoint]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                        Api().requestForBoundingBox("node[amenity=shelter]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                            Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                Api().requestForBoundingBox("node[amenity=fast_food]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                    Api().requestForBoundingBox("node[amenity=restaurant]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                        Api().requestForBoundingBox("node[amenity=cafe]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                            Api().requestForBoundingBox("node[amenity=fuel]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                            
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                                Api().requestForBoundingBox("node[shop=bakery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                                    Api().requestForBoundingBox("node[shop=supermarket]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                    
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                                        Api().requestForBoundingBox("node[cuisine=ice_cream]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                        
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+                                                            Api().requestForBoundingBox("node[highway=emergency_access_point]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         
         var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
         self.mapView.addAnnotations(annotations)
+        
+        annotations = (gpx?.wayPointAnnotations())!
+        self.mapView.addAnnotations(annotations)
     }
+    
     
     func mapView(_ mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if (annotation is MKUserLocation) {
@@ -287,8 +335,7 @@ class SingleTrailMapViewController: MapViewController {
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"viewpoint")
-                    
+                    anView?.image = UIImage(named:"viewpoint")                    
                 }
                 else
                 {
@@ -296,6 +343,40 @@ class SingleTrailMapViewController: MapViewController {
                 }
                 return anView
             }
+            else if ( (annotation as! NodeAnnotationView).node.isIceCream())
+            {
+                let reuseId = "icecream"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"icecream")
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else if ( (annotation as! NodeAnnotationView).node.isEmergencyAccessPoint())
+            {
+                let reuseId = "EmergencyAccessPoint"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
+                    anView?.image = UIImage(named:"emergency_access_point")
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+
+
 
 
         }
@@ -324,6 +405,33 @@ class SingleTrailMapViewController: MapViewController {
             annotationView .addSubview(label)
             return annotationView
         }
+        
+        else if (annotation is WayPointAnnotation)
+        {
+            var annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "WayPoint")
+            annotationView.canShowCallout = false;
+            
+            let size:Int = 15
+            var frame:CGRect = CGRect.zero
+            frame.size = CGSize.init(width: size, height: size)
+            
+            var label:UILabel = UILabel.init(frame: annotationView.frame)
+            label.frame = frame
+            label.textAlignment = NSTextAlignment.center
+//            label.text = annotation.title!
+            label.backgroundColor = UIColor.red
+            label.adjustsFontSizeToFitWidth = true
+            label.font = UIFont.systemFont(ofSize: 10)
+            label.clipsToBounds = true
+            label.textColor = UIColor.black
+            label.layer.borderColor = UIColor.black.cgColor
+            label.layer.cornerRadius = frame.size.width/2
+            label.layer.borderWidth = 1.0
+            label.center = annotationView.center
+            annotationView .addSubview(label)
+            return annotationView
+        }
+
 
         return nil
     }

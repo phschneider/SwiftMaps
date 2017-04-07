@@ -38,4 +38,15 @@ class Gpx: EVObject {
     {
         return (trk?.smallestDistanceTo(current: current))!
     }
+    
+    func wayPointAnnotations() -> [WayPointAnnotation]
+    {
+        var points = [WayPointAnnotation]()
+        for point in wpt
+        {
+            let tmpLocation = CLLocation.init(latitude: point._lat as! CLLocationDegrees, longitude: point._lon as! CLLocationDegrees)
+            points.append(WayPointAnnotation.init(coordinate: tmpLocation.coordinate, title: point.name!))
+        }
+        return points
+    }
 }

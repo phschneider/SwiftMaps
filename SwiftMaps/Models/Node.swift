@@ -76,6 +76,10 @@ class Node: EVObject {
         return (self.type?.lowercased().range(of: "shop=bakery") != nil)
     }
     
+    func isIceCream() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "cuisine=ice_cream") != nil)
+    }
     
     func isPicnic() -> Bool
     {
@@ -86,8 +90,6 @@ class Node: EVObject {
     {
         return (self.type?.lowercased().range(of: "tourism=viewpoint") != nil)
     }
-    
-    
     
     func isFastFood() -> Bool
     {
@@ -103,6 +105,12 @@ class Node: EVObject {
     {
         return (self.type?.lowercased().range(of: "shop=supermarket") != nil)
     }
+    
+    func isEmergencyAccessPoint() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "highway=emergency_access_point") != nil)
+    }
+    
     
     
     func title() -> String
