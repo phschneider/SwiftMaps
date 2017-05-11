@@ -388,7 +388,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         else if (overlay is MKTileOverlay)
         {
             let renderer = MKTileOverlayRenderer.init(tileOverlay: (overlay as! MKTileOverlay))
-            if (overlay is TileOverlay)
+            if (overlay is StravaTileOverlay)
             {
                 renderer.alpha = alphaValue
             }
