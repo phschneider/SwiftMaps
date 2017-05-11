@@ -174,6 +174,7 @@
 		229564391E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643A1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643B1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		229CCC421EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */; };
 		22A11FF01E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
 		22A11FF11E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
 		22A11FF21E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
@@ -377,14 +378,7 @@
 		22BD0B851E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
 		22BD0B861E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
 		22BD0B871E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B8B1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
-		22BD0B8C1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
-		22BD0B8D1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
-		22BD0B8E1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
-		22BD0B8F1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
 		22BD0B901E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
-		22BD0B911E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
-		22BD0B921E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
 		22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
@@ -565,6 +559,7 @@
 		229564211E6C1E160045E3BE /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		229564221E6C1E160045E3BE /* NatureMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NatureMaps-Info.plist"; sourceTree = "<group>"; };
 		229564331E6C21820045E3BE /* Way.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Way.swift; path = Models/Way.swift; sourceTree = "<group>"; };
+		229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AraSaarland300KmBrevet2017.gpx; sourceTree = "<group>"; };
 		22A11FEF1E967AEE000EB30F /* Trk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trk.swift; sourceTree = "<group>"; };
 		22A11FF81E967B3C000EB30F /* Trkseg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkseg.swift; sourceTree = "<group>"; };
 		22A120031E967BB6000EB30F /* Trkpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkpt.swift; sourceTree = "<group>"; };
@@ -922,6 +917,7 @@
 				2253E4DE1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift */,
 				22D0E1B11DF7585D0052E17B /* Networking.swift */,
 				22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */,
+				229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */,
 				22FF9ED11DD887BF001F8DA0 /* MapViewController */,
 				223501861D60C6D10043D3E0 /* DetailViewController.swift */,
 				227C05E11D3180120033E6BD /* LaunchScreen.storyboard */,
@@ -1492,7 +1488,6 @@
 				22B757921DE2340600EFEB96 /* Icon-40@2x.png in Resources */,
 				22A5E74E1E96F17C0020BAFF /* restaurant.png in Resources */,
 				22B7579C1DE2340600EFEB96 /* iTunesArtwork.png in Resources */,
-				22BD0B8E1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E7451E96F11F0020BAFF /* cafe.png in Resources */,
 				22B757981DE2340600EFEB96 /* Icon-83.5@2x.png in Resources */,
 				22B757971DE2340600EFEB96 /* Icon-76@2x.png in Resources */,
@@ -1529,7 +1524,6 @@
 				22A42BF01DE39C4800F81767 /* Icon-40@2x.png in Resources */,
 				22A5E74F1E96F17C0020BAFF /* restaurant.png in Resources */,
 				22A42BFA1DE39C4800F81767 /* iTunesArtwork.png in Resources */,
-				22BD0B8F1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E7461E96F11F0020BAFF /* cafe.png in Resources */,
 				22A42BF61DE39C4800F81767 /* Icon-83.5@2x.png in Resources */,
 				22A42BF51DE39C4800F81767 /* Icon-76@2x.png in Resources */,
@@ -1574,7 +1568,6 @@
 				22A5E7271E96ED980020BAFF /* fuel.png in Resources */,
 				22A5E7661E96F3F00020BAFF /* viewpoint.png in Resources */,
 				22A5E7151E96E6AA0020BAFF /* bench.png in Resources */,
-				22BD0B8B1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E70C1E96E5DF0020BAFF /* peak.png in Resources */,
 				22B757A21DE24EA400EFEB96 /* Icon-60@2x.png in Resources */,
 				22B757A81DE24EA400EFEB96 /* Icon-Small@2x.png in Resources */,
@@ -1618,7 +1611,6 @@
 				229564301E6C1E200045E3BE /* iTunesArtwork.png in Resources */,
 				22A5E7521E96F17D0020BAFF /* restaurant.png in Resources */,
 				229564251E6C1E200045E3BE /* Icon-40.png in Resources */,
-				22BD0B921E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E7491E96F11F0020BAFF /* cafe.png in Resources */,
 				2295642E1E6C1E200045E3BE /* Icon-Small@2x.png in Resources */,
 				229564291E6C1E200045E3BE /* Icon-60@3x.png in Resources */,
@@ -1647,6 +1639,7 @@
 				22A42BE31DE39C1B00F81767 /* Icon-60@3x.png in Resources */,
 				22A42BE01DE39C1B00F81767 /* Icon-40@2x.png in Resources */,
 				22A42BE61DE39C1B00F81767 /* Icon-83.5@2x.png in Resources */,
+				229CCC421EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx in Resources */,
 				22A42BE81DE39C1B00F81767 /* Icon-Small@2x.png in Resources */,
 				22A5E7591E96F2920020BAFF /* supermarket.png in Resources */,
 				22A5E7621E96F3630020BAFF /* shelter.png in Resources */,
@@ -1692,7 +1685,6 @@
 				22EAB6A41E6B708300FC3EC1 /* Icon-120.png in Resources */,
 				22A5E7511E96F17C0020BAFF /* restaurant.png in Resources */,
 				22EAB6AE1E6B708300FC3EC1 /* Icon-Small@2x.png in Resources */,
-				22BD0B911E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E7481E96F11F0020BAFF /* cafe.png in Resources */,
 				22EAB6A81E6B708300FC3EC1 /* Icon-60@2x.png in Resources */,
 				22EAB67C1E6B701900FC3EC1 /* LaunchScreen.storyboard in Resources */,
@@ -1729,7 +1721,6 @@
 				226E3E171DE257340021C283 /* Icon-40@2x.png in Resources */,
 				22A5E74C1E96F17C0020BAFF /* restaurant.png in Resources */,
 				226E3E211DE257340021C283 /* iTunesArtwork.png in Resources */,
-				22BD0B8C1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E7431E96F11F0020BAFF /* cafe.png in Resources */,
 				226E3E1D1DE257340021C283 /* Icon-83.5@2x.png in Resources */,
 				226E3E1C1DE257340021C283 /* Icon-76@2x.png in Resources */,
@@ -1766,7 +1757,6 @@
 				226E3E461DE260570021C283 /* Icon-40@2x.png in Resources */,
 				22A5E74D1E96F17C0020BAFF /* restaurant.png in Resources */,
 				226E3E501DE260570021C283 /* iTunesArtwork.png in Resources */,
-				22BD0B8D1E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E7441E96F11F0020BAFF /* cafe.png in Resources */,
 				226E3E4C1DE260570021C283 /* Icon-83.5@2x.png in Resources */,
 				226E3E4B1DE260570021C283 /* Icon-76@2x.png in Resources */,

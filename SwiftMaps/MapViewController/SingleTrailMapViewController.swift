@@ -45,7 +45,7 @@ class SingleTrailMapViewController: MapViewController {
         
         
         // TEST GPX / EVREFLECT
-        if let filepath = Bundle.main.path(forResource: "AraSaarland200KmBrevet2017", ofType: "gpx") {
+        if let filepath = Bundle.main.path(forResource: "AraSaarland300KmBrevet2017", ofType: "gpx") {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 print(contents)
@@ -88,7 +88,7 @@ class SingleTrailMapViewController: MapViewController {
         let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
         
-        let dispatchTime = 5.0
+        let dispatchTime = 10.0
 
         // TODO: Srings in Array und dann mittels dispatch durchgehen ...
         
