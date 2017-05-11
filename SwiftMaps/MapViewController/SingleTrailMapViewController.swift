@@ -88,47 +88,47 @@ class SingleTrailMapViewController: MapViewController {
         let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
         
-        let dispatchTime = 2.0
+        let dispatchTime = 5.0
+
+        // TODO: Srings in Array und dann mittels dispatch durchgehen ...
+        
+        Api().requestForBoundingBox("node[natural=peak]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-            Api().requestForBoundingBox("node[natural=peak]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
-
+            Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+        
             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
-            
+                Api().requestForBoundingBox("node[tourism=viewpoint]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                    Api().requestForBoundingBox("node[tourism=viewpoint]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                    Api().requestForBoundingBox("node[amenity=shelter]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                        Api().requestForBoundingBox("node[amenity=shelter]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                        Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                            Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                            Api().requestForBoundingBox("node[amenity=fast_food]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                Api().requestForBoundingBox("node[amenity=fast_food]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                Api().requestForBoundingBox("node[amenity=restaurant]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                    Api().requestForBoundingBox("node[amenity=restaurant]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                    Api().requestForBoundingBox("node[amenity=cafe]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                        Api().requestForBoundingBox("node[amenity=cafe]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                        Api().requestForBoundingBox("node[amenity=fuel]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                            Api().requestForBoundingBox("node[amenity=fuel]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                            Api().requestForBoundingBox("node[shop=bakery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                                             
                                             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                Api().requestForBoundingBox("node[shop=bakery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                Api().requestForBoundingBox("node[shop=supermarket]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                    Api().requestForBoundingBox("node[shop=supermarket]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                    Api().requestForBoundingBox("node[cuisine=ice_cream]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                                                     
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                        Api().requestForBoundingBox("node[cuisine=ice_cream]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
-                                                        
-                                                        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                            Api().requestForBoundingBox("node[highway=emergency_access_point]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
-                                                        }
+                                                        Api().requestForBoundingBox("node[highway=emergency_access_point]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                                                     }
                                                 }
                                             }
