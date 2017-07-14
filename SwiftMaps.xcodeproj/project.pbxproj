@@ -174,7 +174,6 @@
 		229564391E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643A1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643B1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
-		229CCC421EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */; };
 		22A11FF01E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
 		22A11FF11E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
 		22A11FF21E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
@@ -378,7 +377,6 @@
 		22BD0B851E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
 		22BD0B861E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
 		22BD0B871E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B901E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */; };
 		22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
@@ -503,6 +501,7 @@
 		225A61531DE1ECCA004CDA62 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		225A61591DE1EE7E004CDA62 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewBoundingBoxExtension.swift; sourceTree = "<group>"; };
+		2264A8471ED44EA200AACEFE /* AraSaarland400KmBrevet(v2)2017.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "AraSaarland400KmBrevet(v2)2017.gpx"; sourceTree = "<group>"; };
 		226E3E341DE2604E0021C283 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		226E3E351DE2604E0021C283 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		226E3E361DE2604E0021C283 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -918,6 +917,7 @@
 				22D0E1B11DF7585D0052E17B /* Networking.swift */,
 				22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */,
 				229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */,
+				2264A8471ED44EA200AACEFE /* AraSaarland400KmBrevet(v2)2017.gpx */,
 				22FF9ED11DD887BF001F8DA0 /* MapViewController */,
 				223501861D60C6D10043D3E0 /* DetailViewController.swift */,
 				227C05E11D3180120033E6BD /* LaunchScreen.storyboard */,
@@ -1639,7 +1639,6 @@
 				22A42BE31DE39C1B00F81767 /* Icon-60@3x.png in Resources */,
 				22A42BE01DE39C1B00F81767 /* Icon-40@2x.png in Resources */,
 				22A42BE61DE39C1B00F81767 /* Icon-83.5@2x.png in Resources */,
-				229CCC421EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx in Resources */,
 				22A42BE81DE39C1B00F81767 /* Icon-Small@2x.png in Resources */,
 				22A5E7591E96F2920020BAFF /* supermarket.png in Resources */,
 				22A5E7621E96F3630020BAFF /* shelter.png in Resources */,
@@ -1648,7 +1647,6 @@
 				22A42BEB1DE39C1B00F81767 /* iTunesArtwork@2x.png in Resources */,
 				22A5E7501E96F17C0020BAFF /* restaurant.png in Resources */,
 				22A42BE91DE39C1B00F81767 /* Icon-Small@3x.png in Resources */,
-				22BD0B901E96753000752922 /* AraSaarland200KmBrevet2017.gpx in Resources */,
 				22A5E7471E96F11F0020BAFF /* cafe.png in Resources */,
 				22A42BEA1DE39C1B00F81767 /* iTunesArtwork.png in Resources */,
 				22A42BE71DE39C1B00F81767 /* Icon-Small.png in Resources */,
