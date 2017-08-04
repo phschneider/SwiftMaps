@@ -15,8 +15,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation!
     var locationButton: UIButton!
-    var alphaSlider: UISlider!
-    var alphaValue : CGFloat = 1.0
+    
+    var alphaSliderLeft: UISlider!
+    var alphaSliderRight: UISlider!
+    
+    var alphaValueLeft : CGFloat = 1.0
+    var alphaValueRight : CGFloat = 1.0
     
     // MARK: View ...
     override func viewDidLoad() {
@@ -188,24 +192,52 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         // Landscape = -328, 207, 736,48
         // Mit min ) -167, 207, 414, 48
-        self.alphaSlider = UISlider()
-        self.alphaSlider.backgroundColor = UIColor.white
-        self.alphaSlider.value = Float(alphaValue)
-        self.alphaSlider.frame = frame;
+        self.alphaSliderLeft = UISlider()
+        self.alphaSliderLeft.backgroundColor = UIColor.white
+        self.alphaSliderLeft.value = Float(alphaValueLeft)
+        self.alphaSliderLeft.frame = frame;
         
-        self.alphaSlider.autoresizingMask = [.flexibleHeight, .flexibleBottomMargin, .flexibleTopMargin]
+        self.alphaSliderLeft.autoresizingMask = [.flexibleHeight, .flexibleBottomMargin, .flexibleTopMargin]
         
-        self.alphaSlider.removeConstraints(self.alphaSlider.constraints)
-        self.alphaSlider.translatesAutoresizingMaskIntoConstraints = true
-        self.alphaSlider.addTarget(self, action: #selector(MapViewController.sliderValueChanged), for:.valueChanged)
-        self.alphaSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
-        self.view .addSubview(self.alphaSlider)
+        self.alphaSliderLeft.removeConstraints(self.alphaSliderLeft.constraints)
+        self.alphaSliderLeft.translatesAutoresizingMaskIntoConstraints = true
+        self.alphaSliderLeft.addTarget(self, action: #selector(MapViewController.sliderValueChanged(sender:)), for:.valueChanged)
+        self.alphaSliderLeft.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+        self.view .addSubview(self.alphaSliderLeft)
+        
+        self.alphaSliderRight = UISlider()
+        self.alphaSliderRight.backgroundColor = UIColor.white
+        self.alphaSliderRight.value = Float(alphaValueRight)
+        if (self.view.bounds.size.width > self.view.bounds.size.height)
+        {
+            frame.origin.x = ceil((frame.size.width*2) ) + 20;
+        }
+        else
+        {
+            frame.origin.x = ceil(frame.size.width / 2) - 40;
+        }
+        self.alphaSliderRight.frame = frame;
+        
+        self.alphaSliderRight.autoresizingMask = [.flexibleHeight, .flexibleBottomMargin, .flexibleTopMargin, .flexibleLeftMargin]
+        
+        self.alphaSliderRight.removeConstraints(self.alphaSliderRight.constraints)
+        self.alphaSliderRight.translatesAutoresizingMaskIntoConstraints = true
+        self.alphaSliderRight.addTarget(self, action: #selector(MapViewController.sliderValueChanged(sender:)), for:.valueChanged)
+        self.alphaSliderRight.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+        self.view .addSubview(self.alphaSliderRight)
     }
     
-    func sliderValueChanged()
+    func sliderValueChanged(sender:UISlider)
     {
-        alphaValue = CGFloat(self.alphaSlider.value)
+        if (sender == self.alphaSliderLeft)
+        {
+            alphaValueLeft = CGFloat(sender.value)
         //        self.alphaSlider.value
+        }
+        else if (sender == self.alphaSliderRight)
+        {
+            alphaValueRight = CGFloat(sender.value)
+        }
         let overlays = mapView.overlays
         mapView.removeOverlays(overlays)
         mapView.addOverlays(overlays)
@@ -390,7 +422,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             let renderer = MKTileOverlayRenderer.init(tileOverlay: (overlay as! MKTileOverlay))
             if (overlay is StravaTileOverlay)
             {
-                renderer.alpha = alphaValue
+                renderer.alpha = alphaValueLeft
+            }
+            if (overlay is KomootTileOverlay)
+            {
+                renderer.alpha = alphaValueRight;
             }
             return renderer
         }

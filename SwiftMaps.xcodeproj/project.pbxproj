@@ -174,6 +174,16 @@
 		229564391E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643A1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643B1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		2296BAA11F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA21F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA31F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA41F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA51F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA61F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA71F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA81F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAA91F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
+		2296BAAA1F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
 		22A11FF01E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
 		22A11FF11E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
 		22A11FF21E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
@@ -559,6 +569,7 @@
 		229564221E6C1E160045E3BE /* NatureMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NatureMaps-Info.plist"; sourceTree = "<group>"; };
 		229564331E6C21820045E3BE /* Way.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Way.swift; path = Models/Way.swift; sourceTree = "<group>"; };
 		229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AraSaarland300KmBrevet2017.gpx; sourceTree = "<group>"; };
+		2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KomootTileOverlay.swift; sourceTree = "<group>"; };
 		22A11FEF1E967AEE000EB30F /* Trk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trk.swift; sourceTree = "<group>"; };
 		22A11FF81E967B3C000EB30F /* Trkseg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkseg.swift; sourceTree = "<group>"; };
 		22A120031E967BB6000EB30F /* Trkpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkpt.swift; sourceTree = "<group>"; };
@@ -911,9 +922,7 @@
 				225A61591DE1EE7E004CDA62 /* Api.swift */,
 				225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */,
 				225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */,
-				22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */,
-				22F5E5481E9538E500029DDD /* StravaTileOverlay.swift */,
-				2253E4DE1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift */,
+				2296BAAB1F34B36800EFDF4A /* TileOverlays */,
 				22D0E1B11DF7585D0052E17B /* Networking.swift */,
 				22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */,
 				229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */,
@@ -976,6 +985,17 @@
 				229564211E6C1E160045E3BE /* iTunesArtwork@2x.png */,
 			);
 			path = AppIcons;
+			sourceTree = "<group>";
+		};
+		2296BAAB1F34B36800EFDF4A /* TileOverlays */ = {
+			isa = PBXGroup;
+			children = (
+				22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */,
+				2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */,
+				22F5E5481E9538E500029DDD /* StravaTileOverlay.swift */,
+				2253E4DE1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift */,
+			);
+			name = TileOverlays;
 			sourceTree = "<group>";
 		};
 		22A120011E967B9D000EB30F /* GPX */ = {
@@ -2458,6 +2478,7 @@
 				225A614B1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
 				22D0E1B51DF7585D0052E17B /* Networking.swift in Sources */,
+				2296BAA61F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				225A61631DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615D1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				22A120101E967E19000EB30F /* Wpt.swift in Sources */,
@@ -2488,6 +2509,7 @@
 				229563F21E6C1D920045E3BE /* PicnicMapsViewController.swift in Sources */,
 				225A614C1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
+				2296BAA71F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				22D0E1B61DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61641DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				22A120111E967E19000EB30F /* Wpt.swift in Sources */,
@@ -2518,6 +2540,7 @@
 				225A61481DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				227C05DE1D3180120033E6BD /* SwiftMaps.xcdatamodeld in Sources */,
 				22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */,
+				2296BAA31F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				225A61601DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615A1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				22A1200D1E967E19000EB30F /* Wpt.swift in Sources */,
@@ -2546,6 +2569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227C05EE1D3180120033E6BD /* SwiftMapsTests.swift in Sources */,
+				2296BAA11F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2554,6 +2578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227C05F91D3180120033E6BD /* SwiftMapsUITests.swift in Sources */,
+				2296BAA21F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2564,6 +2589,7 @@
 				229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */,
 				229563B31E6C1BB30045E3BE /* Networking.swift in Sources */,
 				229563B41E6C1BB30045E3BE /* SwiftMaps.xcdatamodeld in Sources */,
+				2296BAAA1F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				229563B81E6C1BB30045E3BE /* TileOverlay.swift in Sources */,
 				229563B91E6C1BB30045E3BE /* MapViewBoundingBoxExtension.swift in Sources */,
 				22A120141E967E19000EB30F /* Wpt.swift in Sources */,
@@ -2592,6 +2618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */,
+				2296BAA81F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				22A11FFE1E967B3C000EB30F /* Trkseg.swift in Sources */,
 				22D0E1B71DF7585D0052E17B /* Networking.swift in Sources */,
 				22A120121E967E19000EB30F /* Wpt.swift in Sources */,
@@ -2626,6 +2653,7 @@
 				22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */,
 				22EAB66B1E6B701900FC3EC1 /* Networking.swift in Sources */,
 				22EAB66C1E6B701900FC3EC1 /* SwiftMaps.xcdatamodeld in Sources */,
+				2296BAA91F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				229563F31E6C1D940045E3BE /* SegmentMapsViewController.swift in Sources */,
 				22EAB6701E6B701900FC3EC1 /* TileOverlay.swift in Sources */,
 				22A120131E967E19000EB30F /* Wpt.swift in Sources */,
@@ -2656,6 +2684,7 @@
 				225A61491DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				4A24F8BC1D95D95B0011485B /* SwiftMaps.xcdatamodeld in Sources */,
 				229563F01E6C1D8D0045E3BE /* MountainMapViewController.swift in Sources */,
+				2296BAA41F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */,
 				225A61611DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				22A1200E1E967E19000EB30F /* Wpt.swift in Sources */,
@@ -2686,6 +2715,7 @@
 				225A614A1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				4AF49F651D985D60001A8034 /* SwiftMaps.xcdatamodeld in Sources */,
 				22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */,
+				2296BAA51F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 				225A61621DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A615C1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				22A1200F1E967E19000EB30F /* Wpt.swift in Sources */,
