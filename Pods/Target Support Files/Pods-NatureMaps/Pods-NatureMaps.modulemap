@@ -1,0 +1,6 @@
+framework module Pods_NatureMaps {
+  umbrella header "Pods-NatureMaps-umbrella.h"
+
+  export *
+  module * { export * }
+}

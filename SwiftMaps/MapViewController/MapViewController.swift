@@ -134,7 +134,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.updateLocationButtonTitle()
     }
     
-    func locationButtonTapped(){
+    @objc func locationButtonTapped(){
         if (self.mapView.userTrackingMode == MKUserTrackingMode.none)
         {
             self.mapView.userTrackingMode = MKUserTrackingMode.follow
@@ -227,7 +227,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.view .addSubview(self.alphaSliderRight)
     }
     
-    func sliderValueChanged(sender:UISlider)
+    @objc func sliderValueChanged(sender:UISlider)
     {
         if (sender == self.alphaSliderLeft)
         {
@@ -243,7 +243,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.addOverlays(overlays)
     }
     
-    func addTapped(){
+    @objc func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
         
         //        >      4             1            2               3
@@ -420,11 +420,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         else if (overlay is MKTileOverlay)
         {
             let renderer = MKTileOverlayRenderer.init(tileOverlay: (overlay as! MKTileOverlay))
-            if (overlay is StravaTileOverlay)
+            renderer.alpha = 1.0;
+            if (overlay is PersonalStravaTileOverlay)
+            {
+                
+            }
+            else if (overlay is StravaTileOverlay)
             {
                 renderer.alpha = alphaValueLeft
             }
-            if (overlay is KomootTileOverlay)
+            else if (overlay is KomootTileOverlay)
             {
                 renderer.alpha = alphaValueRight;
             }

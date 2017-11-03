@@ -111,6 +111,12 @@ class Node: EVObject {
         return (self.type?.lowercased().range(of: "highway=emergency_access_point") != nil)
     }
     
+    func isFountain() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=fountain") != nil)
+    }
+    
+    
     
     
     func title() -> String

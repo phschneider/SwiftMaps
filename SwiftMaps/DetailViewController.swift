@@ -54,6 +54,12 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         self.tableView.frame = self.view.frame
     }
     
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        userLocation = locations[0]
+        self.tableView.reloadSections(IndexSet(integer: 1), with: UITableViewRowAnimation.automatic)
+    }
+    
     // MARK: HeaderView
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if (section == 0)
@@ -100,11 +106,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         }
 
         return 1
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        userLocation = locations[0] 
-        self.tableView.reloadSections(IndexSet(integer: 1), with: UITableViewRowAnimation.automatic)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

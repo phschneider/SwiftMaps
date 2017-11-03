@@ -1,37 +1,36 @@
 PODS:
-  - Alamofire (4.4.0)
-  - AlamofireNetworkActivityIndicator (2.1.0):
-    - Alamofire (~> 4.1)
+  - Alamofire (4.5.1)
+  - AlamofireNetworkActivityIndicator (2.2.0):
+    - Alamofire (~> 4.5)
   - AlamofireXmlToObjects (2.1.0):
     - Alamofire
     - EVReflection
     - XMLDictionary
-  - EVReflection (4.8.0):
-    - EVReflection/Core (= 4.8.0)
-  - EVReflection/Core (4.8.0)
-  - EVReflection/XML (4.8.0):
+  - EVReflection (4.8.3):
+    - EVReflection/Core (= 4.8.3)
+  - EVReflection/Core (4.8.3)
+  - EVReflection/XML (4.8.3):
     - EVReflection/Core
     - XMLDictionary
   - StravaKit (0.9.5)
   - XMLDictionary (1.4.1)
 
 DEPENDENCIES:
-  - Alamofire
   - Alamofire (~> 4.0)
   - AlamofireNetworkActivityIndicator
   - AlamofireXmlToObjects
-  - EVReflection
+  - EVReflection (~> 4.8.0)
   - EVReflection/XML
   - StravaKit (~> 0.9)
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
   AlamofireXmlToObjects: 3614c4945a5b154041ea9ade99644b5de66d5857
-  EVReflection: 45760b8603c14c3dbb61395a4e77ba797b3b5c69
+  EVReflection: 3b6d6d2d4a55900fa1438f33991d7df72035e98b
   StravaKit: 78c6cecc3c98d3860be2367fec96846664b75621
   XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
 
-PODFILE CHECKSUM: 926bf84eea39eba00d11aebb57f97fc9e3358503
+PODFILE CHECKSUM: ce9569151a4a371e8f06f2f8df8cc4a5d026411a
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.3.1

@@ -37,8 +37,9 @@ class SingleTrailMapViewController: MapViewController {
 
         
         let stravaOverlay:StravaTileOverlay = StravaTileOverlay.init()
+        let stravaPersonalOverlay:PersonalStravaTileOverlay = PersonalStravaTileOverlay.init()
         let komootOverlay:KomootTileOverlay = KomootTileOverlay.init()
-        self.mapView.addOverlays([osmOverlay,komootOverlay,stravaOverlay],level: .aboveLabels)
+        self.mapView.addOverlays([osmOverlay,komootOverlay,stravaOverlay, stravaPersonalOverlay],level: .aboveLabels)
         
 //        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
 //        overlay.canReplaceMapContent = false;
@@ -46,7 +47,7 @@ class SingleTrailMapViewController: MapViewController {
         
         
         // TEST GPX / EVREFLECT
-        if let filepath = Bundle.main.path(forResource: "AraSaarland300KmBrevet2017", ofType: "gpx") {
+        if let filepath = Bundle.main.path(forResource: "AraSaarland400KmBrevet(v2)2017", ofType: "gpx") {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 print(contents)
@@ -89,14 +90,26 @@ class SingleTrailMapViewController: MapViewController {
         let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
         let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
         
-        let dispatchTime = 10.0
+        // TODO: DispatchTime anhand Kartenausschnitt 
+        // TODO: DispatchTime anhand Anzahl Requests
+        let dispatchTime = 60.0
 
         // TODO: Srings in Array und dann mittels dispatch durchgehen ...
+        //        Api().requestForBoundingBox("way[landuse=cemetery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+        //        Api().requestForBoundingBox("node[amenity=fountain]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+        
+        // TODO:
+        //        amenity=drinking_water -
+        //        amenity=water_point -
+        //        natural=spring -
+        //        man_made=water_well -
+        
+        
         
         Api().requestForBoundingBox("node[natural=peak]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-            Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+//            Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
         
             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
                 Api().requestForBoundingBox("node[tourism=viewpoint]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
@@ -105,7 +118,7 @@ class SingleTrailMapViewController: MapViewController {
                     Api().requestForBoundingBox("node[amenity=shelter]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                        Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+//                        Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
                             Api().requestForBoundingBox("node[amenity=fast_food]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
@@ -127,10 +140,12 @@ class SingleTrailMapViewController: MapViewController {
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
                                                     Api().requestForBoundingBox("node[cuisine=ice_cream]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                    AlertController().showAlert("last Request")
                                                     
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                        Api().requestForBoundingBox("node[highway=emergency_access_point]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
-                                                    }
+//                                                    DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
+//                                                        Api().requestForBoundingBox("node[highway=emergency_access_point]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+//                                                        AlertController().showAlert("last Request")
+//                                                    }
                                                 }
                                             }
                                         }
@@ -369,6 +384,21 @@ class SingleTrailMapViewController: MapViewController {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
                     anView?.image = UIImage(named:"emergency_access_point")
+                }
+                else
+                {
+                    anView?.annotation = annotation
+                }
+                return anView
+            }
+            else
+            {
+                let reuseId = "Std"
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                if (anView == nil)
+                {
+                    anView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                    anView!.canShowCallout = true
                 }
                 else
                 {

@@ -46,6 +46,7 @@ class Api {
             urlString = String(format:"%@/xapi_meta?%@[bbox=%@]", serverString, searchString, boundingBox)            
         }
         
+        print("Search String: \(searchString)")
         print("Url String: \(urlString)")
         
         Alamofire.request(

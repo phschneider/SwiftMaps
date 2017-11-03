@@ -22,5 +22,4 @@ class NodeAnnotationView: NSObject, MKAnnotation  {
         
         super.init()
     }
-
 }

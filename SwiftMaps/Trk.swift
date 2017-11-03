@@ -55,7 +55,7 @@ class Trk: EVObject {
                 {
                     distance = distance + location.distance(from: tmplocation)
                 }
-                var roundedDistance:Int = Int(distance.divided(by: 5000.0))
+                let roundedDistance:Int = Int(distance/5000.0)
                 if ((roundedDistance%1)==0)
                 {
                     let distanceKey = String.init(format: "%d", roundedDistance*5 as! CVarArg)
