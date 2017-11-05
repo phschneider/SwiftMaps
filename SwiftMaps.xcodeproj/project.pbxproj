@@ -16,29 +16,78 @@
 		2214BBE21E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
 		2214BBE31E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
 		2214BBE41E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
-		2214BBE61E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		2214BBE71E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		2214BBE81E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		2214BBE91E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		2214BBEA1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		2214BBEB1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		2214BBEC1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		2214BBED1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */; };
-		223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
+		222208F51FACB7D2003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222208F61FACB7D2003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222208F71FACB7D2003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222208F81FACB7D2003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222208F91FACB7D2003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222208FA1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222208FB1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222208FC1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208F41FACB7D2003E374C /* DebugTileOverlay.swift */; };
+		222209021FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		222209031FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		222209041FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		222209051FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		222209061FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		222209071FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		222209081FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		222209091FACB7DF003E374C /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */; };
+		2222090A1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		2222090B1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		2222090C1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		2222090D1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		2222090E1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		2222090F1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		222209101FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		222209111FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */; };
+		222209121FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		222209131FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		222209141FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		222209151FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		222209161FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		222209171FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		222209181FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		222209191FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */; };
+		2222091A1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		2222091B1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		2222091C1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		2222091D1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		2222091E1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		2222091F1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		222209201FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		222209211FACB7DF003E374C /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209001FACB7DF003E374C /* StravaTileOverlay.swift */; };
+		222209221FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		222209231FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		222209241FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		222209251FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		222209261FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		222209271FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		222209281FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		222209291FACB7DF003E374C /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222209011FACB7DF003E374C /* TileOverlay.swift */; };
+		2222092D1FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		2222092E1FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		2222092F1FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		222209301FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		222209311FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		222209321FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		222209331FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		222209341FACB804003E374C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092B1FACB804003E374C /* DetailViewController.swift */; };
+		222209351FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		222209361FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		222209371FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		222209381FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		222209391FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		2222093A1FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		2222093B1FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		2222093C1FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
 		224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
-		224F2A6F1DDBB67900B22D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		224F2A711DDBB67900B22D2B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		224F2A761DDBB67900B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
-		224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		224F2AB41DDBBB7600B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		224F2AB51DDBBB7600B22D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
-		2253E4DF1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253E4DE1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift */; };
 		225A61481DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		225A61491DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		225A614A1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
@@ -54,11 +103,6 @@
 		225A615C1DE1EE7E004CDA62 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
 		225A615D1DE1EE7E004CDA62 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
 		225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
-		225A61601DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
-		225A61611DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
-		225A61621DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
-		225A61631DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
-		225A61641DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		226E3E151DE257340021C283 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */; };
 		226E3E161DE257340021C283 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */; };
 		226E3E171DE257340021C283 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */; };
@@ -100,32 +144,11 @@
 		2286252B1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
 		2286252C1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
 		2286252D1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
-		228933FC1FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228933FD1FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228933FE1FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228933FF1FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228934001FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228934011FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228934021FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228934031FABC5E70028AFF1 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228933FB1FABC5E70028AFF1 /* TileViewController.swift */; };
-		228934051FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
-		228934061FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
-		228934071FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
-		228934081FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
-		228934091FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
-		2289340A1FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
-		2289340B1FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
-		2289340C1FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */; };
 		229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
-		229563B31E6C1BB30045E3BE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		229563B41E6C1BB30045E3BE /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		229563B81E6C1BB30045E3BE /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		229563B91E6C1BB30045E3BE /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		229563BA1E6C1BB30045E3BE /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
 		229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		229563BD1E6C1BB30045E3BE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
-		229563BE1E6C1BB30045E3BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		229563BF1E6C1BB30045E3BE /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		229563C31E6C1BB30045E3BE /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		229563C41E6C1BB30045E3BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229563DE1E6C1D7E0045E3BE /* ATMMapViewController.swift */; };
@@ -190,64 +213,11 @@
 		229564391E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643A1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643B1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
-		2296BAA11F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA21F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA31F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA41F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA51F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA61F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA71F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA81F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAA91F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		2296BAAA1F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */; };
-		22A11FF01E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF11E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF21E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF31E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF41E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF51E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF61E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF71E967AEE000EB30F /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FEF1E967AEE000EB30F /* Trk.swift */; };
-		22A11FF91E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A11FFA1E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A11FFB1E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A11FFC1E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A11FFD1E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A11FFE1E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A11FFF1E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A120001E967B3C000EB30F /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A11FF81E967B3C000EB30F /* Trkseg.swift */; };
-		22A120041E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A120051E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A120061E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A120071E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A120081E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A120091E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A1200A1E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A1200B1E967BB6000EB30F /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120031E967BB6000EB30F /* Trkpt.swift */; };
-		22A1200D1E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A1200E1E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A1200F1E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A120101E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A120111E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A120121E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A120131E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A120141E967E19000EB30F /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1200C1E967E19000EB30F /* Wpt.swift */; };
-		22A120161E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
-		22A120171E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
-		22A120181E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
-		22A120191E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
-		22A1201A1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
-		22A1201B1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
-		22A1201C1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
-		22A1201D1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */; };
 		22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		22A42B871DE39AAE00F81767 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		22A42B881DE39AAE00F81767 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
 		22A42B8A1DE39AAE00F81767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
-		22A42B8C1DE39AAE00F81767 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		22A42B8D1DE39AAE00F81767 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		22A42B921DE39AAE00F81767 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22A42B931DE39AAE00F81767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		22A42BDE1DE39C1B00F81767 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A42BCE1DE39C1500F81767 /* Icon-120.png */; };
@@ -366,6 +336,86 @@
 		22A5E76B1E96F3F00020BAFF /* viewpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A5E7651E96F3F00020BAFF /* viewpoint.png */; };
 		22A5E76C1E96F3F00020BAFF /* viewpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A5E7651E96F3F00020BAFF /* viewpoint.png */; };
 		22A5E76D1E96F3F00020BAFF /* viewpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A5E7651E96F3F00020BAFF /* viewpoint.png */; };
+		22B215A91FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215AA1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215AB1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215AC1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215AD1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215AE1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215AF1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215B01FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
+		22B215B31FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215B41FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215B51FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215B61FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215B71FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215B81FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215B91FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215BA1FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */; };
+		22B215BB1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215BC1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215BD1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215BE1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215BF1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215C01FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215C11FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215C21FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */; };
+		22B215C91FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215CA1FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215CB1FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215CC1FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215CD1FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215CE1FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215CF1FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215D01FAF3FBE0031DFAB /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C41FAF3FBE0031DFAB /* Gpx.swift */; };
+		22B215D11FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D21FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D31FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D41FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D51FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D61FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D71FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D81FAF3FBE0031DFAB /* Trk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C51FAF3FBE0031DFAB /* Trk.swift */; };
+		22B215D91FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215DA1FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215DB1FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215DC1FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215DD1FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215DE1FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215DF1FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215E01FAF3FBE0031DFAB /* Trkpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C61FAF3FBE0031DFAB /* Trkpt.swift */; };
+		22B215E11FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E21FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E31FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E41FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E51FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E61FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E71FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E81FAF3FBE0031DFAB /* Trkseg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C71FAF3FBE0031DFAB /* Trkseg.swift */; };
+		22B215E91FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215EA1FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215EB1FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215EC1FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215ED1FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215EE1FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215EF1FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215F01FAF3FBE0031DFAB /* Wpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215C81FAF3FBE0031DFAB /* Wpt.swift */; };
+		22B215F21FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215F31FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215F41FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215F51FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215F61FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215F71FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215F81FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215F91FAF3FD00031DFAB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215F11FAF3FD00031DFAB /* Networking.swift */; };
+		22B215FB1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
+		22B215FC1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
+		22B215FD1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
+		22B215FE1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
+		22B215FF1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
+		22B216001FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
+		22B216011FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
+		22B216021FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */; };
 		22B757901DE2340600EFEB96 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2A851DDBB95900B22D2B /* Icon-120.png */; };
 		22B757911DE2340600EFEB96 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2A861DDBB95900B22D2B /* Icon-40.png */; };
 		22B757921DE2340600EFEB96 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F2A871DDBB95900B22D2B /* Icon-40@2x.png */; };
@@ -395,36 +445,11 @@
 		22B757AA1DE24EA400EFEB96 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECD1DD885CB001F8DA0 /* iTunesArtwork.png */; };
 		22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECE1DD885CB001F8DA0 /* iTunesArtwork@2x.png */; };
 		22B757AC1DE24EA400EFEB96 /* TrafficMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECF1DD885CB001F8DA0 /* TrafficMap-Logo.png */; };
-		22BD0B801E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B811E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B821E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B831E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B841E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B851E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B861E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22BD0B871E96456800752922 /* Gpx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD0B7F1E96456800752922 /* Gpx.swift */; };
-		22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
-		22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
-		22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
-		22D0E1B51DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
-		22D0E1B61DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
-		22D0E1B71DF7585D0052E17B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
-		22D5A02F1DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		22D5A0301DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		22D5A0311DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
 		22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
-		22EAB66B1E6B701900FC3EC1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0E1B11DF7585D0052E17B /* Networking.swift */; };
 		22EAB66C1E6B701900FC3EC1 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
-		22EAB6701E6B701900FC3EC1 /* TileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */; };
-		22EAB6711E6B701900FC3EC1 /* MapViewBoundingBoxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */; };
 		22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
 		22EAB6741E6B701900FC3EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61531DE1ECCA004CDA62 /* AlertController.swift */; };
-		22EAB6761E6B701900FC3EC1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		22EAB6771E6B701900FC3EC1 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		22EAB6791E6B701900FC3EC1 /* Pods_SingleTrailMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */; };
 		22EAB67B1E6B701900FC3EC1 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22EAB67C1E6B701900FC3EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
@@ -442,20 +467,15 @@
 		22EAB6AF1E6B708300FC3EC1 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB69F1E6B707A00FC3EC1 /* Icon-Small@3x.png */; };
 		22EAB6B01E6B708300FC3EC1 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6A01E6B707A00FC3EC1 /* iTunesArtwork.png */; };
 		22EAB6B11E6B708300FC3EC1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB6A11E6B707A00FC3EC1 /* iTunesArtwork@2x.png */; };
-		22F5E5491E9538E500029DDD /* StravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5E5481E9538E500029DDD /* StravaTileOverlay.swift */; };
 		22FF9ED81DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		4A24F8BC1D95D95B0011485B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
-		4A24F8C11D95D95B0011485B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		4A24F8C21D95D95B0011485B /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		4A24F8CF1D95D95B0011485B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		4A98C8852F6553D6C866A08B /* Pods_MountainMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A3144314A96E3D036D4F96 /* Pods_MountainMaps.framework */; };
 		4AF49F651D985D60001A8034 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
-		4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501861D60C6D10043D3E0 /* DetailViewController.swift */; };
-		4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223501881D60C8050043D3E0 /* NodeAnnotationView.swift */; };
 		4AF49F761D985D60001A8034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
 		6D4789E88952616D69734C21 /* Pods_SingleTrailMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */; };
 		70BE93DF131682DB6DBB12A9 /* Pods_PicnicMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD027E4AE053E0A4285D1233 /* Pods_PicnicMaps.framework */; };
@@ -487,9 +507,14 @@
 		065B78DD4D055984CADDF946 /* Pods-SegmentMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleTrailMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency_access_point.png; sourceTree = "<group>"; };
-		2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WayPointAnnotation.swift; sourceTree = "<group>"; };
-		223501861D60C6D10043D3E0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		223501881D60C8050043D3E0 /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
+		222208F41FACB7D2003E374C /* DebugTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugTileOverlay.swift; path = TileOverlays/DebugTileOverlay.swift; sourceTree = "<group>"; };
+		222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KomootTileOverlay.swift; path = TileOverlays/KomootTileOverlay.swift; sourceTree = "<group>"; };
+		222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapBoxRunBikeHikeTileOverlay.swift; path = TileOverlays/MapBoxRunBikeHikeTileOverlay.swift; sourceTree = "<group>"; };
+		222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalStravaTileOverlay.swift; path = TileOverlays/PersonalStravaTileOverlay.swift; sourceTree = "<group>"; };
+		222209001FACB7DF003E374C /* StravaTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StravaTileOverlay.swift; path = TileOverlays/StravaTileOverlay.swift; sourceTree = "<group>"; };
+		222209011FACB7DF003E374C /* TileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileOverlay.swift; path = TileOverlays/TileOverlay.swift; sourceTree = "<group>"; };
+		2222092B1FACB804003E374C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ViewController/DetailViewController.swift; sourceTree = "<group>"; };
+		2222092C1FACB804003E374C /* TileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileViewController.swift; path = ViewController/TileViewController.swift; sourceTree = "<group>"; };
 		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224F2A851DDBB95900B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		224F2A861DDBB95900B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -523,11 +548,9 @@
 		224F2ACF1DDBBC3800B22D2B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		224F2AD01DDBBC3800B22D2B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		224F2AD21DDBBC3800B22D2B /* PicnicMaps-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PicnicMaps-Info.plist"; sourceTree = "<group>"; };
-		2253E4DE1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBoxRunBikeHikeTileOverlay.swift; sourceTree = "<group>"; };
 		225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 		225A61531DE1ECCA004CDA62 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		225A61591DE1EE7E004CDA62 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewBoundingBoxExtension.swift; sourceTree = "<group>"; };
 		2264A8471ED44EA200AACEFE /* AraSaarland400KmBrevet(v2)2017.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "AraSaarland400KmBrevet(v2)2017.gpx"; sourceTree = "<group>"; };
 		226E3E341DE2604E0021C283 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		226E3E351DE2604E0021C283 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -556,8 +579,6 @@
 		227C05F81D3180120033E6BD /* SwiftMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapsUITests.swift; sourceTree = "<group>"; };
 		227C05FA1D3180120033E6BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		228625251E97D883003F7AF2 /* icecream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icecream.png; sourceTree = "<group>"; };
-		228933FB1FABC5E70028AFF1 /* TileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
-		228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalStravaTileOverlay.swift; sourceTree = "<group>"; };
 		229563DA1E6C1BB30045E3BE /* NatureMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229563DE1E6C1D7E0045E3BE /* ATMMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ATMMapViewController.swift; path = MapViewController/ATMMapViewController.swift; sourceTree = "<group>"; };
 		229563DF1E6C1D7E0045E3BE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MapViewController/MapViewController.swift; sourceTree = "<group>"; };
@@ -587,13 +608,7 @@
 		229564211E6C1E160045E3BE /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		229564221E6C1E160045E3BE /* NatureMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NatureMaps-Info.plist"; sourceTree = "<group>"; };
 		229564331E6C21820045E3BE /* Way.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Way.swift; path = Models/Way.swift; sourceTree = "<group>"; };
-		2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KomootTileOverlay.swift; sourceTree = "<group>"; };
 		229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text.xml; path = AraSaarland300KmBrevet2017.gpx; sourceTree = "<group>"; };
-		22A11FEF1E967AEE000EB30F /* Trk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trk.swift; sourceTree = "<group>"; };
-		22A11FF81E967B3C000EB30F /* Trkseg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkseg.swift; sourceTree = "<group>"; };
-		22A120031E967BB6000EB30F /* Trkpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trkpt.swift; sourceTree = "<group>"; };
-		22A1200C1E967E19000EB30F /* Wpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wpt.swift; sourceTree = "<group>"; };
-		22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceAnnotation.swift; sourceTree = "<group>"; };
 		22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleTrailMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A42BCE1DE39C1500F81767 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22A42BCF1DE39C1500F81767 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -621,10 +636,17 @@
 		22A5E7531E96F2920020BAFF /* supermarket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = supermarket.png; sourceTree = "<group>"; };
 		22A5E75C1E96F3630020BAFF /* shelter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelter.png; sourceTree = "<group>"; };
 		22A5E7651E96F3F00020BAFF /* viewpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewpoint.png; sourceTree = "<group>"; };
-		22BD0B7F1E96456800752922 /* Gpx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gpx.swift; sourceTree = "<group>"; };
+		22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceAnnotation.swift; sourceTree = "<group>"; };
+		22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
+		22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WayPointAnnotation.swift; sourceTree = "<group>"; };
+		22B215C41FAF3FBE0031DFAB /* Gpx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gpx.swift; path = Models/Gpx.swift; sourceTree = "<group>"; };
+		22B215C51FAF3FBE0031DFAB /* Trk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trk.swift; path = Models/Trk.swift; sourceTree = "<group>"; };
+		22B215C61FAF3FBE0031DFAB /* Trkpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trkpt.swift; path = Models/Trkpt.swift; sourceTree = "<group>"; };
+		22B215C71FAF3FBE0031DFAB /* Trkseg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trkseg.swift; path = Models/Trkseg.swift; sourceTree = "<group>"; };
+		22B215C81FAF3FBE0031DFAB /* Wpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wpt.swift; path = Models/Wpt.swift; sourceTree = "<group>"; };
+		22B215F11FAF3FD00031DFAB /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewBoundingBoxExtension.swift; sourceTree = "<group>"; };
 		22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AraSaarland200KmBrevet2017.gpx; sourceTree = "<group>"; };
-		22D0E1B11DF7585D0052E17B /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileOverlay.swift; sourceTree = "<group>"; };
 		22EAB6901E6B701900FC3EC1 /* SegmentMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegmentMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EAB6941E6B707A00FC3EC1 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22EAB6951E6B707A00FC3EC1 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -641,7 +663,6 @@
 		22EAB6A01E6B707A00FC3EC1 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		22EAB6A11E6B707A00FC3EC1 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		22EAB6A21E6B707A00FC3EC1 /* SegmentMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegmentMaps-Info.plist"; sourceTree = "<group>"; };
-		22F5E5481E9538E500029DDD /* StravaTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaTileOverlay.swift; sourceTree = "<group>"; };
 		22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -806,6 +827,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2222092A1FACB7F3003E374C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2222092B1FACB804003E374C /* DetailViewController.swift */,
+				2222092C1FACB804003E374C /* TileViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		224F2A831DDBB95900B22D2B /* ATMMaps */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,26 +969,22 @@
 		227C05D41D3180120033E6BD /* SwiftMaps */ = {
 			isa = PBXGroup;
 			children = (
+				2222092A1FACB7F3003E374C /* ViewController */,
 				227C05D51D3180120033E6BD /* AppDelegate.swift */,
-				22A120151E96D7FA000EB30F /* DistanceAnnotation.swift */,
 				225A61531DE1ECCA004CDA62 /* AlertController.swift */,
 				225A61591DE1EE7E004CDA62 /* Api.swift */,
-				225A615F1DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift */,
 				225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */,
+				22B215C31FAF3F930031DFAB /* Helper */,
+				22B215A71FAF3F3D0031DFAB /* Views */,
 				2296BAAB1F34B36800EFDF4A /* TileOverlays */,
-				22D0E1B11DF7585D0052E17B /* Networking.swift */,
 				22BD0B8A1E96753000752922 /* AraSaarland200KmBrevet2017.gpx */,
 				229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */,
 				2264A8471ED44EA200AACEFE /* AraSaarland400KmBrevet(v2)2017.gpx */,
 				22FF9ED11DD887BF001F8DA0 /* MapViewController */,
-				223501861D60C6D10043D3E0 /* DetailViewController.swift */,
 				227C05E11D3180120033E6BD /* LaunchScreen.storyboard */,
 				227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */,
 				227653F61D31849800BA689B /* Models */,
 				227653EF1D31848E00BA689B /* SwiftMaps-Bridging-Header.h */,
-				223501881D60C8050043D3E0 /* NodeAnnotationView.swift */,
-				2214BBE51E97E00A005C8CC7 /* WayPointAnnotation.swift */,
-				228933FB1FABC5E70028AFF1 /* TileViewController.swift */,
 			);
 			path = SwiftMaps;
 			sourceTree = "<group>";
@@ -1014,11 +1040,12 @@
 		2296BAAB1F34B36800EFDF4A /* TileOverlays */ = {
 			isa = PBXGroup;
 			children = (
-				22D5A02E1DF1ADD8001C10AA /* TileOverlay.swift */,
-				2296BAA01F34B35F00EFDF4A /* KomootTileOverlay.swift */,
-				22F5E5481E9538E500029DDD /* StravaTileOverlay.swift */,
-				2253E4DE1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift */,
-				228934041FABC8020028AFF1 /* PersonalStravaTileOverlay.swift */,
+				222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */,
+				222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */,
+				222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */,
+				222209001FACB7DF003E374C /* StravaTileOverlay.swift */,
+				222209011FACB7DF003E374C /* TileOverlay.swift */,
+				222208F41FACB7D2003E374C /* DebugTileOverlay.swift */,
 			);
 			name = TileOverlays;
 			sourceTree = "<group>";
@@ -1026,11 +1053,11 @@
 		22A120011E967B9D000EB30F /* GPX */ = {
 			isa = PBXGroup;
 			children = (
-				22A11FF81E967B3C000EB30F /* Trkseg.swift */,
-				22A1200C1E967E19000EB30F /* Wpt.swift */,
-				22A11FEF1E967AEE000EB30F /* Trk.swift */,
-				22BD0B7F1E96456800752922 /* Gpx.swift */,
-				22A120031E967BB6000EB30F /* Trkpt.swift */,
+				22B215C41FAF3FBE0031DFAB /* Gpx.swift */,
+				22B215C51FAF3FBE0031DFAB /* Trk.swift */,
+				22B215C61FAF3FBE0031DFAB /* Trkpt.swift */,
+				22B215C71FAF3FBE0031DFAB /* Trkseg.swift */,
+				22B215C81FAF3FBE0031DFAB /* Wpt.swift */,
 			);
 			name = GPX;
 			sourceTree = "<group>";
@@ -1074,6 +1101,25 @@
 				22A42BDB1DE39C1500F81767 /* iTunesArtwork@2x.png */,
 			);
 			path = AppIcons;
+			sourceTree = "<group>";
+		};
+		22B215A71FAF3F3D0031DFAB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */,
+				22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */,
+				22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22B215C31FAF3F930031DFAB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				22B215FA1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift */,
+				22B215F11FAF3FD00031DFAB /* Networking.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		22EAB6921E6B707A00FC3EC1 /* SegmentMaps */ = {
@@ -2629,32 +2675,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B215FE1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A614B1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
-				22D0E1B51DF7585D0052E17B /* Networking.swift in Sources */,
-				2296BAA61F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228933FF1FABC5E70028AFF1 /* TileViewController.swift in Sources */,
-				225A61631DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
+				22B215BE1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215CC1FAF3FBE0031DFAB /* Gpx.swift in Sources */,
 				225A615D1DE1EE7E004CDA62 /* Api.swift in Sources */,
-				22A120101E967E19000EB30F /* Wpt.swift in Sources */,
-				22BD0B831E96456800752922 /* Gpx.swift in Sources */,
+				22B215AC1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564371E6C21820045E3BE /* Way.swift in Sources */,
-				2214BBE91E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
+				222209381FACB804003E374C /* TileViewController.swift in Sources */,
 				229563FD1E6C1DC70045E3BE /* Node.swift in Sources */,
+				2222091D1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */,
 				224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */,
 				225A61571DE1ECCA004CDA62 /* AlertController.swift in Sources */,
-				228934081FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22A120071E967BB6000EB30F /* Trkpt.swift in Sources */,
-				224F2A6F1DDBB67900B22D2B /* DetailViewController.swift in Sources */,
-				22D5A0321DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				22B215EC1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E41FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
+				222208F81FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
+				222209151FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
+				22B215D41FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				229564051E6C1DC70045E3BE /* Osm.swift in Sources */,
-				22A11FFC1E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22A120191E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				222209251FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640D1E6C1DC70045E3BE /* Tag.swift in Sources */,
-				22A11FF31E967AEE000EB30F /* Trk.swift in Sources */,
 				229563EB1E6C1D880045E3BE /* MapViewController.swift in Sources */,
-				224F2A711DDBB67900B22D2B /* NodeAnnotationView.swift in Sources */,
+				2222090D1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209051FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
+				22B215DC1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F51FAF3FD00031DFAB /* Networking.swift in Sources */,
+				222209301FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215B61FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2662,32 +2711,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B215FF1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				229563F21E6C1D920045E3BE /* PicnicMapsViewController.swift in Sources */,
 				225A614C1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
+				22B215BF1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215CD1FAF3FBE0031DFAB /* Gpx.swift in Sources */,
 				224F2AA91DDBBB7600B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
-				2296BAA71F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228934001FABC5E70028AFF1 /* TileViewController.swift in Sources */,
-				22D0E1B61DF7585D0052E17B /* Networking.swift in Sources */,
-				225A61641DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
-				22A120111E967E19000EB30F /* Wpt.swift in Sources */,
-				22BD0B841E96456800752922 /* Gpx.swift in Sources */,
+				22B215AD1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564381E6C21820045E3BE /* Way.swift in Sources */,
-				2214BBEA1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
+				222209391FACB804003E374C /* TileViewController.swift in Sources */,
 				229563FE1E6C1DC70045E3BE /* Node.swift in Sources */,
+				2222091E1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */,
 				225A61581DE1ECCA004CDA62 /* AlertController.swift in Sources */,
-				228934091FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22A120081E967BB6000EB30F /* Trkpt.swift in Sources */,
-				224F2AAF1DDBBB7600B22D2B /* DetailViewController.swift in Sources */,
-				22D5A0331DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				22B215ED1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E51FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
+				222208F91FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
+				222209161FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
+				22B215D51FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				229564061E6C1DC70045E3BE /* Osm.swift in Sources */,
-				22A11FFD1E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22A1201A1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				222209261FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640E1E6C1DC70045E3BE /* Tag.swift in Sources */,
-				22A11FF41E967AEE000EB30F /* Trk.swift in Sources */,
-				224F2AB01DDBBB7600B22D2B /* NodeAnnotationView.swift in Sources */,
+				2222090E1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209061FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
 				229563EC1E6C1D880045E3BE /* MapViewController.swift in Sources */,
+				22B215DD1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F61FAF3FD00031DFAB /* Networking.swift in Sources */,
+				222209311FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215B71FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2695,32 +2747,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B215FB1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A61481DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				227C05DE1D3180120033E6BD /* SwiftMaps.xcdatamodeld in Sources */,
-				22D0E1B21DF7585D0052E17B /* Networking.swift in Sources */,
-				2296BAA31F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228933FC1FABC5E70028AFF1 /* TileViewController.swift in Sources */,
-				225A61601DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
+				22B215BB1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215C91FAF3FBE0031DFAB /* Gpx.swift in Sources */,
 				225A615A1DE1EE7E004CDA62 /* Api.swift in Sources */,
-				22A1200D1E967E19000EB30F /* Wpt.swift in Sources */,
-				22BD0B801E96456800752922 /* Gpx.swift in Sources */,
+				22B215A91FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564341E6C21820045E3BE /* Way.swift in Sources */,
-				2214BBE61E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
+				222209351FACB804003E374C /* TileViewController.swift in Sources */,
 				229563FA1E6C1DC70045E3BE /* Node.swift in Sources */,
+				2222091A1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */,
-				223501871D60C6D10043D3E0 /* DetailViewController.swift in Sources */,
 				229563F61E6C1D9E0045E3BE /* TrafficMapViewController.swift in Sources */,
-				228934051FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22A120041E967BB6000EB30F /* Trkpt.swift in Sources */,
+				222208F51FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
+				22B215E91FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E11FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				225A61541DE1ECCA004CDA62 /* AlertController.swift in Sources */,
-				22D5A02F1DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				222209121FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
+				22B215D11FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				229564021E6C1DC70045E3BE /* Osm.swift in Sources */,
-				22A11FF91E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22A120161E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				222209221FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640A1E6C1DC70045E3BE /* Tag.swift in Sources */,
-				22A11FF01E967AEE000EB30F /* Trk.swift in Sources */,
-				223501891D60C8050043D3E0 /* NodeAnnotationView.swift in Sources */,
+				2222090A1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209021FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
 				229563E81E6C1D860045E3BE /* MapViewController.swift in Sources */,
+				22B215D91FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F21FAF3FD00031DFAB /* Networking.swift in Sources */,
+				2222092D1FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215B31FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2729,7 +2784,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				227C05EE1D3180120033E6BD /* SwiftMapsTests.swift in Sources */,
-				2296BAA11F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2738,7 +2792,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				227C05F91D3180120033E6BD /* SwiftMapsUITests.swift in Sources */,
-				2296BAA21F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2746,32 +2799,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B216021FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */,
-				229563B31E6C1BB30045E3BE /* Networking.swift in Sources */,
+				22B215C21FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215D01FAF3FBE0031DFAB /* Gpx.swift in Sources */,
 				229563B41E6C1BB30045E3BE /* SwiftMaps.xcdatamodeld in Sources */,
-				2296BAAA1F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228934031FABC5E70028AFF1 /* TileViewController.swift in Sources */,
-				229563B81E6C1BB30045E3BE /* TileOverlay.swift in Sources */,
-				229563B91E6C1BB30045E3BE /* MapViewBoundingBoxExtension.swift in Sources */,
-				22A120141E967E19000EB30F /* Wpt.swift in Sources */,
-				22BD0B871E96456800752922 /* Gpx.swift in Sources */,
+				22B215B01FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				2295643B1E6C21820045E3BE /* Way.swift in Sources */,
-				2214BBED1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229564011E6C1DC70045E3BE /* Node.swift in Sources */,
+				2222093C1FACB804003E374C /* TileViewController.swift in Sources */,
 				229563BA1E6C1BB30045E3BE /* Api.swift in Sources */,
+				222209211FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */,
 				229563BD1E6C1BB30045E3BE /* AlertController.swift in Sources */,
-				2289340C1FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22A1200B1E967BB6000EB30F /* Trkpt.swift in Sources */,
+				222208FC1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */,
+				22B215F01FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E81FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				229563F11E6C1D8F0045E3BE /* NatureMapViewController.swift in Sources */,
-				229563BE1E6C1BB30045E3BE /* DetailViewController.swift in Sources */,
+				222209191FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
+				22B215D81FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				229564091E6C1DC70045E3BE /* Osm.swift in Sources */,
-				22A120001E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22A1201D1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				222209291FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				229564111E6C1DC70045E3BE /* Tag.swift in Sources */,
-				22A11FF71E967AEE000EB30F /* Trk.swift in Sources */,
-				229563BF1E6C1BB30045E3BE /* NodeAnnotationView.swift in Sources */,
+				222209111FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209091FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
 				229563EF1E6C1D8A0045E3BE /* MapViewController.swift in Sources */,
+				22B215E01FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F91FAF3FD00031DFAB /* Networking.swift in Sources */,
+				222209341FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215BA1FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2779,34 +2835,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B216001FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */,
-				2296BAA81F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228934011FABC5E70028AFF1 /* TileViewController.swift in Sources */,
-				22A11FFE1E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22D0E1B71DF7585D0052E17B /* Networking.swift in Sources */,
-				22A120121E967E19000EB30F /* Wpt.swift in Sources */,
-				22A120091E967BB6000EB30F /* Trkpt.swift in Sources */,
+				22B215C01FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215CE1FAF3FBE0031DFAB /* Gpx.swift in Sources */,
+				222208FA1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */,
+				22B215AE1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */,
-				22D5A0341DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
-				22A42B871DE39AAE00F81767 /* MapViewBoundingBoxExtension.swift in Sources */,
 				229564391E6C21820045E3BE /* Way.swift in Sources */,
-				22A1201B1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				2222093A1FACB804003E374C /* TileViewController.swift in Sources */,
+				2222091F1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563FF1E6C1DC70045E3BE /* Node.swift in Sources */,
 				229563F41E6C1D980045E3BE /* SingleTrailMapViewController.swift in Sources */,
-				22BD0B851E96456800752922 /* Gpx.swift in Sources */,
-				2289340A1FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22F5E5491E9538E500029DDD /* StravaTileOverlay.swift in Sources */,
 				22A42B881DE39AAE00F81767 /* Api.swift in Sources */,
 				22A42B8A1DE39AAE00F81767 /* AppDelegate.swift in Sources */,
+				22B215EE1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E61FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */,
-				22A42B8C1DE39AAE00F81767 /* DetailViewController.swift in Sources */,
-				2214BBEB1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
+				222209171FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
+				22B215D61FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				222209271FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				229564071E6C1DC70045E3BE /* Osm.swift in Sources */,
 				2295640F1E6C1DC70045E3BE /* Tag.swift in Sources */,
-				2253E4DF1E9587BD00CB30C1 /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
-				22A11FF51E967AEE000EB30F /* Trk.swift in Sources */,
-				22A42B8D1DE39AAE00F81767 /* NodeAnnotationView.swift in Sources */,
+				2222090F1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209071FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
 				229563ED1E6C1D890045E3BE /* MapViewController.swift in Sources */,
+				22B215DE1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F71FAF3FD00031DFAB /* Networking.swift in Sources */,
+				222209321FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215B81FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2814,32 +2871,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B216011FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */,
-				22EAB66B1E6B701900FC3EC1 /* Networking.swift in Sources */,
+				22B215C11FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215CF1FAF3FBE0031DFAB /* Gpx.swift in Sources */,
 				22EAB66C1E6B701900FC3EC1 /* SwiftMaps.xcdatamodeld in Sources */,
-				2296BAA91F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228934021FABC5E70028AFF1 /* TileViewController.swift in Sources */,
 				229563F31E6C1D940045E3BE /* SegmentMapsViewController.swift in Sources */,
-				22EAB6701E6B701900FC3EC1 /* TileOverlay.swift in Sources */,
-				22A120131E967E19000EB30F /* Wpt.swift in Sources */,
-				22BD0B861E96456800752922 /* Gpx.swift in Sources */,
+				22B215AF1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				2295643A1E6C21820045E3BE /* Way.swift in Sources */,
-				2214BBEC1E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
 				229564001E6C1DC70045E3BE /* Node.swift in Sources */,
-				22EAB6711E6B701900FC3EC1 /* MapViewBoundingBoxExtension.swift in Sources */,
+				2222093B1FACB804003E374C /* TileViewController.swift in Sources */,
+				222209201FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */,
 				22EAB6741E6B701900FC3EC1 /* AppDelegate.swift in Sources */,
-				2289340B1FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22A1200A1E967BB6000EB30F /* Trkpt.swift in Sources */,
+				222208FB1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */,
+				22B215EF1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E71FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */,
-				22EAB6761E6B701900FC3EC1 /* DetailViewController.swift in Sources */,
+				222209181FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
+				22B215D71FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				229564081E6C1DC70045E3BE /* Osm.swift in Sources */,
-				22A11FFF1E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22A1201C1E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				222209281FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				229564101E6C1DC70045E3BE /* Tag.swift in Sources */,
-				22A11FF61E967AEE000EB30F /* Trk.swift in Sources */,
-				22EAB6771E6B701900FC3EC1 /* NodeAnnotationView.swift in Sources */,
+				222209101FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209081FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
 				229563EE1E6C1D890045E3BE /* MapViewController.swift in Sources */,
+				22B215DF1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F81FAF3FD00031DFAB /* Networking.swift in Sources */,
+				222209331FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215B91FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2847,32 +2907,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B215FC1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A61491DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				4A24F8BC1D95D95B0011485B /* SwiftMaps.xcdatamodeld in Sources */,
+				22B215BC1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215CA1FAF3FBE0031DFAB /* Gpx.swift in Sources */,
 				229563F01E6C1D8D0045E3BE /* MountainMapViewController.swift in Sources */,
-				2296BAA41F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228933FD1FABC5E70028AFF1 /* TileViewController.swift in Sources */,
-				22D0E1B31DF7585D0052E17B /* Networking.swift in Sources */,
-				225A61611DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
-				22A1200E1E967E19000EB30F /* Wpt.swift in Sources */,
-				22BD0B811E96456800752922 /* Gpx.swift in Sources */,
+				22B215AA1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564351E6C21820045E3BE /* Way.swift in Sources */,
-				2214BBE71E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
+				222209361FACB804003E374C /* TileViewController.swift in Sources */,
 				229563FB1E6C1DC70045E3BE /* Node.swift in Sources */,
+				2222091B1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615B1DE1EE7E004CDA62 /* Api.swift in Sources */,
 				4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */,
 				225A61551DE1ECCA004CDA62 /* AlertController.swift in Sources */,
-				228934061FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22A120051E967BB6000EB30F /* Trkpt.swift in Sources */,
-				4A24F8C11D95D95B0011485B /* DetailViewController.swift in Sources */,
-				22D5A0301DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				22B215EA1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E21FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
+				222208F61FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
+				222209131FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
+				22B215D21FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				229564031E6C1DC70045E3BE /* Osm.swift in Sources */,
-				22A11FFA1E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22A120171E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				222209231FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640B1E6C1DC70045E3BE /* Tag.swift in Sources */,
-				22A11FF11E967AEE000EB30F /* Trk.swift in Sources */,
-				4A24F8C21D95D95B0011485B /* NodeAnnotationView.swift in Sources */,
+				2222090B1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209031FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
 				229563E91E6C1D870045E3BE /* MapViewController.swift in Sources */,
+				22B215DA1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F31FAF3FD00031DFAB /* Networking.swift in Sources */,
+				2222092E1FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215B41FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2880,32 +2943,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B215FD1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				225A614A1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				4AF49F651D985D60001A8034 /* SwiftMaps.xcdatamodeld in Sources */,
-				22D0E1B41DF7585D0052E17B /* Networking.swift in Sources */,
-				2296BAA51F34B35F00EFDF4A /* KomootTileOverlay.swift in Sources */,
-				228933FE1FABC5E70028AFF1 /* TileViewController.swift in Sources */,
-				225A61621DE1EEDC004CDA62 /* MapViewBoundingBoxExtension.swift in Sources */,
+				22B215BD1FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
+				22B215CB1FAF3FBE0031DFAB /* Gpx.swift in Sources */,
 				225A615C1DE1EE7E004CDA62 /* Api.swift in Sources */,
-				22A1200F1E967E19000EB30F /* Wpt.swift in Sources */,
-				22BD0B821E96456800752922 /* Gpx.swift in Sources */,
+				22B215AB1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564361E6C21820045E3BE /* Way.swift in Sources */,
-				2214BBE81E97E00A005C8CC7 /* WayPointAnnotation.swift in Sources */,
+				222209371FACB804003E374C /* TileViewController.swift in Sources */,
 				229563FC1E6C1DC70045E3BE /* Node.swift in Sources */,
+				2222091C1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */,
-				4AF49F6B1D985D60001A8034 /* DetailViewController.swift in Sources */,
 				225A61561DE1ECCA004CDA62 /* AlertController.swift in Sources */,
-				228934071FABC8020028AFF1 /* PersonalStravaTileOverlay.swift in Sources */,
-				22A120061E967BB6000EB30F /* Trkpt.swift in Sources */,
-				4AF49F6C1D985D60001A8034 /* NodeAnnotationView.swift in Sources */,
-				22D5A0311DF1ADD8001C10AA /* TileOverlay.swift in Sources */,
+				222208F71FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
+				22B215EB1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
+				22B215E31FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
+				222209141FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				229564041E6C1DC70045E3BE /* Osm.swift in Sources */,
-				22A11FFB1E967B3C000EB30F /* Trkseg.swift in Sources */,
-				22A120181E96D7FA000EB30F /* DistanceAnnotation.swift in Sources */,
+				22B215D31FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				222209241FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640C1E6C1DC70045E3BE /* Tag.swift in Sources */,
-				22A11FF21E967AEE000EB30F /* Trk.swift in Sources */,
 				229563EA1E6C1D870045E3BE /* MapViewController.swift in Sources */,
+				2222090C1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift in Sources */,
+				222209041FACB7DF003E374C /* KomootTileOverlay.swift in Sources */,
 				229563F51E6C1D9B0045E3BE /* ToiletMapViewController.swift in Sources */,
+				22B215DB1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
+				22B215F41FAF3FD00031DFAB /* Networking.swift in Sources */,
+				2222092F1FACB804003E374C /* DetailViewController.swift in Sources */,
+				22B215B51FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

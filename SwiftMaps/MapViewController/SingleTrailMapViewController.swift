@@ -37,7 +37,7 @@ class SingleTrailMapViewController: MapViewController {
 
         
         let stravaOverlay:StravaTileOverlay = StravaTileOverlay.init()
-        let stravaPersonalOverlay:PersonalStravaTileOverlay = PersonalStravaTileOverlay.init()
+        let stravaPersonalOverlay:DebugTileOverlay = DebugTileOverlay.init()
         let komootOverlay:KomootTileOverlay = KomootTileOverlay.init()
         self.mapView.addOverlays([osmOverlay,komootOverlay,stravaOverlay, stravaPersonalOverlay],level: .aboveLabels)
         
