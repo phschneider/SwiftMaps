@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		073F5CCB10AEDEFDAED95B11 /* Pods_ATMMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00F348B1F80E470409846EB /* Pods_ATMMaps.framework */; };
+		2212C7DB1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
+		2212C7DC1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
+		2212C7DD1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
+		2212C7DE1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
+		2212C7DF1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
+		2212C7E01FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
+		2212C7E11FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
+		2212C7E21FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */; };
 		2214BBDD1E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
 		2214BBDE1E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
 		2214BBDF1E97DC58005C8CC7 /* emergency_access_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */; };
@@ -144,6 +152,14 @@
 		2286252B1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
 		2286252C1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
 		2286252D1E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
+		2289DC481FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
+		2289DC491FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
+		2289DC4A1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
+		2289DC4B1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
+		2289DC4C1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
+		2289DC4D1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
+		2289DC4E1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
+		2289DC4F1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */; };
 		229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		229563B41E6C1BB30045E3BE /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		229563BA1E6C1BB30045E3BE /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
@@ -530,6 +546,7 @@
 		048183CA97705B4F8E4597BF /* Pods_NatureMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatureMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		065B78DD4D055984CADDF946 /* Pods-SegmentMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentMaps/Pods-SegmentMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		0838FFC93F6CC41682F87105 /* Pods_SingleTrailMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleTrailMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OsmHillShadingTileOverlay.swift; path = TileOverlays/OsmHillShadingTileOverlay.swift; sourceTree = "<group>"; };
 		2214BBDC1E97DC58005C8CC7 /* emergency_access_point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency_access_point.png; sourceTree = "<group>"; };
 		222208F41FACB7D2003E374C /* DebugTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugTileOverlay.swift; path = TileOverlays/DebugTileOverlay.swift; sourceTree = "<group>"; };
 		222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KomootTileOverlay.swift; path = TileOverlays/KomootTileOverlay.swift; sourceTree = "<group>"; };
@@ -603,6 +620,7 @@
 		227C05F81D3180120033E6BD /* SwiftMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapsUITests.swift; sourceTree = "<group>"; };
 		227C05FA1D3180120033E6BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		228625251E97D883003F7AF2 /* icecream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icecream.png; sourceTree = "<group>"; };
+		2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackAndWhiteTileOverlay.swift; path = TileOverlays/BlackAndWhiteTileOverlay.swift; sourceTree = "<group>"; };
 		229563DA1E6C1BB30045E3BE /* NatureMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229563DE1E6C1D7E0045E3BE /* ATMMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ATMMapViewController.swift; path = MapViewController/ATMMapViewController.swift; sourceTree = "<group>"; };
 		229563DF1E6C1D7E0045E3BE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MapViewController/MapViewController.swift; sourceTree = "<group>"; };
@@ -1068,6 +1086,7 @@
 			isa = PBXGroup;
 			children = (
 				222209011FACB7DF003E374C /* TileOverlay.swift */,
+				2212C7DA1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift */,
 				222208F41FACB7D2003E374C /* DebugTileOverlay.swift */,
 				222208FD1FACB7DF003E374C /* KomootTileOverlay.swift */,
 				222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */,
@@ -1076,6 +1095,7 @@
 				22B216031FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift */,
 				22B2160C1FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift */,
 				22B216151FB09C320031DFAB /* WaymarkedMtbTileOverlay.swift */,
+				2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */,
 			);
 			name = TileOverlays;
 			sourceTree = "<group>";
@@ -2718,6 +2738,7 @@
 				229563FD1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091D1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */,
+				2212C7DE1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */,
 				225A61571DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				22B215EC1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -2726,6 +2747,7 @@
 				222208F81FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				222209151FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				22B215D41FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC4B1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564051E6C1DC70045E3BE /* Osm.swift in Sources */,
 				222209251FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640D1E6C1DC70045E3BE /* Tag.swift in Sources */,
@@ -2757,6 +2779,7 @@
 				229563FE1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091E1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */,
+				2212C7DF1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				224F2AAD1DDBBB7600B22D2B /* AppDelegate.swift in Sources */,
 				225A61581DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				22B215ED1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -2765,6 +2788,7 @@
 				222208F91FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				222209161FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				22B215D51FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC4C1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564061E6C1DC70045E3BE /* Osm.swift in Sources */,
 				222209261FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640E1E6C1DC70045E3BE /* Tag.swift in Sources */,
@@ -2796,6 +2820,7 @@
 				229563FA1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091A1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */,
+				2212C7DB1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				229563F61E6C1D9E0045E3BE /* TrafficMapViewController.swift in Sources */,
 				222208F51FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				22B215E91FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -2804,6 +2829,7 @@
 				225A61541DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				222209121FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				22B215D11FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC481FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564021E6C1DC70045E3BE /* Osm.swift in Sources */,
 				222209221FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640A1E6C1DC70045E3BE /* Tag.swift in Sources */,
@@ -2851,6 +2877,7 @@
 				229563BA1E6C1BB30045E3BE /* Api.swift in Sources */,
 				222209211FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */,
+				2212C7E21FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				229563BD1E6C1BB30045E3BE /* AlertController.swift in Sources */,
 				222208FC1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */,
 				22B215F01FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -2859,6 +2886,7 @@
 				229563F11E6C1D8F0045E3BE /* NatureMapViewController.swift in Sources */,
 				222209191FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				22B215D81FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC4F1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564091E6C1DC70045E3BE /* Osm.swift in Sources */,
 				222209291FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				229564111E6C1DC70045E3BE /* Tag.swift in Sources */,
@@ -2890,6 +2918,7 @@
 				2222091F1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563FF1E6C1DC70045E3BE /* Node.swift in Sources */,
 				229563F41E6C1D980045E3BE /* SingleTrailMapViewController.swift in Sources */,
+				2212C7E01FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				22A42B881DE39AAE00F81767 /* Api.swift in Sources */,
 				22A42B8A1DE39AAE00F81767 /* AppDelegate.swift in Sources */,
 				22B215EE1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -2898,6 +2927,7 @@
 				22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */,
 				222209171FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				22B215D61FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC4D1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				222209271FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				229564071E6C1DC70045E3BE /* Osm.swift in Sources */,
 				2295640F1E6C1DC70045E3BE /* Tag.swift in Sources */,
@@ -2929,6 +2959,7 @@
 				2222093B1FACB804003E374C /* TileViewController.swift in Sources */,
 				222209201FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */,
+				2212C7E11FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				22EAB6741E6B701900FC3EC1 /* AppDelegate.swift in Sources */,
 				222208FB1FACB7D3003E374C /* DebugTileOverlay.swift in Sources */,
 				22B215EF1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -2937,6 +2968,7 @@
 				22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */,
 				222209181FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				22B215D71FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC4E1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564081E6C1DC70045E3BE /* Osm.swift in Sources */,
 				222209281FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				229564101E6C1DC70045E3BE /* Tag.swift in Sources */,
@@ -2968,6 +3000,7 @@
 				229563FB1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091B1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615B1DE1EE7E004CDA62 /* Api.swift in Sources */,
+				2212C7DC1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */,
 				225A61551DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				22B215EA1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -2976,6 +3009,7 @@
 				222208F61FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				222209131FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				22B215D21FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC491FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564031E6C1DC70045E3BE /* Osm.swift in Sources */,
 				222209231FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640B1E6C1DC70045E3BE /* Tag.swift in Sources */,
@@ -3007,6 +3041,7 @@
 				229563FC1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091C1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */,
+				2212C7DD1FB1EED5008ED19B /* OsmHillShadingTileOverlay.swift in Sources */,
 				225A61561DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				222208F71FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				22B215EB1FAF3FBE0031DFAB /* Wpt.swift in Sources */,
@@ -3015,6 +3050,7 @@
 				222209141FACB7DF003E374C /* PersonalStravaTileOverlay.swift in Sources */,
 				229564041E6C1DC70045E3BE /* Osm.swift in Sources */,
 				22B215D31FAF3FBE0031DFAB /* Trk.swift in Sources */,
+				2289DC4A1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				222209241FACB7DF003E374C /* TileOverlay.swift in Sources */,
 				2295640C1E6C1DC70045E3BE /* Tag.swift in Sources */,
 				229563EA1E6C1D870045E3BE /* MapViewController.swift in Sources */,

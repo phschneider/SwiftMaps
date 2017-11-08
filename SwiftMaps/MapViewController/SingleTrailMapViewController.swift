@@ -43,7 +43,11 @@ class SingleTrailMapViewController: MapViewController {
         let cyclingOverlay:WaymarkedCyclingTileOverlay = WaymarkedCyclingTileOverlay.init()
         let mtbOverlay:WaymarkedMtbTileOverlay = WaymarkedMtbTileOverlay.init()
         
-        self.mapView.addOverlays([osmOverlay,komootOverlay,mtbOverlay],level: .aboveLabels)
+        let osmHillShadingOverlay:OsmHillShadingTileOverlay = OsmHillShadingTileOverlay.init()
+        let blackAndWhiteOverlay:BlackAndWhiteTileOverlay = BlackAndWhiteTileOverlay.init()
+
+        
+        self.mapView.addOverlays([osmOverlay,komootOverlay,mtbOverlay,blackAndWhiteOverlay,osmHillShadingOverlay],level: .aboveLabels)
         
 //        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
 //        overlay.canReplaceMapContent = false;
