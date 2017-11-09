@@ -48,10 +48,11 @@ class SingleTrailMapViewController: MapViewController {
 
         let mapBoxCustomOverlay:MapBoxCustomTileOverlay = MapBoxCustomTileOverlay.init()
         let mapBoxCustomPathOverlay:MapBoxCustomPathTileOverlay = MapBoxCustomPathTileOverlay.init()
+        let mapBoxCustomHillContourOverlay:MapBoxCustomHillContourTileOverlay = MapBoxCustomHillContourTileOverlay.init()
         
 //        self.mapView.addOverlays([osmOverlay,komootOverlay,mtbOverlay,blackAndWhiteOverlay,osmHillShadingOverlay,mapBoxCustomOverlay],level: .aboveLabels)
         
-        self.mapView.addOverlays([mapBoxCustomOverlay, mapBoxCustomPathOverlay],level: .aboveLabels)
+        self.mapView.addOverlays([komootOverlay,mapBoxCustomHillContourOverlay],level: .aboveLabels)
         
 //        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
 //        overlay.canReplaceMapContent = false;
