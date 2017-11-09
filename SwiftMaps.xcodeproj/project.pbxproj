@@ -88,6 +88,14 @@
 		2222093A1FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
 		2222093B1FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
 		2222093C1FACB804003E374C /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222092C1FACB804003E374C /* TileViewController.swift */; };
+		2226F6111FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		2226F6121FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		2226F6131FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		2226F6141FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		2226F6151FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		2226F6161FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		2226F6171FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		2226F6181FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
 		224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
@@ -229,6 +237,14 @@
 		229564391E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643A1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
 		2295643B1E6C21820045E3BE /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229564331E6C21820045E3BE /* Way.swift */; };
+		229632541FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
+		229632551FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
+		229632561FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
+		229632571FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
+		229632581FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
+		229632591FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
+		2296325A1FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
+		2296325B1FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */; };
 		22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61471DE1EC0C004CDA62 /* LocationManagerDelegate.swift */; };
 		22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		22A42B881DE39AAE00F81767 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A61591DE1EE7E004CDA62 /* Api.swift */; };
@@ -556,6 +572,7 @@
 		222209011FACB7DF003E374C /* TileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileOverlay.swift; path = TileOverlays/TileOverlay.swift; sourceTree = "<group>"; };
 		2222092B1FACB804003E374C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ViewController/DetailViewController.swift; sourceTree = "<group>"; };
 		2222092C1FACB804003E374C /* TileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileViewController.swift; path = ViewController/TileViewController.swift; sourceTree = "<group>"; };
+		2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapBoxCustomPathTileOverlay.swift; path = TileOverlays/MapBoxCustomPathTileOverlay.swift; sourceTree = "<group>"; };
 		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224F2A851DDBB95900B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		224F2A861DDBB95900B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -650,6 +667,7 @@
 		229564211E6C1E160045E3BE /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		229564221E6C1E160045E3BE /* NatureMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NatureMaps-Info.plist"; sourceTree = "<group>"; };
 		229564331E6C21820045E3BE /* Way.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Way.swift; path = Models/Way.swift; sourceTree = "<group>"; };
+		229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapBoxCustomTileOverlay.swift; path = TileOverlays/MapBoxCustomTileOverlay.swift; sourceTree = "<group>"; };
 		229CCC411EC4547A00840807 /* AraSaarland300KmBrevet2017.gpx */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text.xml; path = AraSaarland300KmBrevet2017.gpx; sourceTree = "<group>"; };
 		22A42BA71DE39AAE00F81767 /* SingleTrailMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleTrailMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A42BCE1DE39C1500F81767 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
@@ -1096,6 +1114,8 @@
 				22B2160C1FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift */,
 				22B216151FB09C320031DFAB /* WaymarkedMtbTileOverlay.swift */,
 				2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */,
+				229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */,
+				2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */,
 			);
 			name = TileOverlays;
 			sourceTree = "<group>";
@@ -2726,6 +2746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B215FE1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6141FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				225A614B1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				22B216071FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */,
@@ -2735,6 +2756,7 @@
 				22B215AC1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564371E6C21820045E3BE /* Way.swift in Sources */,
 				222209381FACB804003E374C /* TileViewController.swift in Sources */,
+				229632571FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				229563FD1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091D1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */,
@@ -2767,6 +2789,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B215FF1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6151FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				229563F21E6C1D920045E3BE /* PicnicMapsViewController.swift in Sources */,
 				22B216081FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				225A614C1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
@@ -2776,6 +2799,7 @@
 				22B215AD1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564381E6C21820045E3BE /* Way.swift in Sources */,
 				222209391FACB804003E374C /* TileViewController.swift in Sources */,
+				229632581FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				229563FE1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091E1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */,
@@ -2808,6 +2832,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B215FB1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6111FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				225A61481DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				22B216041FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				227C05DE1D3180120033E6BD /* SwiftMaps.xcdatamodeld in Sources */,
@@ -2817,6 +2842,7 @@
 				22B215A91FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564341E6C21820045E3BE /* Way.swift in Sources */,
 				222209351FACB804003E374C /* TileViewController.swift in Sources */,
+				229632541FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				229563FA1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091A1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */,
@@ -2865,6 +2891,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B216021FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6181FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				229563B11E6C1BB30045E3BE /* LocationManagerDelegate.swift in Sources */,
 				22B2160B1FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				22B215C21FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
@@ -2874,6 +2901,7 @@
 				2295643B1E6C21820045E3BE /* Way.swift in Sources */,
 				229564011E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222093C1FACB804003E374C /* TileViewController.swift in Sources */,
+				2296325B1FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				229563BA1E6C1BB30045E3BE /* Api.swift in Sources */,
 				222209211FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */,
@@ -2906,6 +2934,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B216001FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6161FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */,
 				22B216091FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				22B215C01FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
@@ -2915,6 +2944,7 @@
 				22A42B841DE39AAE00F81767 /* SwiftMaps.xcdatamodeld in Sources */,
 				229564391E6C21820045E3BE /* Way.swift in Sources */,
 				2222093A1FACB804003E374C /* TileViewController.swift in Sources */,
+				229632591FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				2222091F1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563FF1E6C1DC70045E3BE /* Node.swift in Sources */,
 				229563F41E6C1D980045E3BE /* SingleTrailMapViewController.swift in Sources */,
@@ -2947,6 +2977,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B216011FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6171FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				22EAB6691E6B701900FC3EC1 /* LocationManagerDelegate.swift in Sources */,
 				22B2160A1FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				22B215C11FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,
@@ -2956,6 +2987,7 @@
 				22B215AF1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				2295643A1E6C21820045E3BE /* Way.swift in Sources */,
 				229564001E6C1DC70045E3BE /* Node.swift in Sources */,
+				2296325A1FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				2222093B1FACB804003E374C /* TileViewController.swift in Sources */,
 				222209201FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */,
@@ -2988,6 +3020,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B215FC1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6121FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				225A61491DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				22B216051FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				4A24F8BC1D95D95B0011485B /* SwiftMaps.xcdatamodeld in Sources */,
@@ -2997,6 +3030,7 @@
 				22B215AA1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564351E6C21820045E3BE /* Way.swift in Sources */,
 				222209361FACB804003E374C /* TileViewController.swift in Sources */,
+				229632551FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				229563FB1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091B1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615B1DE1EE7E004CDA62 /* Api.swift in Sources */,
@@ -3029,6 +3063,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B215FD1FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
+				2226F6131FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				225A614A1DE1EC0C004CDA62 /* LocationManagerDelegate.swift in Sources */,
 				22B216061FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				4AF49F651D985D60001A8034 /* SwiftMaps.xcdatamodeld in Sources */,
@@ -3038,6 +3073,7 @@
 				22B215AB1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */,
 				229564361E6C21820045E3BE /* Way.swift in Sources */,
 				222209371FACB804003E374C /* TileViewController.swift in Sources */,
+				229632561FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
 				229563FC1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091C1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */,
