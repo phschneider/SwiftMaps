@@ -96,6 +96,14 @@
 		2226F6161FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
 		2226F6171FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
 		2226F6181FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */; };
+		223122821FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		223122831FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		223122841FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		223122851FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		223122861FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		223122871FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		223122881FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		223122891FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
 		224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
@@ -581,6 +589,7 @@
 		2222092B1FACB804003E374C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ViewController/DetailViewController.swift; sourceTree = "<group>"; };
 		2222092C1FACB804003E374C /* TileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileViewController.swift; path = ViewController/TileViewController.swift; sourceTree = "<group>"; };
 		2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapBoxCustomPathTileOverlay.swift; path = TileOverlays/MapBoxCustomPathTileOverlay.swift; sourceTree = "<group>"; };
+		223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenTopoMapTileOverlay.swift; path = TileOverlays/OpenTopoMapTileOverlay.swift; sourceTree = "<group>"; };
 		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224F2A851DDBB95900B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		224F2A861DDBB95900B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -1126,6 +1135,7 @@
 				229632531FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift */,
 				2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */,
 				22E7A9531FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift */,
+				223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */,
 			);
 			name = TileOverlays;
 			sourceTree = "<group>";
@@ -2790,6 +2800,7 @@
 				22B215DC1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F51FAF3FD00031DFAB /* Networking.swift in Sources */,
 				222209301FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122851FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B216101FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215B61FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
@@ -2834,6 +2845,7 @@
 				22B215DD1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F61FAF3FD00031DFAB /* Networking.swift in Sources */,
 				222209311FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122861FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B216111FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215B71FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
@@ -2878,6 +2890,7 @@
 				22B215D91FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F21FAF3FD00031DFAB /* Networking.swift in Sources */,
 				2222092D1FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122821FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B2160D1FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215B31FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
@@ -2938,6 +2951,7 @@
 				22B215E01FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F91FAF3FD00031DFAB /* Networking.swift in Sources */,
 				222209341FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122891FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B216141FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215BA1FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
@@ -2982,6 +2996,7 @@
 				22B215DE1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F71FAF3FD00031DFAB /* Networking.swift in Sources */,
 				222209321FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122871FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B216121FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215B81FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
@@ -3026,6 +3041,7 @@
 				22B215DF1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F81FAF3FD00031DFAB /* Networking.swift in Sources */,
 				222209331FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122881FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B216131FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215B91FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
@@ -3070,6 +3086,7 @@
 				22B215DA1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F31FAF3FD00031DFAB /* Networking.swift in Sources */,
 				2222092E1FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122831FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B2160E1FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215B41FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
@@ -3114,6 +3131,7 @@
 				22B215DB1FAF3FBE0031DFAB /* Trkpt.swift in Sources */,
 				22B215F41FAF3FD00031DFAB /* Networking.swift in Sources */,
 				2222092F1FACB804003E374C /* DetailViewController.swift in Sources */,
+				223122841FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */,
 				22B2160F1FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift in Sources */,
 				22B215B51FAF3F730031DFAB /* NodeAnnotationView.swift in Sources */,
 			);
