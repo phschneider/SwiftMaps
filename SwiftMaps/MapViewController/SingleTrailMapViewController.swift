@@ -38,6 +38,8 @@ class SingleTrailMapViewController: MapViewController {
         
         let stravaOverlay:StravaTileOverlay = StravaTileOverlay.init()
         let stravaPersonalOverlay:DebugTileOverlay = DebugTileOverlay.init()
+        let stravaPersonalOverAllOverlay:PersonalOverAllStravaTileOverlay = PersonalOverAllStravaTileOverlay.init()
+        
         let komootOverlay:KomootTileOverlay = KomootTileOverlay.init()
         let hikingOverlay:WaymarkedHikingTileOverlay = WaymarkedHikingTileOverlay.init()
         let cyclingOverlay:WaymarkedCyclingTileOverlay = WaymarkedCyclingTileOverlay.init()
@@ -53,13 +55,14 @@ class SingleTrailMapViewController: MapViewController {
         let openTopoMapOverlay:OpenTopoMapTileOverlay = OpenTopoMapTileOverlay.init()
 //        self.mapView.addOverlays([osmOverlay,komootOverlay,mtbOverlay,blackAndWhiteOverlay,osmHillShadingOverlay,mapBoxCustomOverlay],level: .aboveLabels)
         
-        self.mapView.addOverlays([komootOverlay,openTopoMapOverlay],level: .aboveLabels)
+        self.mapView.addOverlays([komootOverlay,openTopoMapOverlay, stravaPersonalOverAllOverlay],level: .aboveLabels)
         
 //        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
 //        overlay.canReplaceMapContent = false;
 //        self.mapView.addOverlay(overlay, level: .AboveRoads)
         
         
+            
         // TEST GPX / EVREFLECT
         if let filepath = Bundle.main.path(forResource: "AraSaarland400KmBrevet(v2)2017", ofType: "gpx") {
             do {

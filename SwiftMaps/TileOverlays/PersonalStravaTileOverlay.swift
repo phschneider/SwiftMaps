@@ -16,6 +16,6 @@ class PersonalStravaTileOverlay: StravaTileOverlay {
     
     override func name () -> String
     {
-        return "personal"
+        return "strava-bike-personal-2017"
     }
 }

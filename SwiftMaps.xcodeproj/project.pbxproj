@@ -104,6 +104,14 @@
 		223122871FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
 		223122881FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
 		223122891FB5B50200503425 /* OpenTopoMapTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */; };
+		2231228B1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
+		2231228C1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
+		2231228D1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
+		2231228E1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
+		2231228F1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
+		223122901FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
+		223122911FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
+		223122921FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */; };
 		224F2A6A1DDBB67900B22D2B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		224F2A6E1DDBB67900B22D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
@@ -590,6 +598,7 @@
 		2222092C1FACB804003E374C /* TileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileViewController.swift; path = ViewController/TileViewController.swift; sourceTree = "<group>"; };
 		2226F6101FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapBoxCustomPathTileOverlay.swift; path = TileOverlays/MapBoxCustomPathTileOverlay.swift; sourceTree = "<group>"; };
 		223122811FB5B50200503425 /* OpenTopoMapTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenTopoMapTileOverlay.swift; path = TileOverlays/OpenTopoMapTileOverlay.swift; sourceTree = "<group>"; };
+		2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalOverAllStravaTileOverlay.swift; path = TileOverlays/PersonalOverAllStravaTileOverlay.swift; sourceTree = "<group>"; };
 		224F2A7D1DDBB67900B22D2B /* ATMmaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMmaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224F2A851DDBB95900B22D2B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		224F2A861DDBB95900B22D2B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -1128,6 +1137,7 @@
 				222208FE1FACB7DF003E374C /* MapBoxRunBikeHikeTileOverlay.swift */,
 				222209001FACB7DF003E374C /* StravaTileOverlay.swift */,
 				222208FF1FACB7DF003E374C /* PersonalStravaTileOverlay.swift */,
+				2231228A1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift */,
 				22B216031FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift */,
 				22B2160C1FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift */,
 				22B216151FB09C320031DFAB /* WaymarkedMtbTileOverlay.swift */,
@@ -2778,6 +2788,7 @@
 				229564371E6C21820045E3BE /* Way.swift in Sources */,
 				222209381FACB804003E374C /* TileViewController.swift in Sources */,
 				229632571FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				2231228E1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				229563FD1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091D1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563E71E6C1D830045E3BE /* ATMMapViewController.swift in Sources */,
@@ -2823,6 +2834,7 @@
 				229564381E6C21820045E3BE /* Way.swift in Sources */,
 				222209391FACB804003E374C /* TileViewController.swift in Sources */,
 				229632581FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				2231228F1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				229563FE1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091E1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615E1DE1EE7E004CDA62 /* Api.swift in Sources */,
@@ -2868,6 +2880,7 @@
 				229564341E6C21820045E3BE /* Way.swift in Sources */,
 				222209351FACB804003E374C /* TileViewController.swift in Sources */,
 				229632541FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				2231228B1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				229563FA1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091A1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				227C05D61D3180120033E6BD /* AppDelegate.swift in Sources */,
@@ -2929,6 +2942,7 @@
 				229564011E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222093C1FACB804003E374C /* TileViewController.swift in Sources */,
 				2296325B1FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				223122921FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				229563BA1E6C1BB30045E3BE /* Api.swift in Sources */,
 				222209211FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563BC1E6C1BB30045E3BE /* AppDelegate.swift in Sources */,
@@ -2974,6 +2988,7 @@
 				229564391E6C21820045E3BE /* Way.swift in Sources */,
 				2222093A1FACB804003E374C /* TileViewController.swift in Sources */,
 				229632591FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				223122901FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				2222091F1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				229563FF1E6C1DC70045E3BE /* Node.swift in Sources */,
 				229563F41E6C1D980045E3BE /* SingleTrailMapViewController.swift in Sources */,
@@ -3019,6 +3034,7 @@
 				2295643A1E6C21820045E3BE /* Way.swift in Sources */,
 				229564001E6C1DC70045E3BE /* Node.swift in Sources */,
 				2296325A1FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				223122911FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				2222093B1FACB804003E374C /* TileViewController.swift in Sources */,
 				222209201FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				22EAB6721E6B701900FC3EC1 /* Api.swift in Sources */,
@@ -3064,6 +3080,7 @@
 				229564351E6C21820045E3BE /* Way.swift in Sources */,
 				222209361FACB804003E374C /* TileViewController.swift in Sources */,
 				229632551FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				2231228C1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				229563FB1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091B1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				225A615B1DE1EE7E004CDA62 /* Api.swift in Sources */,
@@ -3109,6 +3126,7 @@
 				229564361E6C21820045E3BE /* Way.swift in Sources */,
 				222209371FACB804003E374C /* TileViewController.swift in Sources */,
 				229632561FB49D1B002F1D7C /* MapBoxCustomTileOverlay.swift in Sources */,
+				2231228D1FB5BC7D00503425 /* PersonalOverAllStravaTileOverlay.swift in Sources */,
 				229563FC1E6C1DC70045E3BE /* Node.swift in Sources */,
 				2222091C1FACB7DF003E374C /* StravaTileOverlay.swift in Sources */,
 				4AF49F6A1D985D60001A8034 /* AppDelegate.swift in Sources */,
