@@ -73,6 +73,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         #endif
         
+        self.initCoreDataRelations()
+        
         return true
     }
 
@@ -105,6 +107,203 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return Strava.openURL(url, sourceApplication: sourceApplication)
         #endif
         return false
+    }
+    
+    
+    // MARK: - Helper
+    func initCoreDataRelations()
+    {
+        // Save
+        
+        var tile:NSManagedObject
+        if (UserDefaults.standard.bool(forKey: "StravaTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Strava", forKeyPath: "name")
+            tile.setValue("StravaTileOverlay", forKeyPath: "classFileName")
+
+            UserDefaults.standard.register(defaults: ["StravaTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "StravaTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "StravaPersonalTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Strava - Personal", forKeyPath: "name")
+            tile.setValue("StravaPersonalTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["StravaPersonalTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "StravaPersonalTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+
+        if (UserDefaults.standard.bool(forKey: "StravaPersonalOverAllTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Strava - Personal Over All", forKeyPath: "name")
+            tile.setValue("StravaPersonalOverAllTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["StravaPersonalOverAllTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "StravaPersonalOverAllTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "DebugTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Debug", forKeyPath: "name")
+            tile.setValue("DebugTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["DebugTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "DebugTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+  
+        if (UserDefaults.standard.bool(forKey: "BlackAndWhiteTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Black & White", forKeyPath: "name")
+            tile.setValue("BlackAndWhiteTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["BlackAndWhiteTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "BlackAndWhiteTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "OsmHillShadingTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("OSM HillShading", forKeyPath: "name")
+            tile.setValue("OsmHillShadingTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["OsmHillShadingTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "OsmHillShadingTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "OpenTopoMapTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Open Topo Map", forKeyPath: "name")
+            tile.setValue("OpenTopoMapTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["OpenTopoMapTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "OpenTopoMapTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "WaymarkedHikingTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Waymarked - Hiking", forKeyPath: "name")
+            tile.setValue("WaymarkedHikingTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["WaymarkedHikingTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "WaymarkedHikingTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "WaymarkedCyclingTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Waymarked - Cycling", forKeyPath: "name")
+            tile.setValue("WaymarkedCyclingTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["WaymarkedCyclingTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "WaymarkedCyclingTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "WaymarkedMtbTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Waymarked - MTB", forKeyPath: "name")
+            tile.setValue("WaymarkedMtbTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["WaymarkedMtbTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "WaymarkedMtbTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "KomootTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Komoot", forKeyPath: "name")
+            tile.setValue("KomootTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["KomootTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "KomootTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "MapBoxRunBikeHikeTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("MapBox - RunBikeHike", forKeyPath: "name")
+            tile.setValue("MapBoxRunBikeHikeTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["MapBoxRunBikeHikeTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "MapBoxRunBikeHikeTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "MapBoxCustomTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("MapBox - Custom", forKeyPath: "name")
+            tile.setValue("MapBoxCustomTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["MapBoxCustomTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "MapBoxCustomTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "MapBoxCustomPathTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("MapBox - Custom Path", forKeyPath: "name")
+            tile.setValue("MapBoxCustomPathTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["MapBoxCustomPathTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "MapBoxCustomPathTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "MapBoxCustomHillContourTileOverlayImported") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("MapBox - Custom Hill Contours", forKeyPath: "name")
+            tile.setValue("MapBoxCustomHillContourTileOverlay", forKeyPath: "classFileName")
+            
+            UserDefaults.standard.register(defaults: ["MapBoxCustomHillContourTileOverlayImported" : true])
+            UserDefaults.standard.set(true, forKey: "MapBoxCustomHillContourTileOverlayImported")
+            UserDefaults.standard.synchronize()
+        }
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+        
+        
+        // Read
+        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
+        
+        do {
+            let fetchedEmployees = try managedObjectContext.fetch(employeesFetch) as! [Tile]
+            
+            for tile in fetchedEmployees {
+                
+                print(tile.name)
+                
+            }
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+
     }
     
     // MARK: - Core Data stack

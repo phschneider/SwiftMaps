@@ -7,59 +7,190 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
-//class TileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-//    
-//    var tableView: UITableView
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
+class TileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+
+    private var _tile:Tile?
+    var managedObjectContext: NSManagedObjectContext? = nil
+    var _fetchedResultsController: NSFetchedResultsController<Tile>? = nil
+    var tableView: UITableView
+    
+    convenience init() {
+        self.init(imageURL: nil)
+    }
+    
+    init(imageURL: NSURL?) {
+        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
+
+       
+        
+        //self.imageURL = imageURL
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    override func loadView() {
 //        self.title = "Tiles"
 //        
-//        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
-//        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
 //        
-//        super.init(nibName: nil, bundle: nil)
+//        // super.init(nibName: nil, bundle: nil)
 //        self.view.addSubview(self.tableView)
 //        
 //        self.tableView.delegate = self;
 //        self.tableView.dataSource = self;
-//    }
+//        
+////        // Load core Data stack ...
+////        
+////        
+////        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
+////        
+////        do {
+////            let fetchedEmployees = try managedObjectContext.fetch(employeesFetch)
+////        } catch {
+////            fatalError("Failed to fetch employees: \(error)")
+////        }
 //
-//    // MARK: TableView
-//    func numberOfSections(in tableView: UITableView) -> Int {
+//    }
+    
+    override func viewDidLoad() {
+        self.title = "Tiles"
+        
+        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
+        self.tableView.frame = self.view.frame;
+        self.tableView.autoresizingMask = self.view.autoresizingMask;
+        // super.init(nibName: nil, bundle: nil)
+        self.view.addSubview(self.tableView)
+        
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        
+        //        // Load core Data stack ...
+        //
+        //
+        //        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
+        //
+        //        do {
+        //            let fetchedEmployees = try managedObjectContext.fetch(employeesFetch)
+        //        } catch {
+        //            fatalError("Failed to fetch employees: \(error)")
+        //        }
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(edit))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(close))
+    }
+    
+    @objc func edit(){
+        
+    }
+
+    @objc func close(){
+        //TODO: Hier muss man prüfen ob wir über Modal angezeigt werden oder normal ...
+        
+        let appDel: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.managedObjectContext = appDel.managedObjectContext
+        
+        do {
+            try self.managedObjectContext?.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+
+        
+        NotificationCenter.default.post(name:Notification.Name(rawValue:"TileSelectionClosed"), object: nil,userInfo:nil)
+        
+        self.navigationController?.dismiss(animated: true, completion: {
+        })
+        
+        self.navigationController?.willMove(toParentViewController: nil);
+        self.navigationController?.view.removeFromSuperview();
+        self.navigationController?.didMove(toParentViewController: nil);
+    }
+
+    // MARK: TableView
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections?.count ?? 0
 //        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
 //        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let reuseIdentifier = "LabelCell"
-//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
-//        
-//        switch indexPath.section {
-//        case 0:
-//            let tag = self.node.tag[indexPath.row]
-//            
-//            cell.textLabel?.text = tag._k
-//            cell.detailTextLabel?.text = tag._v
-//            break
-//            
-//        case 1:
-//            cell.textLabel?.text = "Distance"
-//            if ((self.userLocation) != nil)
-//            {
-//                let nodeLocation:CLLocation = CLLocation.init(latitude: Double(node._lat!), longitude: Double(node._lon!))
-//                let myLocation:CLLocationDistance = (self.userLocation!.distance(from: nodeLocation))
-//                cell.detailTextLabel?.text = String(Double(round(100*myLocation)/100))
-//            }
-//            break
-//        default: break
-//            
-//        }
-//        
-//        return cell
-//    }
-//}
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reuseIdentifier = "LabelCell"
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
+        let tile = fetchedResultsController.object(at: indexPath)
+        
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        cell.textLabel!.text = tile.name!.description
+        cell.selectionStyle = .none
+        
+        if (tile.enabled?.boolValue)!
+        {
+            cell.accessoryType = .checkmark;
+        }
+        else
+        {
+            cell.accessoryType = .none;
+        }
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tile = fetchedResultsController.object(at: indexPath)
+        tile.enabled = !(tile.enabled?.boolValue)! as NSNumber
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+     
+        NotificationCenter.default.post(name:Notification.Name(rawValue:"TileSelectionChanged"), object: nil,userInfo:nil)
+    }
+    
+    
+    // MARK: - CoreData
+    var fetchedResultsController: NSFetchedResultsController<Tile> {
+        if _fetchedResultsController != nil {
+            return _fetchedResultsController!
+        }
+        
+        let fetchRequest: NSFetchRequest<Tile> = Tile.fetchRequest()
+        
+        // Set the batch size to a suitable number.
+        fetchRequest.fetchBatchSize = 20
+        
+        // Edit the sort key as appropriate.
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let appDel: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.managedObjectContext = appDel.managedObjectContext
+        
+        // Edit the section name key path and cache name if appropriate.
+        // nil for section name key path means "no sections".
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        aFetchedResultsController.delegate = self
+        _fetchedResultsController = aFetchedResultsController
+        
+        do {
+            try _fetchedResultsController!.performFetch()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+        
+        return _fetchedResultsController!
+    }
+}

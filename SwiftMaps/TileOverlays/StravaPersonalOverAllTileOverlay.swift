@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonalOverAllStravaTileOverlay: StravaTileOverlay {
+class StravaPersonalOverAllTileOverlay: StravaTileOverlay {
     convenience init() {
         // https://d22umfi1yqsdc.cloudfront.net/tiles/01000000008FFE130D5E82CC-7762E7F1/12-2129-1404.png?1509831917    
         self.init(urlTemplate:"https://d22umfi1yqsdc.cloudfront.net/tiles/01000000008FFE130D5E82CC-7762E7F1/{z}-{x}-{y}.png")

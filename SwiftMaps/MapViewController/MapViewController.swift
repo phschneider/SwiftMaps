@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     var mapView: MKMapView!
@@ -68,12 +69,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.view.addSubview(self.mapView)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(addTapped))
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(organizeTapped))
+        
+        let nc = NotificationCenter.default // Note that default is now a property, not a method call
+        nc.addObserver(forName:Notification.Name(rawValue:"TileSelectionChanged"),
+                       object:nil, queue:nil) {
+                        notification in
+                        // Handle notification
+                            self.showOverlays()
+                        }
+        
+        nc.addObserver(forName:Notification.Name(rawValue:"TileSelectionClosed"),
+                       object:nil, queue:nil) {
+                        notification in
+                            self.showControls()
+                        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         //      TODO
         //        locationManager.startUpdatingHeading()
         //        locationManager.startUpdatingLocation()
+        self.showOverlays()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -243,6 +262,41 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.addOverlays(overlays)
     }
     
+    @objc func organizeTapped()
+    {
+        let tileViewController = TileViewController.init()
+        let navController = UINavigationController.init(rootViewController: tileViewController)
+        var frame = CGRect.init(x: 50, y: 75, width: self.view.frame.size.width-100, height:self.view.frame.size.height-150)
+        
+        let size = CGSize.init(width: self.view.frame.size.width/2 , height: self.view.frame.size.height/2)
+        // iPAd
+        if (UIDevice.current.userInterfaceIdiom == .pad)
+        {
+            navController.modalPresentationStyle = .formSheet;
+            navController.preferredContentSize = size;
+            self.present(navController, animated: true, completion: nil);
+        }
+        else
+        {
+            navController.willMove(toParentViewController: self);            
+            navController.view.frame = frame;
+            // navController.view.layer.cornerRadius = 50;
+            navController.view.center = self.view.center;
+            navController.view.backgroundColor = UIColor.white;
+            
+            self.view.addSubview(navController.view);
+            self.view .bringSubview(toFront: navController.view);
+            self.addChildViewController(navController);
+            
+            navController.didMove(toParentViewController: self);
+            // navController.view.layer.cornerRadius = 50;
+            // navController.view.layer.shouldRasterize = true;
+        }
+        
+        self.hideControls()
+    }
+    
+    
     @objc func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
         
@@ -330,6 +384,59 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    
+    // Mark: Helper
+    func showOverlays()
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
+        
+        var overlays = self.mapView.overlays
+        self.mapView.removeOverlays(overlays)
+        overlays.removeAll()
+        
+        employeesFetch.predicate = NSPredicate(format: "enabled == true")
+        do {
+            let fetchedEmployees = try appDelegate.managedObjectContext.fetch(employeesFetch) as! [Tile]
+            
+            for tile in fetchedEmployees {
+                
+                if let anyObj : TileOverlay.Type = NSClassFromString("SingleTrailMaps."+tile.classFileName!) as! TileOverlay.Type
+                {
+                    // print(tile.classFileName)
+                    let instance = anyObj.init()
+                    overlays.append(instance)
+                    
+                }
+                else
+                {
+                    print ("not found: "+tile.name!)
+                }
+                
+            }
+            
+            // TODO: CoreData TileOverlay ...
+            self.mapView.addOverlays(overlays,level: .aboveLabels)
+            
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+    }
+    
+    
+    func hideControls()
+    {
+        self.alphaSliderLeft.alpha = 0.0;
+        self.alphaSliderRight.alpha = 0.0;
+        self.locationButton.alpha = 0.0;
+    }
+    
+    func showControls()
+    {
+        self.alphaSliderLeft.alpha = 1.0;
+        self.alphaSliderRight.alpha = 1.0;
+        self.locationButton.alpha = 1.0;
+    }
     
     // MARK: Helper
 //    func selectAllVisibleAnnotation()
@@ -421,7 +528,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         {
             let renderer = MKTileOverlayRenderer.init(tileOverlay: (overlay as! MKTileOverlay))
             renderer.alpha = 1.0;
-            if (overlay is PersonalStravaTileOverlay)
+            if (overlay is StravaPersonalTileOverlay)
             {
                 
             }
