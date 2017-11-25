@@ -390,6 +390,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
+        let sortDescriptor = NSSortDescriptor(key: "sortOrder", ascending: true)
+        employeesFetch.sortDescriptors = [sortDescriptor]
         
         var overlays = self.mapView.overlays
         self.mapView.removeOverlays(overlays)

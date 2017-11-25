@@ -88,7 +88,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func edit(){
-        
+     self.tableView.setEditing(!(self.tableView.isEditing), animated: true)
     }
 
     @objc func close(){
@@ -115,6 +115,30 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     // MARK: TableView
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let sourceTile = fetchedResultsController.object(at: sourceIndexPath)
+        let destinationTile = fetchedResultsController.object(at: destinationIndexPath)
+        
+        let sourceSortOrder = sourceTile.sortOrder
+        sourceTile.sortOrder = destinationTile.sortOrder
+        destinationTile.sortOrder = sourceSortOrder
+        
+        NotificationCenter.default.post(name:Notification.Name(rawValue:"TileSelectionChanged"), object: nil,userInfo:nil)
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        let sectionInfo = fetchedResultsController.sections![indexPath.section]
+        if (sectionInfo.numberOfObjects > 1)
+        {
+            return true
+        }
+        return false
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
 //        return 1
@@ -169,7 +193,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "sortOrder", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         

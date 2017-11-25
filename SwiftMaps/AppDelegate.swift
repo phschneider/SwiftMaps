@@ -116,15 +116,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Save
         
         var tile:NSManagedObject
+        var sortOrder:NSNumber = 0
         if (UserDefaults.standard.bool(forKey: "StravaTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Strava", forKeyPath: "name")
             tile.setValue("StravaTileOverlay", forKeyPath: "classFileName")
-
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
             UserDefaults.standard.register(defaults: ["StravaTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "StravaTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "StravaPersonalTileOverlayImported") == false)
@@ -132,10 +136,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Strava - Personal", forKeyPath: "name")
             tile.setValue("StravaPersonalTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["StravaPersonalTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "StravaPersonalTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
         if (UserDefaults.standard.bool(forKey: "StravaPersonalOverAllTileOverlayImported") == false)
@@ -143,10 +150,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Strava - Personal Over All", forKeyPath: "name")
             tile.setValue("StravaPersonalOverAllTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["StravaPersonalOverAllTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "StravaPersonalOverAllTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "DebugTileOverlayImported") == false)
@@ -154,10 +164,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Debug", forKeyPath: "name")
             tile.setValue("DebugTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["DebugTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "DebugTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
   
@@ -166,10 +179,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Black & White", forKeyPath: "name")
             tile.setValue("BlackAndWhiteTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["BlackAndWhiteTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "BlackAndWhiteTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "OsmHillShadingTileOverlayImported") == false)
@@ -177,10 +193,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("OSM HillShading", forKeyPath: "name")
             tile.setValue("OsmHillShadingTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["OsmHillShadingTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "OsmHillShadingTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "OpenTopoMapTileOverlayImported") == false)
@@ -188,10 +207,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Open Topo Map", forKeyPath: "name")
             tile.setValue("OpenTopoMapTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["OpenTopoMapTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "OpenTopoMapTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "WaymarkedHikingTileOverlayImported") == false)
@@ -199,10 +221,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Waymarked - Hiking", forKeyPath: "name")
             tile.setValue("WaymarkedHikingTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["WaymarkedHikingTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "WaymarkedHikingTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "WaymarkedCyclingTileOverlayImported") == false)
@@ -210,10 +235,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Waymarked - Cycling", forKeyPath: "name")
             tile.setValue("WaymarkedCyclingTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["WaymarkedCyclingTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "WaymarkedCyclingTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "WaymarkedMtbTileOverlayImported") == false)
@@ -221,10 +249,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Waymarked - MTB", forKeyPath: "name")
             tile.setValue("WaymarkedMtbTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["WaymarkedMtbTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "WaymarkedMtbTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "KomootTileOverlayImported") == false)
@@ -232,10 +263,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Komoot", forKeyPath: "name")
             tile.setValue("KomootTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["KomootTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "KomootTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "MapBoxRunBikeHikeTileOverlayImported") == false)
@@ -243,10 +277,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - RunBikeHike", forKeyPath: "name")
             tile.setValue("MapBoxRunBikeHikeTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["MapBoxRunBikeHikeTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxRunBikeHikeTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "MapBoxCustomTileOverlayImported") == false)
@@ -254,10 +291,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - Custom", forKeyPath: "name")
             tile.setValue("MapBoxCustomTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["MapBoxCustomTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxCustomTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "MapBoxCustomPathTileOverlayImported") == false)
@@ -265,10 +305,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - Custom Path", forKeyPath: "name")
             tile.setValue("MapBoxCustomPathTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["MapBoxCustomPathTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxCustomPathTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         if (UserDefaults.standard.bool(forKey: "MapBoxCustomHillContourTileOverlayImported") == false)
@@ -276,10 +319,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - Custom Hill Contours", forKeyPath: "name")
             tile.setValue("MapBoxCustomHillContourTileOverlay", forKeyPath: "classFileName")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
             UserDefaults.standard.register(defaults: ["MapBoxCustomHillContourTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxCustomHillContourTileOverlayImported")
             UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
         do {
