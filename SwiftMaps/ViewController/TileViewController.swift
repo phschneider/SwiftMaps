@@ -88,7 +88,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func edit(){
-     self.tableView.setEditing(!(self.tableView.isEditing), animated: true)
+        self.tableView.setEditing(!(self.tableView.isEditing), animated: true)
     }
 
     @objc func close(){
@@ -119,6 +119,10 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         return true
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .none
+    }
+    
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let sourceTile = fetchedResultsController.object(at: sourceIndexPath)
         let destinationTile = fetchedResultsController.object(at: destinationIndexPath)
@@ -127,7 +131,10 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         sourceTile.sortOrder = destinationTile.sortOrder
         destinationTile.sortOrder = sourceSortOrder
         
-        NotificationCenter.default.post(name:Notification.Name(rawValue:"TileSelectionChanged"), object: nil,userInfo:nil)
+        if ((sourceTile.enabled?.boolValue)! || (destinationTile.enabled?.boolValue)!)
+        {
+            NotificationCenter.default.post(name:Notification.Name(rawValue:"TileSelectionChanged"), object: nil,userInfo:nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
