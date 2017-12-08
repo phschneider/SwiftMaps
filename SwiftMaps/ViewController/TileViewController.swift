@@ -123,6 +123,60 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         return .none
     }
     
+    // ????
+    func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteAction  = UITableViewRowAction(style: .default, title: "Clear cache") { (rowAction, indexPath) in
+            
+            // Ähnlich wie bei der Notification im MapViewController
+            // Unterscheidung Ob CoreData Tile oder normales Tile ...
+            let tile = self.fetchedResultsController.object(at: indexPath)
+            
+            var path:String=""
+            if let anyObj : TileOverlay.Type = NSClassFromString("SingleTrailMaps."+tile.classFileName!) as! TileOverlay.Type
+            {
+                if (tile.classFileName == "CoreDataTileOverlay")
+                {
+                    let instance:CoreDataTileOverlay
+                    let scheme = (tile.useHttps==false) ? "http://" : "https://"
+                    let url:String = scheme + tile.url! + "/{z}/{x}/{y}.png"
+                    
+                    instance = CoreDataTileOverlay.init(urlTemplate:url)
+                    instance.tileName = tile.name!
+                    path = instance.mainFolder() as String
+                }
+                else
+                {
+                    let instance = anyObj.init()
+                    path = instance.mainFolder() as String
+                }
+            }
+            
+            do
+            {
+                try FileManager.default.removeItem(atPath: path)
+            }
+            catch
+            {
+                print (error)
+            }
+            
+            tableView.setEditing(false, animated: true)            
+        }
+        
+        return [deleteAction]
+
+    }
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
+
+    // MARK: - MOVE
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let sourceTile = fetchedResultsController.object(at: sourceIndexPath)
         let destinationTile = fetchedResultsController.object(at: destinationIndexPath)
@@ -146,6 +200,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         return false
     }
     
+    // MARK: - DATA SOURCE
     func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
 //        return 1

@@ -23,7 +23,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var alphaValueLeft : CGFloat = 1.0
     var alphaValueRight : CGFloat = 1.0
     
-    // MARK: View ...
+    // MARK: - View ...
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -129,7 +129,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
 
     
-    // MARK: Buttons
+    // MARK: - Buttons
     func addLocationButton()
     {
         var frame = self.view.bounds;
@@ -455,7 +455,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.locationButton.alpha = 1.0;
     }
     
-    // MARK: Helper
+    // MARK: - Helper
 //    func selectAllVisibleAnnotation()
 //    {
 //        for object in self.mapView.annotations(in: self.mapView.visibleMapRect)
@@ -468,7 +468,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //    }
     
     
-    // MARK: MapView
+    // MARK: - MapView
 //    func mapView(mapView: MKMapView,didSelectAnnotationView view: MKAnnotationView)
 //    {
 //        if ((view.annotation?.isKindOfClass(NodeAnnotationView)) != nil)
