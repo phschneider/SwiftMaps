@@ -75,6 +75,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.initCoreDataRelations()
         
+        // Check User Agent ... // nc -l 5678
+        if (false) {
+            let url_ = URL(string: "http://localhost:5678/")!
+            var sessionConfig = URLSessionConfiguration.default
+            var xHTTPAdditionalHeaders: [NSObject : AnyObject] = ["User-Agent" as NSObject:"SwiftMaps" as AnyObject]
+            sessionConfig.httpAdditionalHeaders = xHTTPAdditionalHeaders
+            let session = URLSession(configuration: sessionConfig)
+            session.dataTask(with: url_) { (data, response, error) in
+                let body = String(data: data!, encoding: .utf8)!
+                print("body: \(body)")
+                }.resume()
+        }
+        
         return true
     }
 
@@ -113,10 +126,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Helper
     func initCoreDataRelations()
     {
-        // Save
-        
-        var tile:NSManagedObject
         var sortOrder:NSNumber = 0
+        var importName:String = ""
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "sortOrder", ascending: false)]
+        fetchRequest.fetchLimit = 1
+        
+        do {
+            let fetchedEmployees = try managedObjectContext.fetch(fetchRequest) as! [Tile]
+            for tile in fetchedEmployees {
+                sortOrder = tile.sortOrder as! NSNumber
+            }
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+        
+        // Save
+        var tile:NSManagedObject
         if (UserDefaults.standard.bool(forKey: "StravaTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
@@ -328,6 +355,225 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
+        if (UserDefaults.standard.bool(forKey: "OpenStreetMap+CoreDataTileOverlay") == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("OpenStreetMap", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("tile.openstreetmap.org", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:true), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: ["OpenStreetMap+CoreDataTileOverlay" : true])
+            UserDefaults.standard.set(true, forKey: "OpenStreetMap+CoreDataTileOverlay")
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+    
+        importName = "OpenPortGuideWindActual+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("OpenPortGuide Wind Actual", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("weather.openportguide.de/tiles/actual/wind_stream/5", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+//        importName = "OpenPortGuidePressureActual+CoreDataTileOverlay"
+//        if (UserDefaults.standard.bool(forKey: importName) == false)
+//        {
+//            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+//            tile.setValue("OpenPortGuide Wind Actual", forKeyPath: "name")
+//            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+//            tile.setValue("weather.openportguide.de/tiles/actual/surface_pressure/5", forKeyPath: "url")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+//            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+//            
+//            UserDefaults.standard.register(defaults: [importName : true])
+//            UserDefaults.standard.set(true, forKey: importName)
+//            UserDefaults.standard.synchronize()
+//            
+//            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+//        }
+        
+//        importName = "OpenPortGuidePressureActual+CoreDataTileOverlay"
+//        if (UserDefaults.standard.bool(forKey: importName) == false)
+//        {
+//            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+//            tile.setValue("OpenPortGuide Pressure Actual", forKeyPath: "name")
+//            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+//            tile.setValue("weather.openportguide.de/tiles/actual/surface_pressure/5", forKeyPath: "url")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+//            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+//            
+//            UserDefaults.standard.register(defaults: [importName : true])
+//            UserDefaults.standard.set(true, forKey: importName)
+//            UserDefaults.standard.synchronize()
+//            
+//            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+//        }
+        
+//        importName = "OpenPortGuidePrecipitationActual+CoreDataTileOverlay"
+//        if (UserDefaults.standard.bool(forKey: importName) == false)
+//        {
+//            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+//            tile.setValue("OpenPortGuide Precipitation Actual", forKeyPath: "name")
+//            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+//            tile.setValue("weather.openportguide.de/tiles/actual/precipitation/5", forKeyPath: "url")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+//            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+//            
+//            UserDefaults.standard.register(defaults: [importName : true])
+//            UserDefaults.standard.set(true, forKey: importName)
+//            UserDefaults.standard.synchronize()
+//            
+//            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+//        }
+        
+//        importName = "OpenPortGuidePrecipitationShadedActual+CoreDataTileOverlay"
+//        if (UserDefaults.standard.bool(forKey: importName) == false)
+//        {
+//            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+//            tile.setValue("OpenPortGuide Precipitation Shaded Actual", forKeyPath: "name")
+//            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+//            tile.setValue("weather.openportguide.de/tiles/actual/precipitation_shaded/5", forKeyPath: "url")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+//            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+//            
+//            UserDefaults.standard.register(defaults: [importName : true])
+//            UserDefaults.standard.set(true, forKey: importName)
+//            UserDefaults.standard.synchronize()
+//            
+//            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+//        }
+        
+//        importName = "OpenPortGuideAirTemperatureActual+CoreDataTileOverlay"
+//        if (UserDefaults.standard.bool(forKey: importName) == false)
+//        {
+//            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+//            tile.setValue("OpenPortGuide Air Temperature Actual", forKeyPath: "name")
+//            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+//            tile.setValue("weather.openportguide.de/tiles/actual/air_temperature/5", forKeyPath: "url")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+//            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+//            
+//            UserDefaults.standard.register(defaults: [importName : true])
+//            UserDefaults.standard.set(true, forKey: importName)
+//            UserDefaults.standard.synchronize()
+//            
+//            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+//        }
+        
+//        importName = "OpenPortGuideSeaSurfaceemperatureActual+CoreDataTileOverlay"
+//        if (UserDefaults.standard.bool(forKey: importName) == false)
+//        {
+//            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+//            tile.setValue("OpenPortGuide Sea Surface Temperature Actual", forKeyPath: "name")
+//            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+//            tile.setValue("weather.openportguide.de/tiles/actual/sea_surface_temperature/5", forKeyPath: "url")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+//            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+//            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+//            
+//            UserDefaults.standard.register(defaults: [importName : true])
+//            UserDefaults.standard.set(true, forKey: importName)
+//            UserDefaults.standard.synchronize()
+//            
+//            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+//        }
+        
+        
+        
+        
+        importName = "OpenSeaMapSport+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("OpenSeaMap Sport", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("t1.openseamap.org/sport", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+        importName = "OpenSeaMapSport+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("OpenSeaMap Sport", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("t1.openseamap.org/sport", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+        importName = "OpenSeaMap+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("OpenSeaMap Signs", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("t1.openseamap.org/seamark", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+        importName = "OpenPublicTransportMap+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Open Public Transport Map", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("openptmap.org/tiles", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
         do {
             try managedObjectContext.save()
         } catch {
@@ -336,20 +582,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Read
-        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
-        
+        let tilesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
+        let sortDescriptor = NSSortDescriptor(key: "sortOrder", ascending: true)
+        tilesFetch.sortDescriptors = [sortDescriptor]
+
         do {
-            let fetchedEmployees = try managedObjectContext.fetch(employeesFetch) as! [Tile]
-            
-            for tile in fetchedEmployees {
-                
-                print(tile.name)
-                
+            let fetchedTiles = try managedObjectContext.fetch(tilesFetch) as! [Tile]
+
+            for tile in fetchedTiles {
+            print("\(tile.sortOrder)  - \(tile.name)")
             }
         } catch {
-            fatalError("Failed to fetch employees: \(error)")
+            fatalError("Failed to fetch tiles: \(error)")
         }
-
     }
     
     // MARK: - Core Data stack

@@ -10,7 +10,8 @@ import Foundation
 import MapKit
 
 class TileOverlay: MKTileOverlay {
-
+    var tileUseLoadbalancing:Bool = false
+    
 //    let cache: NSCache = NSCache<URL, Data:AnyObject >()
     
     override init(urlTemplate URLTemplate: String?) {
@@ -56,6 +57,28 @@ class TileOverlay: MKTileOverlay {
     }
     
     
+    override func url(forTilePath path: MKTileOverlayPath) -> URL {
+//        print("path \(path)")
+        
+        if (!self.tileUseLoadbalancing)
+        {
+            return super.url(forTilePath: path)
+        }
+        else
+        {
+            let url:URL = super.url(forTilePath: path)
+            let array = ["a", "b", "c"]
+            let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
+            let loadBalancing:String = array[randomIndex] + "."
+            let host = loadBalancing + url.host!
+            
+            let retUrl = URL.init(string: url.scheme!+"://"+host+url.path)!
+//            print("retUrl \(retUrl)")
+            return retUrl
+        }
+        
+    }
+    
     override func loadTile(at path: MKTileOverlayPath, result: @escaping (Data?, Error?) -> Void) {
         let url = self.url(forTilePath: path)
         
@@ -81,8 +104,23 @@ class TileOverlay: MKTileOverlay {
             else
             {
 //                print("loading " + String(describing: path) + " from directory")
+//                print(url)
                 Networking.sharedInstance.incrementCount()
-                URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+                
+                let session:URLSession
+                if (self.name().contains("OpenPortGuid"))
+                {
+                    let sessionConfig = URLSessionConfiguration.default
+                    let xHTTPAdditionalHeaders: [NSObject : AnyObject] = ["User-Agent" as NSObject:"SwiftMaps" as AnyObject]
+                    sessionConfig.httpAdditionalHeaders = xHTTPAdditionalHeaders
+                    session = URLSession(configuration: sessionConfig)
+                }
+                else
+                {
+                    session = URLSession.shared
+                }
+
+                session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
                     Networking.sharedInstance.decrementCount()
                     if error != nil
                     {

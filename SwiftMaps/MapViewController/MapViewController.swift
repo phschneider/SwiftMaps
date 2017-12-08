@@ -405,10 +405,25 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 
                 if let anyObj : TileOverlay.Type = NSClassFromString("SingleTrailMaps."+tile.classFileName!) as! TileOverlay.Type
                 {
-                    // print(tile.classFileName)
-                    let instance = anyObj.init()
-                    overlays.append(instance)
                     
+                    if (tile.classFileName == "CoreDataTileOverlay")
+                    {
+                        let instance:CoreDataTileOverlay
+                        
+                        let scheme = (tile.useHttps==false) ? "http://" : "https://"
+                        let url:String = scheme + tile.url! + "/{z}/{x}/{y}.png"
+                        
+                        instance = CoreDataTileOverlay.init(urlTemplate:url)
+                        instance.tileName = tile.name!
+                        instance.tileUseLoadbalancing = tile.useLoadbalancing
+                        
+                        overlays.append(instance)
+                    }
+                    else
+                    {
+                        let instance = anyObj.init()
+                        overlays.append(instance)
+                    }
                 }
                 else
                 {
