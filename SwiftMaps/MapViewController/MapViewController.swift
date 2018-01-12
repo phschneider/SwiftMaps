@@ -411,7 +411,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                         let instance:CoreDataTileOverlay
                         
                         let scheme = (tile.useHttps==false) ? "http://" : "https://"
-                        let url:String = scheme + tile.url! + "/{z}/{x}/{y}.png"
+                        let url:String = scheme + tile.url! + ".png"
                         
                         instance = CoreDataTileOverlay.init(urlTemplate:url)
                         instance.tileName = tile.name!

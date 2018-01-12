@@ -360,7 +360,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("OpenStreetMap", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
-            tile.setValue("tile.openstreetmap.org", forKeyPath: "url")
+            tile.setValue("tile.openstreetmap.org/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
@@ -379,8 +379,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("OpenPortGuide Wind Actual", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
-            tile.setValue("weather.openportguide.de/tiles/actual/wind_stream/5", forKeyPath: "url")
+            tile.setValue("weather.openportguide.de/tiles/actual/wind_stream/5/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+        // https://www.strava.com/athletes/9436691/heatmaps/1a49b91a#7/49.83798/7.03125
+        importName = "StravaPersonal2018TileOverlayImported+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Strava - Personal 2018", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("d22umfi1yqsdc.cloudfront.net/tiles/01000000008FFE131A49B91A-6F49EA13/{z}-{x}-{y}", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
             
@@ -508,7 +527,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("OpenSeaMap Sport", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
-            tile.setValue("t1.openseamap.org/sport", forKeyPath: "url")
+            tile.setValue("t1.openseamap.org/sport/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
@@ -526,7 +545,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("OpenSeaMap Sport", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
-            tile.setValue("t1.openseamap.org/sport", forKeyPath: "url")
+            tile.setValue("t1.openseamap.org/sport/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
@@ -544,7 +563,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("OpenSeaMap Signs", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
-            tile.setValue("t1.openseamap.org/seamark", forKeyPath: "url")
+            tile.setValue("t1.openseamap.org/seamark/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
@@ -562,7 +581,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Open Public Transport Map", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
-            tile.setValue("openptmap.org/tiles", forKeyPath: "url")
+            tile.setValue("openptmap.org/tiles/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
