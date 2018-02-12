@@ -136,6 +136,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
             // Unterscheidung Ob CoreData Tile oder normales Tile ...
             let tile = self.fetchedResultsController.object(at: indexPath)
             
+            // Hier müssen wir noch an den jeweiligen Renderer Kommen damit die Daten reloaded werden ... (und nur diese Daten)
             var path:String=""
             if let anyObj : TileOverlay.Type = NSClassFromString("SingleTrailMaps."+tile.classFileName!) as! TileOverlay.Type
             {
@@ -165,7 +166,8 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print (error)
             }
             
-            tableView.setEditing(false, animated: true)            
+            NotificationCenter.default.post(name:Notification.Name(rawValue:"TileClearedCache"), object: nil,userInfo:nil)
+            tableView.setEditing(false, animated: true)
         }
         
         return [deleteAction]

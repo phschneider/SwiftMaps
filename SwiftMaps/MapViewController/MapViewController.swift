@@ -17,6 +17,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var currentLocation: CLLocation!
     var locationButton: UIButton!
     
+    var renderers:[MKOverlayRenderer]!
+    
 //    var alphaSliderLeft: UISlider!
 //    var alphaSliderRight: UISlider!
     
@@ -85,6 +87,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                         notification in
                             self.showControls()
                         }
+        
+        nc.addObserver(forName:Notification.Name(rawValue:"TileClearedCache"),
+                       object:nil, queue:nil) {
+                        notification in
+                        self.reloadRenderers()
+        }
 
     }
     
@@ -455,6 +463,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.locationButton.alpha = 1.0;
     }
     
+    func reloadRenderers()
+    {
+        renderers.forEach { renderer in
+            if (renderer.isMember(of: MKTileOverlayRenderer.self))
+            {
+//            if ((renderer.isKind(of: MKTileOverlayRenderer())) != nil)
+//            {
+                (renderer as? MKTileOverlayRenderer)?.reloadData()
+//            }
+            }
+        }
+    }
+    
     // MARK: - Helper
 //    func selectAllVisibleAnnotation()
 //    {
@@ -468,7 +489,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //    }
     
     
-    // MARK: - MapView
+    // MARK: - MapView Delegate
 //    func mapView(mapView: MKMapView,didSelectAnnotationView view: MKAnnotationView)
 //    {
 //        if ((view.annotation?.isKindOfClass(NodeAnnotationView)) != nil)
@@ -522,7 +543,47 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //    }
 //   
     
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        print("Function: \(#function), line: \(#line)")
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print("Function: \(#function), line: \(#line)")
+    }
+    
+    func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+        print("Function: \(#function), line: \(#line)")
+    }
+    
+    public func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        print("Function: \(#function), line: \(#line)")
+    }
+    
+    func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
+        print("Function: \(#function), line: \(#line)")
+    }
+    
+    func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
+        print("Function: \(#function), line: \(#line)")
+    }
+    
+    func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
+        print("Function: \(#function), line: \(#line)")
+    }
+    
+    func mapView(_ mapView: MKMapView, didAdd renderers: [MKOverlayRenderer]){
+        print("Function: \(#function), line: \(#line)")
+        print("didAdd \(renderers)")
+ 
+        renderers.forEach { renderer in
+            print("--- \(renderer)")
+        }
+        
+        self.renderers = renderers
+    }
+    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        print("Function: \(#function), line: \(#line)")
         if (overlay is MKCircle)
         {
             let circleRenderer = MKCircleRenderer(overlay: overlay)
@@ -557,6 +618,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             {
                 renderer.alpha = alphaValueRight;
             }
+            print("rendererFor \(renderer)  - \(overlay)")
+
             return renderer
         }
             
