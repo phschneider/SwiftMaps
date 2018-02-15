@@ -158,7 +158,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
         
-        importName = "StravaPersonal2018TileOverlayImported+CoreDataTileOverlay"
+        importName = "StravaPersonal2017TileOverlayImported+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)

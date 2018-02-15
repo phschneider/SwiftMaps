@@ -138,6 +138,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             // Hier müssen wir noch an den jeweiligen Renderer Kommen damit die Daten reloaded werden ... (und nur diese Daten)
             var path:String=""
+            var name:String=""
             if let anyObj : TileOverlay.Type = NSClassFromString("SingleTrailMaps."+tile.classFileName!) as! TileOverlay.Type
             {
                 if (tile.classFileName == "CoreDataTileOverlay")
@@ -155,11 +156,28 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let instance = anyObj.init()
                     path = instance.mainFolder() as String
                 }
+                name = tile.name!
             }
             
             do
             {
                 try FileManager.default.removeItem(atPath: path)
+                #if DEBUG
+                    // Dieser Cache wird zur Zeit nicht verwendet ...
+                    print ("Clear FileManager Cache for " + path)
+                
+//                let cachesDirectoryURL = try! NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first! .asURL()
+//                let cacheURL = cachesDirectoryURL.appendingPathComponent(name, isDirectory: true)
+//                var diskPath = cacheURL.path
+//                
+//                try FileManager.default.removeItem(atPath: diskPath)
+//                print ("Clear FileManager Cache for " + diskPath)
+                
+                    let cache = URLCache(memoryCapacity:16384, diskCapacity: 268435456, diskPath: name)
+                    print ("Before \(cache.currentDiskUsage)")
+                    cache.removeAllCachedResponses()
+                    print ("After \(cache.currentDiskUsage)")
+                #endif
             }
             catch
             {

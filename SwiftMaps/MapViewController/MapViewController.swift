@@ -465,13 +465,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func reloadRenderers()
     {
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
+        
         renderers.forEach { renderer in
             if (renderer.isMember(of: MKTileOverlayRenderer.self))
             {
-//            if ((renderer.isKind(of: MKTileOverlayRenderer())) != nil)
-//            {
+                // Hier werden alle TileOverlays (nicht nur bei dem der Cache verworfen wurde) neu geladen
+                #if DEBUG
+                    print("Reload Renderer: \(renderer)")
+                #endif
                 (renderer as? MKTileOverlayRenderer)?.reloadData()
-//            }
             }
         }
     }
@@ -544,37 +549,53 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //   
     
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
     }
     
     func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
     }
     
     public func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
     }
     
     func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
     }
     
     func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
     }
     
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
     }
     
     func mapView(_ mapView: MKMapView, didAdd renderers: [MKOverlayRenderer]){
-        print("Function: \(#function), line: \(#line)")
-        print("didAdd \(renderers)")
- 
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+            print("didAdd \(renderers)")
+        #endif
+        
         renderers.forEach { renderer in
             print("--- \(renderer)")
         }
@@ -583,7 +604,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        print("Function: \(#function), line: \(#line)")
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
+        
         if (overlay is MKCircle)
         {
             let circleRenderer = MKCircleRenderer(overlay: overlay)
@@ -618,7 +642,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             {
                 renderer.alpha = alphaValueRight;
             }
-            print("rendererFor \(renderer)  - \(overlay)")
+            
+            #if DEBUG
+                print("rendererFor \(renderer)  - \(overlay)")
+            #endif
 
             return renderer
         }

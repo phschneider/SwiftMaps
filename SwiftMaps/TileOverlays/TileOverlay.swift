@@ -80,6 +80,9 @@ class TileOverlay: MKTileOverlay {
     }
     
     override func loadTile(at path: MKTileOverlayPath, result: @escaping (Data?, Error?) -> Void) {
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+        #endif
         let url = self.url(forTilePath: path)
         
 
@@ -97,27 +100,45 @@ class TileOverlay: MKTileOverlay {
             
             if (storageData != nil)
             {
-//                print("using storage for " + String(describing: path))
+                #if DEBUG
+                    print("using storage for \(storagePath) " + String(describing: path))
+                #endif
                 result(storageData, nil)
                 return
             }
             else
             {
+                
 //                print("loading " + String(describing: path) + " from directory")
 //                print(url)
                 Networking.sharedInstance.incrementCount()
                 
-                let session:URLSession
+                var session:URLSession
                 if (self.name().contains("OpenPortGuid"))
                 {
                     let sessionConfig = URLSessionConfiguration.default
                     let xHTTPAdditionalHeaders: [NSObject : AnyObject] = ["User-Agent" as NSObject:"SwiftMaps" as AnyObject]
+                    
                     sessionConfig.httpAdditionalHeaders = xHTTPAdditionalHeaders
+                    // IGNORE CACHE ...
+                    sessionConfig.requestCachePolicy = .reloadIgnoringLocalCacheData
+                    sessionConfig.urlCache = nil
+                    
                     session = URLSession(configuration: sessionConfig)
                 }
                 else
                 {
-                    session = URLSession.shared
+                    let sessionConfig = URLSessionConfiguration.default
+                    
+//                    let cache = URLCache(memoryCapacity:16384, diskCapacity: 268435456, diskPath: self.name())
+//                    sessionConfig.urlCache = cache
+//                    sessionConfig.requestCachePolicy = .useProtocolCachePolicy
+
+                    // IGNORE CACHE ...
+                    sessionConfig.requestCachePolicy = .reloadIgnoringLocalCacheData
+                    sessionConfig.urlCache = nil
+                    
+                    session = URLSession(configuration: sessionConfig)
                 }
 
                 session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
@@ -135,6 +156,9 @@ class TileOverlay: MKTileOverlay {
                         do {
     //                        let folderPath = self.directoryForPath(path)
     //                        let folderPath = self.mainFolder().stringByAppendingPathComponent("/tiles/default/")
+                            #if DEBUG
+                                print("path \(storagePath) " + String(describing: path))
+                            #endif
                             let folderPath = self.mainFolder().appendingPathComponent(self.directoryForPath(path))
                             try FileManager.default.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
                             try data!.write(to: URL(fileURLWithPath: storagePath), options: .atomicWrite)

@@ -3483,6 +3483,7 @@
 			baseConfigurationReference = 9ED00DA497F7032DAD44EA88 /* Pods-SingleTrailMaps.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Philip Schneider (723AP2V5VG)";
 				DEVELOPMENT_TEAM = 723AP2V5VG;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3501,6 +3502,7 @@
 			baseConfigurationReference = A13FA36DA72B3212838F0C7A /* Pods-SingleTrailMaps.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Philip Schneider (723AP2V5VG)";
 				DEVELOPMENT_TEAM = 723AP2V5VG;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
