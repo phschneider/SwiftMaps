@@ -22,7 +22,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     init(imageURL: NSURL?) {
-        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
+        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
 
        
@@ -62,7 +62,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         self.title = "Tiles"
         
-        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
+        self.tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
         self.tableView.frame = self.view.frame;
         self.tableView.autoresizingMask = self.view.autoresizingMask;
@@ -87,6 +87,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(close))
     }
     
+    // MARK: Button Actions
     @objc func edit(){
         self.tableView.setEditing(!(self.tableView.isEditing), animated: true)
     }
@@ -198,6 +199,14 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     // MARK: - MOVE
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        // Es kann nur innerhalb der gleichen Section Sortiert werden
+        if (sourceIndexPath.section != destinationIndexPath.section)
+        {
+            tableView.reloadData()
+            return
+        }
+        
         let sourceTile = fetchedResultsController.object(at: sourceIndexPath)
         let destinationTile = fetchedResultsController.object(at: destinationIndexPath)
         
@@ -232,6 +241,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        return 1
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "LabelCell"
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
@@ -257,8 +267,19 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         let tile = fetchedResultsController.object(at: indexPath)
         tile.enabled = !(tile.enabled?.boolValue)! as NSNumber
         
-        tableView.reloadRows(at: [indexPath], with: .automatic)
-     
+        //tableView.reloadRows(at: [indexPath], with: .automatic)
+        let appDel: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.managedObjectContext = appDel.managedObjectContext
+        
+        do {
+            try self.managedObjectContext?.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+
+        _fetchedResultsController = nil
+        tableView.reloadData()
+        
         NotificationCenter.default.post(name:Notification.Name(rawValue:"TileSelectionChanged"), object: nil,userInfo:nil)
     }
     
@@ -275,16 +296,17 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "sortOrder", ascending: true)
+        let sortDescriptorEnabled = NSSortDescriptor(key: "enabled", ascending: false)
+        let sortDescriptorSortOrder = NSSortDescriptor(key: "sortOrder", ascending: false)
         
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.sortDescriptors = [sortDescriptorEnabled, sortDescriptorSortOrder]
         
         let appDel: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         self.managedObjectContext = appDel.managedObjectContext
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: "enabled", cacheName: nil)
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
