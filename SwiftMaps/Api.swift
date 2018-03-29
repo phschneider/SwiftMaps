@@ -18,10 +18,14 @@ import AlamofireXmlToObjects
 class Api {
     func requestForBoundingBox(_ searchString: String, boundingBox: NSString ,mapView: MKMapView)
     {
-        self .requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: mapView, gpx: nil)
+        self.requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: mapView, gpxTrack: nil)
     }
-    
-    func requestForBoundingBox(_ searchString: String, boundingBox: NSString ,mapView: MKMapView, gpx:Gpx?)
+    func requestForBoundingBox(_ searchString: String, boundingBox: NSString , mapView: MKMapView, gpxTrack:Gpx?)
+    {
+        self.requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: mapView, gpxTrack:gpxTrack, distance: 0.0)
+
+    }
+    func requestForBoundingBox(_ searchString: String, boundingBox: NSString , mapView: MKMapView, gpxTrack:Gpx?, distance: Double)
     {
         
         var urlString : String = ""
@@ -63,6 +67,8 @@ class Api {
             )
             .validate()
             .responseString { response in
+
+                // FEHLERBEHANDLUNG ...
                 print("Success: \(response.result.isSuccess)")
                 print("Response String: \(response.result.value)")
                 let message : String
@@ -103,6 +109,8 @@ class Api {
                 }
             }
             .responseObject { (response: DataResponse<Osm>) in
+
+                // PARSING ....
                 print("Response Object: ")
                 
                 
@@ -125,8 +133,8 @@ class Api {
                                 let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
                                 let loc = CLLocation.init(latitude: node._lat as! CLLocationDegrees, longitude: node._lon as! CLLocationDegrees)
                                 
-                                // Distance Filter
-                                if (gpx != nil && (gpx?.smallesDistance(current: loc).isLess(than: 1000.0))!)
+                                // Distance Filter => wir zeigen einen GPX-Track an
+                                if (gpxTrack != nil && distance != 0.0 && (gpxTrack?.smallesDistance(current: loc).isLess(than: distance))!)
                                 {
                                     node.type = searchString
                                     
@@ -134,6 +142,25 @@ class Api {
                                     
                                     annotations.append(annotation)
                                     
+                                    let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
+                                    let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+                                    if (MKMapRectIsNull(zoomRect))
+                                    {
+                                        zoomRect = pointRect;
+                                    }
+                                    else
+                                    {
+                                        zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                                    }
+                                }
+                                else if (gpxTrack == nil || distance == 0.0)
+                                {
+                                    node.type = searchString
+
+                                    let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
+
+                                    annotations.append(annotation)
+
                                     let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
                                     let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
                                     if (MKMapRectIsNull(zoomRect))
