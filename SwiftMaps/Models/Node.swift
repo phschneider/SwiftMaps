@@ -9,7 +9,7 @@
 import Foundation
 import EVReflection
 
-class Node: EVObject {
+class Node: EVObject{
     var _version: String?
     var _uid: String?
     
@@ -25,7 +25,7 @@ class Node: EVObject {
     var _ref: String?
     
     var type: String?
-    
+
     func isPeak() -> Bool
     {
         return (self.type?.lowercased().range(of: "peak") != nil)

@@ -120,40 +120,40 @@ class SingleTrailMapViewController: MapViewController {
         
         
         
-        Api().requestForMapRext("node[natural=peak]", mapRect: self.mapView.visibleMapRec, mapView: self.mapView, gpxTrack:self.gpx)
+        Api().requestForCurrentMapRect("node[natural=peak]", mapView: self.mapView, gpxTrack:self.gpx)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
 //            Api().requestForMapRext("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
         
             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                Api().requestForMapRext("node[tourism=viewpoint]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                Api().requestForCurrentMapRect("node[tourism=viewpoint]", mapView: self.mapView, gpxTrack:self.gpx)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                    Api().requestForMapRext("node[amenity=shelter]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                    Api().requestForCurrentMapRect("node[amenity=shelter]", mapView: self.mapView, gpxTrack:self.gpx)
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
 //                        Api().requestForMapRext("node[amenity=bench]", boundingBox: self.mapView.visibleMapRect, mapView: self.mapView, gpx:self.gpx)
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                            Api().requestForMapRext("node[amenity=fast_food]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                            Api().requestForCurrentMapRect("node[amenity=fast_food]", mapView: self.mapView, gpxTrack:self.gpx)
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                Api().requestForMapRext("node[amenity=restaurant]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                                Api().requestForCurrentMapRect("node[amenity=restaurant]", mapView: self.mapView, gpxTrack:self.gpx)
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                    Api().requestForMapRext("node[amenity=cafe]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                                    Api().requestForCurrentMapRect("node[amenity=cafe]",  mapView: self.mapView, gpxTrack:self.gpx)
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                        Api().requestForMapRext("node[amenity=fuel]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                                        Api().requestForCurrentMapRect("node[amenity=fuel]", mapView: self.mapView, gpxTrack:self.gpx)
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                            Api().requestForMapRext("node[shop=bakery]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                                            Api().requestForCurrentMapRect("node[shop=bakery]",mapView: self.mapView, gpxTrack:self.gpx)
                                             
                                             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                Api().requestForMapRext("node[shop=supermarket]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                                                Api().requestForCurrentMapRect("node[shop=supermarket]", mapView: self.mapView, gpxTrack:self.gpx)
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                    Api().requestForMapRext("node[cuisine=ice_cream]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
+                                                    Api().requestForCurrentMapRect("node[cuisine=ice_cream]", mapView: self.mapView, gpxTrack:self.gpx)
                                                     AlertController().showAlert("last Request")
                                                     
 //                                                    DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
