@@ -104,9 +104,6 @@ class SingleTrailMapViewController: MapViewController {
     override func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
         
-        let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
-        let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
-        
         // TODO: DispatchTime anhand Kartenausschnitt 
         // TODO: DispatchTime anhand Anzahl Requests
         let dispatchTime = 60.0
@@ -123,40 +120,40 @@ class SingleTrailMapViewController: MapViewController {
         
         
         
-        Api().requestForBoundingBox("node[natural=peak]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+        Api().requestForMapRext("node[natural=peak]", mapRect: self.mapView.visibleMapRec, mapView: self.mapView, gpxTrack:self.gpx)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-//            Api().requestForBoundingBox("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+//            Api().requestForMapRext("node[tourism=picnic_site]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
         
             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                Api().requestForBoundingBox("node[tourism=viewpoint]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                Api().requestForMapRext("node[tourism=viewpoint]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                    Api().requestForBoundingBox("node[amenity=shelter]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                    Api().requestForMapRext("node[amenity=shelter]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-//                        Api().requestForBoundingBox("node[amenity=bench]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+//                        Api().requestForMapRext("node[amenity=bench]", boundingBox: self.mapView.visibleMapRect, mapView: self.mapView, gpx:self.gpx)
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                            Api().requestForBoundingBox("node[amenity=fast_food]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                            Api().requestForMapRext("node[amenity=fast_food]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                Api().requestForBoundingBox("node[amenity=restaurant]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                Api().requestForMapRext("node[amenity=restaurant]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                    Api().requestForBoundingBox("node[amenity=cafe]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                    Api().requestForMapRext("node[amenity=cafe]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                        Api().requestForBoundingBox("node[amenity=fuel]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                        Api().requestForMapRext("node[amenity=fuel]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                            Api().requestForBoundingBox("node[shop=bakery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                            Api().requestForMapRext("node[shop=bakery]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                                             
                                             DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                Api().requestForBoundingBox("node[shop=supermarket]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                Api().requestForMapRext("node[shop=supermarket]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                                                 
                                                 DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {
-                                                    Api().requestForBoundingBox("node[cuisine=ice_cream]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
+                                                    Api().requestForMapRext("node[cuisine=ice_cream]", mapRect: self.mapView.visibleMapRect, mapView: self.mapView, gpxTrack:self.gpx)
                                                     AlertController().showAlert("last Request")
                                                     
 //                                                    DispatchQueue.main.asyncAfter(deadline: .now() + dispatchTime) {

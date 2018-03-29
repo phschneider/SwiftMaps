@@ -20,11 +20,21 @@ class Api {
     {
         self.requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: mapView, gpxTrack: nil)
     }
+
+    func requestForMapRext(_ searchString: String, mapRect: MKMapRect , mapView: MKMapView, gpxTrack:Gpx?)
+    {
+        let bounding:[Double] = mapView.getBoundingBox(mapRect)
+        let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
+
+        self.requestForBoundingBox(searchString, boundingBox: boundingBoxString as NSString, mapView: mapView, gpxTrack: gpxTrack)
+    }
+
     func requestForBoundingBox(_ searchString: String, boundingBox: NSString , mapView: MKMapView, gpxTrack:Gpx?)
     {
         self.requestForBoundingBox(searchString, boundingBox: boundingBox, mapView: mapView, gpxTrack:gpxTrack, distance: 0.0)
 
     }
+
     func requestForBoundingBox(_ searchString: String, boundingBox: NSString , mapView: MKMapView, gpxTrack:Gpx?, distance: Double)
     {
         
