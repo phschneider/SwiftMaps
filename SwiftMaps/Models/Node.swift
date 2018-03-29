@@ -8,6 +8,7 @@
 
 import Foundation
 import EVReflection
+import CoreData
 
 class Node: EVObject{
     var _version: String?
@@ -25,6 +26,18 @@ class Node: EVObject{
     var _ref: String?
     
     var type: String?
+
+    func toCoreData()
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        var coreDataNode:NSManagedObject = NSEntityDescription.insertNewObject(forEntityName: "CoreDataNode", into: appDelegate.managedObjectContext)
+        coreDataNode.setValue(self.type, forKey: "type")
+        coreDataNode.setValue(self._ref, forKey: "ref")
+//        coreDataNode.setValue(self.tag, forKey: "tag")
+        coreDataNode.setValue(Int64(self._id!), forKey: "id")
+        coreDataNode.setValue(self._lat, forKey: "lat")
+        coreDataNode.setValue(self._lon, forKey: "lon")
+    }
 
     func isPeak() -> Bool
     {

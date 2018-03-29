@@ -13,6 +13,7 @@ import MapKit
 import Alamofire
 //import SWXMLHash
 import AlamofireXmlToObjects
+import CoreData
 
 
 class Api {
@@ -145,6 +146,7 @@ class Api {
 
                         if (result.way.count == 0)
                         {
+                            let appDelegate = UIApplication.shared.delegate as! AppDelegate
                             for node in result.node
                             {
 //                                print(node._lat)
@@ -190,6 +192,13 @@ class Api {
                                         zoomRect = MKMapRectUnion(zoomRect, pointRect);
                                     }
                                 }
+                                node.toCoreData()
+                            }
+
+                            do {
+                                try appDelegate.managedObjectContext.save()
+                            } catch {
+                                fatalError("Failure to save api context: \(error)")
                             }
                         }
                         
