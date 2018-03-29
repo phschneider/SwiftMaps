@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import CoreData
 
 class SingleTrailMapViewController: MapViewController {
     
@@ -96,6 +97,42 @@ class SingleTrailMapViewController: MapViewController {
             // example.txt not found!
         }
 
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataNode")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
+
+        var zoomRect :MKMapRect = MKMapRectNull
+        var annotations: [MKAnnotation] = []
+
+        do {
+            let fetchedNodes = try appDelegate.managedObjectContext.fetch(fetchRequest) as! [CoreDataNode]
+            for coreDataNode in fetchedNodes {
+                let node = coreDataNode.toNode()
+                let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
+                let loc = CLLocation.init(latitude: node._lat as! CLLocationDegrees, longitude: node._lon as! CLLocationDegrees)
+                let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
+                let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
+                annotations.append(annotation)
+                let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+                if (MKMapRectIsNull(zoomRect))
+                {
+                    zoomRect = pointRect;
+                }
+                else
+                {
+                    zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                }
+            }
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+
+        if (annotations.count > 0)
+        {
+            mapView.addAnnotations(annotations)
+//            mapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsetsMake(10,10,10,10), animated: true)
+        }
         
 //        MKPolyline *route = [track route];
 //        [self.mapView addOverlay:route];
@@ -103,10 +140,13 @@ class SingleTrailMapViewController: MapViewController {
     
     override func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
+
         
         // TODO: DispatchTime anhand Kartenausschnitt 
         // TODO: DispatchTime anhand Anzahl Requests
-        let dispatchTime = 60.0
+        let dispatchTime = 1.0
+        let bounding:[Double] = self.mapView.getBoundingBox(self.mapView.visibleMapRect)
+        let boundingBoxString:String = String(format: "%.3f,%.3f,%.3f,%.3f", bounding[1],bounding[0],bounding[3],bounding[2])
 
         // TODO: Srings in Array und dann mittels dispatch durchgehen ...
         //        Api().requestForBoundingBox("way[landuse=cemetery]", boundingBox: boundingBoxString as NSString, mapView: self.mapView, gpx:self.gpx)
@@ -118,7 +158,10 @@ class SingleTrailMapViewController: MapViewController {
         //        natural=spring -
         //        man_made=water_well -
         
-        
+
+        // TODO 2: Request in DB Speichern
+        // TODO 3: Response in DB Speichern um anzuzeigen
+        // TODO 4: Requests im Debug Mode auf Karte anzeigen
         
         Api().requestForCurrentMapRect("node[natural=peak]", mapView: self.mapView, gpxTrack:self.gpx)
 
@@ -171,12 +214,14 @@ class SingleTrailMapViewController: MapViewController {
                 }
             }
         }
-        
-        var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
-        self.mapView.addAnnotations(annotations)
-        
-        annotations = (gpx?.wayPointAnnotations())!
-        self.mapView.addAnnotations(annotations)
+
+        if (gpx != nil) {
+            var annotations: [MKAnnotation] = (gpx?.distanceAnnotations())!
+            self.mapView.addAnnotations(annotations)
+
+            annotations = (gpx?.wayPointAnnotations())!
+            self.mapView.addAnnotations(annotations)
+        }
     }
     
     
