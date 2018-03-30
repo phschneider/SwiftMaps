@@ -126,13 +126,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Helper
     func initCoreDataRelations()
     {
+        importTiles()
+        importPois()
+    }
+
+    private func importTiles() {
         var sortOrder:NSNumber = 0
         var importName:String = ""
-        
+
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "sortOrder", ascending: false)]
         fetchRequest.fetchLimit = 1
-        
+
         do {
             let fetchedEmployees = try managedObjectContext.fetch(fetchRequest) as! [Tile]
             for tile in fetchedEmployees {
@@ -141,7 +146,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
-        
+
         // Save
         var tile:NSManagedObject
         if (UserDefaults.standard.bool(forKey: "StravaTileOverlayImported") == false)
@@ -150,14 +155,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue("Strava", forKeyPath: "name")
             tile.setValue("StravaTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["StravaTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "StravaTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         importName = "StravaPersonal2017TileOverlayImported+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
@@ -165,11 +170,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue("Strava - Personal 2017", forKeyPath: "name")
             tile.setValue("StravaPersonalTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: [importName : true])
             UserDefaults.standard.set(true, forKey: importName)
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
@@ -184,72 +189,72 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: [importName : true])
             UserDefaults.standard.set(true, forKey: importName)
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        
+
         if (UserDefaults.standard.bool(forKey: "StravaPersonalOverAllTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Strava - Personal Over All", forKeyPath: "name")
             tile.setValue("StravaPersonalOverAllTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["StravaPersonalOverAllTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "StravaPersonalOverAllTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "DebugTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Debug", forKeyPath: "name")
             tile.setValue("DebugTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["DebugTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "DebugTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
-  
+
+
         if (UserDefaults.standard.bool(forKey: "BlackAndWhiteTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Black & White", forKeyPath: "name")
             tile.setValue("BlackAndWhiteTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["BlackAndWhiteTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "BlackAndWhiteTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "OsmHillShadingTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("OSM HillShading", forKeyPath: "name")
             tile.setValue("OsmHillShadingTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["OsmHillShadingTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "OsmHillShadingTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         // TODO: Update if exists
         if (UserDefaults.standard.bool(forKey: "OpenTopoMapTileOverlayImported") == false)
         {
@@ -259,126 +264,126 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // TODO: Description = nur bis Zoom 12?
             tile.setValue("OpenTopoMapTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["OpenTopoMapTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "OpenTopoMapTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "WaymarkedHikingTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Waymarked - Hiking", forKeyPath: "name")
             tile.setValue("WaymarkedHikingTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["WaymarkedHikingTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "WaymarkedHikingTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "WaymarkedCyclingTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Waymarked - Cycling", forKeyPath: "name")
             tile.setValue("WaymarkedCyclingTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["WaymarkedCyclingTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "WaymarkedCyclingTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "WaymarkedMtbTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Waymarked - MTB", forKeyPath: "name")
             tile.setValue("WaymarkedMtbTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["WaymarkedMtbTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "WaymarkedMtbTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "KomootTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("Komoot", forKeyPath: "name")
             tile.setValue("KomootTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["KomootTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "KomootTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "MapBoxRunBikeHikeTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - RunBikeHike", forKeyPath: "name")
             tile.setValue("MapBoxRunBikeHikeTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["MapBoxRunBikeHikeTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxRunBikeHikeTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "MapBoxCustomTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - Custom", forKeyPath: "name")
             tile.setValue("MapBoxCustomTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["MapBoxCustomTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxCustomTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "MapBoxCustomPathTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - Custom Path", forKeyPath: "name")
             tile.setValue("MapBoxCustomPathTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["MapBoxCustomPathTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxCustomPathTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "MapBoxCustomHillContourTileOverlayImported") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
             tile.setValue("MapBox - Custom Hill Contours", forKeyPath: "name")
             tile.setValue("MapBoxCustomHillContourTileOverlay", forKeyPath: "classFileName")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["MapBoxCustomHillContourTileOverlayImported" : true])
             UserDefaults.standard.set(true, forKey: "MapBoxCustomHillContourTileOverlayImported")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         if (UserDefaults.standard.bool(forKey: "OpenStreetMap+CoreDataTileOverlay") == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
@@ -388,15 +393,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: ["OpenStreetMap+CoreDataTileOverlay" : true])
             UserDefaults.standard.set(true, forKey: "OpenStreetMap+CoreDataTileOverlay")
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
-    
+
+
         importName = "OpenPortGuideWindActual+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
@@ -407,14 +412,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: [importName : true])
             UserDefaults.standard.set(true, forKey: importName)
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
 //        importName = "OpenPortGuidePressureActual+CoreDataTileOverlay"
 //        if (UserDefaults.standard.bool(forKey: importName) == false)
 //        {
@@ -425,14 +430,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
 //            tile.setValue(sortOrder, forKeyPath: "sortOrder")
-//            
+//
 //            UserDefaults.standard.register(defaults: [importName : true])
 //            UserDefaults.standard.set(true, forKey: importName)
 //            UserDefaults.standard.synchronize()
-//            
+//
 //            sortOrder=NSNumber(value:sortOrder.intValue + 1)
 //        }
-        
+
 //        importName = "OpenPortGuidePressureActual+CoreDataTileOverlay"
 //        if (UserDefaults.standard.bool(forKey: importName) == false)
 //        {
@@ -443,14 +448,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
 //            tile.setValue(sortOrder, forKeyPath: "sortOrder")
-//            
+//
 //            UserDefaults.standard.register(defaults: [importName : true])
 //            UserDefaults.standard.set(true, forKey: importName)
 //            UserDefaults.standard.synchronize()
-//            
+//
 //            sortOrder=NSNumber(value:sortOrder.intValue + 1)
 //        }
-        
+
 //        importName = "OpenPortGuidePrecipitationActual+CoreDataTileOverlay"
 //        if (UserDefaults.standard.bool(forKey: importName) == false)
 //        {
@@ -461,14 +466,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
 //            tile.setValue(sortOrder, forKeyPath: "sortOrder")
-//            
+//
 //            UserDefaults.standard.register(defaults: [importName : true])
 //            UserDefaults.standard.set(true, forKey: importName)
 //            UserDefaults.standard.synchronize()
-//            
+//
 //            sortOrder=NSNumber(value:sortOrder.intValue + 1)
 //        }
-        
+
 //        importName = "OpenPortGuidePrecipitationShadedActual+CoreDataTileOverlay"
 //        if (UserDefaults.standard.bool(forKey: importName) == false)
 //        {
@@ -479,14 +484,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
 //            tile.setValue(sortOrder, forKeyPath: "sortOrder")
-//            
+//
 //            UserDefaults.standard.register(defaults: [importName : true])
 //            UserDefaults.standard.set(true, forKey: importName)
 //            UserDefaults.standard.synchronize()
-//            
+//
 //            sortOrder=NSNumber(value:sortOrder.intValue + 1)
 //        }
-        
+
 //        importName = "OpenPortGuideAirTemperatureActual+CoreDataTileOverlay"
 //        if (UserDefaults.standard.bool(forKey: importName) == false)
 //        {
@@ -497,14 +502,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
 //            tile.setValue(sortOrder, forKeyPath: "sortOrder")
-//            
+//
 //            UserDefaults.standard.register(defaults: [importName : true])
 //            UserDefaults.standard.set(true, forKey: importName)
 //            UserDefaults.standard.synchronize()
-//            
+//
 //            sortOrder=NSNumber(value:sortOrder.intValue + 1)
 //        }
-        
+
 //        importName = "OpenPortGuideSeaSurfaceemperatureActual+CoreDataTileOverlay"
 //        if (UserDefaults.standard.bool(forKey: importName) == false)
 //        {
@@ -515,17 +520,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
 //            tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
 //            tile.setValue(sortOrder, forKeyPath: "sortOrder")
-//            
+//
 //            UserDefaults.standard.register(defaults: [importName : true])
 //            UserDefaults.standard.set(true, forKey: importName)
 //            UserDefaults.standard.synchronize()
-//            
+//
 //            sortOrder=NSNumber(value:sortOrder.intValue + 1)
 //        }
-        
-        
-        
-        
+
+
         importName = "OpenSeaMapSport+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
@@ -536,14 +539,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: [importName : true])
             UserDefaults.standard.set(true, forKey: importName)
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         importName = "OpenSeaMapSport+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
@@ -554,14 +557,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: [importName : true])
             UserDefaults.standard.set(true, forKey: importName)
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         importName = "OpenSeaMap+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
@@ -572,14 +575,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: [importName : true])
             UserDefaults.standard.set(true, forKey: importName)
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         importName = "OpenPublicTransportMap+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
@@ -590,21 +593,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
             tile.setValue(NSNumber.init(value:false), forKeyPath: "useLoadbalancing")
             tile.setValue(sortOrder, forKeyPath: "sortOrder")
-            
+
             UserDefaults.standard.register(defaults: [importName : true])
             UserDefaults.standard.set(true, forKey: importName)
             UserDefaults.standard.synchronize()
-            
+
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
-        
+
         do {
             try managedObjectContext.save()
         } catch {
             fatalError("Failure to save context: \(error)")
         }
-        
-        
+
+
         // Read
         let tilesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
         let sortDescriptor = NSSortDescriptor(key: "sortOrder", ascending: true)
@@ -620,7 +623,216 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Failed to fetch tiles: \(error)")
         }
     }
-    
+
+    private func importPois() {
+        var sortOrder:NSNumber = 0
+        var importName:String = ""
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Poi")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "sortOrder", ascending: false)]
+        fetchRequest.fetchLimit = 1
+
+        do {
+            let fetchedEmployees = try managedObjectContext.fetch(fetchRequest) as! [Poi]
+            for poi in fetchedEmployees {
+                sortOrder = poi.sortOrder as! NSNumber
+            }
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+
+        // Save
+        var poi:NSManagedObject
+
+        importName = "Tourism-ViewpointPoiImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("tourism", forKeyPath: "category")
+            poi.setValue("viewpoint", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Natural-PeakImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("natural", forKeyPath: "category")
+            poi.setValue("peak", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Amenity-ShelterImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("shelter", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Amenity-FastFoodImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("fast_food", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+
+        importName = "Amenity-RestaurantImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("restaurant", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Amenity-CafeImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("cafe", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Amenity-FuelImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("fuel", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Shop-BakeryImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("shop", forKeyPath: "category")
+            poi.setValue("bakery", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Shop-SupermarketImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("shop", forKeyPath: "category")
+            poi.setValue("supermarket", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Cuisine-IceCreamImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("cuisine", forKeyPath: "category")
+            poi.setValue("ice_cream", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Highway-EmergencyAccessPointImported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("highway", forKeyPath: "category")
+            poi.setValue("emergency_access_point", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        do {
+            try managedObjectContext.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+
+
+        // Read
+        let tilesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Poi")
+        let sortDescriptor = NSSortDescriptor(key: "sortOrder", ascending: true)
+        tilesFetch.sortDescriptors = [sortDescriptor]
+
+        do {
+            let fetchedTiles = try managedObjectContext.fetch(tilesFetch) as! [Poi]
+
+            for poi in fetchedTiles {
+                print("\(poi.sortOrder)  - \(poi.type)")
+            }
+        } catch {
+            fatalError("Failed to fetch tiles: \(error)")
+        }
+    }
+
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: URL = {

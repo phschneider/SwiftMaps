@@ -184,6 +184,14 @@
 		227FCF25206D97A400D6FAF7 /* CoreDataNode+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF1F206D97A400D6FAF7 /* CoreDataNode+CoreDataProperties.swift */; };
 		227FCF26206D97A400D6FAF7 /* CoreDataNode+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF1F206D97A400D6FAF7 /* CoreDataNode+CoreDataProperties.swift */; };
 		227FCF27206D97A400D6FAF7 /* CoreDataNode+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF1F206D97A400D6FAF7 /* CoreDataNode+CoreDataProperties.swift */; };
+		227FCF29206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
+		227FCF2A206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
+		227FCF2B206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
+		227FCF2C206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
+		227FCF2D206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
+		227FCF2E206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
+		227FCF2F206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
+		227FCF30206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */; };
 		228625261E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
 		228625271E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
 		228625281E97D883003F7AF2 /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 228625251E97D883003F7AF2 /* icecream.png */; };
@@ -688,6 +696,7 @@
 		227C05FA1D3180120033E6BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227FCF0C206D951E00D6FAF7 /* CoreDataNode+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreDataNode+CoreDataClass.swift"; path = "Models/CoreDataNode+CoreDataClass.swift"; sourceTree = "<group>"; };
 		227FCF1F206D97A400D6FAF7 /* CoreDataNode+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreDataNode+CoreDataProperties.swift"; path = "Models/CoreDataNode+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoiViewController.swift; path = ViewController/PoiViewController.swift; sourceTree = "<group>"; };
 		228625251E97D883003F7AF2 /* icecream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icecream.png; sourceTree = "<group>"; };
 		2289DC471FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackAndWhiteTileOverlay.swift; path = TileOverlays/BlackAndWhiteTileOverlay.swift; sourceTree = "<group>"; };
 		229563DA1E6C1BB30045E3BE /* NatureMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -949,6 +958,7 @@
 			children = (
 				2222092B1FACB804003E374C /* DetailViewController.swift */,
 				2222092C1FACB804003E374C /* TileViewController.swift */,
+				227FCF28206EEA6E00D6FAF7 /* PoiViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -2840,6 +2850,7 @@
 				22B215E41FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				222208F81FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				222209151FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
+				227FCF2C206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D41FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC4B1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564051E6C1DC70045E3BE /* Osm.swift in Sources */,
@@ -2889,6 +2900,7 @@
 				22B215E51FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				222208F91FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				222209161FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
+				227FCF2D206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D51FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC4C1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564061E6C1DC70045E3BE /* Osm.swift in Sources */,
@@ -2938,6 +2950,7 @@
 				22B215E11FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				225A61541DE1ECCA004CDA62 /* AlertController.swift in Sources */,
 				222209121FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
+				227FCF29206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D11FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC481FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564021E6C1DC70045E3BE /* Osm.swift in Sources */,
@@ -3003,6 +3016,7 @@
 				22B215E81FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				229563F11E6C1D8F0045E3BE /* NatureMapViewController.swift in Sources */,
 				222209191FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
+				227FCF30206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D81FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC4F1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564091E6C1DC70045E3BE /* Osm.swift in Sources */,
@@ -3052,6 +3066,7 @@
 				22B215E61FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				22A42B8B1DE39AAE00F81767 /* AlertController.swift in Sources */,
 				222209171FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
+				227FCF2E206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D61FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC4D1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				222209271FACB7DF003E374C /* TileOverlay.swift in Sources */,
@@ -3101,6 +3116,7 @@
 				22B215E71FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				22EAB6751E6B701900FC3EC1 /* AlertController.swift in Sources */,
 				222209181FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
+				227FCF2F206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D71FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC4E1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564081E6C1DC70045E3BE /* Osm.swift in Sources */,
@@ -3150,6 +3166,7 @@
 				22B215E21FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				222208F61FACB7D2003E374C /* DebugTileOverlay.swift in Sources */,
 				222209131FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
+				227FCF2A206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D21FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC491FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				229564031E6C1DC70045E3BE /* Osm.swift in Sources */,
@@ -3199,6 +3216,7 @@
 				22B215E31FAF3FBE0031DFAB /* Trkseg.swift in Sources */,
 				222209141FACB7DF003E374C /* StravaPersonalTileOverlay.swift in Sources */,
 				229564041E6C1DC70045E3BE /* Osm.swift in Sources */,
+				227FCF2B206EEA6E00D6FAF7 /* PoiViewController.swift in Sources */,
 				22B215D31FAF3FBE0031DFAB /* Trk.swift in Sources */,
 				2289DC4A1FB3391D00B1EFA2 /* BlackAndWhiteTileOverlay.swift in Sources */,
 				222209241FACB7DF003E374C /* TileOverlay.swift in Sources */,

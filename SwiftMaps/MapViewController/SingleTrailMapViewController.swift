@@ -11,9 +11,7 @@ import MapKit
 import CoreData
 
 class SingleTrailMapViewController: MapViewController {
-    
-    var gpx:Gpx?
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -24,47 +22,25 @@ class SingleTrailMapViewController: MapViewController {
         super.viewDidLoad()
         self.title = "Trails"
         self.mapView.mapType = MKMapType.standard
-        
-        let osmOverlay:MapBoxRunBikeHikeTileOverlay = MapBoxRunBikeHikeTileOverlay.init()
-//        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGhzY2huZWlkZXIiLCJhIjoiajRrY3hyUSJ9.iUqFM9KNijSRZoI-cHkyLw")
-//        osmOverlay.canReplaceMapContent = true;
-        
-        
-//        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://a.tile.opentopomap.org/{z}/{x}/{y}.png")
-//        osmOverlay.canReplaceMapContent = true;
 
-//        let osmOverlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"https://c.tile.hosted.thunderforest.com/komoot-2/{z}/{x}/{y}.png")
-//        osmOverlay.canReplaceMapContent = true;
-
-        
-        let stravaOverlay:StravaTileOverlay = StravaTileOverlay.init()
-        let stravaPersonalOverlay:DebugTileOverlay = DebugTileOverlay.init()
-        let stravaPersonalOverAllOverlay:StravaPersonalOverAllTileOverlay = StravaPersonalOverAllTileOverlay.init()
-        
-        let komootOverlay:KomootTileOverlay = KomootTileOverlay.init()
-        let hikingOverlay:WaymarkedHikingTileOverlay = WaymarkedHikingTileOverlay.init()
-        let cyclingOverlay:WaymarkedCyclingTileOverlay = WaymarkedCyclingTileOverlay.init()
-        let mtbOverlay:WaymarkedMtbTileOverlay = WaymarkedMtbTileOverlay.init()
-        
-        let osmHillShadingOverlay:OsmHillShadingTileOverlay = OsmHillShadingTileOverlay.init()
-        let blackAndWhiteOverlay:BlackAndWhiteTileOverlay = BlackAndWhiteTileOverlay.init()
-
-        let mapBoxCustomOverlay:MapBoxCustomTileOverlay = MapBoxCustomTileOverlay.init()
-        let mapBoxCustomPathOverlay:MapBoxCustomPathTileOverlay = MapBoxCustomPathTileOverlay.init()
-        let mapBoxCustomHillContourOverlay:MapBoxCustomHillContourTileOverlay = MapBoxCustomHillContourTileOverlay.init()
-        
-        let openTopoMapOverlay:OpenTopoMapTileOverlay = OpenTopoMapTileOverlay.init()
-//        self.mapView.addOverlays([osmOverlay,komootOverlay,mtbOverlay,blackAndWhiteOverlay,osmHillShadingOverlay,mapBoxCustomOverlay],level: .aboveLabels)
-        
-        //self.mapView.addOverlays([komootOverlay,openTopoMapOverlay, stravaPersonalOverAllOverlay],level: .aboveLabels)
-        
-//        let overlay:MKTileOverlay = MKTileOverlay.init(URLTemplate:"http://globalheat.strava.com/tiles/cycling/color1/{z}/{x}/{y}.png")
-//        overlay.canReplaceMapContent = false;
-//        self.mapView.addOverlay(overlay, level: .AboveRoads)
-        
-        
-            
         // TEST GPX / EVREFLECT
+        loadGpxFile()
+
+        loadSavedPois()
+
+//        MKPolyline *route = [track route];
+//        [self.mapView addOverlay:route];
+
+        let nc = NotificationCenter.default // Note that default is now a property, not a method call
+        nc.addObserver(forName:Notification.Name(rawValue:"PoiSelectionChanged"),
+                object:nil, queue:nil) {
+            notification in
+            // Handle notification
+            self.loadSavedPois()
+        }
+    }
+
+    private func loadGpxFile() {
         if let filepath = Bundle.main.path(forResource: "AraSaarland400KmBrevet(v2)2017", ofType: "gpx") {
             do {
                 let contents = try String(contentsOfFile: filepath)
@@ -77,10 +53,10 @@ class SingleTrailMapViewController: MapViewController {
                 self.mapView.addOverlays([line], level:MKOverlayLevel.aboveLabels)
                 var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
                 self.mapView.addAnnotations(annotations)
-                
+
                 annotations = (gpx?.wayPointAnnotations())!
                 self.mapView.addAnnotations(annotations)
-                
+
                 for overlay in self.mapView.overlays
                 {
                     if (overlay is MKPolyline)
@@ -96,36 +72,57 @@ class SingleTrailMapViewController: MapViewController {
         } else {
             // example.txt not found!
         }
+    }
 
+    private func loadSavedPois() {
 
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataNode")
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
+        self.mapView .removeAnnotations(self.mapView.annotations)
 
-        var zoomRect :MKMapRect = MKMapRectNull
+        var zoomRect: MKMapRect = MKMapRectNull
         var annotations: [MKAnnotation] = []
 
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Poi")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "sortOrder", ascending: false)]
+        fetchRequest.predicate = NSPredicate(format: "enabled == true")
+
         do {
-            let fetchedNodes = try appDelegate.managedObjectContext.fetch(fetchRequest) as! [CoreDataNode]
-            for coreDataNode in fetchedNodes {
-                let node = coreDataNode.toNode()
-                let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
-                let loc = CLLocation.init(latitude: node._lat as! CLLocationDegrees, longitude: node._lon as! CLLocationDegrees)
-                let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
-                let annotationPoint : MKMapPoint = MKMapPointForCoordinate(location);
-                annotations.append(annotation)
-                let pointRect:MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
-                if (MKMapRectIsNull(zoomRect))
-                {
-                    zoomRect = pointRect;
+            let fetchedPois = try appDelegate.managedObjectContext.fetch(fetchRequest) as! [Poi]
+
+            for poi in fetchedPois {
+
+                let fetchRequestNodes = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataNode")
+                fetchRequestNodes.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
+                fetchRequestNodes.predicate = NSPredicate(format: "type == %@", String(format: "node[%@=%@]", poi.category!, poi.type!))
+
+                do {
+                    let fetchedNodes = try appDelegate.managedObjectContext.fetch(fetchRequestNodes) as! [CoreDataNode]
+                    for coreDataNode in fetchedNodes {
+                        let node = coreDataNode.toNode()
+                        let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: Double(node._lat!), longitude: Double(node._lon!))
+                        let loc = CLLocation.init(latitude: node._lat as! CLLocationDegrees, longitude: node._lon as! CLLocationDegrees)
+                        let annotation = NodeAnnotationView.init(title: node.title(), coordinate: location, node: node)
+                        let annotationPoint: MKMapPoint = MKMapPointForCoordinate(location);
+                        annotations.append(annotation)
+                        let pointRect: MKMapRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+                        if (MKMapRectIsNull(zoomRect)) {
+                            zoomRect = pointRect;
+                        } else {
+                            zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                        }
+                    }
+                } catch {
+                    fatalError("Failed to fetch nodes: \(error)")
                 }
-                else
-                {
-                    zoomRect = MKMapRectUnion(zoomRect, pointRect);
+
+                if (annotations.count > 0) {
+                    mapView.addAnnotations(annotations)
+//            mapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsetsMake(10,10,10,10), animated: true)
                 }
             }
-        } catch {
-            fatalError("Failed to fetch employees: \(error)")
+        }
+        catch {
+            fatalError("Failed to fetch pois: \(error)")
         }
 
         if (annotations.count > 0)
@@ -133,12 +130,46 @@ class SingleTrailMapViewController: MapViewController {
             mapView.addAnnotations(annotations)
 //            mapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsetsMake(10,10,10,10), animated: true)
         }
-        
-//        MKPolyline *route = [track route];
-//        [self.mapView addOverlay:route];
     }
-    
-    override func addTapped(){
+
+
+    override func showPoiViewController(){
+//        addTapped()
+
+        let poiViewController = PoiViewController.init()
+        poiViewController.mapViewController = self
+        let navController = UINavigationController.init(rootViewController: poiViewController)
+        var frame = CGRect.init(x: 50, y: 75, width: self.view.frame.size.width-100, height:self.view.frame.size.height-150)
+
+        let size = CGSize.init(width: self.view.frame.size.width/2 , height: self.view.frame.size.height/2)
+        // iPAd
+        if (UIDevice.current.userInterfaceIdiom == .pad)
+        {
+            navController.modalPresentationStyle = .formSheet;
+            navController.preferredContentSize = size;
+            self.present(navController, animated: true, completion: nil);
+        }
+        else
+        {
+            navController.willMove(toParentViewController: self);
+            navController.view.frame = frame;
+            // navController.view.layer.cornerRadius = 50;
+            navController.view.center = self.view.center;
+            navController.view.backgroundColor = UIColor.white;
+
+            self.view.addSubview(navController.view);
+            self.view .bringSubview(toFront: navController.view);
+            self.addChildViewController(navController);
+
+            navController.didMove(toParentViewController: self);
+            // navController.view.layer.cornerRadius = 50;
+            // navController.view.layer.shouldRasterize = true;
+        }
+
+        self.hideControls()
+    }
+
+    func addTapped(){
         self.mapView .removeAnnotations(self.mapView.annotations)
 
         
@@ -223,8 +254,8 @@ class SingleTrailMapViewController: MapViewController {
             self.mapView.addAnnotations(annotations)
         }
     }
-    
-    
+
+    // MARK: - Map Delegate ...
     func mapView(_ mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if (annotation is MKUserLocation) {
             //if annotation is not an MKPointAnnotation (eg. MKUserLocation),

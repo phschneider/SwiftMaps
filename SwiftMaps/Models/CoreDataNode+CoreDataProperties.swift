@@ -2,7 +2,7 @@
 //  CoreDataNode+CoreDataProperties.swift
 //  
 //
-//  Created by Philip Schneider on 29.03.18.
+//  Created by Philip Schneider on 31.03.18.
 //
 //
 

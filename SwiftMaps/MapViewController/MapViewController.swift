@@ -12,6 +12,7 @@ import MapKit
 import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate {
+    var gpx:Gpx?
     var mapView: MKMapView!
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation!
@@ -70,9 +71,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         self.view.addSubview(self.mapView)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(addTapped))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showPoiViewController))
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(organizeTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showTileViewController))
         
         let nc = NotificationCenter.default // Note that default is now a property, not a method call
         nc.addObserver(forName:Notification.Name(rawValue:"TileSelectionChanged"),
@@ -87,6 +88,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                         notification in
                             self.showControls()
                         }
+
+        nc.addObserver(forName:Notification.Name(rawValue:"PoiSelectionClosed"),
+                object:nil, queue:nil) {
+            notification in
+            self.showControls()
+        }
         
         nc.addObserver(forName:Notification.Name(rawValue:"TileClearedCache"),
                        object:nil, queue:nil) {
@@ -270,7 +277,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //        mapView.addOverlays(overlays)
 //    }
     
-    @objc func organizeTapped()
+    @objc func showTileViewController()
     {
         let tileViewController = TileViewController.init()
         let navController = UINavigationController.init(rootViewController: tileViewController)
@@ -305,7 +312,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     
-    @objc func addTapped(){
+    @objc func showPoiViewController(){
         self.mapView .removeAnnotations(self.mapView.annotations)
         
         //        >      4             1            2               3

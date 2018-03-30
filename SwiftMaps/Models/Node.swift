@@ -30,13 +30,29 @@ class Node: EVObject{
     func toCoreData()
     {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        var coreDataNode:NSManagedObject = NSEntityDescription.insertNewObject(forEntityName: "CoreDataNode", into: appDelegate.managedObjectContext)
-        coreDataNode.setValue(self.type, forKey: "type")
-        coreDataNode.setValue(self._ref, forKey: "ref")
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataNode")
+        let predicateID = NSPredicate(format: "id == %@",_id!)
+        fetchRequest.predicate = predicateID
+
+        do {
+
+            let results = try appDelegate.managedObjectContext.fetch(fetchRequest)
+            if results.count > 0 {
+                    
+            }else {
+                var coreDataNode:NSManagedObject = NSEntityDescription.insertNewObject(forEntityName: "CoreDataNode", into: appDelegate.managedObjectContext)
+                coreDataNode.setValue(self.type, forKey: "type")
+                coreDataNode.setValue(self._ref, forKey: "ref")
 //        coreDataNode.setValue(self.tag, forKey: "tag")
-        coreDataNode.setValue(Int64(self._id!), forKey: "id")
-        coreDataNode.setValue(self._lat, forKey: "lat")
-        coreDataNode.setValue(self._lon, forKey: "lon")
+                coreDataNode.setValue(Int64(self._id!), forKey: "id")
+                coreDataNode.setValue(self._lat, forKey: "lat")
+                coreDataNode.setValue(self._lon, forKey: "lon")
+            }
+        }
+        catch let error {
+            print(error.localizedDescription)
+        }
     }
 
     func isPeak() -> Bool
@@ -137,21 +153,35 @@ class Node: EVObject{
         var title:String = ""
         let name:Tag? = (self.tagForKey("name"))
         let ele:Tag? = (self.tagForKey("ele"))
-        
+        let description:Tag? = (self.tagForKey("description"))
+
+        if (self.isEmergencyAccessPoint() && _ref != nil)
+        {
+            title = _ref!
+        }
+
         if (name != nil)
         {
             title = title + (name?._v)!
         }
+
+        // Peak ...
         if (ele != nil)
         {
             title = title + " (" + (ele?._v)! + ")"
         }
-        
+
+        if (description != nil)
+        {
+            title = title + " (" + (description?._v)! + ")"
+        }
+
+
         if (title.characters.count == 0)
         {
             title = self._id!
         }
-        
+
         return title
     }
     
