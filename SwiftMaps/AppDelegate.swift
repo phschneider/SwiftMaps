@@ -658,6 +658,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // https://b.tile.thunderforest.com/cycle/9/262/175.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
         // https://a.tile.thunderforest.com/cycle/9/268/175.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
 
+        importName = "OpenCycleMap+Transport+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Open Cycle Map Transport", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("tile.thunderforest.com/transport/{z}/{x}/{y}", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:true), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+//        https://a.tile.thunderforest.com/transport/16/34041/22440.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
+
         do {
             try managedObjectContext.save()
         } catch {
