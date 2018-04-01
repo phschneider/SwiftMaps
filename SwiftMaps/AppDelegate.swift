@@ -736,6 +736,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 //        https://a.tile.thunderforest.com/transport-dark/16/34045/22440.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
+
+        importName = "Thunderforest-Spinal+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Thunderforest Spinal", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("tile.thunderforest.com/spinal-map/{z}/{x}/{y}", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:true), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
         do {
             try managedObjectContext.save()
         } catch {
