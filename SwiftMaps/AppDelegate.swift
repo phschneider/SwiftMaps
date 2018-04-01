@@ -1077,6 +1077,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
+
+        importName = "Highway-SpeedCamera-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("highway", forKeyPath: "category")
+            poi.setValue("speed_camera", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
         
         do {
             try managedObjectContext.save()
