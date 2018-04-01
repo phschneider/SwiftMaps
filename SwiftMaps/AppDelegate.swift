@@ -1107,6 +1107,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
+
+        // TODO - Das ist eine Way Releation!!!
+        importName = "Highway-Services-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("highway", forKeyPath: "category")
+            poi.setValue("services", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Amenity-Toilets-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("toilets", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
         
         do {
             try managedObjectContext.save()
