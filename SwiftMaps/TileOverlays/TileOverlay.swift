@@ -64,15 +64,24 @@ class TileOverlay: MKTileOverlay {
         {
             return super.url(forTilePath: path)
         }
-        else
-        {
-            let url:URL = super.url(forTilePath: path)
+        else {
+            let url: URL = super.url(forTilePath: path)
             let array = ["a", "b", "c"]
             let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
-            let loadBalancing:String = array[randomIndex] + "."
+            let loadBalancing: String = array[randomIndex] + "."
             let host = loadBalancing + url.host!
-            
-            let retUrl = URL.init(string: url.scheme!+"://"+host+url.path)!
+
+
+            var retUrl:URL
+            if (url.host == "tile.thunderforest.com") {
+                retUrl = URL.init(string: url.scheme!+"://"+host+url.path + "?apikey=a5dd6a2f1c934394bce6b0fb077203eb")!
+            }
+            else
+            {
+                retUrl = URL.init(string: url.scheme!+"://"+host+url.path)!
+            }
+
+
 //            print("retUrl \(retUrl)")
             return retUrl
         }
