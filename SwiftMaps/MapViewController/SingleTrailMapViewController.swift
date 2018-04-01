@@ -264,216 +264,16 @@ class SingleTrailMapViewController: MapViewController {
         }
         else if (annotation is NodeAnnotationView)
         {
-            if ( (annotation as! NodeAnnotationView).node.isPeak())
+            let node = (annotation as! NodeAnnotationView).node
+            if ( node?.isGeneric() )!
             {
-                let reuseId = "picnic"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+                let reuseId = node?.type
+                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId!)
                 if (anView == nil)
                 {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"peak")
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isPicnic())
-            {
-                let reuseId = "picnic"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"picnic")
-                   
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isBench())
-            {
-                let reuseId = "bench"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"bench")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isCafe())
-            {
-                let reuseId = "cafe"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"cafe")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isFuel())
-            {
-                let reuseId = "fuel"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"fuel")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isBakery())
-            {
-                let reuseId = "bakery"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"bakery")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isFastFood())
-            {
-                let reuseId = "fastfood"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"fastfood")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isRestaurant())
-            {
-                let reuseId = "restaurant"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"restaurant")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isSupermarket())
-            {
-                let reuseId = "supermarket"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"supermarket")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isShelter())
-            {
-                let reuseId = "shelter"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"shelter")
-                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isViewpoint())
-            {
-                let reuseId = "viewpoint"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"viewpoint")                    
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isIceCream())
-            {
-                let reuseId = "icecream"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"icecream")
-                }
-                else
-                {
-                    anView?.annotation = annotation
-                }
-                return anView
-            }
-            else if ( (annotation as! NodeAnnotationView).node.isEmergencyAccessPoint())
-            {
-                let reuseId = "EmergencyAccessPoint"
-                var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-                if (anView == nil)
-                {
-                    anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                    anView!.canShowCallout = true
-                    anView?.image = UIImage(named:"emergency_access_point")
+                    anView?.image = (annotation as! NodeAnnotationView).node.image()
                 }
                 else
                 {
@@ -496,9 +296,6 @@ class SingleTrailMapViewController: MapViewController {
                 }
                 return anView
             }
-
-
-
 
         }
         else if (annotation is DistanceAnnotation)

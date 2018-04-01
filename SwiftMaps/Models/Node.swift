@@ -145,8 +145,20 @@ class Node: EVObject{
         return (self.type?.lowercased().range(of: "amenity=fountain") != nil)
     }
     
-    
-    
+    func isBikeParking() -> Bool
+    {
+        return (self.type?.lowercased().range(of: "amenity=bicycle_parking") != nil)
+    }
+
+    func isGeneric() -> Bool
+    {
+        return (Bundle.main.path(forResource: self.type!, ofType:".png") != nil)
+    }
+
+    func image() -> UIImage
+    {
+        return UIImage(named:self.type!)!
+    }
     
     func title() -> String
     {

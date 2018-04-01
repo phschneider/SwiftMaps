@@ -852,7 +852,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Save
         var poi:NSManagedObject
 
-        importName = "Tourism-ViewpointPoiImported"
+        importName = "Tourism-ViewpointPoi-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -867,7 +867,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Natural-PeakImported"
+        importName = "Natural-Peak-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -882,7 +882,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Amenity-ShelterImported"
+        importName = "Amenity-Shelter-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -897,7 +897,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Amenity-FastFoodImported"
+        importName = "Amenity-FastFood-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -913,7 +913,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
 
-        importName = "Amenity-RestaurantImported"
+        importName = "Amenity-Restaurant-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -928,7 +928,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Amenity-CafeImported"
+        importName = "Amenity-Cafe-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -943,7 +943,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Amenity-FuelImported"
+        importName = "Amenity-Fuel-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -958,7 +958,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Shop-BakeryImported"
+        importName = "Shop-Bakery-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -973,7 +973,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Shop-SupermarketImported"
+        importName = "Shop-Supermarket-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -988,7 +988,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Cuisine-IceCreamImported"
+        importName = "Cuisine-IceCream-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -1003,7 +1003,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "Highway-EmergencyAccessPointImported"
+        importName = "Highway-EmergencyAccessPoint-Imported"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
@@ -1018,6 +1018,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
+        importName = "Amenity-BicycleParking-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("bicycle_parking", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
+        importName = "Amenity-Bench-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("amenity", forKeyPath: "category")
+            poi.setValue("bench", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+        importName = "Tourism-PicnicSite-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("tourism", forKeyPath: "category")
+            poi.setValue("picnic_site", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
+        importName = "Vending-BicycleTube-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("vending", forKeyPath: "category")
+            poi.setValue("bicycle_tube", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+            
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+            
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+        
         do {
             try managedObjectContext.save()
         } catch {
