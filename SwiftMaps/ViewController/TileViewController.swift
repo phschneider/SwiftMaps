@@ -247,7 +247,7 @@ class TileViewController: UIViewController, UITableViewDelegate, UITableViewData
         let tile = fetchedResultsController.object(at: indexPath)
         
         cell.textLabel?.adjustsFontSizeToFitWidth = true
-        cell.textLabel!.text = tile.name!.description
+        cell.textLabel!.text = String(format: "%d. %@",indexPath.row+1, tile.name!.description)
         cell.selectionStyle = .none
         
         if (tile.enabled?.boolValue)!
