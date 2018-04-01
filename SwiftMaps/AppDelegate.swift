@@ -637,11 +637,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
-        importName = "OpenCycleMap+CoreDataTileOverlay"
+        importName = "Thunderforest+OpenCycleMap+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
-            tile.setValue("Open Cycle Map", forKeyPath: "name")
+            tile.setValue("Thunderforest Open Cycle Map", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
             tile.setValue("tile.thunderforest.com/cycle/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
@@ -658,11 +658,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // https://b.tile.thunderforest.com/cycle/9/262/175.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
         // https://a.tile.thunderforest.com/cycle/9/268/175.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
 
-        importName = "OpenCycleMap+Transport+CoreDataTileOverlay"
+        importName = "Thunderforest+Transport+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
-            tile.setValue("Open Cycle Map Transport", forKeyPath: "name")
+            tile.setValue("Thunderforest Transport", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
             tile.setValue("tile.thunderforest.com/transport/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
@@ -678,11 +678,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //        https://a.tile.thunderforest.com/transport/16/34041/22440.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
 
-        importName = "OpenCycleMap+Landscape+CoreDataTileOverlay"
+        importName = "Thunderforest+Landscape+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
-            tile.setValue("Open Cycle Map Landscape", forKeyPath: "name")
+            tile.setValue("Thunderforest Landscape", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
             tile.setValue("tile.thunderforest.com/landscape/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
@@ -698,11 +698,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //        https://b.tile.thunderforest.com/landscape/16/34042/22440.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
 
-        importName = "OpenCycleMap+Outdoors+CoreDataTileOverlay"
+        importName = "Thunderforest+Outdoors+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
-            tile.setValue("Open Cycle Map Outdoors", forKeyPath: "name")
+            tile.setValue("Thunderforest Outdoors", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
             tile.setValue("tile.thunderforest.com/outdoors/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
@@ -718,11 +718,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        https://b.tile.thunderforest.com/outdoors/16/34040/22440.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb
 
 
-        importName = "OpenCycleMap+Transport Dark+CoreDataTileOverlay"
+        importName = "Thunderforest+Transport Dark+CoreDataTileOverlay"
         if (UserDefaults.standard.bool(forKey: importName) == false)
         {
             tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
-            tile.setValue("Open Cycle Map Transport Dark", forKeyPath: "name")
+            tile.setValue("Thunderforest TransportDark", forKeyPath: "name")
             tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
             tile.setValue("tile.thunderforest.com/transport-dark/{z}/{x}/{y}", forKeyPath: "url")
             tile.setValue(NSNumber.init(value:true), forKeyPath: "useHttps")
