@@ -619,6 +619,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
 
+        importName = "OpenHikingMap+CoreDataTileOverlay"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            tile = NSEntityDescription.insertNewObject(forEntityName: "Tile", into: managedObjectContext)
+            tile.setValue("Hike & Bike Map", forKeyPath: "name")
+            tile.setValue("CoreDataTileOverlay", forKeyPath: "classFileName")
+            tile.setValue("tiles.wmflabs.org/hikebike/{z}/{x}/{y}", forKeyPath: "url")
+            tile.setValue(NSNumber.init(value:false), forKeyPath: "useHttps")
+            tile.setValue(NSNumber.init(value:true), forKeyPath: "useLoadbalancing")
+            tile.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
+
         do {
             try managedObjectContext.save()
         } catch {
