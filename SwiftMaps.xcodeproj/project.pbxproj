@@ -416,6 +416,14 @@
 		22AA470D2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
 		22AA470E2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
 		22AA470F2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA47112073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
+		22AA47122073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
+		22AA47132073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
+		22AA47142073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
+		22AA47152073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
+		22AA47162073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
+		22AA47172073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
+		22AA47182073AC8100B40467 /* node[shop=bicycle].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47102073AC8100B40467 /* node[shop=bicycle].png */; };
 		22B215A91FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
 		22B215AA1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
 		22B215AB1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
@@ -803,6 +811,7 @@
 		22A5E75C1E96F3630020BAFF /* node[amenity=shelter].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[amenity=shelter].png"; sourceTree = "<group>"; };
 		22A5E7651E96F3F00020BAFF /* node[tourism=viewpoint].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=viewpoint].png"; sourceTree = "<group>"; };
 		22AA47072073A18A00B40467 /* node[tourism=hostel].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=hostel].png"; sourceTree = "<group>"; };
+		22AA47102073AC8100B40467 /* node[shop=bicycle].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[shop=bicycle].png"; sourceTree = "<group>"; };
 		22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceAnnotation.swift; sourceTree = "<group>"; };
 		22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
 		22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WayPointAnnotation.swift; sourceTree = "<group>"; };
@@ -1448,6 +1457,7 @@
 		22FF9ED21DD88A8F001F8DA0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				22AA47102073AC8100B40467 /* node[shop=bicycle].png */,
 				22AA47072073A18A00B40467 /* node[tourism=hostel].png */,
 				22A5E7141E96E6AA0020BAFF /* node[amenity=bench].png */,
 				22FB5D632070F93400847E05 /* node[amenity=bicycle_parking].png */,
@@ -1774,6 +1784,7 @@
 				22FB5D7C2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7061E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8620717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				22AA47142073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E7691E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
 				22FB5D722071780D00847E05 /* node[highway=rest_area].png in Resources */,
 				224F2A751DDBB67900B22D2B /* mountain-512@3x.png in Resources */,
@@ -1815,6 +1826,7 @@
 				22FB5D7D2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7071E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8720717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				22AA47152073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E76A1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
 				22FB5D732071780D00847E05 /* node[highway=rest_area].png in Resources */,
 				224F2AB41DDBBB7600B22D2B /* mountain-512@3x.png in Resources */,
@@ -1867,6 +1879,7 @@
 				22FB5D8320717A9900847E05 /* node[amenity=toilets].png in Resources */,
 				22B757A61DE24EA400EFEB96 /* Icon-83.5@2x.png in Resources */,
 				22B757A51DE24EA400EFEB96 /* Icon-76@2x.png in Resources */,
+				22AA47112073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22B757A11DE24EA400EFEB96 /* Icon-40@3x.png in Resources */,
 				22B757A31DE24EA400EFEB96 /* Icon-60@3x.png in Resources */,
 				2214BBDD1E97DC58005C8CC7 /* node[highway=emergency_access_point].png in Resources */,
@@ -1916,6 +1929,7 @@
 				22FB5D802071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E70A1E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8A20717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				22AA47182073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E76D1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
 				22FB5D762071780D00847E05 /* node[highway=rest_area].png in Resources */,
 				229564311E6C1E200045E3BE /* iTunesArtwork@2x.png in Resources */,
@@ -1957,6 +1971,7 @@
 				22FB5D7E2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7081E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8820717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				22AA47162073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E76B1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
 				22FB5D742071780D00847E05 /* node[highway=rest_area].png in Resources */,
 				22A42B931DE39AAE00F81767 /* LaunchScreen.storyboard in Resources */,
@@ -1998,6 +2013,7 @@
 				22FB5D7F2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7091E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8920717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				22AA47172073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E76C1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
 				22FB5D752071780D00847E05 /* node[highway=rest_area].png in Resources */,
 				22EAB6A91E6B708300FC3EC1 /* Icon-60@3x.png in Resources */,
@@ -2039,6 +2055,7 @@
 				22FB5D7A2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7041E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8420717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				22AA47122073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E7671E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
 				22FB5D702071780D00847E05 /* node[highway=rest_area].png in Resources */,
 				22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */,
@@ -2080,6 +2097,7 @@
 				22FB5D7B2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7051E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8520717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				22AA47132073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E7681E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
 				22FB5D712071780D00847E05 /* node[highway=rest_area].png in Resources */,
 				22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */,
