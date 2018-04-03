@@ -408,6 +408,14 @@
 		22A5E76B1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */ = {isa = PBXBuildFile; fileRef = 22A5E7651E96F3F00020BAFF /* node[tourism=viewpoint].png */; };
 		22A5E76C1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */ = {isa = PBXBuildFile; fileRef = 22A5E7651E96F3F00020BAFF /* node[tourism=viewpoint].png */; };
 		22A5E76D1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */ = {isa = PBXBuildFile; fileRef = 22A5E7651E96F3F00020BAFF /* node[tourism=viewpoint].png */; };
+		22AA47082073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA47092073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA470A2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA470B2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA470C2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA470D2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA470E2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
+		22AA470F2073A18A00B40467 /* node[tourism=hostel].png in Resources */ = {isa = PBXBuildFile; fileRef = 22AA47072073A18A00B40467 /* node[tourism=hostel].png */; };
 		22B215A91FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
 		22B215AA1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
 		22B215AB1FAF3F4F0031DFAB /* DistanceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */; };
@@ -794,6 +802,7 @@
 		22A5E7531E96F2920020BAFF /* node[shop=supermarket].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[shop=supermarket].png"; sourceTree = "<group>"; };
 		22A5E75C1E96F3630020BAFF /* node[amenity=shelter].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[amenity=shelter].png"; sourceTree = "<group>"; };
 		22A5E7651E96F3F00020BAFF /* node[tourism=viewpoint].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=viewpoint].png"; sourceTree = "<group>"; };
+		22AA47072073A18A00B40467 /* node[tourism=hostel].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=hostel].png"; sourceTree = "<group>"; };
 		22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceAnnotation.swift; sourceTree = "<group>"; };
 		22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotationView.swift; sourceTree = "<group>"; };
 		22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WayPointAnnotation.swift; sourceTree = "<group>"; };
@@ -1439,6 +1448,7 @@
 		22FF9ED21DD88A8F001F8DA0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				22AA47072073A18A00B40467 /* node[tourism=hostel].png */,
 				22A5E7141E96E6AA0020BAFF /* node[amenity=bench].png */,
 				22FB5D632070F93400847E05 /* node[amenity=bicycle_parking].png */,
 				22A5E7411E96F11F0020BAFF /* node[amenity=cafe].png */,
@@ -1772,6 +1782,7 @@
 				22B7579D1DE2340600EFEB96 /* iTunesArtwork@2x.png in Resources */,
 				22B757991DE2340600EFEB96 /* Icon-Small.png in Resources */,
 				22A5E7571E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				22AA470B2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D682070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E7601E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
 				22A5E73C1E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
@@ -1812,6 +1823,7 @@
 				22A42BFB1DE39C4800F81767 /* iTunesArtwork@2x.png in Resources */,
 				22A42BF71DE39C4800F81767 /* Icon-Small.png in Resources */,
 				22A5E7581E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				22AA470C2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D692070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E7611E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
 				22A5E73D1E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
@@ -1865,6 +1877,7 @@
 				22A5E7271E96ED980020BAFF /* node[amenity=fuel].png in Resources */,
 				22FB5D652070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E7661E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
+				22AA47082073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22A5E7151E96E6AA0020BAFF /* node[amenity=bench].png in Resources */,
 				22A5E70C1E96E5DF0020BAFF /* node[natural=peak].png in Resources */,
 				22B757A21DE24EA400EFEB96 /* Icon-60@2x.png in Resources */,
@@ -1911,6 +1924,7 @@
 				229564241E6C1E200045E3BE /* Icon-120.png in Resources */,
 				2295642A1E6C1E200045E3BE /* Icon-76.png in Resources */,
 				22A5E75B1E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				22AA470F2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D6C2070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E7641E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
 				22A5E7401E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
@@ -1951,6 +1965,7 @@
 				22A42BE61DE39C1B00F81767 /* Icon-83.5@2x.png in Resources */,
 				22A42BE81DE39C1B00F81767 /* Icon-Small@2x.png in Resources */,
 				22A5E7591E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				22AA470D2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D6A2070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E7621E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
 				22A5E73E1E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
@@ -1991,6 +2006,7 @@
 				22EAB6B01E6B708300FC3EC1 /* iTunesArtwork.png in Resources */,
 				22EAB67B1E6B701900FC3EC1 /* mountain-512@3x.png in Resources */,
 				22A5E75A1E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				22AA470E2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D6B2070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E7631E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
 				22A5E73F1E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
@@ -2031,6 +2047,7 @@
 				226E3E221DE257340021C283 /* iTunesArtwork@2x.png in Resources */,
 				226E3E1E1DE257340021C283 /* Icon-Small.png in Resources */,
 				22A5E7551E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				22AA47092073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D662070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E75E1E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
 				22A5E73A1E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
@@ -2071,6 +2088,7 @@
 				226E3E511DE260570021C283 /* iTunesArtwork@2x.png in Resources */,
 				226E3E4D1DE260570021C283 /* Icon-Small.png in Resources */,
 				22A5E7561E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				22AA470A2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D672070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E75F1E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
 				22A5E73B1E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
