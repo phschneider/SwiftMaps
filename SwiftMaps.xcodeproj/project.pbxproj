@@ -151,6 +151,14 @@
 		226A16AC2074F74A0055AE22 /* node[tourism=hotel].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16A62074F74A0055AE22 /* node[tourism=hotel].png */; };
 		226A16AD2074F74A0055AE22 /* node[tourism=hotel].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16A62074F74A0055AE22 /* node[tourism=hotel].png */; };
 		226A16AE2074F74A0055AE22 /* node[tourism=hotel].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16A62074F74A0055AE22 /* node[tourism=hotel].png */; };
+		226A16B020751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B120751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B220751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B320751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B420751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B520751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B620751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B720751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
 		226E3E151DE257340021C283 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */; };
 		226E3E161DE257340021C283 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */; };
 		226E3E171DE257340021C283 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */; };
@@ -739,6 +747,7 @@
 		2264A8471ED44EA200AACEFE /* AraSaarland400KmBrevet(v2)2017.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "AraSaarland400KmBrevet(v2)2017.gpx"; sourceTree = "<group>"; };
 		226A169D2074F4C80055AE22 /* node[tourism=camp_site].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=camp_site].png"; sourceTree = "<group>"; };
 		226A16A62074F74A0055AE22 /* node[tourism=hotel].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=hotel].png"; sourceTree = "<group>"; };
+		226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=guest_house].png"; sourceTree = "<group>"; };
 		226E3E341DE2604E0021C283 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		226E3E351DE2604E0021C283 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		226E3E361DE2604E0021C283 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -1475,6 +1484,7 @@
 		22FF9ED21DD88A8F001F8DA0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */,
 				226A16A62074F74A0055AE22 /* node[tourism=hotel].png */,
 				226A169D2074F4C80055AE22 /* node[tourism=camp_site].png */,
 				22AA47102073AC8100B40467 /* node[shop=bicycle].png */,
@@ -1825,6 +1835,7 @@
 				22A5E7451E96F11F0020BAFF /* node[amenity=cafe].png in Resources */,
 				22B757981DE2340600EFEB96 /* Icon-83.5@2x.png in Resources */,
 				22B757971DE2340600EFEB96 /* Icon-76@2x.png in Resources */,
+				226A16B320751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22A5E7181E96E6AA0020BAFF /* node[amenity=bench].png in Resources */,
 				226A16AA2074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22A5E70F1E96E5DF0020BAFF /* node[natural=peak].png in Resources */,
@@ -1869,6 +1880,7 @@
 				22A5E7461E96F11F0020BAFF /* node[amenity=cafe].png in Resources */,
 				22A42BF61DE39C4800F81767 /* Icon-83.5@2x.png in Resources */,
 				22A42BF51DE39C4800F81767 /* Icon-76@2x.png in Resources */,
+				226A16B420751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22A5E7191E96E6AA0020BAFF /* node[amenity=bench].png in Resources */,
 				226A16AB2074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22A5E7101E96E5DF0020BAFF /* node[natural=peak].png in Resources */,
@@ -1893,6 +1905,7 @@
 				22A5E7391E96F05C0020BAFF /* node[amenity=fast_food].png in Resources */,
 				227C05E31D3180120033E6BD /* LaunchScreen.storyboard in Resources */,
 				228625261E97D883003F7AF2 /* node[cuisine=ice_cream].png in Resources */,
+				226A16B020751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22B757A91DE24EA400EFEB96 /* Icon-Small@3x.png in Resources */,
 				22A5E7541E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
 				22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */,
@@ -1976,6 +1989,7 @@
 				22A5E7491E96F11F0020BAFF /* node[amenity=cafe].png in Resources */,
 				2295642E1E6C1E200045E3BE /* Icon-Small@2x.png in Resources */,
 				229564291E6C1E200045E3BE /* Icon-60@3x.png in Resources */,
+				226A16B720751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22A5E71C1E96E6AA0020BAFF /* node[amenity=bench].png in Resources */,
 				226A16AE2074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22A5E7131E96E5DF0020BAFF /* node[natural=peak].png in Resources */,
@@ -1999,6 +2013,7 @@
 				22A42B921DE39AAE00F81767 /* mountain-512@3x.png in Resources */,
 				22FB5D7E2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7081E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
+				226A16B520751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22FB5D8820717A9900847E05 /* node[amenity=toilets].png in Resources */,
 				22AA47162073AC8100B40467 /* node[shop=bicycle].png in Resources */,
 				22A5E76B1E96F3F00020BAFF /* node[tourism=viewpoint].png in Resources */,
@@ -2064,6 +2079,7 @@
 				22A5E7481E96F11F0020BAFF /* node[amenity=cafe].png in Resources */,
 				22EAB6A81E6B708300FC3EC1 /* Icon-60@2x.png in Resources */,
 				22EAB67C1E6B701900FC3EC1 /* LaunchScreen.storyboard in Resources */,
+				226A16B620751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22A5E71B1E96E6AA0020BAFF /* node[amenity=bench].png in Resources */,
 				226A16AD2074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22A5E7121E96E5DF0020BAFF /* node[natural=peak].png in Resources */,
@@ -2108,6 +2124,7 @@
 				22A5E7431E96F11F0020BAFF /* node[amenity=cafe].png in Resources */,
 				226E3E1D1DE257340021C283 /* Icon-83.5@2x.png in Resources */,
 				226E3E1C1DE257340021C283 /* Icon-76@2x.png in Resources */,
+				226A16B120751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22A5E7161E96E6AA0020BAFF /* node[amenity=bench].png in Resources */,
 				226A16A82074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22A5E70D1E96E5DF0020BAFF /* node[natural=peak].png in Resources */,
@@ -2152,6 +2169,7 @@
 				22A5E7441E96F11F0020BAFF /* node[amenity=cafe].png in Resources */,
 				226E3E4C1DE260570021C283 /* Icon-83.5@2x.png in Resources */,
 				226E3E4B1DE260570021C283 /* Icon-76@2x.png in Resources */,
+				226A16B220751AE20055AE22 /* node[tourism=guest_house].png in Resources */,
 				22A5E7171E96E6AA0020BAFF /* node[amenity=bench].png in Resources */,
 				226A16A92074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22A5E70E1E96E5DF0020BAFF /* node[natural=peak].png in Resources */,
