@@ -159,6 +159,14 @@
 		226A16B520751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
 		226A16B620751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
 		226A16B720751AE20055AE22 /* node[tourism=guest_house].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */; };
+		226A16B920751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
+		226A16BA20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
+		226A16BB20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
+		226A16BC20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
+		226A16BD20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
+		226A16BE20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
+		226A16BF20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
+		226A16C020751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */ = {isa = PBXBuildFile; fileRef = 226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */; };
 		226E3E151DE257340021C283 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9D1DD885CB001F8DA0 /* Icon-120.png */; };
 		226E3E161DE257340021C283 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9E1DD885CB001F8DA0 /* Icon-40.png */; };
 		226E3E171DE257340021C283 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9E9F1DD885CB001F8DA0 /* Icon-40@2x.png */; };
@@ -748,6 +756,7 @@
 		226A169D2074F4C80055AE22 /* node[tourism=camp_site].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=camp_site].png"; sourceTree = "<group>"; };
 		226A16A62074F74A0055AE22 /* node[tourism=hotel].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=hotel].png"; sourceTree = "<group>"; };
 		226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=guest_house].png"; sourceTree = "<group>"; };
+		226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "node[tourism=wilderness_hut].png"; sourceTree = "<group>"; };
 		226E3E341DE2604E0021C283 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		226E3E351DE2604E0021C283 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		226E3E361DE2604E0021C283 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -1484,6 +1493,7 @@
 		22FF9ED21DD88A8F001F8DA0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				226A16B820751C330055AE22 /* node[tourism=wilderness_hut].png */,
 				226A16AF20751AE20055AE22 /* node[tourism=guest_house].png */,
 				226A16A62074F74A0055AE22 /* node[tourism=hotel].png */,
 				226A169D2074F4C80055AE22 /* node[tourism=camp_site].png */,
@@ -1811,6 +1821,7 @@
 				22A5E7331E96EE860020BAFF /* node[shop=bakery].png in Resources */,
 				228625291E97D883003F7AF2 /* node[cuisine=ice_cream].png in Resources */,
 				22B757901DE2340600EFEB96 /* Icon-120.png in Resources */,
+				226A16BC20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				22FB5D7C2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7061E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8620717A9900847E05 /* node[amenity=toilets].png in Resources */,
@@ -1856,6 +1867,7 @@
 				22A5E7341E96EE860020BAFF /* node[shop=bakery].png in Resources */,
 				2286252A1E97D883003F7AF2 /* node[cuisine=ice_cream].png in Resources */,
 				22A42BEE1DE39C4800F81767 /* Icon-120.png in Resources */,
+				226A16BD20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				22FB5D7D2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7071E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8720717A9900847E05 /* node[amenity=toilets].png in Resources */,
@@ -1915,6 +1927,7 @@
 				22B757AC1DE24EA400EFEB96 /* TrafficMap-Logo.png in Resources */,
 				22B757AA1DE24EA400EFEB96 /* iTunesArtwork.png in Resources */,
 				22FB5D8320717A9900847E05 /* node[amenity=toilets].png in Resources */,
+				226A16B920751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				226A16A72074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22B757A61DE24EA400EFEB96 /* Icon-83.5@2x.png in Resources */,
 				22B757A51DE24EA400EFEB96 /* Icon-76@2x.png in Resources */,
@@ -1965,6 +1978,7 @@
 				22A5E7371E96EE860020BAFF /* node[shop=bakery].png in Resources */,
 				2286252D1E97D883003F7AF2 /* node[cuisine=ice_cream].png in Resources */,
 				229563C31E6C1BB30045E3BE /* mountain-512@3x.png in Resources */,
+				226A16C020751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				22FB5D802071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E70A1E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8A20717A9900847E05 /* node[amenity=toilets].png in Resources */,
@@ -2023,6 +2037,7 @@
 				22A42BE01DE39C1B00F81767 /* Icon-40@2x.png in Resources */,
 				22A42BE61DE39C1B00F81767 /* Icon-83.5@2x.png in Resources */,
 				22A42BE81DE39C1B00F81767 /* Icon-Small@2x.png in Resources */,
+				226A16BE20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				226A16AC2074F74A0055AE22 /* node[tourism=hotel].png in Resources */,
 				22A5E7591E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
 				22AA470D2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
@@ -2055,6 +2070,7 @@
 				22A5E7361E96EE860020BAFF /* node[shop=bakery].png in Resources */,
 				2286252C1E97D883003F7AF2 /* node[cuisine=ice_cream].png in Resources */,
 				22EAB6AC1E6B708300FC3EC1 /* Icon-83.5@2x.png in Resources */,
+				226A16BF20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				22FB5D7F2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7091E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8920717A9900847E05 /* node[amenity=toilets].png in Resources */,
@@ -2100,6 +2116,7 @@
 				22A5E7311E96EE860020BAFF /* node[shop=bakery].png in Resources */,
 				228625271E97D883003F7AF2 /* node[cuisine=ice_cream].png in Resources */,
 				226E3E151DE257340021C283 /* Icon-120.png in Resources */,
+				226A16BA20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				22FB5D7A2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7041E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8420717A9900847E05 /* node[amenity=toilets].png in Resources */,
@@ -2145,6 +2162,7 @@
 				22A5E7321E96EE860020BAFF /* node[shop=bakery].png in Resources */,
 				228625281E97D883003F7AF2 /* node[cuisine=ice_cream].png in Resources */,
 				226E3E441DE260570021C283 /* Icon-120.png in Resources */,
+				226A16BB20751C330055AE22 /* node[tourism=wilderness_hut].png in Resources */,
 				22FB5D7B2071794900847E05 /* node[highway=services].png in Resources */,
 				22A5E7051E96E5D30020BAFF /* node[tourism=picnic_site].png in Resources */,
 				22FB5D8520717A9900847E05 /* node[amenity=toilets].png in Resources */,
