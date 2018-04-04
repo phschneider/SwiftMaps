@@ -59,13 +59,23 @@ class TileOverlay: MKTileOverlay {
     
     override func url(forTilePath path: MKTileOverlayPath) -> URL {
 //        print("path \(path)")
-        
+
+        let url: URL = super.url(forTilePath: path)
         if (!self.tileUseLoadbalancing)
         {
+            if (url.host == "tiles.lyrk.org") {
+                let host = url.host!
+                let urlString = URL.init(string: url.scheme!+"://"+host+url.path + "?apikey=64fbc258da5d4c1897f4332b67866b46")!.absoluteString
+
+                return URL.init(string:urlString.replacingOccurrences(of: ".png?apikey=", with: "?apikey="))!
+            }
+            else
+            {
+
+            }
             return super.url(forTilePath: path)
         }
         else {
-            let url: URL = super.url(forTilePath: path)
             let array = ["a", "b", "c"]
             let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
             let loadBalancing: String = array[randomIndex] + "."
