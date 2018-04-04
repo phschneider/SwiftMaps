@@ -1198,6 +1198,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             sortOrder=NSNumber(value:sortOrder.intValue + 1)
         }
+
+        importName = "Tourism-Hotel-Imported"
+        if (UserDefaults.standard.bool(forKey: importName) == false)
+        {
+            poi = NSEntityDescription.insertNewObject(forEntityName: "Poi", into: managedObjectContext)
+            poi.setValue("tourism", forKeyPath: "category")
+            poi.setValue("hotel", forKeyPath: "type")
+            poi.setValue(sortOrder, forKeyPath: "sortOrder")
+
+            UserDefaults.standard.register(defaults: [importName : true])
+            UserDefaults.standard.set(true, forKey: importName)
+            UserDefaults.standard.synchronize()
+
+            sortOrder=NSNumber(value:sortOrder.intValue + 1)
+        }
         
         do {
             try managedObjectContext.save()
