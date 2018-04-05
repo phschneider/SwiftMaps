@@ -2,7 +2,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target "TrafficMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'
@@ -11,7 +11,7 @@ target "TrafficMaps" do
 end
 
 target "MountainMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'
@@ -20,7 +20,7 @@ target "MountainMaps" do
 end
 
 target "ToiletMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'
@@ -29,7 +29,7 @@ target "ToiletMaps" do
 end
 
 target "ATMMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'
@@ -38,7 +38,7 @@ target "ATMMaps" do
 end
 
 target "PicnicMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'
@@ -47,7 +47,7 @@ target "PicnicMaps" do
 end
 
 target "SingleTrailMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'
@@ -56,7 +56,7 @@ target "SingleTrailMaps" do
 end
 
 target "SegmentMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'
@@ -65,7 +65,7 @@ target "SegmentMaps" do
 end
 
 target "NatureMaps" do
-	pod 'EVReflection', '~> 4.8.0'
+	pod 'EVReflection', '~> 4.19.1'
 	pod 'StravaKit', '~> 0.9'
 	pod 'Alamofire', '~> 4.0'
 	pod 'AlamofireNetworkActivityIndicator'

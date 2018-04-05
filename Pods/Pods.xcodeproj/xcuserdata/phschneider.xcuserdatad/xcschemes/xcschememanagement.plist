@@ -46,6 +46,11 @@
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>Pods-NatureMaps.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
 		<key>Pods-PicnicMaps.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -94,12 +99,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0C78712BF6FCE3A851A0AA5095057A65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>115FA0D867E07C04838493890DBD8D29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>174C631955BCFD5E02E5061731472645</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C8ECBE4C82442E3BC1B88179B546601</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FB48D07643C155FCC1116244C8650FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -139,7 +159,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>49FBEE0DB1CDFC45EB70E65368512640</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4A59E2DBDC23714270BEC3BFF18D24B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4AE3B2C11D488218B95152123F61A67C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>51AA9B725A5040F42C3EEB73993A72BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -164,6 +199,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>94D9B51A0B889433A731B251A8290D62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A0640D2324D7A795B33164707D3C62D6</key>
 		<dict>
 			<key>primary</key>
@@ -179,7 +219,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A6C00605AF5799809CC647F611E87E47</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>AD7F710FF21FFF0B6D6260A1FA8C3C94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C152012F87A4E39DAB78045C96C5BC62</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -190,6 +240,11 @@
 			<true/>
 		</dict>
 		<key>D234637E5332E9C1854A3C16EACE95C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D89F6EFC4325020C81694050B353FD31</key>
 		<dict>
 			<key>primary</key>
 			<true/>

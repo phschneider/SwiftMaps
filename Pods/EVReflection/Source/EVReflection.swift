@@ -57,40 +57,32 @@ final public class EVReflection {
     public class func setPropertiesfromDictionary<T>(_ dictionary: NSDictionary, anyObject: T, conversionOptions: ConversionOptions = .DefaultDeserialize, forKeyPath: String? = nil) -> T where T: NSObject {
         
         guard let dict = ((forKeyPath == nil) ? dictionary : dictionary.value(forKeyPath: forKeyPath!) as? NSDictionary) else {
-            print("ERROR: The forKeyPath '\(forKeyPath ?? "")' did not return a dictionary")
+            evPrint(.UnknownKeypath, "ERROR: The forKeyPath '\(forKeyPath ?? "")' did not return a dictionary")
             return anyObject
         }
         
         (anyObject as? EVReflectable)?.initValidation(dict)
-        let (keyMapping, _, types) = getKeyMapping(anyObject, dictionary: dict, conversionOptions: .PropertyMapping)
+        let (keyMapping, _, types) = getKeyMapping(anyObject, dictionary: dict, conversionOptions: .None)
         for (k, v) in dict {
-            var skipKey = false
-            if conversionOptions.contains(.PropertyMapping) {
-                if let reflectable = anyObject as? EVReflectable {
-                    if let mapping = reflectable.propertyMapping().filter({$0.keyInObject == k as? String}).first {
-                        if mapping.1 == nil {
-                            skipKey = true
-                        }
-                    }
+            let keyInObject: String? = (keyMapping.first { $0.keyInResource == k as? String })?.keyInObject
+            if keyInObject != nil {
+                let original: Any? = getValue(anyObject, key: keyInObject!)
+                let dictKey: String = cleanupKey(anyObject, key: k as? String ?? "", tryMatch: types) ?? ""
+                let valid : Bool
+                let dictValue : Any?
+                
+                if conversionOptions.contains(.PropertyConverter) && (anyObject as? EVReflectable)?.propertyConverters().filter({$0.key == keyInObject}).first != nil {
+                    valid = false
+                    dictValue = nil
+                } else {
+                    (dictValue, valid) = dictionaryAndArrayConversion(anyObject, key: keyInObject!, fieldType: types[dictKey] as? String ?? types[keyInObject!] as? String, original: original, theDictValue: v as Any?, conversionOptions: conversionOptions)
                 }
-            }
-            if !skipKey {
-                let objectKey = k as? String ?? ""
-                let mapping = keyMapping[objectKey]
-                let useKey: String = (mapping ?? objectKey) as? String ?? ""
-                let original: Any? = getValue(anyObject, key: useKey)
-                let dictKey: String = cleanupKey(anyObject, key: objectKey, tryMatch: types) ?? ""
-                let (dictValue, valid) = dictionaryAndArrayConversion(anyObject, key: objectKey, fieldType: types[dictKey] as? String ?? types[useKey] as? String, original: original, theDictValue: v as Any?, conversionOptions: conversionOptions)
-                if dictValue != nil {
-                    let value: Any? = valid ? dictValue : (v as Any)
+                
+                if let value: Any = valid ? dictValue : (v as Any) {
                     if let custom = original as? EVCustomReflectable {
                         custom.constructWith(value: value)
                     }
-                    if let key: String = keyMapping[k as? String ?? ""] as? String {
-                        setObjectValue(anyObject, key: key, theValue: value, typeInObject: types[key] as? String, valid: valid, conversionOptions: conversionOptions)
-                    } else {
-                        setObjectValue(anyObject, key: k as? String ?? "", theValue: value, typeInObject: types[dictKey] as? String, valid: valid, conversionOptions: conversionOptions)
-                    }
+                    setObjectValue(anyObject, key: keyInObject!, theValue: value, typeInObject: types[keyInObject!] as? String, valid: valid, conversionOptions: conversionOptions)
                 }
             }
         }
@@ -110,31 +102,43 @@ final public class EVReflection {
      
      - returns: The mapping, keys and values of all properties to items in a dictionary
      */
-    fileprivate static func getKeyMapping<T>(_ anyObject: T, dictionary: NSDictionary, conversionOptions: ConversionOptions = .DefaultDeserialize) -> (keyMapping: NSDictionary, properties: NSDictionary, types: NSDictionary) where T: NSObject {
+    fileprivate static func getKeyMapping<T>(_ anyObject: T, dictionary: NSDictionary, conversionOptions: ConversionOptions = .DefaultDeserialize) -> (keyMapping: [(keyInObject: String?, keyInResource: String?)], properties: NSDictionary, types: NSDictionary) where T: NSObject {
         let (properties, types) = toDictionary(anyObject, conversionOptions: conversionOptions, isCachable: true)
-        var keyMapping: Dictionary<String, String> = Dictionary<String, String>()
+        var keyMapping: [(keyInObject: String?, keyInResource: String?)] = []
+        if let reflectable = anyObject as? EVReflectable {
+            keyMapping = reflectable.propertyMapping()
+        }
+        // Add the mapping from the  keys in the object.
         for (objectKey, _) in properties {
-            if conversionOptions.contains(.PropertyMapping) {
-                if let reflectable = anyObject as? EVReflectable {
-                    if let mapping = reflectable.propertyMapping().filter({$0.keyInResource == objectKey as? String}).first {
-                        keyMapping[objectKey as? String ?? ""] = mapping.keyInObject
-                    }
-                }
-            }
-            
-            if let dictKey = cleanupKey(anyObject, key: objectKey as? String ?? "", tryMatch: dictionary) {
-                if dictKey != objectKey  as? String {
-                    keyMapping[dictKey] = objectKey as? String
+            if (keyMapping.first { $0.keyInObject == objectKey as? String }) == nil {
+                if let dictKey = cleanupKey(anyObject, key: objectKey as? String ?? "", tryMatch: dictionary) {
+                    keyMapping.append((objectKey as? String, dictKey))
+                } else {
+                    keyMapping.append((objectKey as? String, objectKey as? String))
                 }
             }
         }
-        return (keyMapping as NSDictionary, properties, types)
+        // Also add the unknown mapping, these have to be handled in setValue forUndefinedKey
+        for item in dictionary {
+            var isAdded = false
+            if (keyMapping.first { $0.keyInResource == (item.key as? String ?? "") }) == nil {
+                if let reflectable = anyObject as? EVReflectable {
+                    if let mapping = reflectable.propertyMapping().filter({$0.keyInResource == item.key as? String}).first {
+                        keyMapping.append(mapping)
+                        isAdded = true
+                    }
+                }
+                if !isAdded {
+                    keyMapping.append((item.key as? String, item.key as? String))
+                }
+            }
+        }
+        return (keyMapping, properties, types)
     }
     
     
-    private static var properiesCache = NSMutableDictionary()
-    private static var typesCache = NSMutableDictionary()
-    private static var queue = DispatchQueue(label: "nl.evict.evreflection.cache")
+    fileprivate static let properiesCache = NSCache<NSString, NSDictionary>()
+    fileprivate static let typesCache = NSCache<NSString, NSDictionary>()
     
     /**
      Convert an object to a dictionary while cleaning up the keys
@@ -162,33 +166,26 @@ final public class EVReflection {
         var theParents = parents
         theParents.append(theObject)
         
-        let key: String = "\(swiftStringFromClass(theObject)).\(conversionOptions.rawValue)"
-        if isCachable {
-            var p: NSDictionary?
-            var t: NSDictionary?
-            queue.sync {
-                p = properiesCache[key] as? NSDictionary
-                t = typesCache[key] as? NSDictionary
+        var p: NSDictionary = NSDictionary()
+        var t: NSDictionary = NSDictionary()
+        let key: NSString = "\(swiftStringFromClass(theObject)).\(conversionOptions.rawValue)" as NSString
+        if isCachable, let cachedVersionProperty = properiesCache.object(forKey: key), let cachedVersionTypes = typesCache.object(forKey: key) {
+            p = cachedVersionProperty
+            t = cachedVersionTypes
+        } else {
+            let reflected = Mirror(reflecting: theObject)
+            var (properties, types) =  reflectedSub(theObject, reflected: reflected, conversionOptions: conversionOptions, isCachable: isCachable, parents: theParents)
+            if conversionOptions.contains(.KeyCleanup) {
+                (properties, types) = cleanupKeysAndValues(theObject, properties:properties, types:types)
             }
-            if let p = p, let t = t {
-                return (p, t)
-            }
-        }
-        let reflected = Mirror(reflecting: theObject)
-        var (properties, types) =  reflectedSub(theObject, reflected: reflected, conversionOptions: conversionOptions, isCachable: isCachable, parents: theParents)
-        if conversionOptions.contains(.KeyCleanup) {
-             (properties, types) = cleanupKeysAndValues(theObject, properties:properties, types:types)
-        }
-        pdict = properties
-        tdict = types
-
-        if isCachable && typesCache[key] == nil {
-            queue.sync {
-                properiesCache[key] = pdict!
-                typesCache[key] = tdict!
+            p = properties
+            t = types
+            if isCachable {
+                properiesCache.setObject(p, forKey: key)
+                typesCache.setObject(t, forKey: key)
             }
         }
-        return (pdict!, tdict!)
+        return (p, t)
     }
     
     
@@ -204,14 +201,14 @@ final public class EVReflection {
     public class func dictionaryFromJson(_ json: String?) -> NSDictionary {
         let result = NSMutableDictionary()
         if json == nil {
-            print("ERROR: nil is not valid json!")
+            evPrint(.IsInvalidJson, "ERROR: nil is not valid json!")
         } else if let jsonData = json!.data(using: String.Encoding.utf8) {
             do {
                 if let jsonDic = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                     return jsonDic
                 }
             } catch {
-                print("ERROR: Invalid json! \(error.localizedDescription)")
+                evPrint(.IsInvalidJson, "ERROR: Invalid json! \(error.localizedDescription)")
             }
         }
                 
@@ -228,14 +225,14 @@ final public class EVReflection {
     public class func dictionaryArrayFromJson(_ json: String?) -> [NSDictionary] {
         let result = [NSDictionary]()
         if json == nil {
-            print("ERROR: nil is not valid json!")
+            evPrint(.IsInvalidJson, "ERROR: nil is not valid json!")
         } else if let jsonData = json!.data(using: String.Encoding.utf8) {
             do {
                 if let jsonDic = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? [NSDictionary] {
                     return jsonDic
                 }
             } catch {
-                print("ERROR: Invalid json! \(error.localizedDescription)")
+                evPrint(.IsInvalidJson, "ERROR: Invalid json! \(error.localizedDescription)")
             }
         }
         
@@ -255,7 +252,7 @@ final public class EVReflection {
     public class func arrayFromData<T>(_ theObject: NSObject? = nil, type: T, data: Data?, conversionOptions: ConversionOptions = .DefaultDeserialize, forKeyPath: String? = nil) -> [T] {
         var result = [T]()
         if data == nil {
-            print("ERROR: json data is nil!")
+            evPrint(.IsInvalidJson, "ERROR: json data is nil!")
             return result
         }
 
@@ -263,7 +260,7 @@ final public class EVReflection {
             var serialized = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
             if serialized is NSDictionary {
                 if forKeyPath == nil {
-                    print("ERROR: The root of the json is an object and not an array. Specify a forKeyPath to get an item as an array")
+                    evPrint(.IsInvalidJson, "ERROR: The root of the json is an object and not an array. Specify a forKeyPath to get an item as an array")
                     return result
                 } else {
                     serialized = (serialized as! NSDictionary).value(forKeyPath: forKeyPath!) as? [NSDictionary] ?? []
@@ -273,7 +270,7 @@ final public class EVReflection {
             if let jsonDic: [Dictionary<String, AnyObject>] = serialized as? [Dictionary<String, AnyObject>] {
                 let nsobjectype: NSObject.Type? = T.self as? NSObject.Type
                 if nsobjectype == nil {
-                    print("ERROR: EVReflection can only be used with types with NSObject as it's minimal base type")
+                    evPrint(.ShouldExtendNSObject, "ERROR: EVReflection can only be used with types with NSObject as it's minimal base type")
                     return result
                 }
                 result = jsonDic.map({
@@ -282,7 +279,7 @@ final public class EVReflection {
                 })
             }
         } catch {
-            print("ERROR: Invalid json! \(error.localizedDescription)")
+            evPrint(.IsInvalidJson, "ERROR: Invalid json! \(error.localizedDescription)")
         }
         return result
     }
@@ -299,11 +296,11 @@ final public class EVReflection {
     public class func arrayFromJson<T>(type: T, json: String?, conversionOptions: ConversionOptions = .DefaultDeserialize, forKeyPath: String? = nil) -> [T] {
         let result = [T]()
         if json == nil {
-            print("ERROR: nil is not valid json!")
+            evPrint(.IsInvalidJson, "ERROR: nil is not valid json!")
             return result
         }
         guard let data = json!.data(using: String.Encoding.utf8) else {
-            print("ERROR: Could not get Data from json string using utf8 encoding")
+            evPrint(.IsInvalidJson, "ERROR: Could not get Data from json string using utf8 encoding")
             return result
         }
         return arrayFromData(type: type, data: data, conversionOptions: conversionOptions, forKeyPath: forKeyPath)
@@ -331,7 +328,16 @@ final public class EVReflection {
      - returns: The Data representation of the object
      */
     public class func toJsonData(_ theObject: NSObject, conversionOptions: ConversionOptions = .DefaultSerialize, prettyPrinted: Bool = false) -> Data {
-        var (dict, _) = EVReflection.toDictionary(theObject, conversionOptions: conversionOptions)
+        var dict: NSDictionary
+        
+        // Custom or standard toDictionary
+        if let v = theObject as? EVCustomReflectable {
+            dict = v.toCodableValue() as? NSDictionary ?? NSDictionary()
+        } else {
+            let (dictionary, _) = EVReflection.toDictionary(theObject, conversionOptions: conversionOptions)
+            dict = dictionary
+        }
+        
         dict = convertDictionaryForJsonSerialization(dict, theObject: theObject)
         do {
             if prettyPrinted {
@@ -367,7 +373,7 @@ final public class EVReflection {
         if let obj = theObject as? NSObject {
             return "\(swiftStringFromClass(obj)) = \(theObject.toJsonString(prettyPrinted: prettyPrinted))"
         }
-        print("ERROR: \(String(reflecting: theObject)) should have NSObject as it's base type.")
+        evPrint(.ShouldExtendNSObject, "ERROR: \(String(reflecting: theObject)) should have NSObject as it's base type.")
         return "\(String(reflecting: theObject))"
     }
 
@@ -439,7 +445,6 @@ final public class EVReflection {
         return dictionariesAreEqual(lhsdict, rhsdict: rhsdict)
     }
     
-
     /**
      Compare 2 dictionaries
      
@@ -503,6 +508,29 @@ final public class EVReflection {
         // use the bundle name from the main bundle, if that's not set use the identifier
         return nameForBundle(Bundle.main)
     }
+
+    /**
+     Get the app name from the 'Bundle name' and if that's empty, then from the 'Bundle identifier' otherwise we assume it's a EVReflection unit test and use that bundle identifier
+     
+     - parameter aClass: Pass an AnyClass to this method if you know a class from the bundele where you want the name for.
+     
+     - returns: A cleaned up name of the app.
+     */
+    public class func getCleanAppName(_ aClass: AnyClass?) -> String {
+        // if an object was specified, then always use the bundle name of that class
+        if aClass != nil {
+            return nameForBundle(Bundle(for: aClass!))
+        }
+        
+        // If no object was specified but an identifier was set, then use that identifier.
+        if EVReflection.bundleIdentifier != nil {
+            return EVReflection.bundleIdentifier!
+        }
+        
+        // use the bundle name from the main bundle, if that's not set use the identifier
+        return nameForBundle(Bundle.main)
+    }
+
     
     /// Variable that can be set using setBundleIdentifier
     fileprivate static var bundleIdentifier: String? = nil
@@ -555,13 +583,13 @@ final public class EVReflection {
     
     fileprivate static func nameForBundle(_ bundle: Bundle) -> String {
         // get the bundle name from what is set in the infoDictionary
-        var appName = bundle.infoDictionary?[kCFBundleNameKey as String] as? String ?? ""
+        var appName = bundle.infoDictionary?[kCFBundleExecutableKey as String] as? String ?? ""
         
         // If it was not set, then use the bundleIdentifier (which is the same as kCFBundleIdentifierKey)
         if appName == "" {
             appName = bundle.bundleIdentifier ?? ""
+            appName = appName.characters.split(whereSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
         }
-        appName = appName.characters.split(whereSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
         
         // Clean up special characters
         return appName.components(separatedBy: illegalCharacterSet).joined(separator: "_")
@@ -648,6 +676,18 @@ final public class EVReflection {
     public class func swiftStringFromClass(_ theObject: NSObject) -> String {
         return NSStringFromClass(type(of: theObject)).replacingOccurrences(of: getCleanAppName(theObject) + ".", with: "", options: NSString.CompareOptions.caseInsensitive, range: nil)
     }
+
+    /**
+     Get the class name as a string from a swift class
+     
+     - parameter aClass: An AnyClass for whitch the string representation of the class will be returned
+     
+     - returns: The string representation of the class (name of the bundle dot name of the class)
+     */
+    public class func swiftStringFromClass(_ aClass: AnyClass) -> String {
+        return NSStringFromClass(aClass).replacingOccurrences(of: getCleanAppName(aClass) + ".", with: "", options: NSString.CompareOptions.caseInsensitive, range: nil)
+    }
+
     
     /**
      Helper function to convert an Any to AnyObject
@@ -710,7 +750,7 @@ final public class EVReflection {
                     return (convertedValue, valueType, false)
                 }
                 (parentObject as? EVReflectable)?.addStatusMessage(.MissingProtocol, message: "An object with a property of type Array with optional objects should implement the EVArrayConvertable protocol. type = \(valueType) for key \(key ?? "")")
-                print("WARNING: An object with a property of type Array with optional objects should implement the EVArrayConvertable protocol. type = \(valueType) for key \(key ?? "")")
+                evPrint(.MissingProtocol, "WARNING: An object with a property of type Array with optional objects should implement the EVArrayConvertable protocol. type = \(valueType) for key \(key ?? "")")
                 return (NSNull(), "NSNull", false)
             }
         } else if mi.displayStyle == .dictionary {
@@ -727,7 +767,7 @@ final public class EVReflection {
                     return (convertedValue, valueType, false)
                 }
                 (parentObject as? EVReflectable)?.addStatusMessage(.MissingProtocol, message: "An object with a property of type Set should implement the EVArrayConvertable protocol. type = \(valueType) for key \(key ?? "")")
-                print("WARNING: An object with a property of type Set should implement the EVArrayConvertable protocol. type = \(valueType) for key \(key ?? "")")
+                evPrint(.MissingProtocol, "WARNING: An object with a property of type Set should implement the EVArrayConvertable protocol. type = \(valueType) for key \(key ?? "")")
                 return (NSNull(), "NSNull", false)
             }
         } else if mi.displayStyle == .struct {
@@ -737,11 +777,9 @@ final public class EVReflection {
                     let convertedValue = dictionaryConverter.convertDictionary(key!, dict: theValue)
                     return (convertedValue, valueType, false)
                 }
-            }
-            if valueType == "Foundation.Date" {
+            } else if valueType == "Foundation.Date" {
                 return (theValue as! NSDate, "NSDate", false)
-            }
-            if valueType == "Foundation.Data" {
+            } else if valueType == "Foundation.Data" {
                 return (theValue as! NSData, "NSData", false)
             }
             let structAsDict = convertStructureToDictionary(theValue, conversionOptions: conversionOptions, isCachable: isCachable, parents: parents)
@@ -820,6 +858,11 @@ final public class EVReflection {
         if theValue is Array<Any> {
             return (theValue as AnyObject, valueType, false)
         }
+        if theValue is EVCustomReflectable {
+            let value: AnyObject = (theValue as! EVCustomReflectable).toCodableValue() as AnyObject
+            return (value, valueType, false)
+        }
+
         if theValue is EVReflectable && theValue is NSObject {
             if valueType.contains("<") {
                 return (theValue as! EVReflectable, swiftStringFromClass(theValue as! NSObject), true)
@@ -838,9 +881,9 @@ final public class EVReflection {
         if valueType.hasPrefix("Swift.Array<") && parentObject is EVArrayConvertable {
             return ((parentObject as! EVArrayConvertable).convertArray(key ?? "_unknownKey", array: theValue), valueType, false)
         }
-        
+
         (parentObject as? EVReflectable)?.addStatusMessage(.InvalidType, message: "valueForAny unkown type \(valueType) for value: \(theValue).")
-        print("ERROR: valueForAny unkown type \(valueType) for key: \(key ?? "") and value: \(theValue).")
+        evPrint(.InvalidType, "ERROR: valueForAny unkown type \(valueType) for key: \(key ?? "") and value: \(theValue).")
         return (NSNull(), "NSNull", false)
     }
     
@@ -874,6 +917,10 @@ final public class EVReflection {
             }
         }
         
+        if conversionOptions.contains(.Decoding), let ro = anyObject as? EVReflectable {
+            value = ro.decodePropertyValue(value: value, key: key)
+        }
+        
         // Let us put a number into a string property by taking it's stringValue
         let (_, type, _) = valueForAny("", key: key, anyValue: value, conversionOptions: conversionOptions, isCachable: false, parents: parents)
         if (typeInObject == "String" || typeInObject == "NSString") && type == "NSNumber" {
@@ -892,11 +939,13 @@ final public class EVReflection {
             }
         } else if typeInObject == "UUID"  && (type == "String" || type == "NSString") {
             value = UUID(uuidString: value as? String ?? "") as AnyObject? ?? UUID() as AnyObject
+        } else if typeInObject == "NSURL" && (type == "String" || type == "NSString") {
+            value = NSURL(string: value as? String ?? "")! as AnyObject
         } else if (typeInObject == "NSDate" || typeInObject == "Date")  && (type == "String" || type == "NSString") {
             if let convertedValue = value as? String {
                 guard let date = getDateFormatter().date(from: convertedValue) else {
                     (anyObject as? EVReflectable)?.addStatusMessage(.InvalidValue, message: "The dateformatter returend nil for value \(convertedValue)")
-                    print("WARNING: The dateformatter returend nil for value \(convertedValue)")
+                    evPrint(.InvalidValue, "WARNING: The dateformatter returend nil for value \(convertedValue)")
                     return
                 }                
                 value = date as AnyObject
@@ -919,14 +968,15 @@ final public class EVReflection {
             
             // Call your own object validators that comply to the format: validate<Key>:Error:
             do {
-                var setValue: AnyObject? = value as AnyObject?
-                try anyObject.validateValue(&setValue, forKey: key)
-                anyObject.setValue(setValue, forKey: key)
+                if !(value is NSNull) {
+                    var setValue: AnyObject? = value as AnyObject?
+                    try anyObject.validateValue(&setValue, forKey: key)
+                    anyObject.setValue(setValue, forKey: key)
+                }
             } catch _ {
                 (anyObject as? EVReflectable)?.addStatusMessage(.InvalidValue, message: "Not a valid value for object `\(NSStringFromClass(type(of: (anyObject as AnyObject))))`, type `\(type)`, key  `\(key)`, value `\(value)`")
-                print("INFO: Not a valid value for object `\(NSStringFromClass(type(of: (anyObject as AnyObject))))`, type `\(type)`, key  `\(key)`, value `\(value)`")
+                evPrint(.InvalidValue, "INFO: Not a valid value for object `\(NSStringFromClass(type(of: (anyObject as AnyObject))))`, type `\(type)`, key  `\(key)`, value `\(value)`")
             }
-            
             /*  TODO: Do I dare? ... For nullable types like Int? we could use this instead of the workaround.
              // Asign pointerToField based on specific type
              
@@ -1007,18 +1057,24 @@ final public class EVReflection {
                 }
             }
         }
-        // Step 3 - from PascalCase or camelCase
+        
+        // Step 3 - from CmelCase or pascalCase
+        newKey = CamelCaseToPascalCase(newKey)
+        if tryMatch?[newKey] != nil {
+            return newKey
+        }
+
+        // Step 4 - from PascalCase or camelCase
         newKey = PascalCaseToCamelCase(newKey)
         if tryMatch?[newKey] != nil {
             return newKey
         }
         
-        // Step 3 - from camelCase to snakeCase
+        // Step 5 - from camelCase to snakeCase
         newKey = camelCaseToUnderscores(newKey)
         if tryMatch?[newKey] != nil {
             return newKey
         }
-        
         
         if tryMatch != nil {
             return nil
@@ -1030,7 +1086,8 @@ final public class EVReflection {
     /// Character that will be replaced by _ from the keys in a dictionary / json
     fileprivate static let illegalCharacterSet = CharacterSet(charactersIn: " -&%#@!$^*()<>?.,:;")
     /// processIllegalCharacters Cache
-    fileprivate static var processIllegalCharactersCache = [ String : String ]()
+    fileprivate static var processIllegalCharactersCache = NSCache<NSString, NSString>()
+
     /**
      Replace illegal characters to an underscore
      
@@ -1039,19 +1096,21 @@ final public class EVReflection {
      - returns: processed string with illegal characters converted to underscores
      */
     internal static func processIllegalCharacters(_ input: String) -> String {
-        
-        if let cacheHit = processIllegalCharactersCache[input] {
-            return cacheHit
+        var p: NSString = ""
+        if let cachedVersion = processIllegalCharactersCache.object(forKey: input as NSString) {
+            // use the cached version
+            p = cachedVersion
+        } else {
+            // create it from scratch then store in the cache
+            p = input.components(separatedBy: illegalCharacterSet).joined(separator: "_") as NSString
+            processIllegalCharactersCache.setObject(p, forKey: input as NSString)
         }
-        
-        let output = input.components(separatedBy: illegalCharacterSet).joined(separator: "_")
-        
-        processIllegalCharactersCache[input] = output
-        return output
+        return p as String
     }
 
     /// camelCaseToUnderscoresCache Cache
-    fileprivate static var camelCaseToUnderscoresCache = [ String : String ]()
+    fileprivate static var camelCaseToUnderscoresCache = NSCache<NSString, NSString>()
+    
     /**
      Convert a CamelCase to Underscores
      
@@ -1060,23 +1119,23 @@ final public class EVReflection {
      - returns: the underscore string
      */
     internal static func camelCaseToUnderscores(_ input: String) -> String {
-
-        if let cacheHit = camelCaseToUnderscoresCache[input] {
-            return cacheHit
-        }
-        
-        var output: String = String(input.characters.first!).lowercased()
-        let uppercase: CharacterSet = CharacterSet.uppercaseLetters
-        for character in input.substring(from: input.characters.index(input.startIndex, offsetBy: 1)).characters {
-            if uppercase.contains(UnicodeScalar(String(character).utf16.first!)!) {
-                output += "_\(String(character).lowercased())"
-            } else {
-                output += "\(String(character))"
+        var p: NSString = ""
+        if let cachedVersion = camelCaseToUnderscoresCache.object(forKey: input as NSString) {
+            p = cachedVersion
+        } else {
+            var output: String = String(input.characters.first!).lowercased()
+            let uppercase: CharacterSet = CharacterSet.uppercaseLetters
+            for character in input.substring(from: input.characters.index(input.startIndex, offsetBy: 1)).characters {
+                if uppercase.contains(UnicodeScalar(String(character).utf16.first!)!) {
+                    output += "_\(String(character).lowercased())"
+                } else {
+                    output += "\(String(character))"
+                }
             }
+            p = output as NSString
+            camelCaseToUnderscoresCache.setObject(p, forKey: input as NSString)
         }
-        
-        camelCaseToUnderscoresCache[input] = output
-        return output
+        return p as String
     }
 
     
@@ -1089,13 +1148,42 @@ final public class EVReflection {
      - returns: the pascalCase string
      */
     internal static func PascalCaseToCamelCase(_ input: String) -> String {
-        return String(input.characters.first!).lowercased() + input.substring(from: input.characters.index(after: input.startIndex))
+        if input.characters.count > 1 {
+            return String(describing: input.characters.first!).lowercased() + input.substring(from: input.characters.index(after: input.startIndex))
+        }
+        return input.lowercased()
     }
     
     
+    /**
+     Convert a PascalCase to camelCase
+     
+     - parameter input: the CamelCase string
+     
+     - returns: the pascalCase string
+     */
+    internal static func CamelCaseToPascalCase(_ input: String) -> String {
+        if input.characters.count > 1 {
+            return String(describing: input.characters.first!).uppercased() + input.substring(from: input.characters.index(after: input.startIndex))
+        }
+        return input.uppercased()
+    }
     
     /// List of swift keywords for cleaning up keys
     fileprivate static let keywords = ["self", "description", "class", "deinit", "enum", "extension", "func", "import", "init", "let", "protocol", "static", "struct", "subscript", "typealias", "var", "break", "case", "continue", "default", "do", "else", "fallthrough", "if", "in", "for", "return", "switch", "where", "while", "as", "dynamicType", "is", "new", "super", "Self", "Type", "__COLUMN__", "__FILE__", "__FUNCTION__", "__LINE__", "associativity", "didSet", "get", "infix", "inout", "left", "mutating", "none", "nonmutating", "operator", "override", "postfix", "precedence", "prefix", "right", "set", "unowned", "unowned", "safe", "unowned", "unsafe", "weak", "willSet", "private", "public", "internal", "zone"]
+    
+    
+    fileprivate static func arrayConversion(_ anyObject: NSObject, key: String, fieldType: String?, original: Any?, theDictValue: Any?, conversionOptions: ConversionOptions = .DefaultDeserialize) -> NSArray {
+        //Swift.Array<Swift.Array<Swift.Array<A81>>>
+        var dictValue: NSArray? = theDictValue as? NSArray
+        if fieldType?.hasPrefix("Swift.Array<Swift.Array<") ?? false && theDictValue is NSArray {
+            for item in dictValue! {
+                print("Have to convert here... NSArray to \(fieldType ?? "")")
+                
+            }
+        }
+        return dictValue!
+    }
     
     /**
      Convert a value in the dictionary to the correct type for the object
@@ -1113,6 +1201,9 @@ final public class EVReflection {
         var dictValue = theDictValue
         var valid = true
         if let type = fieldType {
+            if type.hasPrefix("Swift.Array<") && dictValue is NSArray {
+                dictValue = arrayConversion(anyObject, key: key, fieldType: fieldType, original: original, theDictValue: theDictValue, conversionOptions: conversionOptions)
+            }
             if type.hasPrefix("Swift.Array<") && dictValue as? NSDictionary != nil {
                 if (dictValue as? NSDictionary)?.count == 1 {
                     // XMLDictionary fix
@@ -1152,8 +1243,8 @@ final public class EVReflection {
             } else if !type.hasPrefix("Swift.Array<") && !type.hasPrefix("Swift.Set<") {
                 if let array = dictValue as? NSArray {
                     if let org = anyObject as? EVReflectable {
-                        org.addStatusMessage(DeserializationStatus.InvalidType, message: "Did not expect an array for \(key). Will use the first item instead.")
-                        print("WARNING: Did not expect an array for \(key). Will use the first item instead.")
+                        org.addStatusMessage(.InvalidType, message: "Did not expect an array for \(key). Will use the first item instead.")
+                        evPrint(.InvalidType, "WARNING: Did not expect an array for \(key). Will use the first item instead.")
                     }
                     if array.count > 0 {
                         return (array[0] as AnyObject?, true)
@@ -1184,7 +1275,7 @@ final public class EVReflection {
             } else {
                 if type.contains("Dictionary<") == false && type != "Struct" {
                     (original as? EVReflectable)?.addStatusMessage(.InvalidClass, message: "Cannot set values on type \(type) from dictionary \(dict)")
-                    print("WARNING: Cannot set values on type \(type) from dictionary \(dict)")
+                    evPrint(.InvalidClass, "WARNING: Cannot set values on type \(type) from dictionary \(dict)")
                 }
                 return (returnObject, false)
             }
@@ -1216,7 +1307,7 @@ final public class EVReflection {
         
         if useType != "Struct" {
             (original as? EVReflectable)?.addStatusMessage(.InvalidClass, message: "Could not create an instance for type \(type)\ndict:\(dict)")
-            print("ERROR: Could not create an instance for type \(useType)\ndict:\(dict)")
+            evPrint(.InvalidClass, "ERROR: Could not create an instance for type \(useType)\ndict:\(dict)")
         }
         return (nil, false)
     }
@@ -1248,7 +1339,7 @@ final public class EVReflection {
         result.removeAll()
         
         for item in array {
-            let org = getTypeFor(anyObject: anyObject, key: key, type: type, item: item)
+            let org = getTypeFor(anyObject: anyObject, key: key, type: subtype, item: item)
             let (arrayObject, valid) = dictToObject(subtype, original:org, dict: item as? NSDictionary ?? NSDictionary(), conversionOptions: conversionOptions)
             if arrayObject != nil && valid {
                 result.append(arrayObject!)
@@ -1305,17 +1396,19 @@ final public class EVReflection {
                 if originalKey  == "evReflectionStatuses" {
                     skipThisKey = true
                 }
+                
                 if conversionOptions.contains(.PropertyMapping) {
                     if let reflectable = theObject as? EVReflectable {
                         if let mapping = reflectable.propertyMapping().filter({$0.keyInObject == originalKey}).first {
-                            if mapping.1 == nil {
+                            if mapping.keyInResource == nil {
                                 skipThisKey = true
                             } else {
-                                mapKey = mapping.1!
+                                mapKey = mapping.keyInResource!
                             }
                         }
                     }
                 }
+                
                 if !skipThisKey {
                     var value = property.value
                     
@@ -1326,6 +1419,10 @@ final public class EVReflection {
                         unboxedValue = v.toCodableValue() as AnyObject
                         valueType = "String"
                         isObject = false
+                    }
+
+                    if conversionOptions.contains(.Encoding), let ro = theObject as? EVReflectable {
+                        unboxedValue = ro.encodePropertyValue(value: unboxedValue, key: originalKey) as AnyObject
                     }
 
                     if conversionOptions.contains(.PropertyConverter) {
@@ -1413,7 +1510,7 @@ final public class EVReflection {
      
      - returns: The cleaned up dictionairy
      */
-    fileprivate class func convertDictionaryForJsonSerialization(_ dict: NSDictionary, theObject: NSObject) -> NSDictionary {
+    internal class func convertDictionaryForJsonSerialization(_ dict: NSDictionary, theObject: NSObject) -> NSDictionary {
         let dict2: NSMutableDictionary = NSMutableDictionary()
         for (key, value) in dict {
             dict2.setValue(convertValueForJsonSerialization(value as AnyObject, theObject: theObject), forKey: key as? String ?? "")
@@ -1444,111 +1541,19 @@ final public class EVReflection {
             return tempArray
         case let date as Date:
             return getDateFormatter().string(from: date) as NSString
+        case let reflectable as EVCustomReflectable:
+            return convertDictionaryForJsonSerialization(reflectable.toCodableValue() as? NSDictionary ?? NSDictionary(), theObject: theObject)
         case let reflectable as EVReflectable:
             return convertDictionaryForJsonSerialization(reflectable.toDictionary(), theObject: theObject)
         case let ok as NSDictionary:
             return convertDictionaryForJsonSerialization(ok, theObject: theObject)
         default:
             (theObject as? EVReflectable)?.addStatusMessage(.InvalidType, message: "Unexpected type while converting value for JsonSerialization: \(value)")
-            NSLog("ERROR: Unexpected type while converting value for JsonSerialization: \(value)")
+            evPrint(.InvalidType, "ERROR: Unexpected type while converting value for JsonSerialization: \(value)")
             return "\(value)" as AnyObject
         }
     }
 }
 
 
-/**
- For specifying what conversion options should be executed
- */
-public struct ConversionOptions: OptionSet, CustomStringConvertible {
-    /// The numeric representation of the options
-    public let rawValue: Int
-    /**
-     Initialize with a raw value
-     
-     - parameter rawValue: the numeric representation
-     
-     - returns: The ConversionOptions
-     */
-    public init(rawValue: Int) { self.rawValue = rawValue }
-    
-    /// No conversion options
-    public static let None = ConversionOptions(rawValue: 0)
-    /// Execute property converters
-    public static let PropertyConverter = ConversionOptions(rawValue: 1)
-    /// Execute property mapping
-    public static let PropertyMapping = ConversionOptions(rawValue: 2)
-    /// Skip specific property values
-    public static let SkipPropertyValue = ConversionOptions(rawValue: 4)
-    /// Do a key cleanup (CameCase, snake_case)
-    public static let KeyCleanup = ConversionOptions(rawValue: 8)
-    
-    /// Default used for NSCoding
-    public static var DefaultNSCoding: ConversionOptions = [None]
-    /// Default used for comparing / hashing functions
-    public static var DefaultComparing: ConversionOptions = [PropertyConverter, PropertyMapping, SkipPropertyValue]
-    /// Default used for deserialization
-    public static var DefaultDeserialize: ConversionOptions = [PropertyConverter, PropertyMapping, SkipPropertyValue, KeyCleanup]
-    /// Default used for serialization
-    public static var DefaultSerialize: ConversionOptions = [PropertyConverter, PropertyMapping, SkipPropertyValue]
-    
-    /// Get a nice description of the ConversionOptions
-    public var description: String {
-        let strings = ["PropertyConverter", "PropertyMapping", "SkipPropertyValue", "KeyCleanup"]
-        var members = [String]()
-        for (flag, string) in strings.enumerated() where contains(ConversionOptions(rawValue:1<<(flag + 1))) {
-            members.append(string)
-        }
-        if members.count == 0 {
-            members.append("None")
-        }
-        return members.description
-    }
 
-}
-
-/**
- Type of status messages after deserialization
- */
-public struct DeserializationStatus: OptionSet, CustomStringConvertible {
-    /// The numeric representation of the options
-    public let rawValue: Int
-    /**
-     Initialize with a raw value
-     
-     - parameter rawValue: the numeric representation
-     
-     - returns: the DeserializationStatus
-     */
-    public init(rawValue: Int) { self.rawValue = rawValue }
-
-    /// No status message
-    public static let None = DeserializationStatus(rawValue: 0)
-    /// Incorrect key error
-    public static let IncorrectKey  = DeserializationStatus(rawValue: 1)
-    /// Missing key error
-    public static let MissingKey  = DeserializationStatus(rawValue: 2)
-    /// Invalid type error
-    public static let InvalidType  = DeserializationStatus(rawValue: 4)
-    /// Invalid value error
-    public static let InvalidValue  = DeserializationStatus(rawValue: 8)
-    /// Invalid class error
-    public static let InvalidClass  = DeserializationStatus(rawValue: 16)
-    /// Missing protocol error
-    public static let MissingProtocol  = DeserializationStatus(rawValue: 32)
-    /// Custom status message
-    public static let Custom  = DeserializationStatus(rawValue: 64)
-    
-    /// Get a nice description of the DeserializationStatus
-    public var description: String {
-        let strings = ["IncorrectKey", "MissingKey", "InvalidType", "InvalidValue", "InvalidClass", "MissingProtocol", "Custom"]
-        var members = [String]()
-        for (flag, string) in strings.enumerated() where contains(DeserializationStatus(rawValue:1<<(flag))) {
-            members.append(string)
-        }
-        if members.count == 0 {
-            members.append("None")
-        }
-        return members.description
-    }
-}
