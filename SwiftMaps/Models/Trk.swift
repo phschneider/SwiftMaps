@@ -12,17 +12,24 @@ import MapKit
 
 class Trk: EVObject {
     var name: String?
-    var trkseg = [Trkseg]()
-    
+    var trkseg: [Trkseg] = [Trkseg]()
+
+    required override init() {
+        super.init()
+        print("Trk init")
+    }
+        
     public var points: [CLLocationCoordinate2D]? {
         var points = [CLLocationCoordinate2D]()
         
         for segment in trkseg
         {
-            for point in segment.trkpt
-            {
-                points.append(CLLocationCoordinate2DMake(point._lat as! CLLocationDegrees, point._lon as! CLLocationDegrees));
-            }
+            print (segment)
+//            for point in segment.trkpt
+//            {
+//                print (point)
+                points.append(CLLocationCoordinate2DMake(segment._lat as! CLLocationDegrees, segment._lon as! CLLocationDegrees));
+//            }
         }
         return points
     }
@@ -32,10 +39,10 @@ class Trk: EVObject {
         
         for segment in trkseg
         {
-            for point in segment.trkpt
-            {
-                points.append(CLLocation.init(latitude: point._lat as! CLLocationDegrees, longitude: point._lon as! CLLocationDegrees));
-            }
+//            for point in segment.trkpt
+//            {
+                points.append(CLLocation.init(latitude: segment._lat as! CLLocationDegrees, longitude: segment._lon as! CLLocationDegrees));
+//            }
         }
         return points
     }
@@ -43,14 +50,15 @@ class Trk: EVObject {
     public var distanceAnnotations: [DistanceAnnotation]? {
         var points = [DistanceAnnotation]()
         var alreadyAddedDistances = [String]()
+        var location:CLLocation! = nil
+        var tmplocation:CLLocation
+        var distance:Double = 0.0
+
         for segment in trkseg
         {
-            var location:CLLocation! = nil
-            var tmplocation:CLLocation
-            var distance:Double = 0.0
-            for point in segment.trkpt
-            {
-                tmplocation = CLLocation.init(latitude: point._lat as! CLLocationDegrees, longitude: point._lon as! CLLocationDegrees)
+//            for point in segment.trkpt
+//            {
+                tmplocation = CLLocation.init(latitude: segment._lat as! CLLocationDegrees, longitude: segment._lon as! CLLocationDegrees)
                 if (location != nil)
                 {
                     distance = distance + location.distance(from: tmplocation)
@@ -66,7 +74,7 @@ class Trk: EVObject {
                     }
                 }
                 location = tmplocation
-            }
+//            }
         }
         return points
     }

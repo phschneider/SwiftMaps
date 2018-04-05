@@ -24,48 +24,23 @@ class SingleTrailMapViewController: MapViewController {
         self.mapView.mapType = MKMapType.standard
 
         // TEST GPX / EVREFLECT
-        loadGpxFile()
-
-        loadSavedPois()
-
-//        MKPolyline *route = [track route];
-//        [self.mapView addOverlay:route];
+        self.loadGpxFromBundleFile(filename: "AraSaarland200KmBrevet(v3)2018")
+        self.loadSavedAndEnabledPois()
 
         let nc = NotificationCenter.default // Note that default is now a property, not a method call
         nc.addObserver(forName:Notification.Name(rawValue:"PoiSelectionChanged"),
                 object:nil, queue:nil) {
             notification in
             // Handle notification
-            self.loadSavedPois()
+            self.loadSavedAndEnabledPois()
         }
     }
 
-    private func loadGpxFile() {
-        if let filepath = Bundle.main.path(forResource: "AraSaarland400KmBrevet(v2)2017", ofType: "gpx") {
+    func loadGpxFromBundleFile(filename:String) {
+        if let filepath = Bundle.main.path(forResource: filename, ofType: "gpx") {
             do {
                 let contents = try String(contentsOfFile: filepath)
-                print(contents)
-                self.gpx = Gpx(xmlString: contents)
-                print(gpx?.trk)
-                let line: MKPolyline = (gpx?.route())!
-//                if (line)
-//                {
-                self.mapView.addOverlays([line], level:MKOverlayLevel.aboveLabels)
-                var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
-                self.mapView.addAnnotations(annotations)
-
-                annotations = (gpx?.wayPointAnnotations())!
-                self.mapView.addAnnotations(annotations)
-
-                for overlay in self.mapView.overlays
-                {
-                    if (overlay is MKPolyline)
-                    {
-                        let offset:CGFloat = 75
-                        self.mapView.setVisibleMapRect(overlay.boundingMapRect, edgePadding: UIEdgeInsets(top: offset, left: offset, bottom: offset, right: offset), animated: true)
-                    }
-                }
-//                }
+                self.loadGpxFile(contents: contents)
             } catch {
                 // contents could not be loaded
             }
@@ -74,8 +49,43 @@ class SingleTrailMapViewController: MapViewController {
         }
     }
 
-    private func loadSavedPois() {
+    func loadGpxFromUrl(url:URL) {
+        do
+        {
+            let contents = try String(contentsOf: url)
+            self.loadGpxFile(contents: contents)
+        }
+        catch {
+            fatalError("Failed to open url: \(error)")
+        }
+    }
 
+    private func loadGpxFile(contents:String) {
+        // print(contents)
+        self.gpx = Gpx(xmlString: contents)
+        print(gpx?.trk)
+//    return
+        let line: MKPolyline = (gpx?.route())!
+        self.mapView.add(line)
+
+        self.mapView.addOverlays([line], level:MKOverlayLevel.aboveLabels)
+        var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
+        self.mapView.addAnnotations(annotations)
+
+        annotations = (gpx?.wayPointAnnotations())!
+        self.mapView.addAnnotations(annotations)
+
+        for overlay in self.mapView.overlays
+        {
+            if (overlay is MKPolyline)
+            {
+                let offset:CGFloat = 75
+                self.mapView.setVisibleMapRect(overlay.boundingMapRect, edgePadding: UIEdgeInsets(top: offset, left: offset, bottom: offset, right: offset), animated: true)
+            }
+        }
+    }
+
+    private func loadSavedAndEnabledPois() {
         self.mapView .removeAnnotations(self.mapView.annotations)
 
         var zoomRect: MKMapRect = MKMapRectNull
@@ -129,6 +139,15 @@ class SingleTrailMapViewController: MapViewController {
         {
             mapView.addAnnotations(annotations)
 //            mapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsetsMake(10,10,10,10), animated: true)
+        }
+
+        if (self.gpx != nil)
+        {
+            var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
+            self.mapView.addAnnotations(annotations)
+
+            annotations = (gpx?.wayPointAnnotations())!
+            self.mapView.addAnnotations(annotations)
         }
     }
 
@@ -274,6 +293,7 @@ class SingleTrailMapViewController: MapViewController {
                     anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                     anView!.canShowCallout = true
                     anView?.image = (annotation as! NodeAnnotationView).node.image()
+                    anView?.rightCalloutAccessoryView = UIButton(type:.detailDisclosure) as UIButton
                 }
                 else
                 {

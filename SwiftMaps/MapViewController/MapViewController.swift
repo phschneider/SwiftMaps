@@ -403,6 +403,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     // Mark: Helper
     func showOverlays()
     {
+
+        var visiblePolyLines = [MKOverlay]()
+        for overlay in self.mapView.overlays {
+            if (overlay is MKPolyline) {
+                visiblePolyLines.append(overlay)
+            }
+        }
+
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tile")
         let sortDescriptor = NSSortDescriptor(key: "sortOrder", ascending: true)
@@ -453,6 +461,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
+
+        self.mapView.addOverlays(visiblePolyLines,level: .aboveLabels)
     }
     
     

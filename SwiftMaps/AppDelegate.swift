@@ -115,11 +115,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+
+        if (mapViewController is SingleTrailMapViewController)
+        {
+            (mapViewController as! SingleTrailMapViewController).loadGpxFromUrl(url: url)
+
+        }
+        return true
+    }
+    
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
         #if IS_SEGMENT_MAPS
             return Strava.openURL(url, sourceApplication: sourceApplication)
         #endif
-        return false
+        return true
     }
     
     

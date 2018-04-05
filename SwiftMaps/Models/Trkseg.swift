@@ -10,5 +10,12 @@ import Foundation
 import EVReflection
 
 class Trkseg: EVObject {
-    var trkpt: [Trkpt] = [Trkpt]()
+//    var trkpt: [Trkpt] = [Trkpt]()
+
+    // Anstatt trkpt!?
+    var ele: String?
+    var time: String?
+
+    var _lat: NSNumber?
+    var _lon: NSNumber?
 }
