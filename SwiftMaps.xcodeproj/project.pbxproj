@@ -677,6 +677,7 @@
 		22FF9ED81DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9ED91DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
 		22FF9EDA1DD88B14001F8DA0 /* mountain-512@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ED71DD88B14001F8DA0 /* mountain-512@3x.png */; };
+		4A165E08209E270200A3623F /* SingleTrailMaps.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A165E07209E270200A3623F /* SingleTrailMaps.xcassets */; };
 		4A24F8BC1D95D95B0011485B /* SwiftMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C05DC1D3180120033E6BD /* SwiftMaps.xcdatamodeld */; };
 		4A24F8C01D95D95B0011485B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C05D51D3180120033E6BD /* AppDelegate.swift */; };
 		4A24F8CF1D95D95B0011485B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C05E11D3180120033E6BD /* LaunchScreen.storyboard */; };
@@ -938,6 +939,7 @@
 		24460EC3EF3F0A44194405AC /* Pods-ToiletMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToiletMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToiletMaps/Pods-ToiletMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		2BD123240E9EB4EF17CD2499 /* Pods-ATMMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		33B249D4328B8B5D682217BC /* Pods-ATMMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATMMaps/Pods-ATMMaps.release.xcconfig"; sourceTree = "<group>"; };
+		4A165E07209E270200A3623F /* SingleTrailMaps.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SingleTrailMaps.xcassets; sourceTree = "<group>"; };
 		4A24F8E51D95D95B0011485B /* MountainMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountainMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4CEF0B1FCA0FEC003346A4 /* CoreDataTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTileOverlay.swift; sourceTree = "<group>"; };
 		4A7C80692F699A189A3EAC02 /* Pods-NatureMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatureMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NatureMaps/Pods-NatureMaps.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1338,6 +1340,7 @@
 		22A42BCC1DE39C1500F81767 /* SingleTrailMaps */ = {
 			isa = PBXGroup;
 			children = (
+				4A165E07209E270200A3623F /* SingleTrailMaps.xcassets */,
 				22A42BCD1DE39C1500F81767 /* AppIcons */,
 				22A42BDD1DE39C1500F81767 /* SingleTrailMaps-Info.plist */,
 			);
@@ -1800,6 +1803,7 @@
 					};
 					22A42B7E1DE39AAE00F81767 = {
 						DevelopmentTeam = 723AP2V5VG;
+						ProvisioningStyle = Manual;
 					};
 					22EAB6651E6B701900FC3EC1 = {
 						LastSwiftMigration = 0820;
@@ -2071,6 +2075,7 @@
 				226A16D6207523200055AE22 /* node[tourism=chalet].png in Resources */,
 				22E098BC207674E1001080CA /* AraSaarland200KmBrevet(v3)2018.gpx in Resources */,
 				22A5E7591E96F2920020BAFF /* node[shop=supermarket].png in Resources */,
+				4A165E08209E270200A3623F /* SingleTrailMaps.xcassets in Resources */,
 				22AA470D2073A18A00B40467 /* node[tourism=hostel].png in Resources */,
 				22FB5D6A2070F93400847E05 /* node[amenity=bicycle_parking].png in Resources */,
 				22A5E7621E96F3630020BAFF /* node[amenity=shelter].png in Resources */,
@@ -3533,7 +3538,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_PICNIC_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.picnic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e0b76ba-ef71-4340-914d-b745142db9a7";
+				PROVISIONING_PROFILE = "23313821-57ce-450f-9ae2-a6a918f01ee4";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -3549,7 +3554,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_PICNIC_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.picnic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e0b76ba-ef71-4340-914d-b745142db9a7";
+				PROVISIONING_PROFILE = "23313821-57ce-450f-9ae2-a6a918f01ee4";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
@@ -3774,16 +3779,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9ED00DA497F7032DAD44EA88 /* Pods-SingleTrailMaps.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Philip Schneider (723AP2V5VG)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 723AP2V5VG;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SINGLETRAIL_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.singletrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "22fd081b-b1cc-42e5-b975-1822ab267df4";
-				PROVISIONING_PROFILE_SPECIFIER = "net.phschneider.maps.singletrail AppStore";
+				PROVISIONING_PROFILE = "23313821-57ce-450f-9ae2-a6a918f01ee4";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -3793,16 +3800,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A13FA36DA72B3212838F0C7A /* Pods-SingleTrailMaps.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Philip Schneider (723AP2V5VG)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 723AP2V5VG;
 				INFOPLIST_FILE = "Resources/SingleTrailMaps/SingleTrailMaps-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIS_SINGLETRAIL_MAPS";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phschneider.maps.singletrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "22fd081b-b1cc-42e5-b975-1822ab267df4";
-				PROVISIONING_PROFILE_SPECIFIER = "net.phschneider.maps.singletrail AppStore";
+				PROVISIONING_PROFILE = "23313821-57ce-450f-9ae2-a6a918f01ee4";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftMaps/SwiftMaps-Bridging-Header.h";
 			};
 			name = Release;
