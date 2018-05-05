@@ -606,6 +606,7 @@
 		22B757AB1DE24EA400EFEB96 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECE1DD885CB001F8DA0 /* iTunesArtwork@2x.png */; };
 		22B757AC1DE24EA400EFEB96 /* TrafficMap-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FF9ECF1DD885CB001F8DA0 /* TrafficMap-Logo.png */; };
 		22E098BC207674E1001080CA /* AraSaarland200KmBrevet(v3)2018.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22E098BB207674E1001080CA /* AraSaarland200KmBrevet(v3)2018.gpx */; };
+		22E098BE2076D4C0001080CA /* HighLowAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E098BD2076D4C0001080CA /* HighLowAnnotation.swift */; };
 		22E7A9541FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E7A9531FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift */; };
 		22E7A9551FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E7A9531FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift */; };
 		22E7A9561FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E7A9531FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift */; };
@@ -879,6 +880,7 @@
 		22B2160C1FB09B380031DFAB /* WaymarkedCyclingTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaymarkedCyclingTileOverlay.swift; path = TileOverlays/WaymarkedCyclingTileOverlay.swift; sourceTree = "<group>"; };
 		22B216151FB09C320031DFAB /* WaymarkedMtbTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaymarkedMtbTileOverlay.swift; path = TileOverlays/WaymarkedMtbTileOverlay.swift; sourceTree = "<group>"; };
 		22E098BB207674E1001080CA /* AraSaarland200KmBrevet(v3)2018.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "AraSaarland200KmBrevet(v3)2018.gpx"; sourceTree = "<group>"; };
+		22E098BD2076D4C0001080CA /* HighLowAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighLowAnnotation.swift; sourceTree = "<group>"; };
 		22E7A9531FB4AFC500A0A17A /* MapBoxCustomHillContourTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapBoxCustomHillContourTileOverlay.swift; path = TileOverlays/MapBoxCustomHillContourTileOverlay.swift; sourceTree = "<group>"; };
 		22EAB6901E6B701900FC3EC1 /* SegmentMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegmentMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EAB6941E6B707A00FC3EC1 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
@@ -1369,6 +1371,7 @@
 				22B215A81FAF3F4F0031DFAB /* DistanceAnnotation.swift */,
 				22B215B11FAF3F730031DFAB /* NodeAnnotationView.swift */,
 				22B215B21FAF3F730031DFAB /* WayPointAnnotation.swift */,
+				22E098BD2076D4C0001080CA /* HighLowAnnotation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3268,6 +3271,7 @@
 				22B216001FAF3FDA0031DFAB /* MapViewBoundingBoxExtension.swift in Sources */,
 				2226F6161FB4A173001B5024 /* MapBoxCustomPathTileOverlay.swift in Sources */,
 				22A42B821DE39AAE00F81767 /* LocationManagerDelegate.swift in Sources */,
+				22E098BE2076D4C0001080CA /* HighLowAnnotation.swift in Sources */,
 				227FCF13206D951E00D6FAF7 /* CoreDataNode+CoreDataClass.swift in Sources */,
 				22B216091FB09A3E0031DFAB /* WaymarkedHikingTileOverlay.swift in Sources */,
 				22B215C01FAF3F730031DFAB /* WayPointAnnotation.swift in Sources */,

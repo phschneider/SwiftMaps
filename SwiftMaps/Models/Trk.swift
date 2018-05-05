@@ -41,7 +41,7 @@ class Trk: EVObject {
         {
 //            for point in segment.trkpt
 //            {
-                points.append(CLLocation.init(latitude: segment._lat as! CLLocationDegrees, longitude: segment._lon as! CLLocationDegrees));
+                points.append(segment.location());
 //            }
         }
         return points
@@ -58,7 +58,7 @@ class Trk: EVObject {
         {
 //            for point in segment.trkpt
 //            {
-                tmplocation = CLLocation.init(latitude: segment._lat as! CLLocationDegrees, longitude: segment._lon as! CLLocationDegrees)
+                tmplocation = segment.location()
                 if (location != nil)
                 {
                     distance = distance + location.distance(from: tmplocation)

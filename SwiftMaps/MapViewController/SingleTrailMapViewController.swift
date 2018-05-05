@@ -64,6 +64,7 @@ class SingleTrailMapViewController: MapViewController {
         // print(contents)
         self.gpx = Gpx(xmlString: contents)
         print(gpx?.trk)
+
 //    return
         let line: MKPolyline = (gpx?.route())!
         self.mapView.add(line)
@@ -72,9 +73,11 @@ class SingleTrailMapViewController: MapViewController {
         var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
         self.mapView.addAnnotations(annotations)
 
-        annotations = (gpx?.wayPointAnnotations())!
-        self.mapView.addAnnotations(annotations)
-
+        if (self.gpx != nil)
+        {
+            self.showAnnotations()
+        }
+        
         for overlay in self.mapView.overlays
         {
             if (overlay is MKPolyline)
@@ -143,15 +146,31 @@ class SingleTrailMapViewController: MapViewController {
 
         if (self.gpx != nil)
         {
-            var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
-            self.mapView.addAnnotations(annotations)
-
-            annotations = (gpx?.wayPointAnnotations())!
-            self.mapView.addAnnotations(annotations)
+            self.showAnnotations()
         }
     }
 
-
+    func showAnnotations(){
+        
+        if (self.gpx != nil)
+        {
+            var annotations:[MKAnnotation] = (gpx?.distanceAnnotations())!
+            self.mapView.addAnnotations(annotations)
+            
+            annotations = (gpx?.wayPointAnnotations())!
+            self.mapView.addAnnotations(annotations)
+            
+            //            annotations = ((gpx?.high())!)
+            //            self.mapView.addAnnotations(annotations)
+            //
+            //            annotations = (gpx?.low())!
+            //            self.mapView.addAnnotations(annotations)
+            
+            annotations = (gpx?.highLow())!
+            self.mapView.addAnnotations(annotations)
+        }
+    }
+    
     override func showPoiViewController(){
 //        addTapped()
 
@@ -265,12 +284,9 @@ class SingleTrailMapViewController: MapViewController {
             }
         }
 
-        if (gpx != nil) {
-            var annotations: [MKAnnotation] = (gpx?.distanceAnnotations())!
-            self.mapView.addAnnotations(annotations)
-
-            annotations = (gpx?.wayPointAnnotations())!
-            self.mapView.addAnnotations(annotations)
+        if (self.gpx != nil)
+        {
+            self.showAnnotations()
         }
     }
 
@@ -369,9 +385,54 @@ class SingleTrailMapViewController: MapViewController {
             annotationView .addSubview(label)
             return annotationView
         }
+        else if (annotation is HighLowAnnotation)
+        {
+            var annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "HighLow")
+            annotationView.canShowCallout = false;
+            
+            let size:Int = 15
+            var frame:CGRect = CGRect.zero
+            frame.size = CGSize.init(width: size, height: size)
+            
+            var label:UILabel = UILabel.init(frame: annotationView.frame)
+            label.frame = frame
+            label.textAlignment = NSTextAlignment.center
+            label.text = annotation.title!
+            if ( (annotation as! HighLowAnnotation).isHigh == true)
+            {
+                label.backgroundColor = UIColor.black
+                label.textColor = UIColor.white
+                label.layer.borderColor = UIColor.white.cgColor
+            }
+            else
+            {
+                label.backgroundColor = UIColor.white
+                label.textColor = UIColor.black
+                label.layer.borderColor = UIColor.black.cgColor
+            }
+            
+            label.adjustsFontSizeToFitWidth = true
+            label.font = UIFont.systemFont(ofSize: 10)
+            label.clipsToBounds = true
+            label.layer.cornerRadius = frame.size.width/2
+            label.layer.borderWidth = 1.0
+            label.center = annotationView.center
+            annotationView .addSubview(label)
+            return annotationView
+        }
 
 
         return nil
     }
     
+    override func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+//        if (control as? UIButton)?.buttonType == .detailDisclosure {
+//            mapView.deselectAnnotation(view.annotation, animated: false)
+//            performSegueWithIdentifier(Constants.EditWaypointSegue, sender: view)
+//        } else if let waypoint = view.annotation as? GPX.Waypoint {
+//            if waypoint.imageURL != nil {
+//                performSegueWithIdentifier(Constants.ShowImageSegue, sender: view)
+//            }
+//        }
+    }
 }

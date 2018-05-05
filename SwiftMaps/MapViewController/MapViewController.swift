@@ -616,9 +616,26 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         renderers.forEach { renderer in
             print("--- \(renderer)")
         }
-        
         self.renderers = renderers
     }
+    
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        #if DEBUG
+            print("Function: \(#function), line: \(#line)")
+            print("didAddAnnotationViews \(views)")
+        #endif
+        for view in views
+        {
+            //High & Low muss über DistanceAnnotations liegen ...
+            if view.annotation is HighLowAnnotation
+            {
+                view.superview?.bringSubview(toFront: view)
+            }
+        }
+        
+    }
+
+    
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         #if DEBUG
@@ -682,6 +699,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         {
             return MKOverlayRenderer.init(overlay: overlay)
         }
+    }
+
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
+    {
+
     }
 }
 

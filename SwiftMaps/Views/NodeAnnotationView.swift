@@ -12,7 +12,12 @@ import MapKit
 class NodeAnnotationView: NSObject, MKAnnotation  {
     var node: Node!
     let title: String?
-    let coordinate: CLLocationCoordinate2D
+    var coordinate: CLLocationCoordinate2D
+    
+    init(coordinate: CLLocationCoordinate2D, title: String) {
+        self.coordinate = coordinate
+        self.title = title
+    }
     
     init(title: String, coordinate: CLLocationCoordinate2D, node:Node) {
         self.title = title
@@ -22,4 +27,5 @@ class NodeAnnotationView: NSObject, MKAnnotation  {
         
         super.init()
     }
+
 }
