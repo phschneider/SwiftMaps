@@ -86,6 +86,8 @@ class SingleTrailMapViewController: MapViewController {
                 self.mapView.setVisibleMapRect(overlay.boundingMapRect, edgePadding: UIEdgeInsets(top: offset, left: offset, bottom: offset, right: offset), animated: true)
             }
         }
+        
+        self.title =  String(format:"%.2fkm", (self.gpx?.distance())!/1000)
     }
 
     private func loadSavedAndEnabledPois() {

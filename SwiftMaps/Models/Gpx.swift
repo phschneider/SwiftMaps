@@ -143,4 +143,26 @@ class Gpx: EVObject {
         points.append(HighLowAnnotation.init(coordinate: (high?.coordinate)!, title: String(format: "%.f",(high?.altitude)!)))
         return points
     }
+    
+    func distance() -> CLLocationDistance
+    {
+        var distance = 0.0
+        var lastLocation:CLLocation?
+        
+        for location in (trk?.locations)!
+        {
+            if (lastLocation != nil)
+            {
+                distance += location.distance(from: lastLocation!)
+            }
+            lastLocation = location
+        }
+        return distance
+    }
+
+    // TODO: Min Höhe (Wert X bei KM Y)
+    // TODO: MAx Höhe (Wert X bei KM Y)
+
+    // TODO: Anstieg 1 ...
+    // TODO: Anstieg 2 ...
 }
