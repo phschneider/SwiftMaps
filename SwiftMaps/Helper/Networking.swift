@@ -36,12 +36,15 @@ class Networking {
     
     fileprivate func showTraffic()
     {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        }
     }
     
     fileprivate func hideTraffic()
     {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    }
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }    }
     
 }
