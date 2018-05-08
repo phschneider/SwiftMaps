@@ -66,9 +66,6 @@ class Gpx: EVObject {
             }
             else if (Double(point.altitude) - Double((high?.altitude)!) > 0)
             {
-                print("point: \(point.altitude)")
-                print("high: \(high?.altitude)")
-
                 high = point
             }
         }
@@ -99,17 +96,11 @@ class Gpx: EVObject {
             
             if (Double(point.altitude) - Double((high?.altitude)!) > 0)
             {
-                print("point: \(point.altitude)")
-                print("high: \(high?.altitude)")
-                
                 high = point
             }
             
             if (Double(point.altitude) - Double((low?.altitude)!) < 0)
             {
-                print("point: \(point.altitude)")
-                print("low: \(high?.altitude)")
-                
                 low = point
             }
         }
@@ -134,9 +125,6 @@ class Gpx: EVObject {
             }
             else if (Double(point.altitude) - Double((high?.altitude)!) < 0)
             {
-                print("point: \(point.altitude)")
-                print("high: \(high?.altitude)")
-                
                 high = point
             }
         }

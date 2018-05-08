@@ -36,6 +36,7 @@ class SingleTrailMapViewController: MapViewController {
         }
     }
 
+    // MARK: - GPX ...
     func loadGpxFromBundleFile(filename:String) {
         if let filepath = Bundle.main.path(forResource: filename, ofType: "gpx") {
             do {
@@ -90,6 +91,7 @@ class SingleTrailMapViewController: MapViewController {
         self.title =  String(format:"%.2fkm", (self.gpx?.distance())!/1000)
     }
 
+    // MARK: - POIS ...
     private func loadSavedAndEnabledPois() {
         self.mapView .removeAnnotations(self.mapView.annotations)
 
@@ -338,40 +340,52 @@ class SingleTrailMapViewController: MapViewController {
         }
         else if (annotation is DistanceAnnotation)
         {
-            var annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "Distance")
+            let annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "Distance")
             annotationView.canShowCallout = false;
             
-            let size:Int = 15
+            let size:Double = 15.0
             var frame:CGRect = CGRect.zero
             frame.size = CGSize.init(width: size, height: size)
             
-            var label:UILabel = UILabel.init(frame: annotationView.frame)
+            let view:UIView = UIView.init(frame: annotationView.frame)
+            view.frame = frame
+            view.backgroundColor = UIColor.yellow
+            view.clipsToBounds = true
+            view.layer.borderColor = UIColor.black.cgColor
+            view.layer.cornerRadius = frame.size.width/2
+            view.layer.borderWidth = 1.0
+            view.center = annotationView.center
+            
+            let padding = 4.0
+            frame = CGRect.zero
+            frame.size = CGSize.init(width: size-padding, height: size-padding)
+            frame.origin.x = CGFloat(padding/2.0)
+            frame.origin.y = CGFloat(padding/2.0)
+            
+            let label:UILabel = UILabel.init(frame: annotationView.frame)
             label.frame = frame
             label.textAlignment = NSTextAlignment.center
+            label.baselineAdjustment = UIBaselineAdjustment.alignCenters
             label.text = annotation.title!
-            label.backgroundColor = UIColor.yellow
             label.adjustsFontSizeToFitWidth = true
             label.font = UIFont.systemFont(ofSize: 10)
-            label.clipsToBounds = true
             label.textColor = UIColor.black
-            label.layer.borderColor = UIColor.black.cgColor
-            label.layer.cornerRadius = frame.size.width/2
-            label.layer.borderWidth = 1.0
-            label.center = annotationView.center
-            annotationView .addSubview(label)
+            view.addSubview(label)
+            annotationView .addSubview(view)
+            
             return annotationView
         }
         
         else if (annotation is WayPointAnnotation)
         {
-            var annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "WayPoint")
+            let annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "WayPoint")
             annotationView.canShowCallout = false;
             
-            let size:Int = 15
+            let size:Int = 10
             var frame:CGRect = CGRect.zero
             frame.size = CGSize.init(width: size, height: size)
             
-            var label:UILabel = UILabel.init(frame: annotationView.frame)
+            let label:UILabel = UILabel.init(frame: annotationView.frame)
             label.frame = frame
             label.textAlignment = NSTextAlignment.center
 //            label.text = annotation.title!
@@ -389,37 +403,51 @@ class SingleTrailMapViewController: MapViewController {
         }
         else if (annotation is HighLowAnnotation)
         {
-            var annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "HighLow")
+            let annotationView: MKAnnotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: "HighLow")
             annotationView.canShowCallout = false;
             
-            let size:Int = 15
+            let size:Double = 20.0
             var frame:CGRect = CGRect.zero
             frame.size = CGSize.init(width: size, height: size)
             
-            var label:UILabel = UILabel.init(frame: annotationView.frame)
+            let view:UIView = UIView.init(frame: annotationView.frame)
+            view.frame = frame
+            view.backgroundColor = UIColor.yellow
+            view.clipsToBounds = true
+            view.layer.borderColor = UIColor.black.cgColor
+            view.layer.cornerRadius = frame.size.width/2
+            view.layer.borderWidth = 1.0
+            view.center = annotationView.center
+            
+            let padding = 4.0
+            frame = CGRect.zero
+            frame.size = CGSize.init(width: size-padding, height: size-padding)
+            frame.origin.x = CGFloat(padding/2.0)
+            frame.origin.y = CGFloat(padding/2.0)
+            
+            let label:UILabel = UILabel.init(frame: annotationView.frame)
             label.frame = frame
             label.textAlignment = NSTextAlignment.center
+            label.baselineAdjustment = UIBaselineAdjustment.alignCenters
             label.text = annotation.title!
+            label.adjustsFontSizeToFitWidth = true
+            label.font = UIFont.systemFont(ofSize: 10)
+            
             if ( (annotation as! HighLowAnnotation).isHigh == true)
             {
-                label.backgroundColor = UIColor.black
+                view.backgroundColor = UIColor.black
                 label.textColor = UIColor.white
-                label.layer.borderColor = UIColor.white.cgColor
+                view.layer.borderColor = UIColor.white.cgColor
             }
             else
             {
-                label.backgroundColor = UIColor.white
+                view.backgroundColor = UIColor.white
                 label.textColor = UIColor.black
-                label.layer.borderColor = UIColor.black.cgColor
+                view.layer.borderColor = UIColor.black.cgColor
             }
             
-            label.adjustsFontSizeToFitWidth = true
-            label.font = UIFont.systemFont(ofSize: 10)
-            label.clipsToBounds = true
-            label.layer.cornerRadius = frame.size.width/2
-            label.layer.borderWidth = 1.0
-            label.center = annotationView.center
-            annotationView .addSubview(label)
+            view.addSubview(label)
+            annotationView .addSubview(view)
             return annotationView
         }
 
