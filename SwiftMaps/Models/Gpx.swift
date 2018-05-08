@@ -132,6 +132,33 @@ class Gpx: EVObject {
         return points
     }
     
+    
+    func max() -> Double
+    {
+        var max = 0.0
+        for point in (trk?.locations)!
+        {
+            if ((Double(point.altitude) - max) > 0)
+            {
+                max = point.altitude
+            }
+        }
+        return max;
+    }
+    
+    func min() -> Double
+    {
+        var min = self.max()
+        for point in (trk?.locations)!
+        {
+            if ((Double(point.altitude) - min) < 0)
+            {
+                min = point.altitude
+            }
+        }
+        return min;
+    }
+    
     func distance() -> CLLocationDistance
     {
         var distance = 0.0
@@ -146,6 +173,32 @@ class Gpx: EVObject {
             lastLocation = location
         }
         return distance
+    }
+    
+    func distanceInKm() -> CLLocationDistance
+    {
+        var distance = 0.0
+        var lastLocation:CLLocation?
+        
+        for location in (trk?.locations)!
+        {
+            if (lastLocation != nil)
+            {
+                distance += location.distance(from: lastLocation!)
+            }
+            lastLocation = location
+        }
+        return distance/1000.0
+    }
+    
+    func locations() -> [CLLocation]
+    {
+        var locations = [CLLocation]()
+        for location in (trk?.locations)!
+        {
+            locations.append(location)
+        }
+        return locations
     }
 
     // TODO: Min Höhe (Wert X bei KM Y)

@@ -88,7 +88,11 @@ class SingleTrailMapViewController: MapViewController {
             }
         }
         
-        self.title =  String(format:"%.2fkm", (self.gpx?.distance())!/1000)
+        self.title =  String(format:"%.2fkm", (self.gpx?.distanceInKm())!)
+        
+        var elevationView = ElevationView.init(frame: CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.origin.y)! + (self.navigationController?.navigationBar.frame.size.height)!, width: self.view.frame.size.width, height: self.view.frame.size.height/4), gpx: self.gpx!)
+        elevationView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin, .flexibleHeight]
+        self.view.addSubview(elevationView)
     }
 
     // MARK: - POIS ...
